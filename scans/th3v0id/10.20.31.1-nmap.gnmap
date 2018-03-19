@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:30:02 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.31.1-nmap 10.20.31.1
+Host: 10.20.31.1 ()	Status: Up
+Host: 10.20.31.1 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.9p1 Debian 5ubuntu1.3 (Ubuntu Linux; protocol 2.0)/, 53/open/tcp//tcpwrapped///	Ignored State: closed (998)
+# Nmap done at Mon Mar 19 09:30:34 2018 -- 1 IP address (1 host up) scanned in 32.82 seconds

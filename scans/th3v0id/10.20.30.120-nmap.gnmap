@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:53:21 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.30.120-nmap 10.20.30.120
+Host: 10.20.30.120 ()	Status: Up
+Host: 10.20.30.120 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3 (protocol 2.0)/, 80/open/tcp//http//lighttpd 1.4.35/, 443/open/tcp//ssl|http//Jetty 9.0.7.v20131107/, 50003/open/tcp//unknown///, 50006/open/tcp//unknown///	Ignored State: filtered (995)
+# Nmap done at Mon Mar 19 09:54:41 2018 -- 1 IP address (1 host up) scanned in 79.84 seconds

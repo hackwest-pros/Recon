@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:28:58 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.30.111-nmap 10.20.30.111
+Host: 10.20.30.111 ()	Status: Up
+Host: 10.20.30.111 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3p1 Debian 3ubuntu7.1 (Ubuntu Linux; protocol 2.0)/, 53/open/tcp//domain//dnsmasq 2.52/, 81/open/tcp//http//Apache httpd 2.2.14/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 548/open/tcp//afp//Netatalk 2 (name: itac-fw; protocol 3.1)/, 2049/open/tcp//nfs//2-4 (RPC #100003)/, 4443/open/tcp//ssl|http//TwistedWeb httpd 9.0.0/	Ignored State: closed (993)
+# Nmap done at Mon Mar 19 09:30:02 2018 -- 1 IP address (1 host up) scanned in 63.23 seconds

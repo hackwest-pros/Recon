@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 10:06:09 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.31.71-nmap 10.20.31.71
+Host: 10.20.31.71 ()	Status: Up
+Host: 10.20.31.71 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)/, 25/open/tcp//smtp//Postfix smtpd/, 53/open/tcp//domain//ISC BIND 9.10.3-P4-Ubuntu/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 110/open/tcp//pop3//Dovecot pop3d/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 143/open/tcp//imap//Dovecot imapd/, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 5666/open/tcp//tcpwrapped///	Ignored State: closed (991)
+# Nmap done at Mon Mar 19 10:07:35 2018 -- 1 IP address (1 host up) scanned in 85.70 seconds

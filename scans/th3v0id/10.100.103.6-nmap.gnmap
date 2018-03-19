@@ -1,0 +1,2 @@
+# Nmap 7.60 scan initiated Mon Mar 19 05:20:11 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.103.6-nmap 10.100.103.6
+# Nmap done at Mon Mar 19 05:20:14 2018 -- 1 IP address (0 hosts up) scanned in 3.48 seconds

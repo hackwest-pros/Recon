@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 10:32:27 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.101.157-nmap 10.100.101.157
+Host: 10.100.101.157 ()	Status: Up
+Host: 10.100.101.157 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.15/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 443/open/tcp//ssl|http//Apache httpd 2.2.15/	Ignored State: closed (996)
+# Nmap done at Mon Mar 19 10:33:52 2018 -- 1 IP address (1 host up) scanned in 85.24 seconds

@@ -1,0 +1,2028 @@
+# Nmap 7.60 scan initiated Mon Mar 19 10:11:22 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.31.75-nmap 10.20.31.75
+Nmap scan report for 10.20.31.75
+Host is up (0.17s latency).
+Not shown: 993 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [80267] OpenSSH up to 5.x/6.x/7.1p1 Forward Option roaming_common.c roaming_read/roaming_write memory corruption
+| [80266] OpenSSH up to 5.x/6.x/7.1p1 roaming_common.c resend_bytes information disclosure
+| [4584] OpenSSH up to 5.7 auth-options.c information disclosure
+| [4282] OpenSSH 5.6/5.7 Legacy Certificate memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-0814] The auth_parse_options function in auth-options.c in sshd in OpenSSH before 5.7 provides debug messages containing authorized_keys command options, which allows remote authenticated users to obtain potentially sensitive information by reading these messages, as demonstrated by the shared user account required by Gitolite.  NOTE: this can cross privilege boundaries because a user account may intentionally have no shell or filesystem access, and therefore may have no supported way to read an authorized_keys file in its own home directory.
+| [CVE-2011-5000] The ssh_gssapi_parse_ename function in gss-serv.c in OpenSSH 5.8 and earlier, when gssapi-with-mic authentication is enabled, allows remote authenticated users to cause a denial of service (memory consumption) via a large value in a certain length field.  NOTE: there may be limited scenarios in which this issue is relevant.
+| [CVE-2011-0539] The key_certify function in usr.bin/ssh/key.c in OpenSSH 5.6 and 5.7, when generating legacy certificates using the -t command-line option in ssh-keygen, does not initialize the nonce field, which might allow remote attackers to obtain sensitive stack memory contents or make it easier to conduct hash collision attacks.
+| [CVE-2010-4755] The (1) remote_glob function in sftp-glob.c and the (2) process_put function in sftp.c in OpenSSH 5.8 and earlier, as used in FreeBSD 7.3 and 8.1, NetBSD 5.0.2, OpenBSD 4.7, and other products, allow remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in SSH_FXP_STAT requests to an sftp daemon, a different vulnerability than CVE-2010-2632.
+| [CVE-2010-4478] OpenSSH 5.6 and earlier, when J-PAKE is enabled, does not properly validate the public parameters in the J-PAKE protocol, which allows remote attackers to bypass the need for knowledge of the shared secret, and successfully authenticate, by sending crafted values in each round of the protocol, a related issue to CVE-2010-4252.
+| [CVE-2009-2904] A certain Red Hat modification to the ChrootDirectory feature in OpenSSH 4.8, as used in sshd in OpenSSH 4.3 in Red Hat Enterprise Linux (RHEL) 5.4 and Fedora 11, allows local users to gain privileges via hard links to setuid programs that use configuration files within the chroot directory, related to requirements for directory ownership.
+| [CVE-2008-3844] Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact.  NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points.  As of 20080827, no unofficial distributions of this software are known.
+| [CVE-2008-3259] OpenSSH before 5.1 sets the SO_REUSEADDR socket option when the X11UseLocalhost configuration setting is disabled, which allows local users on some platforms to hijack the X11 forwarding port via a bind to a single IP address, as demonstrated on the HP-UX platform.
+| [CVE-2006-0883] OpenSSH on FreeBSD 5.3 and 5.4, when used with OpenPAM, does not properly handle when a forked child process terminates during PAM authentication, which allows remote attackers to cause a denial of service (client connection refusal) by connecting multiple times to the SSH server, waiting for the password prompt, then disconnecting.
+| 
+| OSVDB - http://www.osvdb.org:
+| [92034] GSI-OpenSSH auth-pam.c Memory Management Authentication Bypass
+| [90474] Red Hat / Fedora PAM Module for OpenSSH Incorrect error() Function Calling Local Privilege Escalation
+| [90007] OpenSSH logingracetime / maxstartup Threshold Connection Saturation Remote DoS
+| [81500] OpenSSH gss-serv.c ssh_gssapi_parse_ename Function Field Length Value Parsing Remote DoS
+| [78706] OpenSSH auth-options.c sshd auth_parse_options Function authorized_keys Command Option Debug Message Information Disclosure
+| [75753] OpenSSH PAM Module Aborted Conversation Local Information Disclosure
+| [75249] OpenSSH sftp-glob.c remote_glob Function Glob Expression Parsing Remote DoS
+| [75248] OpenSSH sftp.c process_put Function Glob Expression Parsing Remote DoS
+| [72183] Portable OpenSSH ssh-keysign ssh-rand-helper Utility File Descriptor Leak Local Information Disclosure
+| [70873] OpenSSH Legacy Certificates Stack Memory Disclosure
+| [69658] OpenSSH J-PAKE Public Parameter Validation Shared Secret Authentication Bypass
+| [67743] Novell NetWare OpenSSH SSHD.NLM Absolute Path Handling Remote Overflow
+| [59353] OpenSSH sshd Local TCP Redirection Connection Masking Weakness
+| [58495] OpenSSH sshd ChrootDirectory Feature SetUID Hard Link Local Privilege Escalation
+| [56921] OpenSSH Unspecified Remote Compromise
+| [53021] OpenSSH on ftp.openbsd.org Trojaned Distribution
+| [50036] OpenSSH CBC Mode Chosen Ciphertext 32-bit Chunk Plaintext Context Disclosure
+| [49386] OpenSSH sshd TCP Connection State Remote Account Enumeration
+| [48791] OpenSSH on Debian sshd Crafted Username Arbitrary Remote SELinux Role Access
+| [47635] OpenSSH Packages on Red Hat Enterprise Linux Compromised Distribution
+| [47227] OpenSSH X11UseLocalhost X11 Forwarding Port Hijacking
+| [45873] Cisco WebNS SSHield w/ OpenSSH Crafted Large Packet Remote DoS
+| [43911] OpenSSH ~/.ssh/rc ForceCommand Bypass Arbitrary Command Execution
+| [43745] OpenSSH X11 Forwarding Local Session Hijacking
+| [43371] OpenSSH Trusted X11 Cookie Connection Policy Bypass
+| [39214] OpenSSH linux_audit_record_event Crafted Username Audit Log Injection
+| [37315] pam_usb OpenSSH Authentication Unspecified Issue
+| [34850] OpenSSH on Mac OS X Key Generation Remote Connection DoS
+| [34601] OPIE w/ OpenSSH Account Enumeration
+| [34600] OpenSSH S/KEY Authentication Account Enumeration
+| [32721] OpenSSH Username Password Complexity Account Enumeration
+| [30232] OpenSSH Privilege Separation Monitor Weakness
+| [29494] OpenSSH packet.c Invalid Protocol Sequence Remote DoS
+| [29266] OpenSSH GSSAPI Authentication Abort Username Enumeration
+| [29264] OpenSSH Signal Handler Pre-authentication Race Condition Code Execution
+| [29152] OpenSSH Identical Block Packet DoS
+| [27745] Apple Mac OS X OpenSSH Nonexistent Account Login Enumeration DoS
+| [23797] OpenSSH with OpenPAM Connection Saturation Forked Process Saturation DoS
+| [22692] OpenSSH scp Command Line Filename Processing Command Injection
+| [20216] OpenSSH with KerberosV Remote Authentication Bypass
+| [19142] OpenSSH Multiple X11 Channel Forwarding Leaks
+| [19141] OpenSSH GSSAPIAuthentication Credential Escalation
+| [18236] OpenSSH no pty Command Execution Local PAM Restriction Bypass
+| [16567] OpenSSH Privilege Separation LoginGraceTime DoS
+| [16039] Solaris 108994 Series Patch OpenSSH LDAP Client Authentication DoS
+| [9562] OpenSSH Default Configuration Anon SSH Service Port Bounce Weakness
+| [9550] OpenSSH scp Traversal Arbitrary File Overwrite
+| [6601] OpenSSH *realloc() Unspecified Memory Errors
+| [6245] OpenSSH SKEY/BSD_AUTH Challenge-Response Remote Overflow
+| [6073] OpenSSH on FreeBSD libutil Arbitrary File Read
+| [6072] OpenSSH PAM Conversation Function Stack Modification
+| [6071] OpenSSH SSHv1 PAM Challenge-Response Authentication Privilege Escalation
+| [5536] OpenSSH sftp-server Restricted Keypair Restriction Bypass
+| [5408] OpenSSH echo simulation Information Disclosure
+| [5113] OpenSSH NIS YP Netgroups Authentication Bypass
+| [4536] OpenSSH Portable AIX linker Privilege Escalation
+| [3938] OpenSSL and OpenSSH /dev/random Check Failure
+| [3456] OpenSSH buffer_append_space() Heap Corruption
+| [2557] OpenSSH Multiple Buffer Management Multiple Overflows
+| [2140] OpenSSH w/ PAM Username Validity Timing Attack
+| [2112] OpenSSH Reverse DNS Lookup Bypass
+| [2109] OpenSSH sshd Root Login Timing Side-Channel Weakness
+| [1853] OpenSSH Symbolic Link 'cookies' File Removal
+| [839] OpenSSH PAMAuthenticationViaKbdInt Challenge-Response Remote Overflow
+| [781] OpenSSH Kerberos TGT/AFS Token Passing Remote Overflow
+| [730] OpenSSH Channel Code Off by One Remote Privilege Escalation
+| [688] OpenSSH UseLogin Environment Variable Local Command Execution
+| [642] OpenSSH Multiple Key Type ACL Bypass
+| [504] OpenSSH SSHv2 Public Key Authentication Bypass
+| [341] OpenSSH UseLogin Local Privilege Escalation
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [101552] OpenSSH 'sftp-server.c' Remote Security Bypass Vulnerability
+| [94977] OpenSSH CVE-2016-10011 Local Information Disclosure Vulnerability
+| [94975] OpenSSH CVE-2016-10012 Security Bypass Vulnerability
+| [94972] OpenSSH CVE-2016-10010 Privilege Escalation Vulnerability
+| [94968] OpenSSH CVE-2016-10009 Remote Code Execution Vulnerability
+| [93776] OpenSSH 'ssh/kex.c' Denial of Service Vulnerability
+| [92212] OpenSSH CVE-2016-6515 Denial of Service Vulnerability
+| [92210] OpenSSH CBC Padding Weak Encryption Security Weakness
+| [92209] OpenSSH MAC Verification Security Bypass Vulnerability
+| [91812] OpenSSH CVE-2016-6210 User Enumeration Vulnerability
+| [90440] OpenSSH CVE-2004-1653 Remote Security Vulnerability
+| [90340] OpenSSH CVE-2004-2760 Remote Security Vulnerability
+| [89385] OpenSSH CVE-2005-2666 Local Security Vulnerability
+| [88655] OpenSSH CVE-2001-1382 Remote Security Vulnerability
+| [88513] OpenSSH CVE-2000-0999 Remote Security Vulnerability
+| [88367] OpenSSH CVE-1999-1010 Local Security Vulnerability
+| [87789] OpenSSH CVE-2003-0682 Remote Security Vulnerability
+| [86187] OpenSSH 'session.c' Local Security Bypass Vulnerability
+| [86144] OpenSSH CVE-2007-2768 Remote Security Vulnerability
+| [84427] OpenSSH CVE-2016-1908 Security Bypass Vulnerability
+| [84314] OpenSSH CVE-2016-3115 Remote Command Injection Vulnerability
+| [84185] OpenSSH CVE-2006-4925 Denial-Of-Service Vulnerability
+| [81293] OpenSSH CVE-2016-1907 Denial of Service Vulnerability
+| [80698] OpenSSH CVE-2016-0778 Heap Based Buffer Overflow Vulnerability
+| [80695] OpenSSH CVE-2016-0777 Information Disclosure Vulnerability
+| [76497] OpenSSH CVE-2015-6565 Local Security Bypass Vulnerability
+| [76317] OpenSSH PAM Support Multiple Remote Code Execution Vulnerabilities
+| [75990] OpenSSH Login Handling Security Bypass Weakness
+| [75525] OpenSSH 'x11_open_helper()' Function Security Bypass Vulnerability
+| [71420] Portable OpenSSH 'gss-serv-krb5.c' Security Bypass Vulnerability
+| [68757] OpenSSH Multiple Remote Denial of Service Vulnerabilities
+| [66459] OpenSSH Certificate Validation Security Bypass Vulnerability
+| [66355] OpenSSH 'child_set_env()' Function Security Bypass Vulnerability
+| [65674] OpenSSH 'ssh-keysign.c' Local Information Disclosure Vulnerability
+| [65230] OpenSSH 'schnorr.c' Remote Memory Corruption Vulnerability
+| [63605] OpenSSH 'sshd' Process Remote Memory Corruption Vulnerability
+| [61286] OpenSSH Remote Denial of Service Vulnerability
+| [58894] GSI-OpenSSH PAM_USER Security Bypass Vulnerability
+| [58162] OpenSSH CVE-2010-5107 Denial of Service Vulnerability
+| [54114] OpenSSH 'ssh_gssapi_parse_ename()' Function Denial of Service Vulnerability
+| [51702] Debian openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [50416] Linux Kernel 'kdump' and 'mkdumprd' OpenSSH Integration Remote Information Disclosure Vulnerability
+| [49473] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [48507] OpenSSH 'pam_thread()' Remote Buffer Overflow Vulnerability
+| [47691] Portable OpenSSH 'ssh-keysign' Local Unauthorized Access Vulnerability
+| [46155] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [45304] OpenSSH J-PAKE Security Bypass Vulnerability
+| [36552] Red Hat Enterprise Linux OpenSSH 'ChrootDirectory' Option Local Privilege Escalation Vulnerability
+| [32319] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [30794] Red Hat OpenSSH Backdoor Vulnerability
+| [30339] OpenSSH 'X11UseLocalhost' X11 Forwarding Session Hijacking Vulnerability
+| [30276] Debian OpenSSH SELinux Privilege Escalation Vulnerability
+| [28531] OpenSSH ForceCommand Command Execution Weakness
+| [28444] OpenSSH X Connections Session Hijacking Vulnerability
+| [26097] OpenSSH LINUX_AUDIT_RECORD_EVENT Remote Log Injection Weakness
+| [25628] OpenSSH X11 Cookie Local Authentication Bypass Vulnerability
+| [23601] OpenSSH S/Key Remote Information Disclosure Vulnerability
+| [20956] OpenSSH Privilege Separation Key Signature Weakness
+| [20418] OpenSSH-Portable Existing Password Remote Information Disclosure Weakness
+| [20245] OpenSSH-Portable GSSAPI Authentication Abort Information Disclosure Weakness
+| [20241] Portable OpenSSH GSSAPI Remote Code Execution Vulnerability
+| [20216] OpenSSH Duplicated Block Remote Denial of Service Vulnerability
+| [16892] OpenSSH Remote PAM Denial Of Service Vulnerability
+| [14963] OpenSSH LoginGraceTime Remote Denial Of Service Vulnerability
+| [14729] OpenSSH GSSAPI Credential Disclosure Vulnerability
+| [14727] OpenSSH DynamicForward Inadvertent GatewayPorts Activation Vulnerability
+| [11781] OpenSSH-portable PAM Authentication Remote Information Disclosure Vulnerability
+| [9986] RCP, OpenSSH SCP Client File Corruption Vulnerability
+| [9040] OpenSSH PAM Conversation Memory Scrubbing Weakness
+| [8677] Multiple Portable OpenSSH PAM Vulnerabilities
+| [8628] OpenSSH Buffer Mismanagement Vulnerabilities
+| [7831] OpenSSH Reverse DNS Lookup Access Control Bypass Vulnerability
+| [7482] OpenSSH Remote Root Authentication Timing Side-Channel Weakness
+| [7467] OpenSSH-portable Enabled PAM Delay Information Disclosure Vulnerability
+| [7343] OpenSSH Authentication Execution Path Timing Information Leakage Weakness
+| [6168] OpenSSH Visible Password Vulnerability
+| [5374] OpenSSH Trojan Horse Vulnerability
+| [5093] OpenSSH Challenge-Response Buffer Overflow Vulnerabilities
+| [4560] OpenSSH Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [4241] OpenSSH Channel Code Off-By-One Vulnerability
+| [3614] OpenSSH UseLogin Environment Variable Passing Vulnerability
+| [3560] OpenSSH Kerberos Arbitrary Privilege Elevation Vulnerability
+| [3369] OpenSSH Key Based Source IP Access Control Bypass Vulnerability
+| [3345] OpenSSH SFTP Command Restriction Bypassing Vulnerability
+| [2917] OpenSSH PAM Session Evasion Vulnerability
+| [2825] OpenSSH Client X11 Forwarding Cookie Removal File Symbolic Link Vulnerability
+| [2356] OpenSSH Private Key Authentication Check Vulnerability
+| [1949] OpenSSH Client Unauthorized Remote Forwarding Vulnerability
+| [1334] OpenSSH UseLogin Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028187] OpenSSH pam_ssh_agent_auth Module on Red Hat Enterprise Linux Lets Remote Users Execute Arbitrary Code
+| [1026593] OpenSSH Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1025739] OpenSSH on FreeBSD Has Buffer Overflow in pam_thread() That Lets Remote Users Execute Arbitrary Code
+| [1025482] OpenSSH ssh-keysign Utility Lets Local Users Gain Elevated Privileges
+| [1025028] OpenSSH Legacy Certificates May Disclose Stack Contents to Remote Users
+| [1022967] OpenSSH on Red Hat Enterprise Linux Lets Remote Authenticated Users Gain Elevated Privileges
+| [1021235] OpenSSH CBC Mode Error Handling May Let Certain Remote Users Obtain Plain Text in Certain Cases
+| [1020891] OpenSSH on Debian Lets Remote Users Prevent Logins
+| [1020730] OpenSSH for Red Hat Enterprise Linux Packages May Have Been Compromised
+| [1020537] OpenSSH on HP-UX Lets Local Users Hijack X11 Sessions
+| [1019733] OpenSSH Unsafe Default Configuration May Let Local Users Execute Arbitrary Commands
+| [1019707] OpenSSH Lets Local Users Hijack Forwarded X Sessions in Certain Cases
+| [1017756] Apple OpenSSH Key Generation Process Lets Remote Users Deny Service
+| [1017183] OpenSSH Privilege Separation Monitor Validation Error May Cause the Monitor to Fail to Properly Control the Unprivileged Process
+| [1016940] OpenSSH Race Condition in Signal Handler Lets Remote Users Deny Service and May Potentially Permit Code Execution
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016931] OpenSSH SSH v1 CRC Attack Detection Implementation Lets Remote Users Deny Service
+| [1016672] OpenSSH on Mac OS X Lets Remote Users Deny Service
+| [1015706] OpenSSH Interaction With OpenPAM Lets Remote Users Deny Service
+| [1015540] OpenSSH scp Double Shell Character Expansion During Local-to-Local Copying May Let Local Users Gain Elevated Privileges in Certain Cases
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1011193] OpenSSH scp Directory Traversal Flaw Lets Remote SSH Servers Overwrite Files in Certain Cases
+| [1011143] OpenSSH Default Configuration May Be Unsafe When Used With Anonymous SSH Services
+| [1007791] Portable OpenSSH PAM free() Bug May Let Remote Users Execute Root Code
+| [1007716] OpenSSH buffer_append_space() and Other Buffer Management Errors May Let Remote Users Execute Arbitrary Code
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006688] OpenSSH Timing Flaw With Pluggable Authentication Modules Can Disclose Valid User Account Names to Remote Users
+| [1004818] OpenSSH's Secure Shell (SSH) Implementation Weakness May Disclose User Passwords to Remote Users During Man-in-the-Middle Attacks
+| [1004616] OpenSSH Integer Overflow and Buffer Overflow May Allow Remote Users to Gain Root Access to the System
+| [1004391] OpenSSH 'BSD_AUTH' Access Control Bug May Allow Unauthorized Remote Users to Authenticated to the System
+| [1004115] OpenSSH Buffer Overflow in Kerberos Ticket and AFS Token Processing Lets Local Users Execute Arbitrary Code With Root Level Permissions
+| [1003758] OpenSSH Off-by-one 'Channels' Bug May Let Authorized Remote Users Execute Arbitrary Code with Root Privileges
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002748] OpenSSH 3.0 Denial of Service Condition May Allow Remote Users to Crash the sshd Daemon and KerberosV Configuration Error May Allow Remote Users to Partially Authenticate When Authentication Should Not Be Permitted
+| [1002734] OpenSSH's S/Key Implementation Information Disclosure Flaw Provides Remote Users With Information About Valid User Accounts
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1001683] OpenSSH Allows Authorized Users to Delete Other User Files Named Cookies
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [83258] GSI-OpenSSH auth-pam.c security bypass
+| [82781] OpenSSH time limit denial of service
+| [82231] OpenSSH pam_ssh_agent_auth PAM code execution
+| [74809] OpenSSH ssh_gssapi_parse_ename denial of service
+| [72756] Debian openssh-server commands information disclosure
+| [68339] OpenSSH pam_thread buffer overflow
+| [67264] OpenSSH ssh-keysign unauthorized access
+| [65910] OpenSSH remote_glob function denial of service
+| [65163] OpenSSH certificate information disclosure
+| [64387] OpenSSH J-PAKE security bypass
+| [63337] Cisco Unified Videoconferencing OpenSSH weak security
+| [46620] OpenSSH and multiple SSH Tectia products CBC mode information disclosure
+| [45202] OpenSSH signal handler denial of service
+| [44747] RHEL OpenSSH backdoor
+| [44280] OpenSSH PermitRootLogin information disclosure
+| [44279] OpenSSH sshd weak security
+| [44037] OpenSSH sshd SELinux role unauthorized access
+| [43940] OpenSSH X11 forwarding information disclosure
+| [41549] OpenSSH ForceCommand directive security bypass
+| [41438] OpenSSH sshd session hijacking
+| [40897] OpenSSH known_hosts weak security
+| [40587] OpenSSH username weak security
+| [37371] OpenSSH username data manipulation
+| [37118] RHSA update for OpenSSH privilege separation monitor authentication verification weakness not installed
+| [37112] RHSA update for OpenSSH signal handler race condition not installed
+| [37107] RHSA update for OpenSSH identical block denial of service not installed
+| [36637] OpenSSH X11 cookie privilege escalation
+| [35167] OpenSSH packet.c newkeys[mode] denial of service
+| [34490] OpenSSH OPIE information disclosure
+| [33794] OpenSSH ChallengeResponseAuthentication information disclosure
+| [32975] Apple Mac OS X OpenSSH denial of service
+| [32387] RHSA-2006:0738 updates for openssh not installed
+| [32359] RHSA-2006:0697 updates for openssh not installed
+| [32230] RHSA-2006:0298 updates for openssh not installed
+| [32132] RHSA-2006:0044 updates for openssh not installed
+| [30120] OpenSSH privilege separation monitor authentication verification weakness
+| [29255] OpenSSH GSSAPI user enumeration
+| [29254] OpenSSH signal handler race condition
+| [29158] OpenSSH identical block denial of service
+| [28147] Apple Mac OS X OpenSSH nonexistent user login denial of service
+| [25116] OpenSSH OpenPAM denial of service
+| [24305] OpenSSH SCP shell expansion command execution
+| [22665] RHSA-2005:106 updates for openssh not installed
+| [22117] OpenSSH GSSAPI allows elevated privileges
+| [22115] OpenSSH GatewayPorts security bypass
+| [20930] OpenSSH sshd.c LoginGraceTime denial of service
+| [19441] Sun Solaris OpenSSH LDAP (1) client authentication denial of service
+| [17213] OpenSSH allows port bouncing attacks
+| [16323] OpenSSH scp file overwrite
+| [13797] OpenSSH PAM information leak
+| [13271] OpenSSH could allow an attacker to corrupt the PAM conversion stack
+| [13264] OpenSSH PAM code could allow an attacker to gain access
+| [13215] OpenSSH buffer management errors could allow an attacker to execute code
+| [13214] OpenSSH memory vulnerabilities
+| [13191] OpenSSH large packet buffer overflow
+| [12196] OpenSSH could allow an attacker to bypass login restrictions
+| [11970] OpenSSH could allow an attacker to obtain valid administrative account
+| [11902] OpenSSH PAM support enabled information leak
+| [9803] OpenSSH &quot
+| [9763] OpenSSH downloaded from the OpenBSD FTP site or OpenBSD FTP mirror sites could contain a Trojan Horse
+| [9307] OpenSSH is running on the system
+| [9169] OpenSSH &quot
+| [8896] OpenSSH Kerberos 4 TGT/AFS buffer overflow
+| [8697] FreeBSD libutil in OpenSSH fails to drop privileges prior to using the login class capability database
+| [8383] OpenSSH off-by-one error in channel code
+| [7647] OpenSSH UseLogin option arbitrary code execution
+| [7634] OpenSSH using sftp and restricted keypairs could allow an attacker to bypass restrictions
+| [7598] OpenSSH with Kerberos allows attacker to gain elevated privileges
+| [7179] OpenSSH source IP access control bypass
+| [6757] OpenSSH &quot
+| [6676] OpenSSH X11 forwarding symlink attack could allow deletion of arbitrary files
+| [6084] OpenSSH 2.3.1 allows remote users to bypass authentication
+| [5517] OpenSSH allows unauthorized access to resources
+| [4646] OpenSSH UseLogin option allows remote users to execute commands as root
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21579] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (2)
+| [21578] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (1)
+| [21402] OpenSSH 2.x/3.x Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [21314] OpenSSH 2.x/3.0.1/3.0.2 Channel Code Off-By-One Vulnerability
+| [20253] OpenSSH 1.2 scp File Create/Overwrite Vulnerability
+| [17462] FreeBSD OpenSSH 3.5p1 - Remote Root Exploit
+| [14866] Novell Netware 6.5 - OpenSSH Remote Stack Overflow
+| [6094] Debian OpenSSH Remote SELinux Privilege Elevation Exploit (auth)
+| [3303] Portable OpenSSH <= 3.6.1p-PAM / 4.1-SUSE Timing Attack Exploit
+| [2444] OpenSSH <= 4.3 p1 (Duplicated Block) Remote Denial of Service Exploit
+| [1572] Dropbear / OpenSSH Server (MAX_UNAUTH_CLIENTS) Denial of Service
+| [258] glibc-2.2 and openssh-2.3.0p1 exploits glibc => 2.1.9x
+| [26] OpenSSH/PAM <= 3.6.1p1 Remote Users Ident (gossh.sh)
+| [25] OpenSSH/PAM <= 3.6.1p1 Remote Users Discovery Tool
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [900179] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [881183] CentOS Update for openssh CESA-2012:0884 centos6 
+| [880802] CentOS Update for openssh CESA-2009:1287 centos5 i386
+| [880746] CentOS Update for openssh CESA-2009:1470 centos5 i386
+| [870763] RedHat Update for openssh RHSA-2012:0884-04
+| [870129] RedHat Update for openssh RHSA-2008:0855-01
+| [861813] Fedora Update for openssh FEDORA-2010-5429
+| [861319] Fedora Update for openssh FEDORA-2007-395
+| [861170] Fedora Update for openssh FEDORA-2007-394
+| [861012] Fedora Update for openssh FEDORA-2007-715
+| [840345] Ubuntu Update for openssh vulnerability USN-597-1
+| [840300] Ubuntu Update for openssh update USN-612-5
+| [840271] Ubuntu Update for openssh vulnerability USN-612-2
+| [840268] Ubuntu Update for openssh update USN-612-7
+| [840259] Ubuntu Update for openssh vulnerabilities USN-649-1
+| [840214] Ubuntu Update for openssh vulnerability USN-566-1
+| [831074] Mandriva Update for openssh MDVA-2010:162 (openssh)
+| [830929] Mandriva Update for openssh MDVA-2010:090 (openssh)
+| [830807] Mandriva Update for openssh MDVA-2010:026 (openssh)
+| [830603] Mandriva Update for openssh MDVSA-2008:098 (openssh)
+| [830523] Mandriva Update for openssh MDVSA-2008:078 (openssh)
+| [830317] Mandriva Update for openssh-askpass-qt MDKA-2007:127 (openssh-askpass-qt)
+| [830191] Mandriva Update for openssh MDKSA-2007:236 (openssh)
+| [802407] OpenSSH 'sshd' Challenge Response Authentication Buffer Overflow Vulnerability
+| [103503] openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [103247] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [103064] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [100584] OpenSSH X Connections Session Hijacking Vulnerability
+| [100153] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [66170] CentOS Security Advisory CESA-2009:1470 (openssh)
+| [65987] SLES10: Security update for OpenSSH
+| [65819] SLES10: Security update for OpenSSH
+| [65514] SLES9: Security update for OpenSSH
+| [65513] SLES9: Security update for OpenSSH
+| [65334] SLES9: Security update for OpenSSH
+| [65248] SLES9: Security update for OpenSSH
+| [65218] SLES9: Security update for OpenSSH
+| [65169] SLES9: Security update for openssh,openssh-askpass
+| [65126] SLES9: Security update for OpenSSH
+| [65019] SLES9: Security update for OpenSSH
+| [65015] SLES9: Security update for OpenSSH
+| [64931] CentOS Security Advisory CESA-2009:1287 (openssh)
+| [61639] Debian Security Advisory DSA 1638-1 (openssh)
+| [61030] Debian Security Advisory DSA 1576-2 (openssh)
+| [61029] Debian Security Advisory DSA 1576-1 (openssh)
+| [60840] FreeBSD Security Advisory (FreeBSD-SA-08:05.openssh.asc)
+| [60803] Gentoo Security Advisory GLSA 200804-03 (openssh)
+| [60667] Slackware Advisory SSA:2008-095-01 openssh 
+| [59014] Slackware Advisory SSA:2007-255-01 openssh 
+| [58741] Gentoo Security Advisory GLSA 200711-02 (openssh)
+| [57919] Gentoo Security Advisory GLSA 200611-06 (openssh)
+| [57895] Gentoo Security Advisory GLSA 200609-17 (openssh)
+| [57585] Debian Security Advisory DSA 1212-1 (openssh (1:3.8.1p1-8.sarge.6))
+| [57492] Slackware Advisory SSA:2006-272-02 openssh 
+| [57483] Debian Security Advisory DSA 1189-1 (openssh-krb5)
+| [57476] FreeBSD Security Advisory (FreeBSD-SA-06:22.openssh.asc)
+| [57470] FreeBSD Ports: openssh
+| [56352] FreeBSD Security Advisory (FreeBSD-SA-06:09.openssh.asc)
+| [56330] Gentoo Security Advisory GLSA 200602-11 (OpenSSH)
+| [56294] Slackware Advisory SSA:2006-045-06 openssh 
+| [53964] Slackware Advisory SSA:2003-266-01 New OpenSSH packages 
+| [53885] Slackware Advisory SSA:2003-259-01 OpenSSH Security Advisory 
+| [53884] Slackware Advisory SSA:2003-260-01 OpenSSH updated again 
+| [53788] Debian Security Advisory DSA 025-1 (openssh)
+| [52638] FreeBSD Security Advisory (FreeBSD-SA-03:15.openssh.asc)
+| [52635] FreeBSD Security Advisory (FreeBSD-SA-03:12.openssh.asc)
+| [11343] OpenSSH Client Unauthorized Remote Forwarding
+| [10954] OpenSSH AFS/Kerberos ticket/token passing
+| [10883] OpenSSH Channel Code Off by 1
+| [10823] OpenSSH UseLogin Environment Variables
+|_
+25/tcp  open  smtp     Postfix smtpd
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [108975] Apple macOS up to 10.13.1 Postfix unknown vulnerability
+| [98314] PostfixAdmin up to 3.0.1 AliasHandler delete.php gen_show_status denial of service
+| [71720] Postfix up to 2.3.0 backup.php pacrypt sql injection
+| [12746] Postfix Admin 2.3.6 functions.inc.php sql injection
+| [57422] Postfix memory corruption
+| [56843] Postfix up to 2.7.2 Cleartext weak encryption
+| [22507] Apple Mac OS X 10.3.6 Postfix Server Spam weak authentication
+| [20751] Wietse Venema Postfix up to 2001-11-15 Address Parser denial of service
+| [20746] Wietse Venema Postfix up to 2001-11-15 SMTP Service denial of service
+| [17589] Wietse Venema Postfix 1999-09-06/1999-12-31/2000-02-28 SMTP Server Memory Exhaustion denial of service
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2013-2852] Format string vulnerability in the b43_request_firmware function in drivers/net/wireless/b43/main.c in the Broadcom B43 wireless driver in the Linux kernel through 3.9.4 allows local users to gain privileges by leveraging root access and including format string specifiers in an fwpostfix modprobe parameter, leading to improper construction of an error message.
+| [CVE-2011-1720] The SMTP server in Postfix before 2.5.13, 2.6.x before 2.6.10, 2.7.x before 2.7.4, and 2.8.x before 2.8.3, when certain Cyrus SASL authentication methods are enabled, does not create a new server handle after client authentication fails, which allows remote attackers to cause a denial of service (heap memory corruption and daemon crash) or possibly execute arbitrary code via an invalid AUTH command with one method followed by an AUTH command with a different method.
+| [CVE-2011-0411] The STARTTLS implementation in Postfix 2.4.x before 2.4.16, 2.5.x before 2.5.12, 2.6.x before 2.6.9, and 2.7.x before 2.7.3 does not properly restrict I/O buffering, which allows man-in-the-middle attackers to insert commands into encrypted SMTP sessions by sending a cleartext command that is processed after TLS is in place, related to a "plaintext command injection" attack.
+| [CVE-2010-0230] SUSE Linux Enterprise 10 SP3 (SLE10-SP3) and openSUSE 11.2 configures postfix to listen on all network interfaces, which might allow remote attackers to bypass intended access restrictions.
+| [CVE-2009-2939] The postfix.postinst script in the Debian GNU/Linux and Ubuntu postfix 2.5.5 package grants the postfix user write access to /var/spool/postfix/pid, which might allow local users to conduct symlink attacks that overwrite arbitrary files.
+| [CVE-2008-4977] ** DISPUTED **  postfix_groups.pl in Postfix 2.5.2 allows local users to overwrite arbitrary files via a symlink attack on the (1) /tmp/postfix_groups.stdout, (2) /tmp/postfix_groups.stderr, and (3) /tmp/postfix_groups.message temporary files.  NOTE: the vendor disputes this vulnerability, stating "This is not a real issue ... users would have to edit a script under /usr/lib to enable it."
+| [CVE-2008-3889] Postfix 2.4 before 2.4.9, 2.5 before 2.5.5, and 2.6 before 2.6-20080902, when used with the Linux 2.6 kernel, leaks epoll file descriptors during execution of "non-Postfix" commands, which allows local users to cause a denial of service (application slowdown or exit) via a crafted command, as demonstrated by a command in a .forward file.
+| [CVE-2008-3646] The Postfix configuration file in Mac OS X 10.5.5 causes Postfix to be network-accessible when mail is sent from a local command-line tool, which allows remote attackers to send mail to local Mac OS X users.
+| [CVE-2008-2937] Postfix 2.5 before 2.5.4 and 2.6 before 2.6-20080814 delivers to a mailbox file even when this file is not owned by the recipient, which allows local users to read e-mail messages by creating a mailbox file corresponding to another user's account name.
+| [CVE-2008-2936] Postfix before 2.3.15, 2.4 before 2.4.8, 2.5 before 2.5.4, and 2.6 before 2.6-20080814, when the operating system supports hard links to symlinks, allows local users to append e-mail messages to a file to which a root-owned symlink points, by creating a hard link to this symlink and then sending a message.  NOTE: this can be leveraged to gain privileges if there is a symlink to an init script.
+| [CVE-2007-3791] Buffer overflow in the w_read function in sockets.c in Cami Sardinha and Nigel Kukard policyd before 1.81 for Postfix allows remote attackers to cause a denial of service and possibly execute arbitrary code via long SMTP commands.  NOTE: some of these details are obtained from third party information.
+| [CVE-2006-0213] Kolab Server 2.0.1, 2.0.2 and development versions pre-2.1-20051215 and earlier, when authenticating users via secure SMTP, stores authentication credentials in plaintext in the postfix.log file, which allows local users to gain privileges.
+| [CVE-2005-1127] Format string vulnerability in the log function in Net::Server 0.87 and earlier, as used in Postfix Greylisting Policy Server (Postgrey) 1.18 and earlier, and possibly other products, allows remote attackers to cause a denial of service (crash) via format string specifiers that are not properly handled before being sent to syslog, as demonstrated using sender addresses to Postgrey.
+| [CVE-2005-0337] Postfix 2.1.3, when /proc/net/if_inet6 is not available and permit_mx_backup is enabled in smtpd_recipient_restrictions, allows remote attackers to bypass e-mail restrictions and perform mail relaying by sending mail to an IPv6 hostname.
+| [CVE-2004-1113] SQL injection vulnerability in SQLgrey Postfix greylisting service before 1.2.0 allows remote attackers to execute arbitrary SQL commands via the (1) sender or (2) recipient e-mail addresses.
+| [CVE-2004-1088] Postfix server for Apple Mac OS X 10.3.6, when using CRAM-MD5, allows remote attackers to send mail without authentication by replaying authentication information.
+| [CVE-2004-0925] Postfix on Mac OS X 10.3.x through 10.3.5, with SMTPD AUTH enabled, does not properly clear the username between authentication attempts, which allows users with the longest username to prevent other valid users from being able to authenticate.
+| [CVE-2003-0540] The address parser code in Postfix 1.1.12 and earlier allows remote attackers to cause a denial of service (lock) via (1) a malformed envelope address to a local host that would generate a bounce and contains the ".!" string in the MAIL FROM or Errors-To headers, which causes nqmgr to lock up, or (2) via a valid MAIL FROM with a RCPT TO containing a ".!" string, which causes an instance of the SMTP listener to lock up.
+| [CVE-2003-0468] Postfix 1.1.11 and earlier allows remote attackers to use Postfix to conduct "bounce scans" or DDos attacks of other hosts via an email address to the local host containing the target IP address and service name followed by a "!" string, which causes Postfix to attempt to use SMTP to communicate with the target on the associated port.
+| [CVE-2001-0894] Vulnerability in Postfix SMTP server before 20010228-pl07, when configured to email the postmaster when SMTP errors cause the session to terminate, allows remote attackers to cause a denial of service (memory exhaustion) by generating a large number of SMTP errors, which forces the SMTP session log to grow too large.
+| 
+| OSVDB - http://www.osvdb.org:
+| [94034] Linux Kernel Broadcom B43 Wireless Driver b43_request_firmware Function fwpostfix modprobe Parameter Format String Local Privilege Escalation
+| [78567] Postfix Admin backup.php Unspecified SQL Injection
+| [78566] Postfix Admin functions.inc.php pacrypt() Function Unspecified SQL Injection
+| [78565] Postfix Admin create-domain.php Unspecified SQL Injection
+| [78564] Postfix Admin Unspecified XSS
+| [78563] Postfix Admin edit-alias.php Unspecified XSS
+| [78562] Postfix Admin create-alias.php Unspecified XSS
+| [78561] Postfix Admin create-domain.php Unspecified XSS
+| [78560] Postfix Admin templates/edit-vacation.php domain Parameter XSS
+| [78559] Postfix Admin templates/menu.php domain Parameter XSS
+| [72259] Postfix SMTP Cyrus SASL Authentication Context Data Reuse Memory Corruption
+| [71021] Postfix STARTTLS Arbitrary Plaintext Command Injection
+| [68340] Artica postfix.events.php Unrestricted Access Information Disclosure
+| [61983] SUSE Linux postfix Network Interface Remote Access Restriction Bypass
+| [58325] Debian GNU/Linux postfix postfix.postinst Symlink Arbitrary File Overwrite
+| [49634] Postfix postfix_groups.pl Multiple Temporary File Symlink Arbitrary File Overwrite
+| [48973] Apple Mac OS X Postfix Network Access Configuration Weakness
+| [48108] Postfix epoll File Descriptor Leak Local DoS
+| [47659] Postfix Cross-user Filename Local Mail Interception
+| [47658] Postfix Hardlink to Symlink Mailspool Arbitrary Content Append
+| [43888] policyd-weight for Postfix Socket Handling Unspecified Arbitrary File Manipulation
+| [38091] policyd for Postfix sockets.c read_w() Function SMTP Command Remote Overflow
+| [22381] Kolab Server Secure SMTP postfix.log Authentication Credential Disclosure
+| [13470] Postfix IPv6 Patch if_inet6 Failure Arbitrary Mail Relay
+| [12339] SQLgrey Postfix greylisting service Unspecified SQL Injection
+| [12200] Apple Mac OS X Postfix CRAM-MD5 Replay Credentials
+| [11571] SQLgrey Postfix greylisting Email Address SQL Injection
+| [10545] Postfix Multiple Mail Header SMTP listener DoS
+| [10544] Postfix Malformed Envelope Address nqmgr DoS
+| [10500] Apple Mac OS X Postfix SMTPD AUTH Username Overflow DoS
+| [6551] Postfix Bounce Scan / Packet Amplification DDoS
+| [1991] Postfix SMTP Log DoS
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [96142] PostfixAdmin CVE-2017-5930 Session Management Security Bypass Vulnerability
+| [90814] Postfix Admin Multiple Cross Site Request Forgery Vulnerabilities
+| [67250] Postfix Arbitrary Content Security Bypass Vulnerability
+| [66455] Postfix Admin 'functions.inc.php' SQL Injection Vulnerability
+| [65184] Fail2ban Postfix Filter Remote Denial of Service Vulnerability
+| [51680] Postfix Admin Multiple SQL Injection and Cross Site Scripting Vulnerabilities
+| [47778] Postfix SMTP Server Cyrus SASL Support Memory Corruption Vulnerability
+| [36469] Debian and Ubuntu Postfix Insecure Temporary File Creation Vulnerability
+| [31721] Apple Mac OS X 10.5 Postfix Security Bypass Vulnerability
+| [30977] Postfix 'epoll' Linux Event Handler Local Denial of Service Vulnerability
+| [30691] Postfix Local Information Disclosure and Local Privilege Escalation Vulnerabilities
+| [13133] Salim Gasmi GLD Postfix Greylisting Daemon Format String Vulnerability
+| [13129] Salim Gasmi GLD Postfix Greylisting Daemon Buffer Overflow Vulnerability
+| [12445] Postfix IPv6 Unauthorized Mail Relay Vulnerability
+| [11898] SQLgrey Postfix Greylisting Service Unspecified SQL Injection Vulnerability
+| [11633] SQLgrey Postfix Greylisting Service SQL Injection Vulnerability
+| [11323] Apple Mac OS X Postfix Release SMTPD AUTH Username Denial Of Service Vulnerability
+| [8362] Postfix SMTP Malformed E-mail Envelope Address Denial of Service Vulnerability
+| [8361] Postfix Connection Proxying Vulnerability
+| [8333] Multiple Postfix Denial of Service Vulnerabilities
+| [3638] SuSEConfig.postfix chroot Local DoS Attack Vulnerability
+| [3637] SuSEConfig.postfix chroot File Ownership Vulnerability
+| [3544] Postfix SMTP Log Denial Of Service Vulnerability
+| [1428] cyrus With postfix and Procmail Remote Shell Expansion Vulnerabilities
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1025521] Postfix SASL Authentication Heap Overflow Lets Remote Users Deny Service
+| [1025179] Postfix Plaintext to TLS Switching Error Lets Remote Users Inject Plaintext Commands
+| [1020800] Postfix Linux epoll File Descriptor Leak Lets Local Users Deny Service
+| [1020700] Postfix Symlink Dereference Bug Lets Local Users Gain Elevated Privileges
+| [1012395] Postfix CRAM-MD5 Replay Attack May Let Remote Users Send Mail
+| [1011532] Postfix Buffer Error May Prevent Remote Users from Being Able to Authenticate Using SMTPD AUTH
+| [1007382] Postfix Bounce Messages Let Remote Users Scan for Open Ports on Other Hosts
+| [1007381] Postfix Address Resolver Parsing Bug Lets Remote Users Hang the System
+| [1002756] Postfix Mail Server Can Be Crashed By Remote Users Initiating Unsuccessful Sessions
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [72752] Postfix Admin multiple parameters SQL injection
+| [72751] PostfixAdmin multiple parameters cross-site scripting
+| [67359] Postfix Cyrus SASL library in the SMTP server code execution
+| [55970] SUSE Linux Enterprise postfix security bypass
+| [53425] Postfix in Debian and Ubuntu pid symlink
+| [45876] Apple Mac OS X Postfix configuration file weak security
+| [44865] Postfix file descriptor denial of service
+| [44461] Postfix email information disclosure
+| [44460] Postfix symlink code execution
+| [22655] RHSA-2005:152 updates for postfix not installed
+| [19218] Postfix IPv6 mail relay
+| [18435] SQLgrey Postfix greylisting service SQL injection
+| [18353] Postfix CRAM-MD5 authentication replay attack
+| [17998] SQLgrey Postfix greylisting service SQL injection
+| [17595] Apple Mac OS postfix SMTPD AUTH denial of service
+| [12816] Postfix MAIL FROM or RCPT TO denial of service
+| [12815] Postfix could be used as a distributed denial of service tool
+| [7568] Postfix SMTP log denial of service
+| [4905] Cyrus with postfix and procmail integration could allow remote command execution
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [25392] Salim Gasmi GLD 1.x Postfix Greylisting Daemon Buffer Overflow Vulnerability
+| [22982] Postfix 1.1.x Denial of Service Vulnerabilities (2)
+| [22981] Postfix 1.1.x Denial of Service Vulnerabilities (1)
+| [16841] GLD (Greylisting Daemon) Postfix Buffer Overflow
+| [10023] Salim Gasmi GLD 1.0 - 1.4 Postfix Greylisting Buffer Overflow
+| [6472] Postfix < 2.4.9, 2.5.5, 2.6-20080902 - (.forward) Local DoS Exploit
+| [6337] Postfix <= 2.6-20080814 - (symlink) Local Privilege Escalation Exploit
+| [934] gld 1.4 (Postfix Greylisting Daemon) Remote Format String Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902517] Postfix SMTP Server Cyrus SASL Support Memory Corruption Vulnerability
+| [881389] CentOS Update for postfix CESA-2011:0422 centos5 x86_64
+| [881293] CentOS Update for postfix CESA-2011:0843 centos4 x86_64
+| [881278] CentOS Update for postfix CESA-2011:0422 centos4 x86_64
+| [881267] CentOS Update for postfix CESA-2011:0843 centos5 x86_64
+| [880520] CentOS Update for postfix CESA-2011:0422 centos5 i386
+| [880509] CentOS Update for postfix CESA-2011:0843 centos5 i386
+| [880488] CentOS Update for postfix CESA-2011:0843 centos4 i386
+| [880485] CentOS Update for postfix CESA-2011:0422 centos4 i386
+| [880268] CentOS Update for postfix CESA-2008:0839 centos3 i386
+| [880023] CentOS Update for postfix CESA-2008:0839 centos3 x86_64
+| [870658] RedHat Update for postfix RHSA-2011:0423-01
+| [870440] RedHat Update for postfix RHSA-2011:0843-01
+| [870418] RedHat Update for postfix RHSA-2011:0422-01
+| [870021] RedHat Update for postfix RHSA-2008:0839-01
+| [863100] Fedora Update for postfix FEDORA-2011-6777
+| [863097] Fedora Update for postfix FEDORA-2011-6771
+| [862950] Fedora Update for postfix FEDORA-2011-3394
+| [862938] Fedora Update for postfix FEDORA-2011-3355
+| [860510] Fedora Update for postfix FEDORA-2008-8593
+| [860419] Fedora Update for postfix FEDORA-2008-8595
+| [850126] SuSE Update for postfix SUSE-SA:2010:011
+| [850031] SuSE Update for postfix SUSE-SA:2008:040
+| [840658] Ubuntu Update for postfix USN-1131-1
+| [840648] Ubuntu Update for postfix USN-1113-1
+| [840227] Ubuntu Update for postfix vulnerabilities USN-642-1
+| [840190] Ubuntu Update for postfix vulnerability USN-636-1
+| [831400] Mandriva Update for postfix MDVSA-2011:090 (postfix)
+| [830713] Mandriva Update for postfix MDVSA-2008:171 (postfix)
+| [830635] Mandriva Update for postfix MDVSA-2008:190 (postfix)
+| [830075] Mandriva Update for postfix MDKA-2007:079 (postfix)
+| [72452] Gentoo Security Advisory GLSA 201209-18 (postfixadmin)
+| [71559] Gentoo Security Advisory GLSA 201206-33 (Postfix)
+| [70744] FreeBSD Ports: postfixadmin
+| [69770] FreeBSD Ports: postfix, postfix-base
+| [69733] Debian Security Advisory DSA 2233-1 (postfix)
+| [69363] FreeBSD Ports: postfix, postfix-base
+| [66394] Mandriva Security Advisory MDVSA-2009:224-1 (postfix)
+| [65957] SLES10: Security update for Postfix
+| [65911] SLES10: Security update for Postfix
+| [65353] SLES9: Security update for Postfix
+| [65350] SLES9: Security update for postfix
+| [64696] Mandrake Security Advisory MDVSA-2009:224 (postfix)
+| [61646] Gentoo Security Advisory GLSA 200809-09 (postfix)
+| [61445] Gentoo Security Advisory GLSA 200808-12 (postfix)
+| [61435] Debian Security Advisory DSA 1629-2 (postfix)
+| [61434] Debian Security Advisory DSA 1629-1 (postfix)
+| [60836] FreeBSD Ports: postfix-policyd-weight
+| [58580] Debian Security Advisory DSA 1361-1 (postfix-policyd)
+| [53833] Debian Security Advisory DSA 093-1 (postfix)
+| [53652] Debian Security Advisory DSA 363-1 (postfix)
+|_
+80/tcp  open  http     Apache httpd 2.2.22 ((Ubuntu))
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [9891] Apache HTTP Server 2.2.22 suEXEC Feature .htaccess information disclosure
+| [4583] Apache httpd up to 2.2.21 Threaded MPM denial of service
+| [4582] Apache httpd up to 2.2.21 protocol.c information disclosure
+| [2393] Apache httpd up to 2.2.2 HTTP Header cross site scripting
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2013-1048] The Debian apache2ctl script in the apache2 package squeeze before 2.2.16-6+squeeze11, wheezy before 2.2.22-13, and sid before 2.2.22-13 for the Apache HTTP Server on Debian GNU/Linux does not properly create the /var/lock/apache2 lock directory, which allows local users to gain privileges via an unspecified symlink attack.
+| [CVE-2012-0216] The default configuration of the apache2 package in Debian GNU/Linux squeeze before 2.2.16-6+squeeze7, wheezy before 2.2.22-4, and sid before 2.2.22-4, when mod_php or mod_rivet is used, provides example scripts under the doc/ URI, which might allow local users to conduct cross-site scripting (XSS) attacks, gain privileges, or obtain sensitive information via vectors involving localhost HTTP requests to the Apache HTTP Server.
+| [CVE-2013-1896] mod_dav.c in the Apache HTTP Server before 2.2.25 does not properly determine whether DAV is enabled for a URI, which allows remote attackers to cause a denial of service (segmentation fault) via a MERGE request in which the URI is configured for handling by the mod_dav_svn module, but a certain href attribute in XML data refers to a non-DAV URI.
+| [CVE-2013-1862] mod_rewrite.c in the mod_rewrite module in the Apache HTTP Server 2.2.x before 2.2.25 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to execute arbitrary commands via an HTTP request containing an escape sequence for a terminal emulator.
+| [CVE-2013-1768] The BrokerFactory functionality in Apache OpenJPA 1.x before 1.2.3 and 2.x before 2.2.2 creates local executable JSP files containing logging trace data produced during deserialization of certain crafted OpenJPA objects, which makes it easier for remote attackers to execute arbitrary code by creating a serialized object and leveraging improperly secured server programs.
+| [CVE-2012-4558] Multiple cross-site scripting (XSS) vulnerabilities in the balancer_handler function in the manager interface in mod_proxy_balancer.c in the mod_proxy_balancer module in the Apache HTTP Server 2.2.x before 2.2.24-dev and 2.4.x before 2.4.4 allow remote attackers to inject arbitrary web script or HTML via a crafted string.
+| [CVE-2012-4557] The mod_proxy_ajp module in the Apache HTTP Server 2.2.12 through 2.2.21 places a worker node into an error state upon detection of a long request-processing time, which allows remote attackers to cause a denial of service (worker consumption) via an expensive request.
+| [CVE-2012-3499] Multiple cross-site scripting (XSS) vulnerabilities in the Apache HTTP Server 2.2.x before 2.2.24-dev and 2.4.x before 2.4.4 allow remote attackers to inject arbitrary web script or HTML via vectors involving hostnames and URIs in the (1) mod_imagemap, (2) mod_info, (3) mod_ldap, (4) mod_proxy_ftp, and (5) mod_status modules.
+| [CVE-2012-0053] protocol.c in the Apache HTTP Server 2.2.x through 2.2.21 does not properly restrict header information during construction of Bad Request (aka 400) error documents, which allows remote attackers to obtain the values of HTTPOnly cookies via vectors involving a (1) long or (2) malformed header in conjunction with crafted web script.
+| [CVE-2012-0031] scoreboard.c in the Apache HTTP Server 2.2.21 and earlier might allow local users to cause a denial of service (daemon crash during shutdown) or possibly have unspecified other impact by modifying a certain type field within a scoreboard shared memory segment, leading to an invalid call to the free function.
+| [CVE-2012-0021] The log_cookie function in mod_log_config.c in the mod_log_config module in the Apache HTTP Server 2.2.17 through 2.2.21, when a threaded MPM is used, does not properly handle a %{}C format string, which allows remote attackers to cause a denial of service (daemon crash) via a cookie that lacks both a name and a value.
+| [CVE-2011-4415] The ap_pregsub function in server/util.c in the Apache HTTP Server 2.0.x through 2.0.64 and 2.2.x through 2.2.21, when the mod_setenvif module is enabled, does not restrict the size of values of environment variables, which allows local users to cause a denial of service (memory consumption or NULL pointer dereference) via a .htaccess file with a crafted SetEnvIf directive, in conjunction with a crafted HTTP request header, related to (1) the "len +=" statement and (2) the apr_pcalloc function call, a different vulnerability than CVE-2011-3607.
+| [CVE-2011-4317] The mod_proxy module in the Apache HTTP Server 1.3.x through 1.3.42, 2.0.x through 2.0.64, and 2.2.x through 2.2.21, when the Revision 1179239 patch is in place, does not properly interact with use of (1) RewriteRule and (2) ProxyPassMatch pattern matches for configuration of a reverse proxy, which allows remote attackers to send requests to intranet servers via a malformed URI containing an @ (at sign) character and a : (colon) character in invalid positions.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2011-3368.
+| [CVE-2011-3607] Integer overflow in the ap_pregsub function in server/util.c in the Apache HTTP Server 2.0.x through 2.0.64 and 2.2.x through 2.2.21, when the mod_setenvif module is enabled, allows local users to gain privileges via a .htaccess file with a crafted SetEnvIf directive, in conjunction with a crafted HTTP request header, leading to a heap-based buffer overflow.
+| [CVE-2011-3368] The mod_proxy module in the Apache HTTP Server 1.3.x through 1.3.42, 2.0.x through 2.0.64, and 2.2.x through 2.2.21 does not properly interact with use of (1) RewriteRule and (2) ProxyPassMatch pattern matches for configuration of a reverse proxy, which allows remote attackers to send requests to intranet servers via a malformed URI containing an initial @ (at sign) character.
+| [CVE-2011-3348] The mod_proxy_ajp module in the Apache HTTP Server before 2.2.21, when used with mod_proxy_balancer in certain configurations, allows remote attackers to cause a denial of service (temporary "error state" in the backend server) via a malformed HTTP request.
+| [CVE-2006-4110] Apache 2.2.2, when running on Windows, allows remote attackers to read source code of CGI programs via a request that contains uppercase (or alternate case) characters that bypass the case-sensitive ScriptAlias directive, but allow access to the file on case-insensitive file systems.
+| [CVE-2006-3918] http_protocol.c in (1) IBM HTTP Server 6.0 before 6.0.2.13 and 6.1 before 6.1.0.1, and (2) Apache HTTP Server 1.3 before 1.3.35, 2.0 before 2.0.58, and 2.2 before 2.2.2, does not sanitize the Expect header from an HTTP request when it is reflected back in an error message, which might allow cross-site scripting (XSS) style attacks using web client components that can send arbitrary headers in requests, as demonstrated using a Flash SWF file.
+| 
+| OSVDB - http://www.osvdb.org:
+| [20897] PHP w/ Apache 2 SAPI virtual() Function Unspecified INI Setting Disclosure
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [42102] Apache 'mod_proxy_http' 2.2.9 for Unix Timeout Handling Information Disclosure Vulnerability
+| [27237] Apache HTTP Server 2.2.6, 2.0.61 and 1.3.39 'mod_status' Cross-Site Scripting Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1008196] Apache 2.x on Windows May Return Unexpected Files For URLs Ending With Certain Characters
+| [1007143] Apache 2.0 Web Server May Use a Weaker Encryption Implementation Than Specified in Some Cases
+| [1006444] Apache 2.0 Web Server Line Feed Buffer Allocation Flaw Lets Remote Users Deny Service
+| [1005963] Apache Web Server 2.x Windows Device Access Flaw Lets Remote Users Crash the Server or Possibly Execute Arbitrary Code
+| [1004770] Apache 2.x Web Server ap_log_rerror() Function May Disclose Full Installation Path to Remote Users
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [75211] Debian GNU/Linux apache 2 cross-site scripting
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [28365] Apache 2.2.2 CGI Script Source Code Information Disclosure Vulnerability
+| [31052] Apache <= 2.2.6 'mod_negotiation' HTML Injection and HTTP Response Splitting Vulnerability
+| [30901] Apache HTTP Server 2.2.6 Windows Share PHP File Extension Mapping Information Disclosure Vulnerability
+| [30835] Apache HTTP Server <= 2.2.4 413 Error HTTP Request Method Cross-Site Scripting Weakness
+| [27915] Apache James 2.2 SMTP Denial of Service Vulnerability
+| [18984] Apache Struts <= 2.2.1.1 - Remote Command Execution
+| [17691] Apache Struts < 2.2.0 - Remote Command Execution
+| [15319] Apache 2.2 (Windows) Local Denial of Service
+| [11650] Apache 2.2.14 mod_isapi Dangling Pointer Remote SYSTEM Exploit
+| [2237] Apache < 1.3.37, 2.0.59, 2.2.3 (mod_rewrite) Remote Overflow PoC
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [100858] Apache 'mod_proxy_http' 2.2.9 for Unix Timeout Handling Information Disclosure Vulnerability
+|_
+110/tcp open  pop3     Dovecot pop3d
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [106837] Dovecot up to 2.2.16 ssl-proxy-openssl.c ssl-proxy-opensslc denial of service
+| [97052] Dovecot up to 2.2.26 auth-policy Unset Crash denial of service
+| [69835] Dovecot 2.2.0/2.2.1 denial of service
+| [13348] Dovecot up to 1.2.15/2.1.15 IMAP4/POP3 SSL/TLS Handshake denial of service
+| [65684] Dovecot up to 2.2.6 unknown vulnerability
+| [9807] Dovecot up to 1.2.7 on Exim Input Sanitizer privilege escalation
+| [63692] Dovecot up to 2.0.9 spoofing
+| [7062] Dovecot 2.1.10 mail-search.c denial of service
+| [57517] Dovecot up to 2.0.9 Login directory traversal
+| [57516] Dovecot up to 2.0.9 Access Restriction directory traversal
+| [57515] Dovecot up to 2.0.9 Crash denial of service
+| [54944] Dovecot up to 1.2.9 denial of service
+| [54943] Dovecot up to 1.2.9 Access Restriction Symlink privilege escalation
+| [54942] Dovecot up to 2.0.4 Access Restriction denial of service
+| [54941] Dovecot up to 2.0.4 Access Restriction unknown vulnerability
+| [54840] Dovecot up to 1.2.9 AGate unknown vulnerability
+| [53277] Dovecot up to 1.2.9 denial of service
+| [50082] Dovecot up to 1.1.6 Stack-based memory corruption
+| [45256] Dovecot up to 1.1.5 directory traversal
+| [44846] Dovecot 1.1.4/1.1.5 IMAP Client Crash denial of service
+| [44546] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [44545] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [41430] Dovecot 1.0.12/1.1 Locking unknown vulnerability
+| [40356] Dovecot 1.0.9 Cache unknown vulnerability
+| [38222] Dovecot 1.0.2 directory traversal
+| [36376] Dovecot up to 1.0.x directory traversal
+| [33332] Timo Sirainen Dovecot up to 1.0test53 Off-By-One memory corruption
+| [30268] Timo Sirainen Dovecot 1.0/1.0 Beta2/1.0 Beta3/1.0 Beta7 directory traversal
+| [28756] Timo Sirainen Dovecot 1.0beta2 imap/pop3-login denial of service
+| [18862] Matthew Mondor mmftpd/mmpop3d up to 0.0.13 Command mmsyslog Format String
+| [14073] Slackware Linux 3.3/3.4 IMAPD/POP3D Short Sequence memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2011-4318] Dovecot 2.0.x before 2.0.16, when ssl or starttls is enabled and hostname is used to define the proxy destination, does not verify that the server hostname matches a domain name in the subject's Common Name (CN) of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via a valid certificate for a different hostname.
+| [CVE-2011-2167] script-login in Dovecot 2.0.x before 2.0.13 does not follow the chroot configuration setting, which might allow remote authenticated users to conduct directory traversal attacks by leveraging a script.
+| [CVE-2011-2166] script-login in Dovecot 2.0.x before 2.0.13 does not follow the user and group configuration settings, which might allow remote authenticated users to bypass intended access restrictions by leveraging a script.
+| [CVE-2011-1929] lib-mail/message-header-parser.c in Dovecot 1.2.x before 1.2.17 and 2.0.x before 2.0.13 does not properly handle '\0' characters in header names, which allows remote attackers to cause a denial of service (daemon crash or mailbox corruption) via a crafted e-mail message.
+| [CVE-2010-4011] Dovecot in Apple Mac OS X 10.6.5 10H574 does not properly manage memory for user names, which allows remote authenticated users to read the private e-mail of other persons in opportunistic circumstances via standard e-mail clients accessing a user's own mailbox, related to a "memory aliasing issue."
+| [CVE-2010-3780] Dovecot 1.2.x before 1.2.15 allows remote authenticated users to cause a denial of service (master process outage) by simultaneously disconnecting many (1) IMAP or (2) POP3 sessions.
+| [CVE-2010-3779] Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.beta2 grants the admin permission to the owner of each mailbox in a non-public namespace, which might allow remote authenticated users to bypass intended access restrictions by changing the ACL of a mailbox, as demonstrated by a symlinked shared mailbox.
+| [CVE-2010-3707] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving more specific entries that occur after less specific entries, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3706] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving the private namespace of a user, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3304] The ACL plugin in Dovecot 1.2.x before 1.2.13 propagates INBOX ACLs to newly created mailboxes in certain configurations, which might allow remote attackers to read mailboxes that have unintended weak ACLs.
+| [CVE-2010-0745] Unspecified vulnerability in Dovecot 1.2.x before 1.2.11 allows remote attackers to cause a denial of service (CPU consumption) via long headers in an e-mail message.
+| [CVE-2010-0535] Dovecot in Apple Mac OS X 10.6 before 10.6.3, when Kerberos is enabled, does not properly enforce the service access control list (SACL) for sending and receiving e-mail, which allows remote authenticated users to bypass intended access restrictions via unspecified vectors.
+| [CVE-2010-0433] The kssl_keytab_is_available function in ssl/kssl.c in OpenSSL before 0.9.8n, when Kerberos is enabled but Kerberos configuration files cannot be opened, does not check a certain return value, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via SSL cipher negotiation, as demonstrated by a chroot installation of Dovecot or stunnel without Kerberos configuration files inside the chroot.
+| [CVE-2009-3897] Dovecot 1.2.x before 1.2.8 sets 0777 permissions during creation of certain directories at installation time, which allows local users to access arbitrary user accounts by replacing the auth socket, related to the parent directories of the base_dir directory, and possibly the base_dir directory itself.
+| [CVE-2009-3235] Multiple stack-based buffer overflows in the Sieve plugin in Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, as derived from Cyrus libsieve, allow context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted SIEVE script, as demonstrated by forwarding an e-mail message to a large number of recipients, a different vulnerability than CVE-2009-2632.
+| [CVE-2009-2632] Buffer overflow in the SIEVE script component (sieve/script.c), as used in cyrus-imapd in Cyrus IMAP Server 2.2.13 and 2.3.14, and Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, allows local users to execute arbitrary code and read or modify arbitrary messages via a crafted SIEVE script, related to the incorrect use of the sizeof operator for determining buffer length, combined with an integer signedness error.
+| [CVE-2008-5301] Directory traversal vulnerability in the ManageSieve implementation in Dovecot 1.0.15, 1.1, and 1.2 allows remote attackers to read and modify arbitrary .sieve files via a ".." (dot dot) in a script name.
+| [CVE-2008-4907] The message parsing feature in Dovecot 1.1.4 and 1.1.5, when using the FETCH ENVELOPE command in the IMAP client, allows remote attackers to cause a denial of service (persistent crash) via an email with a malformed From address, which triggers an assertion error, aka "invalid message address parsing bug."
+| [CVE-2008-4870] dovecot 1.0.7 in Red Hat Enterprise Linux (RHEL) 5, and possibly Fedora, uses world-readable permissions for dovecot.conf, which allows local users to obtain the ssl_key_password parameter value.
+| [CVE-2008-4578] The ACL plugin in Dovecot before 1.1.4 allows attackers to bypass intended access restrictions by using the "k" right to create unauthorized "parent/child/child" mailboxes.
+| [CVE-2008-4577] The ACL plugin in Dovecot before 1.1.4 treats negative access rights as if they are positive access rights, which allows attackers to bypass intended access restrictions.
+| [CVE-2008-1218] Argument injection vulnerability in Dovecot 1.0.x before 1.0.13, and 1.1.x before 1.1.rc3, when using blocking passdbs, allows remote attackers to bypass the password check via a password containing TAB characters, which are treated as argument delimiters that enable the skip_password_check field to be specified.
+| [CVE-2008-1199] Dovecot before 1.0.11, when configured to use mail_extra_groups to allow Dovecot to create dotlocks in /var/mail, might allow local users to read sensitive mail files for other users, or modify files or directories that are writable by group, via a symlink attack.
+| [CVE-2007-6598] Dovecot before 1.0.10, with certain configuration options including use of %variables, does not properly maintain the LDAP+auth cache, which might allow remote authenticated users to login as a different user who has the same password.
+| [CVE-2007-5794] Race condition in nss_ldap, when used in applications that are linked against the pthread library and fork after a call to nss_ldap, might send user data to the wrong process because of improper handling of the LDAP connection. NOTE: this issue was originally reported for Dovecot with the wrong mailboxes being returned, but other applications might also be affected.
+| [CVE-2007-4211] The ACL plugin in Dovecot before 1.0.3 allows remote authenticated users with the insert right to save certain flags via a (1) COPY or (2) APPEND command.
+| [CVE-2007-2231] Directory traversal vulnerability in index/mbox/mbox-storage.c in Dovecot before 1.0.rc29, when using the zlib plugin, allows remote attackers to read arbitrary gzipped (.gz) mailboxes (mbox files) via a .. (dot dot) sequence in the mailbox name.
+| [CVE-2007-2173] Eval injection vulnerability in (1) courier-imapd.indirect and (2) courier-pop3d.indirect in Courier-IMAP before 4.0.6-r2, and 4.1.x before 4.1.2-r1, on Gentoo Linux allows remote attackers to execute arbitrary commands via the XMAILDIR variable, related to the LOGINRUN variable.
+| [CVE-2007-0618] Unspecified vulnerability in (1) pop3d, (2) pop3ds, (3) imapd, and (4) imapds in IBM AIX 5.3.0 has unspecified impact and attack vectors, involving an "authentication vulnerability."
+| [CVE-2006-5973] Off-by-one buffer overflow in Dovecot 1.0test53 through 1.0.rc14, and possibly other versions, when index files are used and mmap_disable is set to "yes," allows remote authenticated IMAP or POP3 users to cause a denial of service (crash) via unspecified vectors involving the cache file.
+| [CVE-2006-2502] Stack-based buffer overflow in pop3d in Cyrus IMAPD (cyrus-imapd) 2.3.2, when the popsubfolders option is enabled, allows remote attackers to execute arbitrary code via a long USER command.
+| [CVE-2006-2414] Directory traversal vulnerability in Dovecot 1.0 beta and 1.0 allows remote attackers to list files and directories under the mbox parent directory and obtain mailbox names via ".." sequences in the (1) LIST or (2) DELETE IMAP command.
+| [CVE-2006-0730] Multiple unspecified vulnerabilities in Dovecot before 1.0beta3 allow remote attackers to cause a denial of service (application crash or hang) via unspecified vectors involving (1) "potential hangs" in the APPEND command and "potential crashes" in (2) dovecot-auth and (3) imap/pop3-login.  NOTE: vector 2 might be related to a double free vulnerability.
+| [CVE-2002-0925] Format string vulnerability in mmsyslog function allows remote attackers to execute arbitrary code via (1) the USER command to mmpop3d for mmmail 0.0.13 and earlier, (2) the HELO command to mmsmtpd for mmmail 0.0.13 and earlier, or (3) the USER command to mmftpd 0.0.7 and earlier.
+| [CVE-2001-0143] vpop3d program in linuxconf 1.23r and earlier allows local users to overwrite arbitrary files via a symlink attack.
+| [CVE-2000-1197] POP2 or POP3 server (pop3d) in imap-uw IMAP package on FreeBSD and other operating systems creates lock files with predictable names, which allows local users to cause a denial of service (lack of mail access) for other users by creating lock files for other mail boxes.
+| [CVE-1999-1445] Vulnerability in imapd and ipop3d in Slackware 3.4 and 3.3 with shadowing enabled, and possibly other operating systems, allows remote attackers to cause a core dump via a short sequence of USER and PASS commands that do not provide valid usernames or passwords.
+| 
+| OSVDB - http://www.osvdb.org:
+| [96172] Dovecot POP3 Service Terminated LIST Command Remote DoS
+| [93525] Dovecot IMAP APPEND Command Malformed Parameter Parsing Remote DoS
+| [93004] Dovecot with Exim sender_address Parameter Remote Command Execution
+| [88058] Dovecot lib-storage/mail-search.c Multiple Keyword Search Handling Remote DoS
+| [77185] Dovecot SSL Certificate Common Name Field MitM Spoofing Weakness
+| [74515] Dovecot script-login chroot Configuration Setting Traversal Arbitrary File Access
+| [74514] Dovecot script-login User / Group Configuration Settings Remote Access Restriction Bypass
+| [72495] Dovecot lib-mail/message-header-parser.c Mail Header Name NULL Character Handling Remote DoS
+| [69260] Apple Mac OS X Server Dovecot Memory Aliasing Mail Delivery Issue
+| [68516] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition User Private Namespace Mailbox Access Restriction Remote Bypass
+| [68515] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition Specific Entry Order Mailbox Access Restriction Remote Bypass
+| [68513] Dovecot Non-public Namespace Mailbox ACL Manipulation Access Restriction Remote Bypass
+| [68512] Dovecot IMAP / POP3 Session Disconnect Master Process Outage Remote DoS
+| [66625] Dovecot ACL Plugin INBOX ACL Copying Weakness Restriction Bypass
+| [66113] Dovecot Mail Root Directory Creation Permission Weakness
+| [66112] Dovecot Installation base_dir Parent Directory Permission Weakness
+| [66111] Dovecot SEARCH Functionality str_find_init() Function Overflow
+| [66110] Dovecot Multiple Unspecified Buffer Overflows
+| [66108] Dovecot Malformed Message Body Processing Unspecified Functions Remote DoS
+| [64783] Dovecot E-mail Message Header Unspecified DoS
+| [63372] Apple Mac OS X Dovecot Kerberos Authentication SACL Restriction Bypass
+| [62796] Dovecot mbox Format Email Header Handling DoS
+| [60316] Dovecot base_dir Directory Permission Weakness Local Privilege Escalation
+| [58103] Dovecot CMU Sieve Plugin Script Handling Multiple Overflows
+| [50253] Dovecot dovecot.conf Permission Weakness Local ssl_key_password Parameter Disclosure
+| [49918] Dovecot ManageSieve Script Name Handling Traversal Arbitrary File Manipulation
+| [49429] Dovecot Message Parsing Feature Crafted Email Header Handling Remote DoS
+| [49099] Dovecot ACL Plugin k Right Mailbox Creation Restriction Bypass
+| [49098] Dovecot ACL Plugin Negative Access Rights Bypass
+| [43137] Dovecot mail_extra_groups Symlink File Manipulation
+| [42979] Dovecot passdbs Argument Injection Authentication Bypass
+| [39876] Dovecot LDAP Auth Cache Security Bypass
+| [39386] Dovecot ACL Plugin Insert Right APPEND / COPY Command Unauthorized Flag Manipulation
+| [35489] Dovecot index/mbox/mbox-storage.c Traversal Arbitrary Gzip File Access
+| [30524] Dovecot IMAP/POP3 Server dovecot.index.cache Handling Overflow
+| [25853] Cyrus IMAPD pop3d USER Command Remote Overflow
+| [25727] Dovecot Multiple Command Traversal Arbitrary Directory Listing
+| [23281] Dovecot imap/pop3-login dovecot-auth DoS
+| [23280] Dovecot Malformed APPEND Command DoS
+| [14459] mmmail mmpop3d USER Command mmsyslog Function Format String
+| [12033] Slackware Linux imapd/ipop3d Malformed USER/PASS Sequence DoS
+| [5857] Linux pop3d Arbitrary Mail File Access
+| [2471] akpop3d username SQL Injection
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [97536] Dovecot CVE-2017-2669 Denial of Service Vulnerability
+| [94639] Dovecot Auth Component CVE-2016-8652 Denial of Service Vulnerability
+| [91175] Dovecot CVE-2016-4982 Local Information Disclosure Vulnerability
+| [84736] Dovecot CVE-2008-4870 Local Security Vulnerability
+| [74335] Dovecot 'ssl-proxy-openssl.c' Remote Denial of Service Vulnerability
+| [67306] Dovecot Denial of Service Vulnerability
+| [67219] akpop3d 'pszQuery' Remote Memory Corruption Vulnerability
+| [63367] Dovecot Checkpassword Authentication Protocol Local Authentication Bypass Vulnerability
+| [61763] RETIRED: Dovecot 'LIST' Command Denial of Service Vulnerability
+| [60465] Exim for Dovecot 'use_shell' Remote Command Execution Vulnerability
+| [60052] Dovecot 'APPEND' Parameter Denial of Service Vulnerability
+| [56759] RETIRED: Dovecot 'mail-search.c' Denial of Service Vulnerability
+| [50709] Dovecot SSL Certificate 'Common Name' Field Validation Security Bypass Vulnerability
+| [48003] Dovecot 'script-login' Multiple Security Bypass Vulnerabilities
+| [47930] Dovecot Header Name NULL Character Denial of Service Vulnerability
+| [44874] Apple Mac OS X Dovecot (CVE-2010-4011) Memory Corruption Vulnerability
+| [43690] Dovecot Access Control List (ACL) Multiple Remote Vulnerabilities
+| [41964] Dovecot Access Control List (ACL) Plugin Security Bypass Weakness
+| [39838] tpop3d Remote Denial of Service Vulnerability
+| [39258] Dovecot Service Control Access List Security Bypass Vulnerability
+| [37084] Dovecot Insecure 'base_dir' Permissions Local Privilege Escalation Vulnerability
+| [36377] Dovecot Sieve Plugin Multiple Unspecified Buffer Overflow Vulnerabilities
+| [32582] Dovecot ManageSieve Service '.sieve' Files Directory Traversal Vulnerability
+| [31997] Dovecot Invalid Message Address Parsing Denial of Service Vulnerability
+| [31587] Dovecot ACL Plugin Multiple Security Bypass Vulnerabilities
+| [28181] Dovecot 'Tab' Character Password Check Security Bypass Vulnerability
+| [28092] Dovecot 'mail_extra_groups' Insecure Settings Local Unauthorized Access Vulnerability
+| [27093] Dovecot Authentication Cache Security Bypass Vulnerability
+| [25182] Dovecot ACL Plugin Security Bypass Vulnerability
+| [23552] Dovecot Zlib Plugin Remote Information Disclosure Vulnerability
+| [22262] IBM AIX Pop3D/Pop3DS/IMapD/IMapDS Authentication Bypass Vulnerability
+| [21183] Dovecot IMAP Server Mapped Pages Off-By-One Buffer Overflow Vulnerability
+| [18056] Cyrus IMAPD POP3D Remote Buffer Overflow Vulnerability
+| [17961] Dovecot Remote Information Disclosure Vulnerability
+| [16672] Dovecot Double Free Denial of Service Vulnerability
+| [8495] akpop3d User Name SQL Injection Vulnerability
+| [8473] Vpop3d Remote Denial Of Service Vulnerability
+| [3990] ZPop3D Bad Login Logging Failure Vulnerability
+| [2781] DynFX MailServer POP3d Denial of Service Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028585] Dovecot APPEND Parameter Processing Flaw Lets Remote Authenticated Users Deny Service
+| [1024740] Mac OS X Server Dovecot Memory Aliasing Bug May Cause Mail to Be Delivered to the Wrong User
+| [1017288] Dovecot POP3/IMAP Cache File Buffer Overflow May Let Remote Users Execute Arbitrary Code
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [86382] Dovecot POP3 Service denial of service
+| [84396] Dovecot IMAP APPEND denial of service
+| [80453] Dovecot mail-search.c denial of service
+| [71354] Dovecot SSL Common Name (CN) weak security
+| [67675] Dovecot script-login security bypass
+| [67674] Dovecot script-login directory traversal
+| [67589] Dovecot header name denial of service
+| [63267] Apple Mac OS X Dovecot information disclosure
+| [62340] Dovecot mailbox security bypass
+| [62339] Dovecot IMAP or POP3 denial of service
+| [62256] Dovecot mailbox security bypass
+| [62255] Dovecot ACL entry security bypass
+| [60639] Dovecot ACL plugin weak security
+| [57267] Apple Mac OS X Dovecot Kerberos security bypass
+| [56763] Dovecot header denial of service
+| [54363] Dovecot base_dir privilege escalation
+| [53248] CMU Sieve plugin for Dovecot unspecified buffer overflow
+| [46323] Dovecot dovecot.conf information disclosure
+| [46227] Dovecot message parsing denial of service
+| [45669] Dovecot ACL mailbox security bypass
+| [45667] Dovecot ACL plugin rights security bypass
+| [41085] Dovecot TAB characters authentication bypass
+| [41009] Dovecot mail_extra_groups option unauthorized access
+| [39342] Dovecot LDAP auth cache configuration security bypass
+| [35767] Dovecot ACL plugin security bypass
+| [34082] Dovecot mbox-storage.c directory traversal
+| [30433] Dovecot IMAP/POP3 server dovecot.index.cache buffer overflow
+| [26578] Cyrus IMAP pop3d buffer overflow
+| [26536] Dovecot IMAP LIST information disclosure
+| [24710] Dovecot dovecot-auth and imap/pop3-login denial of service
+| [24709] Dovecot APPEND command denial of service
+| [13018] akpop3d authentication code SQL injection
+| [7345] Slackware Linux imapd and ipop3d core dump
+| [6269] imap, ipop2d and ipop3d buffer overflows
+| [5923] Linuxconf vpop3d symbolic link
+| [4918] IPOP3D, Buffer overflow attack
+| [1560] IPOP3D, user login successful
+| [1559] IPOP3D user login to remote host successful
+| [1525] IPOP3D, user logout
+| [1524] IPOP3D, user auto-logout
+| [1523] IPOP3D, user login failure
+| [1522] IPOP3D, brute force attack
+| [1521] IPOP3D, user kiss of death logout
+| [418] pop3d mktemp creates insecure temporary files
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [25297] Dovecot with Exim sender_address Parameter - Remote Command Execution
+| [23053] Vpop3d Remote Denial of Service Vulnerability
+| [16836] Cyrus IMAPD pop3d popsubfolders USER Buffer Overflow
+| [11893] tPop3d 1.5.3 DoS
+| [5257] Dovecot IMAP 1.0.10 <= 1.1rc2 - Remote Email Disclosure Exploit
+| [2185] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (3)
+| [2053] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (2)
+| [1813] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [901026] Dovecot Sieve Plugin Multiple Buffer Overflow Vulnerabilities
+| [901025] Dovecot Version Detection
+| [881402] CentOS Update for dovecot CESA-2011:1187 centos5 x86_64
+| [881358] CentOS Update for dovecot CESA-2011:1187 centos4 x86_64
+| [880980] CentOS Update for dovecot CESA-2011:1187 centos5 i386
+| [880967] CentOS Update for dovecot CESA-2011:1187 centos4 i386
+| [870607] RedHat Update for dovecot RHSA-2011:0600-01
+| [870471] RedHat Update for dovecot RHSA-2011:1187-01
+| [870153] RedHat Update for dovecot RHSA-2008:0297-02
+| [863272] Fedora Update for dovecot FEDORA-2011-7612
+| [863115] Fedora Update for dovecot FEDORA-2011-7258
+| [861525] Fedora Update for dovecot FEDORA-2007-664
+| [861394] Fedora Update for dovecot FEDORA-2007-493
+| [861333] Fedora Update for dovecot FEDORA-2007-1485
+| [860845] Fedora Update for dovecot FEDORA-2008-9202
+| [860663] Fedora Update for dovecot FEDORA-2008-2475
+| [860169] Fedora Update for dovecot FEDORA-2008-2464
+| [860089] Fedora Update for dovecot FEDORA-2008-9232
+| [840950] Ubuntu Update for dovecot USN-1295-1
+| [840668] Ubuntu Update for dovecot USN-1143-1
+| [840583] Ubuntu Update for dovecot vulnerabilities USN-1059-1
+| [840335] Ubuntu Update for dovecot vulnerabilities USN-593-1
+| [840290] Ubuntu Update for dovecot vulnerability USN-567-1
+| [840234] Ubuntu Update for dovecot vulnerability USN-666-1
+| [840072] Ubuntu Update for dovecot vulnerability USN-487-1
+| [831405] Mandriva Update for dovecot MDVSA-2011:101 (dovecot)
+| [831230] Mandriva Update for dovecot MDVSA-2010:217 (dovecot)
+| [831197] Mandriva Update for dovecot MDVSA-2010:196 (dovecot)
+| [831054] Mandriva Update for dovecot MDVSA-2010:104 (dovecot)
+| [830496] Mandriva Update for dovecot MDVSA-2008:232 (dovecot)
+| [801055] Dovecot 'base_dir' Insecure Permissions Security Bypass Vulnerability
+| [800030] Dovecot ACL Plugin Security Bypass Vulnerabilities
+| [70767] Gentoo Security Advisory GLSA 201110-04 (Dovecot)
+| [70259] FreeBSD Ports: dovecot
+| [69959] Debian Security Advisory DSA 2252-1 (dovecot)
+| [66522] FreeBSD Ports: dovecot
+| [65010] Ubuntu USN-838-1 (dovecot)
+| [64978] Debian Security Advisory DSA 1892-1 (dovecot)
+| [64953] Mandrake Security Advisory MDVSA-2009:242-1 (dovecot)
+| [64952] Mandrake Security Advisory MDVSA-2009:242 (dovecot)
+| [64861] Fedora Core 10 FEDORA-2009-9559 (dovecot)
+| [62965] Gentoo Security Advisory GLSA 200812-16 (dovecot)
+| [62854] FreeBSD Ports: dovecot-managesieve
+| [61916] FreeBSD Ports: dovecot
+| [60588] Gentoo Security Advisory GLSA 200803-25 (dovecot)
+| [60568] Debian Security Advisory DSA 1516-1 (dovecot)
+| [60528] FreeBSD Ports: dovecot
+| [60134] Debian Security Advisory DSA 1457-1 (dovecot)
+| [60089] FreeBSD Ports: dovecot
+| [58578] Debian Security Advisory DSA 1359-1 (dovecot)
+| [56834] Debian Security Advisory DSA 1080-1 (dovecot)
+|_
+143/tcp open  imap     Dovecot imapd
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [106837] Dovecot up to 2.2.16 ssl-proxy-openssl.c ssl-proxy-opensslc denial of service
+| [97052] Dovecot up to 2.2.26 auth-policy Unset Crash denial of service
+| [69835] Dovecot 2.2.0/2.2.1 denial of service
+| [13348] Dovecot up to 1.2.15/2.1.15 IMAP4/POP3 SSL/TLS Handshake denial of service
+| [65684] Dovecot up to 2.2.6 unknown vulnerability
+| [9807] Dovecot up to 1.2.7 on Exim Input Sanitizer privilege escalation
+| [63692] Dovecot up to 2.0.9 spoofing
+| [7062] Dovecot 2.1.10 mail-search.c denial of service
+| [59792] Cyrus IMAPd 2.4.11 weak authentication
+| [57517] Dovecot up to 2.0.9 Login directory traversal
+| [57516] Dovecot up to 2.0.9 Access Restriction directory traversal
+| [57515] Dovecot up to 2.0.9 Crash denial of service
+| [54944] Dovecot up to 1.2.9 denial of service
+| [54943] Dovecot up to 1.2.9 Access Restriction Symlink privilege escalation
+| [54942] Dovecot up to 2.0.4 Access Restriction denial of service
+| [54941] Dovecot up to 2.0.4 Access Restriction unknown vulnerability
+| [54840] Dovecot up to 1.2.9 AGate unknown vulnerability
+| [53277] Dovecot up to 1.2.9 denial of service
+| [50082] Dovecot up to 1.1.6 Stack-based memory corruption
+| [45256] Dovecot up to 1.1.5 directory traversal
+| [44846] Dovecot 1.1.4/1.1.5 IMAP Client Crash denial of service
+| [44546] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [44545] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [41430] Dovecot 1.0.12/1.1 Locking unknown vulnerability
+| [40356] Dovecot 1.0.9 Cache unknown vulnerability
+| [38222] Dovecot 1.0.2 directory traversal
+| [37927] Ipswitch Ipswitch Collaboration Suite up to 2006.1 IMAP Service imapd32.exe memory corruption
+| [36376] Dovecot up to 1.0.x directory traversal
+| [35759] Atrium MERCUR IMAPD IMAP4 mcrimap4.exe memory corruption
+| [33332] Timo Sirainen Dovecot up to 1.0test53 Off-By-One memory corruption
+| [30337] Cyrus IMAPD 2.3.2 Stack-based memory corruption
+| [30268] Timo Sirainen Dovecot 1.0/1.0 Beta2/1.0 Beta3/1.0 Beta7 directory traversal
+| [28756] Timo Sirainen Dovecot 1.0beta2 imap/pop3-login denial of service
+| [25346] Ipswitch Ipswitch Collaboration Suite imapd32.exe memory corruption
+| [25342] Ipswitch Ipswitch Collaboration Suite imapd32.exe) IMAP Daemon imapd32.exe denial of service
+| [24794] MailEnable Imapd Login meimap.exe memory corruption
+| [24504] Cyrus IMAPd 2.0.17/2.1.16/2.1.17/2.1.18/2.2.10 fetch Stack-based memory corruption
+| [15457] University of Washington imapd 4.7 LIST Command memory corruption
+| [14186] University of Washington Imapd 10.234 memory corruption
+| [14073] Slackware Linux 3.3/3.4 IMAPD/POP3D Short Sequence memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2009-2632] Buffer overflow in the SIEVE script component (sieve/script.c), as used in cyrus-imapd in Cyrus IMAP Server 2.2.13 and 2.3.14, and Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, allows local users to execute arbitrary code and read or modify arbitrary messages via a crafted SIEVE script, related to the incorrect use of the sizeof operator for determining buffer length, combined with an integer signedness error.
+| [CVE-2011-4318] Dovecot 2.0.x before 2.0.16, when ssl or starttls is enabled and hostname is used to define the proxy destination, does not verify that the server hostname matches a domain name in the subject's Common Name (CN) of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via a valid certificate for a different hostname.
+| [CVE-2011-3481] The index_get_ids function in index.c in imapd in Cyrus IMAP Server before 2.4.11, when server-side threading is enabled, allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via a crafted References header in an e-mail message.
+| [CVE-2011-3372] imap/nntpd.c in the NNTP server (nntpd) for Cyrus IMAPd 2.4.x before 2.4.12 allows remote attackers to bypass authentication by sending an AUTHINFO USER command without sending an additional AUTHINFO PASS command.
+| [CVE-2011-2167] script-login in Dovecot 2.0.x before 2.0.13 does not follow the chroot configuration setting, which might allow remote authenticated users to conduct directory traversal attacks by leveraging a script.
+| [CVE-2011-2166] script-login in Dovecot 2.0.x before 2.0.13 does not follow the user and group configuration settings, which might allow remote authenticated users to bypass intended access restrictions by leveraging a script.
+| [CVE-2011-1929] lib-mail/message-header-parser.c in Dovecot 1.2.x before 1.2.17 and 2.0.x before 2.0.13 does not properly handle '\0' characters in header names, which allows remote attackers to cause a denial of service (daemon crash or mailbox corruption) via a crafted e-mail message.
+| [CVE-2010-4011] Dovecot in Apple Mac OS X 10.6.5 10H574 does not properly manage memory for user names, which allows remote authenticated users to read the private e-mail of other persons in opportunistic circumstances via standard e-mail clients accessing a user's own mailbox, related to a "memory aliasing issue."
+| [CVE-2010-3780] Dovecot 1.2.x before 1.2.15 allows remote authenticated users to cause a denial of service (master process outage) by simultaneously disconnecting many (1) IMAP or (2) POP3 sessions.
+| [CVE-2010-3779] Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.beta2 grants the admin permission to the owner of each mailbox in a non-public namespace, which might allow remote authenticated users to bypass intended access restrictions by changing the ACL of a mailbox, as demonstrated by a symlinked shared mailbox.
+| [CVE-2010-3707] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving more specific entries that occur after less specific entries, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3706] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving the private namespace of a user, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3304] The ACL plugin in Dovecot 1.2.x before 1.2.13 propagates INBOX ACLs to newly created mailboxes in certain configurations, which might allow remote attackers to read mailboxes that have unintended weak ACLs.
+| [CVE-2010-0745] Unspecified vulnerability in Dovecot 1.2.x before 1.2.11 allows remote attackers to cause a denial of service (CPU consumption) via long headers in an e-mail message.
+| [CVE-2010-0535] Dovecot in Apple Mac OS X 10.6 before 10.6.3, when Kerberos is enabled, does not properly enforce the service access control list (SACL) for sending and receiving e-mail, which allows remote authenticated users to bypass intended access restrictions via unspecified vectors.
+| [CVE-2010-0433] The kssl_keytab_is_available function in ssl/kssl.c in OpenSSL before 0.9.8n, when Kerberos is enabled but Kerberos configuration files cannot be opened, does not check a certain return value, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via SSL cipher negotiation, as demonstrated by a chroot installation of Dovecot or stunnel without Kerberos configuration files inside the chroot.
+| [CVE-2009-3897] Dovecot 1.2.x before 1.2.8 sets 0777 permissions during creation of certain directories at installation time, which allows local users to access arbitrary user accounts by replacing the auth socket, related to the parent directories of the base_dir directory, and possibly the base_dir directory itself.
+| [CVE-2009-3235] Multiple stack-based buffer overflows in the Sieve plugin in Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, as derived from Cyrus libsieve, allow context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted SIEVE script, as demonstrated by forwarding an e-mail message to a large number of recipients, a different vulnerability than CVE-2009-2632.
+| [CVE-2008-5301] Directory traversal vulnerability in the ManageSieve implementation in Dovecot 1.0.15, 1.1, and 1.2 allows remote attackers to read and modify arbitrary .sieve files via a ".." (dot dot) in a script name.
+| [CVE-2008-4907] The message parsing feature in Dovecot 1.1.4 and 1.1.5, when using the FETCH ENVELOPE command in the IMAP client, allows remote attackers to cause a denial of service (persistent crash) via an email with a malformed From address, which triggers an assertion error, aka "invalid message address parsing bug."
+| [CVE-2008-4870] dovecot 1.0.7 in Red Hat Enterprise Linux (RHEL) 5, and possibly Fedora, uses world-readable permissions for dovecot.conf, which allows local users to obtain the ssl_key_password parameter value.
+| [CVE-2008-4578] The ACL plugin in Dovecot before 1.1.4 allows attackers to bypass intended access restrictions by using the "k" right to create unauthorized "parent/child/child" mailboxes.
+| [CVE-2008-4577] The ACL plugin in Dovecot before 1.1.4 treats negative access rights as if they are positive access rights, which allows attackers to bypass intended access restrictions.
+| [CVE-2008-1218] Argument injection vulnerability in Dovecot 1.0.x before 1.0.13, and 1.1.x before 1.1.rc3, when using blocking passdbs, allows remote attackers to bypass the password check via a password containing TAB characters, which are treated as argument delimiters that enable the skip_password_check field to be specified.
+| [CVE-2008-1199] Dovecot before 1.0.11, when configured to use mail_extra_groups to allow Dovecot to create dotlocks in /var/mail, might allow local users to read sensitive mail files for other users, or modify files or directories that are writable by group, via a symlink attack.
+| [CVE-2007-6598] Dovecot before 1.0.10, with certain configuration options including use of %variables, does not properly maintain the LDAP+auth cache, which might allow remote authenticated users to login as a different user who has the same password.
+| [CVE-2007-5794] Race condition in nss_ldap, when used in applications that are linked against the pthread library and fork after a call to nss_ldap, might send user data to the wrong process because of improper handling of the LDAP connection. NOTE: this issue was originally reported for Dovecot with the wrong mailboxes being returned, but other applications might also be affected.
+| [CVE-2007-5740] The format string protection mechanism in IMAPD for Perdition Mail Retrieval Proxy 1.17 and earlier allows remote attackers to execute arbitrary code via an IMAP tag with a null byte followed by a format string specifier, which is not counted by the mechanism.
+| [CVE-2007-5018] Stack-based buffer overflow in IMAPD in Mercury/32 4.52 allows remote authenticated users to execute arbitrary code via a long argument in a SEARCH ON command.  NOTE: this issue might overlap with CVE-2004-1211.
+| [CVE-2007-4211] The ACL plugin in Dovecot before 1.0.3 allows remote authenticated users with the insert right to save certain flags via a (1) COPY or (2) APPEND command.
+| [CVE-2007-3925] Multiple buffer overflows in the IMAP service (imapd32.exe) in Ipswitch IMail Server 2006 before 2006.21 allow remote authenticated users to execute arbitrary code via the (1) Search or (2) Search Charset command.
+| [CVE-2007-2231] Directory traversal vulnerability in index/mbox/mbox-storage.c in Dovecot before 1.0.rc29, when using the zlib plugin, allows remote attackers to read arbitrary gzipped (.gz) mailboxes (mbox files) via a .. (dot dot) sequence in the mailbox name.
+| [CVE-2007-2173] Eval injection vulnerability in (1) courier-imapd.indirect and (2) courier-pop3d.indirect in Courier-IMAP before 4.0.6-r2, and 4.1.x before 4.1.2-r1, on Gentoo Linux allows remote attackers to execute arbitrary commands via the XMAILDIR variable, related to the LOGINRUN variable.
+| [CVE-2007-1579] Stack-based buffer overflow in Atrium MERCUR IMAPD allows remote attackers to have an unknown impact via a certain SUBSCRIBE command.
+| [CVE-2007-1578] Multiple integer signedness errors in the NTLM implementation in Atrium MERCUR IMAPD (mcrimap4.exe) 5.00.14, with SP4, allow remote attackers to execute arbitrary code via a long NTLMSSP argument that triggers a stack-based buffer overflow.
+| [CVE-2007-0618] Unspecified vulnerability in (1) pop3d, (2) pop3ds, (3) imapd, and (4) imapds in IBM AIX 5.3.0 has unspecified impact and attack vectors, involving an "authentication vulnerability."
+| [CVE-2006-6762] The IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to cause a denial of service via an APPEND command with a single "(" (parenthesis) in the argument.
+| [CVE-2006-6761] Stack-based buffer overflow in the IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to execute arbitrary code via a long argument to the SUBSCRIBE command.
+| [CVE-2006-6425] Stack-based buffer overflow in the IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to execute arbitrary code via unspecified vectors involving the APPEND command.
+| [CVE-2006-6424] Multiple buffer overflows in Novell NetMail before 3.52e FTF2 allow remote attackers to execute arbitrary code (1) by appending literals to certain IMAP verbs when specifying command continuation requests to IMAPD, resulting in a heap overflow
+| [CVE-2006-5973] Off-by-one buffer overflow in Dovecot 1.0test53 through 1.0.rc14, and possibly other versions, when index files are used and mmap_disable is set to "yes," allows remote authenticated IMAP or POP3 users to cause a denial of service (crash) via unspecified vectors involving the cache file.
+| [CVE-2006-2502] Stack-based buffer overflow in pop3d in Cyrus IMAPD (cyrus-imapd) 2.3.2, when the popsubfolders option is enabled, allows remote attackers to execute arbitrary code via a long USER command.
+| [CVE-2006-2414] Directory traversal vulnerability in Dovecot 1.0 beta and 1.0 allows remote attackers to list files and directories under the mbox parent directory and obtain mailbox names via ".." sequences in the (1) LIST or (2) DELETE IMAP command.
+| [CVE-2006-0730] Multiple unspecified vulnerabilities in Dovecot before 1.0beta3 allow remote attackers to cause a denial of service (application crash or hang) via unspecified vectors involving (1) "potential hangs" in the APPEND command and "potential crashes" in (2) dovecot-auth and (3) imap/pop3-login.  NOTE: vector 2 might be related to a double free vulnerability.
+| [CVE-2005-2278] Stack-based buffer overflow in the IMAP daemon (imapd) in MailEnable Professional 1.54 allows remote authenticated users to execute arbitrary code via the status command with a long mailbox name.
+| [CVE-2005-1256] Stack-based buffer overflow in the IMAP daemon (IMAPD32.EXE) in IMail 8.13 in Ipswitch Collaboration Suite (ICS), and other versions before IMail Server 8.2 Hotfix 2, allows remote authenticated users to execute arbitrary code via a STATUS command with a long mailbox name.
+| [CVE-2005-1249] The IMAP daemon (IMAPD32.EXE) in Ipswitch Collaboration Suite (ICS) allows remote attackers to cause a denial of service (CPU consumption) via an LSUB command with a large number of null characters, which causes an infinite loop.
+| [CVE-2005-1015] Buffer overflow in MailEnable Imapd (MEIMAP.exe) allows remote attackers to execute arbitrary code via a long LOGIN command.
+| [CVE-2005-0546] Multiple buffer overflows in Cyrus IMAPd before 2.2.11 may allow attackers to execute arbitrary code via (1) an off-by-one error in the imapd annotate extension, (2) an off-by-one error in "cached header handling," (3) a stack-based buffer overflow in fetchnews, or (4) a stack-based buffer overflow in imapd.
+| [CVE-2003-1322] Multiple stack-based buffer overflows in Atrium MERCUR IMAPD in MERCUR Mailserver before 4.2.15.0 allow remote attackers to execute arbitrary code via a long (1) EXAMINE, (2) DELETE, (3) SUBSCRIBE, (4) RENAME, (5) UNSUBSCRIBE, (6) LIST, (7) LSUB, (8) STATUS, (9) LOGIN, (10) CREATE, or (11) SELECT command.
+| [CVE-2002-1782] The default configuration of University of Washington IMAP daemon (wu-imapd), when running on a system that does not allow shell access, allows a local user with a valid IMAP account to read arbitrary files as that user.
+| [CVE-2002-1604] Multiple buffer overflows in HP Tru64 UNIX allow local and possibly remote attackers to execute arbitrary code via a long NLSPATH environment variable to (1) csh, (2) dtsession, (3) dxsysinfo, (4) imapd, (5) inc, (6) uucp, (7) uux, (8) rdist, or (9) deliver.
+| [CVE-2002-0997] Buffer overflows in IMAP Agent (imapd) for Novell NetMail (NIMS) 3.0.3 before 3.0.3A allows remote attackers to cause a denial of service.
+| [CVE-2002-0379] Buffer overflow in University of Washington imap server (uw-imapd) imap-2001 (imapd 2001.315) and imap-2001a (imapd 2001.315) with legacy RFC 1730 support, and imapd 2000.287 and earlier, allows remote authenticated users to execute arbitrary code via a long BODY request.
+| [CVE-2001-0691] Buffer overflows in Washington University imapd 2000a through 2000c could allow local users without shell access to execute code as themselves in certain configurations.
+| [CVE-2000-0284] Buffer overflow in University of Washington imapd version 4.7 allows users with a valid account to execute commands via LIST or other commands.
+| [CVE-1999-1557] Buffer overflow in the login functions in IMAP server (imapd) in Ipswitch IMail 5.0 and earlier allows remote attackers to cause a denial of service and possibly execute arbitrary code via (1) a long user name or (2) a long password.
+| [CVE-1999-1445] Vulnerability in imapd and ipop3d in Slackware 3.4 and 3.3 with shadowing enabled, and possibly other operating systems, allows remote attackers to cause a core dump via a short sequence of USER and PASS commands that do not provide valid usernames or passwords.
+| [CVE-1999-1224] IMAP 4.1 BETA, and possibly other versions, does not properly handle the SIGABRT (abort) signal, which allows local users to crash the server (imapd) via certain sequences of commands, which causes a core dump that may contain sensitive password information.
+| 
+| OSVDB - http://www.osvdb.org:
+| [96172] Dovecot POP3 Service Terminated LIST Command Remote DoS
+| [93525] Dovecot IMAP APPEND Command Malformed Parameter Parsing Remote DoS
+| [93004] Dovecot with Exim sender_address Parameter Remote Command Execution
+| [88058] Dovecot lib-storage/mail-search.c Multiple Keyword Search Handling Remote DoS
+| [78304] Eudora WorldMail imapd SEH LIST Command Parsing Remote Overflow
+| [77185] Dovecot SSL Certificate Common Name Field MitM Spoofing Weakness
+| [75445] Cyrus IMAP Server imapd index.c index_get_ids Function References Header NULL Dereference Remote DoS
+| [74515] Dovecot script-login chroot Configuration Setting Traversal Arbitrary File Access
+| [74514] Dovecot script-login User / Group Configuration Settings Remote Access Restriction Bypass
+| [72495] Dovecot lib-mail/message-header-parser.c Mail Header Name NULL Character Handling Remote DoS
+| [69260] Apple Mac OS X Server Dovecot Memory Aliasing Mail Delivery Issue
+| [68516] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition User Private Namespace Mailbox Access Restriction Remote Bypass
+| [68515] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition Specific Entry Order Mailbox Access Restriction Remote Bypass
+| [68513] Dovecot Non-public Namespace Mailbox ACL Manipulation Access Restriction Remote Bypass
+| [68512] Dovecot IMAP / POP3 Session Disconnect Master Process Outage Remote DoS
+| [66625] Dovecot ACL Plugin INBOX ACL Copying Weakness Restriction Bypass
+| [66113] Dovecot Mail Root Directory Creation Permission Weakness
+| [66112] Dovecot Installation base_dir Parent Directory Permission Weakness
+| [66111] Dovecot SEARCH Functionality str_find_init() Function Overflow
+| [66110] Dovecot Multiple Unspecified Buffer Overflows
+| [66108] Dovecot Malformed Message Body Processing Unspecified Functions Remote DoS
+| [64783] Dovecot E-mail Message Header Unspecified DoS
+| [63372] Apple Mac OS X Dovecot Kerberos Authentication SACL Restriction Bypass
+| [62796] Dovecot mbox Format Email Header Handling DoS
+| [60316] Dovecot base_dir Directory Permission Weakness Local Privilege Escalation
+| [58103] Dovecot CMU Sieve Plugin Script Handling Multiple Overflows
+| [57843] Cyrus IMAP Server (cyrus-imapd) SIEVE Script Component (sieve/script.c) Crafted Script Handling Overflow
+| [57681] UoW imap Server (uw-imapd) Arbitrary Remote File Access
+| [52906] UW-imapd c-client Initial Request Remote Format String
+| [52905] UW-imapd c-client Library RFC822BUFFER Routines rfc822_output_char Function Off-by-one
+| [52456] UW-imapd on Debian Linux LOGIN Command Remote DoS
+| [50253] Dovecot dovecot.conf Permission Weakness Local ssl_key_password Parameter Disclosure
+| [49918] Dovecot ManageSieve Script Name Handling Traversal Arbitrary File Manipulation
+| [49485] UW-imapd dmail Utility Mailbox Name Handling Overflow
+| [49484] UW-imapd tmail Utility Mailbox Name Handling Overflow
+| [49429] Dovecot Message Parsing Feature Crafted Email Header Handling Remote DoS
+| [49099] Dovecot ACL Plugin k Right Mailbox Creation Restriction Bypass
+| [49098] Dovecot ACL Plugin Negative Access Rights Bypass
+| [43137] Dovecot mail_extra_groups Symlink File Manipulation
+| [42979] Dovecot passdbs Argument Injection Authentication Bypass
+| [42004] Perdition Mail Retrieval Proxy IMAPD IMAP Tag Remote Format String Arbitrary Code Execution
+| [39876] Dovecot LDAP Auth Cache Security Bypass
+| [39670] Mercury Mail Transport System IMAPD SEARCH Command Remote Overflow
+| [39386] Dovecot ACL Plugin Insert Right APPEND / COPY Command Unauthorized Flag Manipulation
+| [35489] Dovecot index/mbox/mbox-storage.c Traversal Arbitrary Gzip File Access
+| [31362] Novell NetMail IMAP Daemon (IMAPD) APPEND Command Remote Overflow
+| [31361] Novell NetMail IMAP Daemon (IMAPD) APPEND Command DoS
+| [31360] Novell NetMail IMAP Daemon (IMAPD) SUBSCRIBE Command Remote Overflow
+| [30524] Dovecot IMAP/POP3 Server dovecot.index.cache Handling Overflow
+| [25853] Cyrus IMAPD pop3d USER Command Remote Overflow
+| [25727] Dovecot Multiple Command Traversal Arbitrary Directory Listing
+| [23281] Dovecot imap/pop3-login dovecot-auth DoS
+| [23280] Dovecot Malformed APPEND Command DoS
+| [18179] HP Tru64 UNIX imapd NLSPATH Environment Variable Local Overflow
+| [13242] UW-imapd CRAM-MD5 Authentication Bypass
+| [12385] Novell NetMail IMAPD 101_mEna Script Remote Overflow
+| [12042] UoW imapd Multiple Unspecified Overflows
+| [12037] UoW imapd (UW-IMAP) Multiple Command Remote Overflows
+| [12033] Slackware Linux imapd/ipop3d Malformed USER/PASS Sequence DoS
+| [911] UoW imapd AUTHENTICATE Command Remote Overflow
+| [790] UoW imap Server (uw-imapd) BODY Request Remote Overflow
+| [519] UoW imapd SIGABRT Signal Forced Crash Information Disclosure
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [97536] Dovecot CVE-2017-2669 Denial of Service Vulnerability
+| [94639] Dovecot Auth Component CVE-2016-8652 Denial of Service Vulnerability
+| [91175] Dovecot CVE-2016-4982 Local Information Disclosure Vulnerability
+| [84736] Dovecot CVE-2008-4870 Local Security Vulnerability
+| [84478] imapd CVE-1999-1224 Denial-Of-Service Vulnerability
+| [74335] Dovecot 'ssl-proxy-openssl.c' Remote Denial of Service Vulnerability
+| [67306] Dovecot Denial of Service Vulnerability
+| [65650] Eudora WorldMail imapd 'UID' Command Buffer Overflow Vulnerability
+| [63367] Dovecot Checkpassword Authentication Protocol Local Authentication Bypass Vulnerability
+| [61763] RETIRED: Dovecot 'LIST' Command Denial of Service Vulnerability
+| [60465] Exim for Dovecot 'use_shell' Remote Command Execution Vulnerability
+| [60052] Dovecot 'APPEND' Parameter Denial of Service Vulnerability
+| [56759] RETIRED: Dovecot 'mail-search.c' Denial of Service Vulnerability
+| [51403] Eudora WorldMail imapd 'LIST' Command Buffer Overflow Vulnerability
+| [50709] Dovecot SSL Certificate 'Common Name' Field Validation Security Bypass Vulnerability
+| [49949] Cyrus IMAPd NTTP Logic Error Authentication Bypass Vulnerability
+| [48003] Dovecot 'script-login' Multiple Security Bypass Vulnerabilities
+| [47930] Dovecot Header Name NULL Character Denial of Service Vulnerability
+| [44874] Apple Mac OS X Dovecot (CVE-2010-4011) Memory Corruption Vulnerability
+| [43690] Dovecot Access Control List (ACL) Multiple Remote Vulnerabilities
+| [41964] Dovecot Access Control List (ACL) Plugin Security Bypass Weakness
+| [39258] Dovecot Service Control Access List Security Bypass Vulnerability
+| [37084] Dovecot Insecure 'base_dir' Permissions Local Privilege Escalation Vulnerability
+| [36377] Dovecot Sieve Plugin Multiple Unspecified Buffer Overflow Vulnerabilities
+| [32582] Dovecot ManageSieve Service '.sieve' Files Directory Traversal Vulnerability
+| [31997] Dovecot Invalid Message Address Parsing Denial of Service Vulnerability
+| [31587] Dovecot ACL Plugin Multiple Security Bypass Vulnerabilities
+| [28181] Dovecot 'Tab' Character Password Check Security Bypass Vulnerability
+| [28092] Dovecot 'mail_extra_groups' Insecure Settings Local Unauthorized Access Vulnerability
+| [27093] Dovecot Authentication Cache Security Bypass Vulnerability
+| [26270] Perdition IMAPD __STR_VWRITE Remote Format String Vulnerability
+| [25733] Mercury/32 IMAPD SEARCH Command Remote Stack Buffer Overflow Vulnerability
+| [25182] Dovecot ACL Plugin Security Bypass Vulnerability
+| [23552] Dovecot Zlib Plugin Remote Information Disclosure Vulnerability
+| [23058] Atrium Mercur IMapD NTLM Buffer Overflow Vulnerability
+| [22262] IBM AIX Pop3D/Pop3DS/IMapD/IMapDS Authentication Bypass Vulnerability
+| [21183] Dovecot IMAP Server Mapped Pages Off-By-One Buffer Overflow Vulnerability
+| [18056] Cyrus IMAPD POP3D Remote Buffer Overflow Vulnerability
+| [17961] Dovecot Remote Information Disclosure Vulnerability
+| [16672] Dovecot Double Free Denial of Service Vulnerability
+| [15980] Qualcomm WorldMail IMAPD Buffer Overflow Vulnerability
+| [15753] Ipswitch Collaboration Suite and IMail Server IMAPD LIST Command Denial Of Service Vulnerability
+| [12636] Cyrus IMAPD Multiple Remote Buffer Overflow Vulnerabilities
+| [11738] Cyrus IMAPD Multiple Remote Unspecified Vulnerabilities
+| [11729] Cyrus IMAPD Multiple Remote Vulnerabilities
+| [6298] Cyrus IMAPD Pre-Login Heap Corruption Vulnerability
+| [4713] Wu-imapd Partial Mailbox Attribute Remote Buffer Overflow Vulnerability
+| [2856] Imapd 'Local' Buffer Overflow Vulnerabilities
+| [1110] Univ. Of Washington imapd Buffer Overflow Vulnerabilities
+| [502] NT IMail Imapd Buffer Overflow DoS Vulnerability
+| [130] imapd Buffer Overflow Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028585] Dovecot APPEND Parameter Processing Flaw Lets Remote Authenticated Users Deny Service
+| [1024740] Mac OS X Server Dovecot Memory Aliasing Bug May Cause Mail to Be Delivered to the Wrong User
+| [1017288] Dovecot POP3/IMAP Cache File Buffer Overflow May Let Remote Users Execute Arbitrary Code
+| [1013278] Cyrus IMAPd Buffer Overflows in Annotate Extension, Cached Header, and Fetchnews May Let Remote Users Execute Arbitrary Code
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [86382] Dovecot POP3 Service denial of service
+| [84396] Dovecot IMAP APPEND denial of service
+| [80453] Dovecot mail-search.c denial of service
+| [71354] Dovecot SSL Common Name (CN) weak security
+| [70325] Cyrus IMAPd NNTP security bypass
+| [67675] Dovecot script-login security bypass
+| [67674] Dovecot script-login directory traversal
+| [67589] Dovecot header name denial of service
+| [63267] Apple Mac OS X Dovecot information disclosure
+| [62340] Dovecot mailbox security bypass
+| [62339] Dovecot IMAP or POP3 denial of service
+| [62256] Dovecot mailbox security bypass
+| [62255] Dovecot ACL entry security bypass
+| [60639] Dovecot ACL plugin weak security
+| [57267] Apple Mac OS X Dovecot Kerberos security bypass
+| [56763] Dovecot header denial of service
+| [54363] Dovecot base_dir privilege escalation
+| [53248] CMU Sieve plugin for Dovecot unspecified buffer overflow
+| [47526] UW-imapd rfc822_output_char() denial of service
+| [46323] Dovecot dovecot.conf information disclosure
+| [46227] Dovecot message parsing denial of service
+| [45669] Dovecot ACL mailbox security bypass
+| [45667] Dovecot ACL plugin rights security bypass
+| [41085] Dovecot TAB characters authentication bypass
+| [41009] Dovecot mail_extra_groups option unauthorized access
+| [39342] Dovecot LDAP auth cache configuration security bypass
+| [35767] Dovecot ACL plugin security bypass
+| [34082] Dovecot mbox-storage.c directory traversal
+| [30433] Dovecot IMAP/POP3 server dovecot.index.cache buffer overflow
+| [26536] Dovecot IMAP LIST information disclosure
+| [24710] Dovecot dovecot-auth and imap/pop3-login denial of service
+| [24709] Dovecot APPEND command denial of service
+| [22629] RHSA-2005:408 updates for cyrus-imapd not installed
+| [19460] Cyrus IMAP imapd buffer overflow
+| [19455] Cyrus IMAP imapd extension off-by-one buffer overflow
+| [18492] Novell NetMail IMAPD 101_mEna buffer overflow
+| [10803] UW IMAP (wu-imapd) authenticated user buffer overflow
+| [9238] UW IMAP (wu-imapd) could allow a remote attacker to access arbitrary files
+| [9055] UW IMAP (wu-imapd) partial mailbox attributes to request buffer overflow
+| [7345] Slackware Linux imapd and ipop3d core dump
+| [573] Imapd denial of service
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [30724] Perdition 1.17 IMAPD __STR_VWRITE Remote Format String Vulnerability
+| [25297] Dovecot with Exim sender_address Parameter - Remote Command Execution
+| [22061] Cyrus IMAPD 1.4/1.5.19/2.0.12/2.0.16/2.1.9/2.1.10 Pre-Login Heap Corruption Vulnerability
+| [21443] Wu-imapd 2000/2001 Partial Mailbox Attribute Remote Buffer Overflow Vulnerability (2)
+| [21442] Wu-imapd 2000/2001 Partial Mailbox Attribute Remote Buffer Overflow Vulnerability (1)
+| [19849] UoW imapd 10.234/12.264 COPY Buffer Overflow (meta)
+| [19848] UoW imapd 10.234/12.264 LSUB Buffer Overflow (meta)
+| [19847] UoW imapd 10.234/12.264 Buffer Overflow Vulnerabilities
+| [19377] Ipswitch IMail 5.0 Imapd Buffer Overflow DoS Vulnerability
+| [19107] Netscape Messaging Server 3.55,University of Washington imapd 10.234 Buffer Overflow Vulnerability
+| [18354] WorldMail imapd 3.0 SEH overflow (egg hunter)
+| [16836] Cyrus IMAPD pop3d popsubfolders USER Buffer Overflow
+| [16485] MailEnable IMAPD 1.54 - STATUS Request Buffer Overflow
+| [16482] MDaemon 9.6.4 IMAPD FETCH Buffer Overflow
+| [16480] MailEnable IMAPD W3C Logging Buffer Overflow
+| [16477] Mdaemon 8.0.3 IMAPD CRAM-MD5 Authentication Overflow
+| [16475] MailEnable IMAPD (2.35) Login Request Buffer Overflow
+| [16474] Qualcomm WorldMail 3.0 IMAPD LIST Buffer Overflow
+| [5257] Dovecot IMAP 1.0.10 <= 1.1rc2 - Remote Email Disclosure Exploit
+| [4429] Mercury/32 4.52 IMAPD SEARCH command Post-Auth Overflow Exploit
+| [3627] IPSwitch IMail Server <= 8.20 IMAPD Remote Buffer Overflow Exploit
+| [3527] Mercur IMAPD 5.00.14 Remote Denial of Service Exploit (win32)
+| [2185] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (3)
+| [2053] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (2)
+| [1813] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit
+| [1380] Eudora Qualcomm WorldMail 3.0 (IMAPd) Remote Overflow Exploit
+| [1332] MailEnable 1.54 Pro Universal IMAPD W3C Logging BoF Exploit
+| [1327] FTGate4 Groupware Mail Server 4.1 (imapd) Remote Buffer Overflow PoC
+| [1151] MDaemon 8.0.3 IMAPD CRAM-MD5 Authentication Overflow Exploit
+| [1124] IPSwitch IMail Server <= 8.15 IMAPD Remote Root Exploit
+| [915] MailEnable Enterprise 1.x Imapd Remote Exploit
+| [903] Cyrus imapd 2.2.4 - 2.2.8 (imapmagicplus) Remote Exploit
+| [340] Linux imapd Remote Overflow File Retrieve Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [901026] Dovecot Sieve Plugin Multiple Buffer Overflow Vulnerabilities
+| [901025] Dovecot Version Detection
+| [881425] CentOS Update for cyrus-imapd CESA-2011:1508 centos5 x86_64
+| [881403] CentOS Update for cyrus-imapd CESA-2011:0859 centos5 x86_64
+| [881402] CentOS Update for dovecot CESA-2011:1187 centos5 x86_64
+| [881397] CentOS Update for cyrus-imapd CESA-2011:1317 centos4 x86_64
+| [881370] CentOS Update for cyrus-imapd CESA-2011:1508 centos4 x86_64
+| [881358] CentOS Update for dovecot CESA-2011:1187 centos4 x86_64
+| [881318] CentOS Update for cyrus-imapd CESA-2011:0859 centos4 x86_64
+| [881255] CentOS Update for cyrus-imapd CESA-2011:1317 centos5 x86_64
+| [881050] CentOS Update for cyrus-imapd CESA-2011:1508 centos5 i386
+| [881049] CentOS Update for cyrus-imapd CESA-2011:1508 centos4 i386
+| [881007] CentOS Update for cyrus-imapd CESA-2011:1317 centos5 i386
+| [880980] CentOS Update for dovecot CESA-2011:1187 centos5 i386
+| [880978] CentOS Update for cyrus-imapd CESA-2011:1317 centos4 i386
+| [880967] CentOS Update for dovecot CESA-2011:1187 centos4 i386
+| [880958] CentOS Update for cyrus-imapd CESA-2011:0859 centos4 i386
+| [880905] CentOS Update for cyrus-imapd CESA-2009:1459 centos4 i386
+| [880864] CentOS Update for cyrus-imapd CESA-2009:1459 centos5 i386
+| [880826] CentOS Update for cyrus-imapd CESA-2009:1116 centos5 i386
+| [880536] CentOS Update for cyrus-imapd CESA-2011:0859 centos5 i386
+| [870607] RedHat Update for dovecot RHSA-2011:0600-01
+| [870520] RedHat Update for cyrus-imapd RHSA-2011:1508-01
+| [870489] RedHat Update for cyrus-imapd RHSA-2011:1317-01
+| [870471] RedHat Update for dovecot RHSA-2011:1187-01
+| [870443] RedHat Update for cyrus-imapd RHSA-2011:0859-01
+| [870153] RedHat Update for dovecot RHSA-2008:0297-02
+| [864075] Fedora Update for cyrus-imapd FEDORA-2011-13832
+| [863585] Fedora Update for cyrus-imapd FEDORA-2011-13869
+| [863579] Fedora Update for cyrus-imapd FEDORA-2011-13860
+| [863281] Fedora Update for cyrus-imapd FEDORA-2011-7193
+| [863273] Fedora Update for cyrus-imapd FEDORA-2011-7217
+| [863272] Fedora Update for dovecot FEDORA-2011-7612
+| [863115] Fedora Update for dovecot FEDORA-2011-7258
+| [861525] Fedora Update for dovecot FEDORA-2007-664
+| [861394] Fedora Update for dovecot FEDORA-2007-493
+| [861333] Fedora Update for dovecot FEDORA-2007-1485
+| [860845] Fedora Update for dovecot FEDORA-2008-9202
+| [860663] Fedora Update for dovecot FEDORA-2008-2475
+| [860169] Fedora Update for dovecot FEDORA-2008-2464
+| [860089] Fedora Update for dovecot FEDORA-2008-9232
+| [840950] Ubuntu Update for dovecot USN-1295-1
+| [840668] Ubuntu Update for dovecot USN-1143-1
+| [840583] Ubuntu Update for dovecot vulnerabilities USN-1059-1
+| [840335] Ubuntu Update for dovecot vulnerabilities USN-593-1
+| [840290] Ubuntu Update for dovecot vulnerability USN-567-1
+| [840234] Ubuntu Update for dovecot vulnerability USN-666-1
+| [840072] Ubuntu Update for dovecot vulnerability USN-487-1
+| [831590] Mandriva Update for cyrus-imapd MDVSA-2012:037 (cyrus-imapd)
+| [831468] Mandriva Update for cyrus-imapd MDVSA-2011:149 (cyrus-imapd)
+| [831410] Mandriva Update for cyrus-imapd MDVSA-2011:100 (cyrus-imapd)
+| [831405] Mandriva Update for dovecot MDVSA-2011:101 (dovecot)
+| [831230] Mandriva Update for dovecot MDVSA-2010:217 (dovecot)
+| [831207] Mandriva Update for cyrus-imapd MDVA-2010:208 (cyrus-imapd)
+| [831197] Mandriva Update for dovecot MDVSA-2010:196 (dovecot)
+| [831054] Mandriva Update for dovecot MDVSA-2010:104 (dovecot)
+| [830496] Mandriva Update for dovecot MDVSA-2008:232 (dovecot)
+| [801055] Dovecot 'base_dir' Insecure Permissions Security Bypass Vulnerability
+| [800149] UW-imapd tmail and dmail BOF Vulnerabilities (Linux)
+| [800030] Dovecot ACL Plugin Security Bypass Vulnerabilities
+| [70767] Gentoo Security Advisory GLSA 201110-04 (Dovecot)
+| [70696] Debian Security Advisory DSA 2377-1 (cyrus-imapd-2.2)
+| [70407] Debian Security Advisory DSA 2318-1 (cyrus-imapd-2.2)
+| [70259] FreeBSD Ports: dovecot
+| [69965] Debian Security Advisory DSA 2258-1 (kolab-cyrus-imapd)
+| [69959] Debian Security Advisory DSA 2252-1 (dovecot)
+| [69740] Debian Security Advisory DSA 2242-1 (cyrus-imapd-2.2)
+| [66522] FreeBSD Ports: dovecot
+| [66416] Mandriva Security Advisory MDVSA-2009:229-1 (cyrus-imapd)
+| [66233] SLES10: Security update for Cyrus IMAPD
+| [66226] SLES11: Security update for Cyrus IMAPD
+| [66222] SLES9: Security update for Cyrus IMAPD
+| [65938] SLES10: Security update for Cyrus IMAPD
+| [65723] SLES11: Security update for Cyrus IMAPD
+| [65523] SLES9: Security update for Cyrus IMAPD
+| [65479] SLES9: Security update for cyrus-imapd
+| [65094] SLES9: Security update for cyrus-imapd
+| [65010] Ubuntu USN-838-1 (dovecot)
+| [64989] CentOS Security Advisory CESA-2009:1459 (cyrus-imapd)
+| [64978] Debian Security Advisory DSA 1892-1 (dovecot)
+| [64977] Debian Security Advisory DSA 1893-1 (cyrus-imapd-2.2 kolab-cyrus-imapd)
+| [64965] Fedora Core 11 FEDORA-2009-9901 (cyrus-imapd)
+| [64963] Fedora Core 10 FEDORA-2009-9869 (cyrus-imapd)
+| [64953] Mandrake Security Advisory MDVSA-2009:242-1 (dovecot)
+| [64952] Mandrake Security Advisory MDVSA-2009:242 (dovecot)
+| [64898] FreeBSD Ports: cyrus-imapd
+| [64864] Debian Security Advisory DSA 1881-1 (cyrus-imapd-2.2)
+| [64861] Fedora Core 10 FEDORA-2009-9559 (dovecot)
+| [64847] Fedora Core 10 FEDORA-2009-9428 (cyrus-imapd)
+| [64846] Fedora Core 11 FEDORA-2009-9417 (cyrus-imapd)
+| [64838] Mandrake Security Advisory MDVSA-2009:229 (cyrus-imapd)
+| [64271] CentOS Security Advisory CESA-2009:1116 (cyrus-imapd)
+| [62965] Gentoo Security Advisory GLSA 200812-16 (dovecot)
+| [62854] FreeBSD Ports: dovecot-managesieve
+| [61916] FreeBSD Ports: dovecot
+| [60588] Gentoo Security Advisory GLSA 200803-25 (dovecot)
+| [60568] Debian Security Advisory DSA 1516-1 (dovecot)
+| [60528] FreeBSD Ports: dovecot
+| [60134] Debian Security Advisory DSA 1457-1 (dovecot)
+| [60089] FreeBSD Ports: dovecot
+| [58578] Debian Security Advisory DSA 1359-1 (dovecot)
+| [56834] Debian Security Advisory DSA 1080-1 (dovecot)
+| [55807] Slackware Advisory SSA:2005-310-06 imapd
+| [54861] Gentoo Security Advisory GLSA 200502-29 (cyrus-imapd)
+| [54755] Gentoo Security Advisory GLSA 200411-34 (cyrus-imapd)
+| [53739] Debian Security Advisory DSA 215-1 (cyrus-imapd)
+| [53288] Debian Security Advisory DSA 597-1 (cyrus-imapd)
+| [52297] FreeBSD Ports: cyrus-imapd
+| [52296] FreeBSD Ports: cyrus-imapd
+| [52295] FreeBSD Ports: cyrus-imapd
+| [52294] FreeBSD Ports: cyrus-imapd
+| [52172] FreeBSD Ports: cyrus-imapd
+|_
+993/tcp open  ssl/imap Dovecot imapd
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [106837] Dovecot up to 2.2.16 ssl-proxy-openssl.c ssl-proxy-opensslc denial of service
+| [97052] Dovecot up to 2.2.26 auth-policy Unset Crash denial of service
+| [69835] Dovecot 2.2.0/2.2.1 denial of service
+| [13348] Dovecot up to 1.2.15/2.1.15 IMAP4/POP3 SSL/TLS Handshake denial of service
+| [65684] Dovecot up to 2.2.6 unknown vulnerability
+| [9807] Dovecot up to 1.2.7 on Exim Input Sanitizer privilege escalation
+| [63692] Dovecot up to 2.0.9 spoofing
+| [7062] Dovecot 2.1.10 mail-search.c denial of service
+| [59792] Cyrus IMAPd 2.4.11 weak authentication
+| [57517] Dovecot up to 2.0.9 Login directory traversal
+| [57516] Dovecot up to 2.0.9 Access Restriction directory traversal
+| [57515] Dovecot up to 2.0.9 Crash denial of service
+| [54944] Dovecot up to 1.2.9 denial of service
+| [54943] Dovecot up to 1.2.9 Access Restriction Symlink privilege escalation
+| [54942] Dovecot up to 2.0.4 Access Restriction denial of service
+| [54941] Dovecot up to 2.0.4 Access Restriction unknown vulnerability
+| [54840] Dovecot up to 1.2.9 AGate unknown vulnerability
+| [53277] Dovecot up to 1.2.9 denial of service
+| [50082] Dovecot up to 1.1.6 Stack-based memory corruption
+| [45256] Dovecot up to 1.1.5 directory traversal
+| [44846] Dovecot 1.1.4/1.1.5 IMAP Client Crash denial of service
+| [44546] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [44545] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [41430] Dovecot 1.0.12/1.1 Locking unknown vulnerability
+| [40356] Dovecot 1.0.9 Cache unknown vulnerability
+| [38222] Dovecot 1.0.2 directory traversal
+| [37927] Ipswitch Ipswitch Collaboration Suite up to 2006.1 IMAP Service imapd32.exe memory corruption
+| [36376] Dovecot up to 1.0.x directory traversal
+| [35759] Atrium MERCUR IMAPD IMAP4 mcrimap4.exe memory corruption
+| [33332] Timo Sirainen Dovecot up to 1.0test53 Off-By-One memory corruption
+| [30337] Cyrus IMAPD 2.3.2 Stack-based memory corruption
+| [30268] Timo Sirainen Dovecot 1.0/1.0 Beta2/1.0 Beta3/1.0 Beta7 directory traversal
+| [28756] Timo Sirainen Dovecot 1.0beta2 imap/pop3-login denial of service
+| [25346] Ipswitch Ipswitch Collaboration Suite imapd32.exe memory corruption
+| [25342] Ipswitch Ipswitch Collaboration Suite imapd32.exe) IMAP Daemon imapd32.exe denial of service
+| [24794] MailEnable Imapd Login meimap.exe memory corruption
+| [24504] Cyrus IMAPd 2.0.17/2.1.16/2.1.17/2.1.18/2.2.10 fetch Stack-based memory corruption
+| [15457] University of Washington imapd 4.7 LIST Command memory corruption
+| [14186] University of Washington Imapd 10.234 memory corruption
+| [14073] Slackware Linux 3.3/3.4 IMAPD/POP3D Short Sequence memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2009-2632] Buffer overflow in the SIEVE script component (sieve/script.c), as used in cyrus-imapd in Cyrus IMAP Server 2.2.13 and 2.3.14, and Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, allows local users to execute arbitrary code and read or modify arbitrary messages via a crafted SIEVE script, related to the incorrect use of the sizeof operator for determining buffer length, combined with an integer signedness error.
+| [CVE-2011-4318] Dovecot 2.0.x before 2.0.16, when ssl or starttls is enabled and hostname is used to define the proxy destination, does not verify that the server hostname matches a domain name in the subject's Common Name (CN) of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via a valid certificate for a different hostname.
+| [CVE-2011-3481] The index_get_ids function in index.c in imapd in Cyrus IMAP Server before 2.4.11, when server-side threading is enabled, allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via a crafted References header in an e-mail message.
+| [CVE-2011-3372] imap/nntpd.c in the NNTP server (nntpd) for Cyrus IMAPd 2.4.x before 2.4.12 allows remote attackers to bypass authentication by sending an AUTHINFO USER command without sending an additional AUTHINFO PASS command.
+| [CVE-2011-2167] script-login in Dovecot 2.0.x before 2.0.13 does not follow the chroot configuration setting, which might allow remote authenticated users to conduct directory traversal attacks by leveraging a script.
+| [CVE-2011-2166] script-login in Dovecot 2.0.x before 2.0.13 does not follow the user and group configuration settings, which might allow remote authenticated users to bypass intended access restrictions by leveraging a script.
+| [CVE-2011-1929] lib-mail/message-header-parser.c in Dovecot 1.2.x before 1.2.17 and 2.0.x before 2.0.13 does not properly handle '\0' characters in header names, which allows remote attackers to cause a denial of service (daemon crash or mailbox corruption) via a crafted e-mail message.
+| [CVE-2010-4011] Dovecot in Apple Mac OS X 10.6.5 10H574 does not properly manage memory for user names, which allows remote authenticated users to read the private e-mail of other persons in opportunistic circumstances via standard e-mail clients accessing a user's own mailbox, related to a "memory aliasing issue."
+| [CVE-2010-3780] Dovecot 1.2.x before 1.2.15 allows remote authenticated users to cause a denial of service (master process outage) by simultaneously disconnecting many (1) IMAP or (2) POP3 sessions.
+| [CVE-2010-3779] Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.beta2 grants the admin permission to the owner of each mailbox in a non-public namespace, which might allow remote authenticated users to bypass intended access restrictions by changing the ACL of a mailbox, as demonstrated by a symlinked shared mailbox.
+| [CVE-2010-3707] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving more specific entries that occur after less specific entries, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3706] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving the private namespace of a user, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3304] The ACL plugin in Dovecot 1.2.x before 1.2.13 propagates INBOX ACLs to newly created mailboxes in certain configurations, which might allow remote attackers to read mailboxes that have unintended weak ACLs.
+| [CVE-2010-0745] Unspecified vulnerability in Dovecot 1.2.x before 1.2.11 allows remote attackers to cause a denial of service (CPU consumption) via long headers in an e-mail message.
+| [CVE-2010-0535] Dovecot in Apple Mac OS X 10.6 before 10.6.3, when Kerberos is enabled, does not properly enforce the service access control list (SACL) for sending and receiving e-mail, which allows remote authenticated users to bypass intended access restrictions via unspecified vectors.
+| [CVE-2010-0433] The kssl_keytab_is_available function in ssl/kssl.c in OpenSSL before 0.9.8n, when Kerberos is enabled but Kerberos configuration files cannot be opened, does not check a certain return value, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via SSL cipher negotiation, as demonstrated by a chroot installation of Dovecot or stunnel without Kerberos configuration files inside the chroot.
+| [CVE-2009-3897] Dovecot 1.2.x before 1.2.8 sets 0777 permissions during creation of certain directories at installation time, which allows local users to access arbitrary user accounts by replacing the auth socket, related to the parent directories of the base_dir directory, and possibly the base_dir directory itself.
+| [CVE-2009-3235] Multiple stack-based buffer overflows in the Sieve plugin in Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, as derived from Cyrus libsieve, allow context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted SIEVE script, as demonstrated by forwarding an e-mail message to a large number of recipients, a different vulnerability than CVE-2009-2632.
+| [CVE-2008-5301] Directory traversal vulnerability in the ManageSieve implementation in Dovecot 1.0.15, 1.1, and 1.2 allows remote attackers to read and modify arbitrary .sieve files via a ".." (dot dot) in a script name.
+| [CVE-2008-4907] The message parsing feature in Dovecot 1.1.4 and 1.1.5, when using the FETCH ENVELOPE command in the IMAP client, allows remote attackers to cause a denial of service (persistent crash) via an email with a malformed From address, which triggers an assertion error, aka "invalid message address parsing bug."
+| [CVE-2008-4870] dovecot 1.0.7 in Red Hat Enterprise Linux (RHEL) 5, and possibly Fedora, uses world-readable permissions for dovecot.conf, which allows local users to obtain the ssl_key_password parameter value.
+| [CVE-2008-4578] The ACL plugin in Dovecot before 1.1.4 allows attackers to bypass intended access restrictions by using the "k" right to create unauthorized "parent/child/child" mailboxes.
+| [CVE-2008-4577] The ACL plugin in Dovecot before 1.1.4 treats negative access rights as if they are positive access rights, which allows attackers to bypass intended access restrictions.
+| [CVE-2008-1218] Argument injection vulnerability in Dovecot 1.0.x before 1.0.13, and 1.1.x before 1.1.rc3, when using blocking passdbs, allows remote attackers to bypass the password check via a password containing TAB characters, which are treated as argument delimiters that enable the skip_password_check field to be specified.
+| [CVE-2008-1199] Dovecot before 1.0.11, when configured to use mail_extra_groups to allow Dovecot to create dotlocks in /var/mail, might allow local users to read sensitive mail files for other users, or modify files or directories that are writable by group, via a symlink attack.
+| [CVE-2007-6598] Dovecot before 1.0.10, with certain configuration options including use of %variables, does not properly maintain the LDAP+auth cache, which might allow remote authenticated users to login as a different user who has the same password.
+| [CVE-2007-5794] Race condition in nss_ldap, when used in applications that are linked against the pthread library and fork after a call to nss_ldap, might send user data to the wrong process because of improper handling of the LDAP connection. NOTE: this issue was originally reported for Dovecot with the wrong mailboxes being returned, but other applications might also be affected.
+| [CVE-2007-5740] The format string protection mechanism in IMAPD for Perdition Mail Retrieval Proxy 1.17 and earlier allows remote attackers to execute arbitrary code via an IMAP tag with a null byte followed by a format string specifier, which is not counted by the mechanism.
+| [CVE-2007-5018] Stack-based buffer overflow in IMAPD in Mercury/32 4.52 allows remote authenticated users to execute arbitrary code via a long argument in a SEARCH ON command.  NOTE: this issue might overlap with CVE-2004-1211.
+| [CVE-2007-4211] The ACL plugin in Dovecot before 1.0.3 allows remote authenticated users with the insert right to save certain flags via a (1) COPY or (2) APPEND command.
+| [CVE-2007-3925] Multiple buffer overflows in the IMAP service (imapd32.exe) in Ipswitch IMail Server 2006 before 2006.21 allow remote authenticated users to execute arbitrary code via the (1) Search or (2) Search Charset command.
+| [CVE-2007-2231] Directory traversal vulnerability in index/mbox/mbox-storage.c in Dovecot before 1.0.rc29, when using the zlib plugin, allows remote attackers to read arbitrary gzipped (.gz) mailboxes (mbox files) via a .. (dot dot) sequence in the mailbox name.
+| [CVE-2007-2173] Eval injection vulnerability in (1) courier-imapd.indirect and (2) courier-pop3d.indirect in Courier-IMAP before 4.0.6-r2, and 4.1.x before 4.1.2-r1, on Gentoo Linux allows remote attackers to execute arbitrary commands via the XMAILDIR variable, related to the LOGINRUN variable.
+| [CVE-2007-1579] Stack-based buffer overflow in Atrium MERCUR IMAPD allows remote attackers to have an unknown impact via a certain SUBSCRIBE command.
+| [CVE-2007-1578] Multiple integer signedness errors in the NTLM implementation in Atrium MERCUR IMAPD (mcrimap4.exe) 5.00.14, with SP4, allow remote attackers to execute arbitrary code via a long NTLMSSP argument that triggers a stack-based buffer overflow.
+| [CVE-2007-0618] Unspecified vulnerability in (1) pop3d, (2) pop3ds, (3) imapd, and (4) imapds in IBM AIX 5.3.0 has unspecified impact and attack vectors, involving an "authentication vulnerability."
+| [CVE-2006-6762] The IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to cause a denial of service via an APPEND command with a single "(" (parenthesis) in the argument.
+| [CVE-2006-6761] Stack-based buffer overflow in the IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to execute arbitrary code via a long argument to the SUBSCRIBE command.
+| [CVE-2006-6425] Stack-based buffer overflow in the IMAP daemon (IMAPD) in Novell NetMail before 3.52e FTF2 allows remote authenticated users to execute arbitrary code via unspecified vectors involving the APPEND command.
+| [CVE-2006-6424] Multiple buffer overflows in Novell NetMail before 3.52e FTF2 allow remote attackers to execute arbitrary code (1) by appending literals to certain IMAP verbs when specifying command continuation requests to IMAPD, resulting in a heap overflow
+| [CVE-2006-5973] Off-by-one buffer overflow in Dovecot 1.0test53 through 1.0.rc14, and possibly other versions, when index files are used and mmap_disable is set to "yes," allows remote authenticated IMAP or POP3 users to cause a denial of service (crash) via unspecified vectors involving the cache file.
+| [CVE-2006-2502] Stack-based buffer overflow in pop3d in Cyrus IMAPD (cyrus-imapd) 2.3.2, when the popsubfolders option is enabled, allows remote attackers to execute arbitrary code via a long USER command.
+| [CVE-2006-2414] Directory traversal vulnerability in Dovecot 1.0 beta and 1.0 allows remote attackers to list files and directories under the mbox parent directory and obtain mailbox names via ".." sequences in the (1) LIST or (2) DELETE IMAP command.
+| [CVE-2006-0730] Multiple unspecified vulnerabilities in Dovecot before 1.0beta3 allow remote attackers to cause a denial of service (application crash or hang) via unspecified vectors involving (1) "potential hangs" in the APPEND command and "potential crashes" in (2) dovecot-auth and (3) imap/pop3-login.  NOTE: vector 2 might be related to a double free vulnerability.
+| [CVE-2005-2278] Stack-based buffer overflow in the IMAP daemon (imapd) in MailEnable Professional 1.54 allows remote authenticated users to execute arbitrary code via the status command with a long mailbox name.
+| [CVE-2005-1256] Stack-based buffer overflow in the IMAP daemon (IMAPD32.EXE) in IMail 8.13 in Ipswitch Collaboration Suite (ICS), and other versions before IMail Server 8.2 Hotfix 2, allows remote authenticated users to execute arbitrary code via a STATUS command with a long mailbox name.
+| [CVE-2005-1249] The IMAP daemon (IMAPD32.EXE) in Ipswitch Collaboration Suite (ICS) allows remote attackers to cause a denial of service (CPU consumption) via an LSUB command with a large number of null characters, which causes an infinite loop.
+| [CVE-2005-1015] Buffer overflow in MailEnable Imapd (MEIMAP.exe) allows remote attackers to execute arbitrary code via a long LOGIN command.
+| [CVE-2005-0546] Multiple buffer overflows in Cyrus IMAPd before 2.2.11 may allow attackers to execute arbitrary code via (1) an off-by-one error in the imapd annotate extension, (2) an off-by-one error in "cached header handling," (3) a stack-based buffer overflow in fetchnews, or (4) a stack-based buffer overflow in imapd.
+| [CVE-2003-1322] Multiple stack-based buffer overflows in Atrium MERCUR IMAPD in MERCUR Mailserver before 4.2.15.0 allow remote attackers to execute arbitrary code via a long (1) EXAMINE, (2) DELETE, (3) SUBSCRIBE, (4) RENAME, (5) UNSUBSCRIBE, (6) LIST, (7) LSUB, (8) STATUS, (9) LOGIN, (10) CREATE, or (11) SELECT command.
+| [CVE-2002-1782] The default configuration of University of Washington IMAP daemon (wu-imapd), when running on a system that does not allow shell access, allows a local user with a valid IMAP account to read arbitrary files as that user.
+| [CVE-2002-1604] Multiple buffer overflows in HP Tru64 UNIX allow local and possibly remote attackers to execute arbitrary code via a long NLSPATH environment variable to (1) csh, (2) dtsession, (3) dxsysinfo, (4) imapd, (5) inc, (6) uucp, (7) uux, (8) rdist, or (9) deliver.
+| [CVE-2002-0997] Buffer overflows in IMAP Agent (imapd) for Novell NetMail (NIMS) 3.0.3 before 3.0.3A allows remote attackers to cause a denial of service.
+| [CVE-2002-0379] Buffer overflow in University of Washington imap server (uw-imapd) imap-2001 (imapd 2001.315) and imap-2001a (imapd 2001.315) with legacy RFC 1730 support, and imapd 2000.287 and earlier, allows remote authenticated users to execute arbitrary code via a long BODY request.
+| [CVE-2001-0691] Buffer overflows in Washington University imapd 2000a through 2000c could allow local users without shell access to execute code as themselves in certain configurations.
+| [CVE-2000-0284] Buffer overflow in University of Washington imapd version 4.7 allows users with a valid account to execute commands via LIST or other commands.
+| [CVE-1999-1557] Buffer overflow in the login functions in IMAP server (imapd) in Ipswitch IMail 5.0 and earlier allows remote attackers to cause a denial of service and possibly execute arbitrary code via (1) a long user name or (2) a long password.
+| [CVE-1999-1445] Vulnerability in imapd and ipop3d in Slackware 3.4 and 3.3 with shadowing enabled, and possibly other operating systems, allows remote attackers to cause a core dump via a short sequence of USER and PASS commands that do not provide valid usernames or passwords.
+| [CVE-1999-1224] IMAP 4.1 BETA, and possibly other versions, does not properly handle the SIGABRT (abort) signal, which allows local users to crash the server (imapd) via certain sequences of commands, which causes a core dump that may contain sensitive password information.
+| 
+| OSVDB - http://www.osvdb.org:
+| [96172] Dovecot POP3 Service Terminated LIST Command Remote DoS
+| [93525] Dovecot IMAP APPEND Command Malformed Parameter Parsing Remote DoS
+| [93004] Dovecot with Exim sender_address Parameter Remote Command Execution
+| [88058] Dovecot lib-storage/mail-search.c Multiple Keyword Search Handling Remote DoS
+| [78304] Eudora WorldMail imapd SEH LIST Command Parsing Remote Overflow
+| [77185] Dovecot SSL Certificate Common Name Field MitM Spoofing Weakness
+| [75445] Cyrus IMAP Server imapd index.c index_get_ids Function References Header NULL Dereference Remote DoS
+| [74515] Dovecot script-login chroot Configuration Setting Traversal Arbitrary File Access
+| [74514] Dovecot script-login User / Group Configuration Settings Remote Access Restriction Bypass
+| [72495] Dovecot lib-mail/message-header-parser.c Mail Header Name NULL Character Handling Remote DoS
+| [69260] Apple Mac OS X Server Dovecot Memory Aliasing Mail Delivery Issue
+| [68516] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition User Private Namespace Mailbox Access Restriction Remote Bypass
+| [68515] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition Specific Entry Order Mailbox Access Restriction Remote Bypass
+| [68513] Dovecot Non-public Namespace Mailbox ACL Manipulation Access Restriction Remote Bypass
+| [68512] Dovecot IMAP / POP3 Session Disconnect Master Process Outage Remote DoS
+| [66625] Dovecot ACL Plugin INBOX ACL Copying Weakness Restriction Bypass
+| [66113] Dovecot Mail Root Directory Creation Permission Weakness
+| [66112] Dovecot Installation base_dir Parent Directory Permission Weakness
+| [66111] Dovecot SEARCH Functionality str_find_init() Function Overflow
+| [66110] Dovecot Multiple Unspecified Buffer Overflows
+| [66108] Dovecot Malformed Message Body Processing Unspecified Functions Remote DoS
+| [64783] Dovecot E-mail Message Header Unspecified DoS
+| [63372] Apple Mac OS X Dovecot Kerberos Authentication SACL Restriction Bypass
+| [62796] Dovecot mbox Format Email Header Handling DoS
+| [60316] Dovecot base_dir Directory Permission Weakness Local Privilege Escalation
+| [58103] Dovecot CMU Sieve Plugin Script Handling Multiple Overflows
+| [57843] Cyrus IMAP Server (cyrus-imapd) SIEVE Script Component (sieve/script.c) Crafted Script Handling Overflow
+| [57681] UoW imap Server (uw-imapd) Arbitrary Remote File Access
+| [52906] UW-imapd c-client Initial Request Remote Format String
+| [52905] UW-imapd c-client Library RFC822BUFFER Routines rfc822_output_char Function Off-by-one
+| [52456] UW-imapd on Debian Linux LOGIN Command Remote DoS
+| [50253] Dovecot dovecot.conf Permission Weakness Local ssl_key_password Parameter Disclosure
+| [49918] Dovecot ManageSieve Script Name Handling Traversal Arbitrary File Manipulation
+| [49485] UW-imapd dmail Utility Mailbox Name Handling Overflow
+| [49484] UW-imapd tmail Utility Mailbox Name Handling Overflow
+| [49429] Dovecot Message Parsing Feature Crafted Email Header Handling Remote DoS
+| [49099] Dovecot ACL Plugin k Right Mailbox Creation Restriction Bypass
+| [49098] Dovecot ACL Plugin Negative Access Rights Bypass
+| [43137] Dovecot mail_extra_groups Symlink File Manipulation
+| [42979] Dovecot passdbs Argument Injection Authentication Bypass
+| [42004] Perdition Mail Retrieval Proxy IMAPD IMAP Tag Remote Format String Arbitrary Code Execution
+| [39876] Dovecot LDAP Auth Cache Security Bypass
+| [39670] Mercury Mail Transport System IMAPD SEARCH Command Remote Overflow
+| [39386] Dovecot ACL Plugin Insert Right APPEND / COPY Command Unauthorized Flag Manipulation
+| [35489] Dovecot index/mbox/mbox-storage.c Traversal Arbitrary Gzip File Access
+| [31362] Novell NetMail IMAP Daemon (IMAPD) APPEND Command Remote Overflow
+| [31361] Novell NetMail IMAP Daemon (IMAPD) APPEND Command DoS
+| [31360] Novell NetMail IMAP Daemon (IMAPD) SUBSCRIBE Command Remote Overflow
+| [30524] Dovecot IMAP/POP3 Server dovecot.index.cache Handling Overflow
+| [25853] Cyrus IMAPD pop3d USER Command Remote Overflow
+| [25727] Dovecot Multiple Command Traversal Arbitrary Directory Listing
+| [23281] Dovecot imap/pop3-login dovecot-auth DoS
+| [23280] Dovecot Malformed APPEND Command DoS
+| [18179] HP Tru64 UNIX imapd NLSPATH Environment Variable Local Overflow
+| [13242] UW-imapd CRAM-MD5 Authentication Bypass
+| [12385] Novell NetMail IMAPD 101_mEna Script Remote Overflow
+| [12042] UoW imapd Multiple Unspecified Overflows
+| [12037] UoW imapd (UW-IMAP) Multiple Command Remote Overflows
+| [12033] Slackware Linux imapd/ipop3d Malformed USER/PASS Sequence DoS
+| [911] UoW imapd AUTHENTICATE Command Remote Overflow
+| [790] UoW imap Server (uw-imapd) BODY Request Remote Overflow
+| [519] UoW imapd SIGABRT Signal Forced Crash Information Disclosure
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [97536] Dovecot CVE-2017-2669 Denial of Service Vulnerability
+| [94639] Dovecot Auth Component CVE-2016-8652 Denial of Service Vulnerability
+| [91175] Dovecot CVE-2016-4982 Local Information Disclosure Vulnerability
+| [84736] Dovecot CVE-2008-4870 Local Security Vulnerability
+| [84478] imapd CVE-1999-1224 Denial-Of-Service Vulnerability
+| [74335] Dovecot 'ssl-proxy-openssl.c' Remote Denial of Service Vulnerability
+| [67306] Dovecot Denial of Service Vulnerability
+| [65650] Eudora WorldMail imapd 'UID' Command Buffer Overflow Vulnerability
+| [63367] Dovecot Checkpassword Authentication Protocol Local Authentication Bypass Vulnerability
+| [61763] RETIRED: Dovecot 'LIST' Command Denial of Service Vulnerability
+| [60465] Exim for Dovecot 'use_shell' Remote Command Execution Vulnerability
+| [60052] Dovecot 'APPEND' Parameter Denial of Service Vulnerability
+| [56759] RETIRED: Dovecot 'mail-search.c' Denial of Service Vulnerability
+| [51403] Eudora WorldMail imapd 'LIST' Command Buffer Overflow Vulnerability
+| [50709] Dovecot SSL Certificate 'Common Name' Field Validation Security Bypass Vulnerability
+| [49949] Cyrus IMAPd NTTP Logic Error Authentication Bypass Vulnerability
+| [48003] Dovecot 'script-login' Multiple Security Bypass Vulnerabilities
+| [47930] Dovecot Header Name NULL Character Denial of Service Vulnerability
+| [44874] Apple Mac OS X Dovecot (CVE-2010-4011) Memory Corruption Vulnerability
+| [43690] Dovecot Access Control List (ACL) Multiple Remote Vulnerabilities
+| [41964] Dovecot Access Control List (ACL) Plugin Security Bypass Weakness
+| [39258] Dovecot Service Control Access List Security Bypass Vulnerability
+| [37084] Dovecot Insecure 'base_dir' Permissions Local Privilege Escalation Vulnerability
+| [36377] Dovecot Sieve Plugin Multiple Unspecified Buffer Overflow Vulnerabilities
+| [32582] Dovecot ManageSieve Service '.sieve' Files Directory Traversal Vulnerability
+| [31997] Dovecot Invalid Message Address Parsing Denial of Service Vulnerability
+| [31587] Dovecot ACL Plugin Multiple Security Bypass Vulnerabilities
+| [28181] Dovecot 'Tab' Character Password Check Security Bypass Vulnerability
+| [28092] Dovecot 'mail_extra_groups' Insecure Settings Local Unauthorized Access Vulnerability
+| [27093] Dovecot Authentication Cache Security Bypass Vulnerability
+| [26270] Perdition IMAPD __STR_VWRITE Remote Format String Vulnerability
+| [25733] Mercury/32 IMAPD SEARCH Command Remote Stack Buffer Overflow Vulnerability
+| [25182] Dovecot ACL Plugin Security Bypass Vulnerability
+| [23552] Dovecot Zlib Plugin Remote Information Disclosure Vulnerability
+| [23058] Atrium Mercur IMapD NTLM Buffer Overflow Vulnerability
+| [22262] IBM AIX Pop3D/Pop3DS/IMapD/IMapDS Authentication Bypass Vulnerability
+| [21183] Dovecot IMAP Server Mapped Pages Off-By-One Buffer Overflow Vulnerability
+| [18056] Cyrus IMAPD POP3D Remote Buffer Overflow Vulnerability
+| [17961] Dovecot Remote Information Disclosure Vulnerability
+| [16672] Dovecot Double Free Denial of Service Vulnerability
+| [15980] Qualcomm WorldMail IMAPD Buffer Overflow Vulnerability
+| [15753] Ipswitch Collaboration Suite and IMail Server IMAPD LIST Command Denial Of Service Vulnerability
+| [12636] Cyrus IMAPD Multiple Remote Buffer Overflow Vulnerabilities
+| [11738] Cyrus IMAPD Multiple Remote Unspecified Vulnerabilities
+| [11729] Cyrus IMAPD Multiple Remote Vulnerabilities
+| [6298] Cyrus IMAPD Pre-Login Heap Corruption Vulnerability
+| [4713] Wu-imapd Partial Mailbox Attribute Remote Buffer Overflow Vulnerability
+| [2856] Imapd 'Local' Buffer Overflow Vulnerabilities
+| [1110] Univ. Of Washington imapd Buffer Overflow Vulnerabilities
+| [502] NT IMail Imapd Buffer Overflow DoS Vulnerability
+| [130] imapd Buffer Overflow Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028585] Dovecot APPEND Parameter Processing Flaw Lets Remote Authenticated Users Deny Service
+| [1024740] Mac OS X Server Dovecot Memory Aliasing Bug May Cause Mail to Be Delivered to the Wrong User
+| [1017288] Dovecot POP3/IMAP Cache File Buffer Overflow May Let Remote Users Execute Arbitrary Code
+| [1013278] Cyrus IMAPd Buffer Overflows in Annotate Extension, Cached Header, and Fetchnews May Let Remote Users Execute Arbitrary Code
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [86382] Dovecot POP3 Service denial of service
+| [84396] Dovecot IMAP APPEND denial of service
+| [80453] Dovecot mail-search.c denial of service
+| [71354] Dovecot SSL Common Name (CN) weak security
+| [70325] Cyrus IMAPd NNTP security bypass
+| [67675] Dovecot script-login security bypass
+| [67674] Dovecot script-login directory traversal
+| [67589] Dovecot header name denial of service
+| [63267] Apple Mac OS X Dovecot information disclosure
+| [62340] Dovecot mailbox security bypass
+| [62339] Dovecot IMAP or POP3 denial of service
+| [62256] Dovecot mailbox security bypass
+| [62255] Dovecot ACL entry security bypass
+| [60639] Dovecot ACL plugin weak security
+| [57267] Apple Mac OS X Dovecot Kerberos security bypass
+| [56763] Dovecot header denial of service
+| [54363] Dovecot base_dir privilege escalation
+| [53248] CMU Sieve plugin for Dovecot unspecified buffer overflow
+| [47526] UW-imapd rfc822_output_char() denial of service
+| [46323] Dovecot dovecot.conf information disclosure
+| [46227] Dovecot message parsing denial of service
+| [45669] Dovecot ACL mailbox security bypass
+| [45667] Dovecot ACL plugin rights security bypass
+| [41085] Dovecot TAB characters authentication bypass
+| [41009] Dovecot mail_extra_groups option unauthorized access
+| [39342] Dovecot LDAP auth cache configuration security bypass
+| [35767] Dovecot ACL plugin security bypass
+| [34082] Dovecot mbox-storage.c directory traversal
+| [30433] Dovecot IMAP/POP3 server dovecot.index.cache buffer overflow
+| [26536] Dovecot IMAP LIST information disclosure
+| [24710] Dovecot dovecot-auth and imap/pop3-login denial of service
+| [24709] Dovecot APPEND command denial of service
+| [22629] RHSA-2005:408 updates for cyrus-imapd not installed
+| [19460] Cyrus IMAP imapd buffer overflow
+| [19455] Cyrus IMAP imapd extension off-by-one buffer overflow
+| [18492] Novell NetMail IMAPD 101_mEna buffer overflow
+| [10803] UW IMAP (wu-imapd) authenticated user buffer overflow
+| [9238] UW IMAP (wu-imapd) could allow a remote attacker to access arbitrary files
+| [9055] UW IMAP (wu-imapd) partial mailbox attributes to request buffer overflow
+| [7345] Slackware Linux imapd and ipop3d core dump
+| [573] Imapd denial of service
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [30724] Perdition 1.17 IMAPD __STR_VWRITE Remote Format String Vulnerability
+| [25297] Dovecot with Exim sender_address Parameter - Remote Command Execution
+| [22061] Cyrus IMAPD 1.4/1.5.19/2.0.12/2.0.16/2.1.9/2.1.10 Pre-Login Heap Corruption Vulnerability
+| [21443] Wu-imapd 2000/2001 Partial Mailbox Attribute Remote Buffer Overflow Vulnerability (2)
+| [21442] Wu-imapd 2000/2001 Partial Mailbox Attribute Remote Buffer Overflow Vulnerability (1)
+| [19849] UoW imapd 10.234/12.264 COPY Buffer Overflow (meta)
+| [19848] UoW imapd 10.234/12.264 LSUB Buffer Overflow (meta)
+| [19847] UoW imapd 10.234/12.264 Buffer Overflow Vulnerabilities
+| [19377] Ipswitch IMail 5.0 Imapd Buffer Overflow DoS Vulnerability
+| [19107] Netscape Messaging Server 3.55,University of Washington imapd 10.234 Buffer Overflow Vulnerability
+| [18354] WorldMail imapd 3.0 SEH overflow (egg hunter)
+| [16836] Cyrus IMAPD pop3d popsubfolders USER Buffer Overflow
+| [16485] MailEnable IMAPD 1.54 - STATUS Request Buffer Overflow
+| [16482] MDaemon 9.6.4 IMAPD FETCH Buffer Overflow
+| [16480] MailEnable IMAPD W3C Logging Buffer Overflow
+| [16477] Mdaemon 8.0.3 IMAPD CRAM-MD5 Authentication Overflow
+| [16475] MailEnable IMAPD (2.35) Login Request Buffer Overflow
+| [16474] Qualcomm WorldMail 3.0 IMAPD LIST Buffer Overflow
+| [5257] Dovecot IMAP 1.0.10 <= 1.1rc2 - Remote Email Disclosure Exploit
+| [4429] Mercury/32 4.52 IMAPD SEARCH command Post-Auth Overflow Exploit
+| [3627] IPSwitch IMail Server <= 8.20 IMAPD Remote Buffer Overflow Exploit
+| [3527] Mercur IMAPD 5.00.14 Remote Denial of Service Exploit (win32)
+| [2185] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (3)
+| [2053] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (2)
+| [1813] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit
+| [1380] Eudora Qualcomm WorldMail 3.0 (IMAPd) Remote Overflow Exploit
+| [1332] MailEnable 1.54 Pro Universal IMAPD W3C Logging BoF Exploit
+| [1327] FTGate4 Groupware Mail Server 4.1 (imapd) Remote Buffer Overflow PoC
+| [1151] MDaemon 8.0.3 IMAPD CRAM-MD5 Authentication Overflow Exploit
+| [1124] IPSwitch IMail Server <= 8.15 IMAPD Remote Root Exploit
+| [915] MailEnable Enterprise 1.x Imapd Remote Exploit
+| [903] Cyrus imapd 2.2.4 - 2.2.8 (imapmagicplus) Remote Exploit
+| [340] Linux imapd Remote Overflow File Retrieve Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [901026] Dovecot Sieve Plugin Multiple Buffer Overflow Vulnerabilities
+| [901025] Dovecot Version Detection
+| [881425] CentOS Update for cyrus-imapd CESA-2011:1508 centos5 x86_64
+| [881403] CentOS Update for cyrus-imapd CESA-2011:0859 centos5 x86_64
+| [881402] CentOS Update for dovecot CESA-2011:1187 centos5 x86_64
+| [881397] CentOS Update for cyrus-imapd CESA-2011:1317 centos4 x86_64
+| [881370] CentOS Update for cyrus-imapd CESA-2011:1508 centos4 x86_64
+| [881358] CentOS Update for dovecot CESA-2011:1187 centos4 x86_64
+| [881318] CentOS Update for cyrus-imapd CESA-2011:0859 centos4 x86_64
+| [881255] CentOS Update for cyrus-imapd CESA-2011:1317 centos5 x86_64
+| [881050] CentOS Update for cyrus-imapd CESA-2011:1508 centos5 i386
+| [881049] CentOS Update for cyrus-imapd CESA-2011:1508 centos4 i386
+| [881007] CentOS Update for cyrus-imapd CESA-2011:1317 centos5 i386
+| [880980] CentOS Update for dovecot CESA-2011:1187 centos5 i386
+| [880978] CentOS Update for cyrus-imapd CESA-2011:1317 centos4 i386
+| [880967] CentOS Update for dovecot CESA-2011:1187 centos4 i386
+| [880958] CentOS Update for cyrus-imapd CESA-2011:0859 centos4 i386
+| [880905] CentOS Update for cyrus-imapd CESA-2009:1459 centos4 i386
+| [880864] CentOS Update for cyrus-imapd CESA-2009:1459 centos5 i386
+| [880826] CentOS Update for cyrus-imapd CESA-2009:1116 centos5 i386
+| [880536] CentOS Update for cyrus-imapd CESA-2011:0859 centos5 i386
+| [870607] RedHat Update for dovecot RHSA-2011:0600-01
+| [870520] RedHat Update for cyrus-imapd RHSA-2011:1508-01
+| [870489] RedHat Update for cyrus-imapd RHSA-2011:1317-01
+| [870471] RedHat Update for dovecot RHSA-2011:1187-01
+| [870443] RedHat Update for cyrus-imapd RHSA-2011:0859-01
+| [870153] RedHat Update for dovecot RHSA-2008:0297-02
+| [864075] Fedora Update for cyrus-imapd FEDORA-2011-13832
+| [863585] Fedora Update for cyrus-imapd FEDORA-2011-13869
+| [863579] Fedora Update for cyrus-imapd FEDORA-2011-13860
+| [863281] Fedora Update for cyrus-imapd FEDORA-2011-7193
+| [863273] Fedora Update for cyrus-imapd FEDORA-2011-7217
+| [863272] Fedora Update for dovecot FEDORA-2011-7612
+| [863115] Fedora Update for dovecot FEDORA-2011-7258
+| [861525] Fedora Update for dovecot FEDORA-2007-664
+| [861394] Fedora Update for dovecot FEDORA-2007-493
+| [861333] Fedora Update for dovecot FEDORA-2007-1485
+| [860845] Fedora Update for dovecot FEDORA-2008-9202
+| [860663] Fedora Update for dovecot FEDORA-2008-2475
+| [860169] Fedora Update for dovecot FEDORA-2008-2464
+| [860089] Fedora Update for dovecot FEDORA-2008-9232
+| [840950] Ubuntu Update for dovecot USN-1295-1
+| [840668] Ubuntu Update for dovecot USN-1143-1
+| [840583] Ubuntu Update for dovecot vulnerabilities USN-1059-1
+| [840335] Ubuntu Update for dovecot vulnerabilities USN-593-1
+| [840290] Ubuntu Update for dovecot vulnerability USN-567-1
+| [840234] Ubuntu Update for dovecot vulnerability USN-666-1
+| [840072] Ubuntu Update for dovecot vulnerability USN-487-1
+| [831590] Mandriva Update for cyrus-imapd MDVSA-2012:037 (cyrus-imapd)
+| [831468] Mandriva Update for cyrus-imapd MDVSA-2011:149 (cyrus-imapd)
+| [831410] Mandriva Update for cyrus-imapd MDVSA-2011:100 (cyrus-imapd)
+| [831405] Mandriva Update for dovecot MDVSA-2011:101 (dovecot)
+| [831230] Mandriva Update for dovecot MDVSA-2010:217 (dovecot)
+| [831207] Mandriva Update for cyrus-imapd MDVA-2010:208 (cyrus-imapd)
+| [831197] Mandriva Update for dovecot MDVSA-2010:196 (dovecot)
+| [831054] Mandriva Update for dovecot MDVSA-2010:104 (dovecot)
+| [830496] Mandriva Update for dovecot MDVSA-2008:232 (dovecot)
+| [801055] Dovecot 'base_dir' Insecure Permissions Security Bypass Vulnerability
+| [800149] UW-imapd tmail and dmail BOF Vulnerabilities (Linux)
+| [800030] Dovecot ACL Plugin Security Bypass Vulnerabilities
+| [70767] Gentoo Security Advisory GLSA 201110-04 (Dovecot)
+| [70696] Debian Security Advisory DSA 2377-1 (cyrus-imapd-2.2)
+| [70407] Debian Security Advisory DSA 2318-1 (cyrus-imapd-2.2)
+| [70259] FreeBSD Ports: dovecot
+| [69965] Debian Security Advisory DSA 2258-1 (kolab-cyrus-imapd)
+| [69959] Debian Security Advisory DSA 2252-1 (dovecot)
+| [69740] Debian Security Advisory DSA 2242-1 (cyrus-imapd-2.2)
+| [66522] FreeBSD Ports: dovecot
+| [66416] Mandriva Security Advisory MDVSA-2009:229-1 (cyrus-imapd)
+| [66233] SLES10: Security update for Cyrus IMAPD
+| [66226] SLES11: Security update for Cyrus IMAPD
+| [66222] SLES9: Security update for Cyrus IMAPD
+| [65938] SLES10: Security update for Cyrus IMAPD
+| [65723] SLES11: Security update for Cyrus IMAPD
+| [65523] SLES9: Security update for Cyrus IMAPD
+| [65479] SLES9: Security update for cyrus-imapd
+| [65094] SLES9: Security update for cyrus-imapd
+| [65010] Ubuntu USN-838-1 (dovecot)
+| [64989] CentOS Security Advisory CESA-2009:1459 (cyrus-imapd)
+| [64978] Debian Security Advisory DSA 1892-1 (dovecot)
+| [64977] Debian Security Advisory DSA 1893-1 (cyrus-imapd-2.2 kolab-cyrus-imapd)
+| [64965] Fedora Core 11 FEDORA-2009-9901 (cyrus-imapd)
+| [64963] Fedora Core 10 FEDORA-2009-9869 (cyrus-imapd)
+| [64953] Mandrake Security Advisory MDVSA-2009:242-1 (dovecot)
+| [64952] Mandrake Security Advisory MDVSA-2009:242 (dovecot)
+| [64898] FreeBSD Ports: cyrus-imapd
+| [64864] Debian Security Advisory DSA 1881-1 (cyrus-imapd-2.2)
+| [64861] Fedora Core 10 FEDORA-2009-9559 (dovecot)
+| [64847] Fedora Core 10 FEDORA-2009-9428 (cyrus-imapd)
+| [64846] Fedora Core 11 FEDORA-2009-9417 (cyrus-imapd)
+| [64838] Mandrake Security Advisory MDVSA-2009:229 (cyrus-imapd)
+| [64271] CentOS Security Advisory CESA-2009:1116 (cyrus-imapd)
+| [62965] Gentoo Security Advisory GLSA 200812-16 (dovecot)
+| [62854] FreeBSD Ports: dovecot-managesieve
+| [61916] FreeBSD Ports: dovecot
+| [60588] Gentoo Security Advisory GLSA 200803-25 (dovecot)
+| [60568] Debian Security Advisory DSA 1516-1 (dovecot)
+| [60528] FreeBSD Ports: dovecot
+| [60134] Debian Security Advisory DSA 1457-1 (dovecot)
+| [60089] FreeBSD Ports: dovecot
+| [58578] Debian Security Advisory DSA 1359-1 (dovecot)
+| [56834] Debian Security Advisory DSA 1080-1 (dovecot)
+| [55807] Slackware Advisory SSA:2005-310-06 imapd
+| [54861] Gentoo Security Advisory GLSA 200502-29 (cyrus-imapd)
+| [54755] Gentoo Security Advisory GLSA 200411-34 (cyrus-imapd)
+| [53739] Debian Security Advisory DSA 215-1 (cyrus-imapd)
+| [53288] Debian Security Advisory DSA 597-1 (cyrus-imapd)
+| [52297] FreeBSD Ports: cyrus-imapd
+| [52296] FreeBSD Ports: cyrus-imapd
+| [52295] FreeBSD Ports: cyrus-imapd
+| [52294] FreeBSD Ports: cyrus-imapd
+| [52172] FreeBSD Ports: cyrus-imapd
+|_
+995/tcp open  ssl/pop3 Dovecot pop3d
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [106837] Dovecot up to 2.2.16 ssl-proxy-openssl.c ssl-proxy-opensslc denial of service
+| [97052] Dovecot up to 2.2.26 auth-policy Unset Crash denial of service
+| [69835] Dovecot 2.2.0/2.2.1 denial of service
+| [13348] Dovecot up to 1.2.15/2.1.15 IMAP4/POP3 SSL/TLS Handshake denial of service
+| [65684] Dovecot up to 2.2.6 unknown vulnerability
+| [9807] Dovecot up to 1.2.7 on Exim Input Sanitizer privilege escalation
+| [63692] Dovecot up to 2.0.9 spoofing
+| [7062] Dovecot 2.1.10 mail-search.c denial of service
+| [57517] Dovecot up to 2.0.9 Login directory traversal
+| [57516] Dovecot up to 2.0.9 Access Restriction directory traversal
+| [57515] Dovecot up to 2.0.9 Crash denial of service
+| [54944] Dovecot up to 1.2.9 denial of service
+| [54943] Dovecot up to 1.2.9 Access Restriction Symlink privilege escalation
+| [54942] Dovecot up to 2.0.4 Access Restriction denial of service
+| [54941] Dovecot up to 2.0.4 Access Restriction unknown vulnerability
+| [54840] Dovecot up to 1.2.9 AGate unknown vulnerability
+| [53277] Dovecot up to 1.2.9 denial of service
+| [50082] Dovecot up to 1.1.6 Stack-based memory corruption
+| [45256] Dovecot up to 1.1.5 directory traversal
+| [44846] Dovecot 1.1.4/1.1.5 IMAP Client Crash denial of service
+| [44546] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [44545] Dovecot up to 1.0.x Access Restriction unknown vulnerability
+| [41430] Dovecot 1.0.12/1.1 Locking unknown vulnerability
+| [40356] Dovecot 1.0.9 Cache unknown vulnerability
+| [38222] Dovecot 1.0.2 directory traversal
+| [36376] Dovecot up to 1.0.x directory traversal
+| [33332] Timo Sirainen Dovecot up to 1.0test53 Off-By-One memory corruption
+| [30268] Timo Sirainen Dovecot 1.0/1.0 Beta2/1.0 Beta3/1.0 Beta7 directory traversal
+| [28756] Timo Sirainen Dovecot 1.0beta2 imap/pop3-login denial of service
+| [18862] Matthew Mondor mmftpd/mmpop3d up to 0.0.13 Command mmsyslog Format String
+| [14073] Slackware Linux 3.3/3.4 IMAPD/POP3D Short Sequence memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2011-4318] Dovecot 2.0.x before 2.0.16, when ssl or starttls is enabled and hostname is used to define the proxy destination, does not verify that the server hostname matches a domain name in the subject's Common Name (CN) of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via a valid certificate for a different hostname.
+| [CVE-2011-2167] script-login in Dovecot 2.0.x before 2.0.13 does not follow the chroot configuration setting, which might allow remote authenticated users to conduct directory traversal attacks by leveraging a script.
+| [CVE-2011-2166] script-login in Dovecot 2.0.x before 2.0.13 does not follow the user and group configuration settings, which might allow remote authenticated users to bypass intended access restrictions by leveraging a script.
+| [CVE-2011-1929] lib-mail/message-header-parser.c in Dovecot 1.2.x before 1.2.17 and 2.0.x before 2.0.13 does not properly handle '\0' characters in header names, which allows remote attackers to cause a denial of service (daemon crash or mailbox corruption) via a crafted e-mail message.
+| [CVE-2010-4011] Dovecot in Apple Mac OS X 10.6.5 10H574 does not properly manage memory for user names, which allows remote authenticated users to read the private e-mail of other persons in opportunistic circumstances via standard e-mail clients accessing a user's own mailbox, related to a "memory aliasing issue."
+| [CVE-2010-3780] Dovecot 1.2.x before 1.2.15 allows remote authenticated users to cause a denial of service (master process outage) by simultaneously disconnecting many (1) IMAP or (2) POP3 sessions.
+| [CVE-2010-3779] Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.beta2 grants the admin permission to the owner of each mailbox in a non-public namespace, which might allow remote authenticated users to bypass intended access restrictions by changing the ACL of a mailbox, as demonstrated by a symlinked shared mailbox.
+| [CVE-2010-3707] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving more specific entries that occur after less specific entries, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3706] plugins/acl/acl-backend-vfile.c in Dovecot 1.2.x before 1.2.15 and 2.0.x before 2.0.5 interprets an ACL entry as a directive to add to the permissions granted by another ACL entry, instead of a directive to replace the permissions granted by another ACL entry, in certain circumstances involving the private namespace of a user, which allows remote authenticated users to bypass intended access restrictions via a request to read or modify a mailbox.
+| [CVE-2010-3304] The ACL plugin in Dovecot 1.2.x before 1.2.13 propagates INBOX ACLs to newly created mailboxes in certain configurations, which might allow remote attackers to read mailboxes that have unintended weak ACLs.
+| [CVE-2010-0745] Unspecified vulnerability in Dovecot 1.2.x before 1.2.11 allows remote attackers to cause a denial of service (CPU consumption) via long headers in an e-mail message.
+| [CVE-2010-0535] Dovecot in Apple Mac OS X 10.6 before 10.6.3, when Kerberos is enabled, does not properly enforce the service access control list (SACL) for sending and receiving e-mail, which allows remote authenticated users to bypass intended access restrictions via unspecified vectors.
+| [CVE-2010-0433] The kssl_keytab_is_available function in ssl/kssl.c in OpenSSL before 0.9.8n, when Kerberos is enabled but Kerberos configuration files cannot be opened, does not check a certain return value, which allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via SSL cipher negotiation, as demonstrated by a chroot installation of Dovecot or stunnel without Kerberos configuration files inside the chroot.
+| [CVE-2009-3897] Dovecot 1.2.x before 1.2.8 sets 0777 permissions during creation of certain directories at installation time, which allows local users to access arbitrary user accounts by replacing the auth socket, related to the parent directories of the base_dir directory, and possibly the base_dir directory itself.
+| [CVE-2009-3235] Multiple stack-based buffer overflows in the Sieve plugin in Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, as derived from Cyrus libsieve, allow context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted SIEVE script, as demonstrated by forwarding an e-mail message to a large number of recipients, a different vulnerability than CVE-2009-2632.
+| [CVE-2009-2632] Buffer overflow in the SIEVE script component (sieve/script.c), as used in cyrus-imapd in Cyrus IMAP Server 2.2.13 and 2.3.14, and Dovecot 1.0 before 1.0.4 and 1.1 before 1.1.7, allows local users to execute arbitrary code and read or modify arbitrary messages via a crafted SIEVE script, related to the incorrect use of the sizeof operator for determining buffer length, combined with an integer signedness error.
+| [CVE-2008-5301] Directory traversal vulnerability in the ManageSieve implementation in Dovecot 1.0.15, 1.1, and 1.2 allows remote attackers to read and modify arbitrary .sieve files via a ".." (dot dot) in a script name.
+| [CVE-2008-4907] The message parsing feature in Dovecot 1.1.4 and 1.1.5, when using the FETCH ENVELOPE command in the IMAP client, allows remote attackers to cause a denial of service (persistent crash) via an email with a malformed From address, which triggers an assertion error, aka "invalid message address parsing bug."
+| [CVE-2008-4870] dovecot 1.0.7 in Red Hat Enterprise Linux (RHEL) 5, and possibly Fedora, uses world-readable permissions for dovecot.conf, which allows local users to obtain the ssl_key_password parameter value.
+| [CVE-2008-4578] The ACL plugin in Dovecot before 1.1.4 allows attackers to bypass intended access restrictions by using the "k" right to create unauthorized "parent/child/child" mailboxes.
+| [CVE-2008-4577] The ACL plugin in Dovecot before 1.1.4 treats negative access rights as if they are positive access rights, which allows attackers to bypass intended access restrictions.
+| [CVE-2008-1218] Argument injection vulnerability in Dovecot 1.0.x before 1.0.13, and 1.1.x before 1.1.rc3, when using blocking passdbs, allows remote attackers to bypass the password check via a password containing TAB characters, which are treated as argument delimiters that enable the skip_password_check field to be specified.
+| [CVE-2008-1199] Dovecot before 1.0.11, when configured to use mail_extra_groups to allow Dovecot to create dotlocks in /var/mail, might allow local users to read sensitive mail files for other users, or modify files or directories that are writable by group, via a symlink attack.
+| [CVE-2007-6598] Dovecot before 1.0.10, with certain configuration options including use of %variables, does not properly maintain the LDAP+auth cache, which might allow remote authenticated users to login as a different user who has the same password.
+| [CVE-2007-5794] Race condition in nss_ldap, when used in applications that are linked against the pthread library and fork after a call to nss_ldap, might send user data to the wrong process because of improper handling of the LDAP connection. NOTE: this issue was originally reported for Dovecot with the wrong mailboxes being returned, but other applications might also be affected.
+| [CVE-2007-4211] The ACL plugin in Dovecot before 1.0.3 allows remote authenticated users with the insert right to save certain flags via a (1) COPY or (2) APPEND command.
+| [CVE-2007-2231] Directory traversal vulnerability in index/mbox/mbox-storage.c in Dovecot before 1.0.rc29, when using the zlib plugin, allows remote attackers to read arbitrary gzipped (.gz) mailboxes (mbox files) via a .. (dot dot) sequence in the mailbox name.
+| [CVE-2007-2173] Eval injection vulnerability in (1) courier-imapd.indirect and (2) courier-pop3d.indirect in Courier-IMAP before 4.0.6-r2, and 4.1.x before 4.1.2-r1, on Gentoo Linux allows remote attackers to execute arbitrary commands via the XMAILDIR variable, related to the LOGINRUN variable.
+| [CVE-2007-0618] Unspecified vulnerability in (1) pop3d, (2) pop3ds, (3) imapd, and (4) imapds in IBM AIX 5.3.0 has unspecified impact and attack vectors, involving an "authentication vulnerability."
+| [CVE-2006-5973] Off-by-one buffer overflow in Dovecot 1.0test53 through 1.0.rc14, and possibly other versions, when index files are used and mmap_disable is set to "yes," allows remote authenticated IMAP or POP3 users to cause a denial of service (crash) via unspecified vectors involving the cache file.
+| [CVE-2006-2502] Stack-based buffer overflow in pop3d in Cyrus IMAPD (cyrus-imapd) 2.3.2, when the popsubfolders option is enabled, allows remote attackers to execute arbitrary code via a long USER command.
+| [CVE-2006-2414] Directory traversal vulnerability in Dovecot 1.0 beta and 1.0 allows remote attackers to list files and directories under the mbox parent directory and obtain mailbox names via ".." sequences in the (1) LIST or (2) DELETE IMAP command.
+| [CVE-2006-0730] Multiple unspecified vulnerabilities in Dovecot before 1.0beta3 allow remote attackers to cause a denial of service (application crash or hang) via unspecified vectors involving (1) "potential hangs" in the APPEND command and "potential crashes" in (2) dovecot-auth and (3) imap/pop3-login.  NOTE: vector 2 might be related to a double free vulnerability.
+| [CVE-2002-0925] Format string vulnerability in mmsyslog function allows remote attackers to execute arbitrary code via (1) the USER command to mmpop3d for mmmail 0.0.13 and earlier, (2) the HELO command to mmsmtpd for mmmail 0.0.13 and earlier, or (3) the USER command to mmftpd 0.0.7 and earlier.
+| [CVE-2001-0143] vpop3d program in linuxconf 1.23r and earlier allows local users to overwrite arbitrary files via a symlink attack.
+| [CVE-2000-1197] POP2 or POP3 server (pop3d) in imap-uw IMAP package on FreeBSD and other operating systems creates lock files with predictable names, which allows local users to cause a denial of service (lack of mail access) for other users by creating lock files for other mail boxes.
+| [CVE-1999-1445] Vulnerability in imapd and ipop3d in Slackware 3.4 and 3.3 with shadowing enabled, and possibly other operating systems, allows remote attackers to cause a core dump via a short sequence of USER and PASS commands that do not provide valid usernames or passwords.
+| 
+| OSVDB - http://www.osvdb.org:
+| [96172] Dovecot POP3 Service Terminated LIST Command Remote DoS
+| [93525] Dovecot IMAP APPEND Command Malformed Parameter Parsing Remote DoS
+| [93004] Dovecot with Exim sender_address Parameter Remote Command Execution
+| [88058] Dovecot lib-storage/mail-search.c Multiple Keyword Search Handling Remote DoS
+| [77185] Dovecot SSL Certificate Common Name Field MitM Spoofing Weakness
+| [74515] Dovecot script-login chroot Configuration Setting Traversal Arbitrary File Access
+| [74514] Dovecot script-login User / Group Configuration Settings Remote Access Restriction Bypass
+| [72495] Dovecot lib-mail/message-header-parser.c Mail Header Name NULL Character Handling Remote DoS
+| [69260] Apple Mac OS X Server Dovecot Memory Aliasing Mail Delivery Issue
+| [68516] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition User Private Namespace Mailbox Access Restriction Remote Bypass
+| [68515] Dovecot plugins/acl/acl-backend-vfile.c ACL Permission Addition Specific Entry Order Mailbox Access Restriction Remote Bypass
+| [68513] Dovecot Non-public Namespace Mailbox ACL Manipulation Access Restriction Remote Bypass
+| [68512] Dovecot IMAP / POP3 Session Disconnect Master Process Outage Remote DoS
+| [66625] Dovecot ACL Plugin INBOX ACL Copying Weakness Restriction Bypass
+| [66113] Dovecot Mail Root Directory Creation Permission Weakness
+| [66112] Dovecot Installation base_dir Parent Directory Permission Weakness
+| [66111] Dovecot SEARCH Functionality str_find_init() Function Overflow
+| [66110] Dovecot Multiple Unspecified Buffer Overflows
+| [66108] Dovecot Malformed Message Body Processing Unspecified Functions Remote DoS
+| [64783] Dovecot E-mail Message Header Unspecified DoS
+| [63372] Apple Mac OS X Dovecot Kerberos Authentication SACL Restriction Bypass
+| [62796] Dovecot mbox Format Email Header Handling DoS
+| [60316] Dovecot base_dir Directory Permission Weakness Local Privilege Escalation
+| [58103] Dovecot CMU Sieve Plugin Script Handling Multiple Overflows
+| [50253] Dovecot dovecot.conf Permission Weakness Local ssl_key_password Parameter Disclosure
+| [49918] Dovecot ManageSieve Script Name Handling Traversal Arbitrary File Manipulation
+| [49429] Dovecot Message Parsing Feature Crafted Email Header Handling Remote DoS
+| [49099] Dovecot ACL Plugin k Right Mailbox Creation Restriction Bypass
+| [49098] Dovecot ACL Plugin Negative Access Rights Bypass
+| [43137] Dovecot mail_extra_groups Symlink File Manipulation
+| [42979] Dovecot passdbs Argument Injection Authentication Bypass
+| [39876] Dovecot LDAP Auth Cache Security Bypass
+| [39386] Dovecot ACL Plugin Insert Right APPEND / COPY Command Unauthorized Flag Manipulation
+| [35489] Dovecot index/mbox/mbox-storage.c Traversal Arbitrary Gzip File Access
+| [30524] Dovecot IMAP/POP3 Server dovecot.index.cache Handling Overflow
+| [25853] Cyrus IMAPD pop3d USER Command Remote Overflow
+| [25727] Dovecot Multiple Command Traversal Arbitrary Directory Listing
+| [23281] Dovecot imap/pop3-login dovecot-auth DoS
+| [23280] Dovecot Malformed APPEND Command DoS
+| [14459] mmmail mmpop3d USER Command mmsyslog Function Format String
+| [12033] Slackware Linux imapd/ipop3d Malformed USER/PASS Sequence DoS
+| [5857] Linux pop3d Arbitrary Mail File Access
+| [2471] akpop3d username SQL Injection
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [97536] Dovecot CVE-2017-2669 Denial of Service Vulnerability
+| [94639] Dovecot Auth Component CVE-2016-8652 Denial of Service Vulnerability
+| [91175] Dovecot CVE-2016-4982 Local Information Disclosure Vulnerability
+| [84736] Dovecot CVE-2008-4870 Local Security Vulnerability
+| [74335] Dovecot 'ssl-proxy-openssl.c' Remote Denial of Service Vulnerability
+| [67306] Dovecot Denial of Service Vulnerability
+| [67219] akpop3d 'pszQuery' Remote Memory Corruption Vulnerability
+| [63367] Dovecot Checkpassword Authentication Protocol Local Authentication Bypass Vulnerability
+| [61763] RETIRED: Dovecot 'LIST' Command Denial of Service Vulnerability
+| [60465] Exim for Dovecot 'use_shell' Remote Command Execution Vulnerability
+| [60052] Dovecot 'APPEND' Parameter Denial of Service Vulnerability
+| [56759] RETIRED: Dovecot 'mail-search.c' Denial of Service Vulnerability
+| [50709] Dovecot SSL Certificate 'Common Name' Field Validation Security Bypass Vulnerability
+| [48003] Dovecot 'script-login' Multiple Security Bypass Vulnerabilities
+| [47930] Dovecot Header Name NULL Character Denial of Service Vulnerability
+| [44874] Apple Mac OS X Dovecot (CVE-2010-4011) Memory Corruption Vulnerability
+| [43690] Dovecot Access Control List (ACL) Multiple Remote Vulnerabilities
+| [41964] Dovecot Access Control List (ACL) Plugin Security Bypass Weakness
+| [39838] tpop3d Remote Denial of Service Vulnerability
+| [39258] Dovecot Service Control Access List Security Bypass Vulnerability
+| [37084] Dovecot Insecure 'base_dir' Permissions Local Privilege Escalation Vulnerability
+| [36377] Dovecot Sieve Plugin Multiple Unspecified Buffer Overflow Vulnerabilities
+| [32582] Dovecot ManageSieve Service '.sieve' Files Directory Traversal Vulnerability
+| [31997] Dovecot Invalid Message Address Parsing Denial of Service Vulnerability
+| [31587] Dovecot ACL Plugin Multiple Security Bypass Vulnerabilities
+| [28181] Dovecot 'Tab' Character Password Check Security Bypass Vulnerability
+| [28092] Dovecot 'mail_extra_groups' Insecure Settings Local Unauthorized Access Vulnerability
+| [27093] Dovecot Authentication Cache Security Bypass Vulnerability
+| [25182] Dovecot ACL Plugin Security Bypass Vulnerability
+| [23552] Dovecot Zlib Plugin Remote Information Disclosure Vulnerability
+| [22262] IBM AIX Pop3D/Pop3DS/IMapD/IMapDS Authentication Bypass Vulnerability
+| [21183] Dovecot IMAP Server Mapped Pages Off-By-One Buffer Overflow Vulnerability
+| [18056] Cyrus IMAPD POP3D Remote Buffer Overflow Vulnerability
+| [17961] Dovecot Remote Information Disclosure Vulnerability
+| [16672] Dovecot Double Free Denial of Service Vulnerability
+| [8495] akpop3d User Name SQL Injection Vulnerability
+| [8473] Vpop3d Remote Denial Of Service Vulnerability
+| [3990] ZPop3D Bad Login Logging Failure Vulnerability
+| [2781] DynFX MailServer POP3d Denial of Service Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028585] Dovecot APPEND Parameter Processing Flaw Lets Remote Authenticated Users Deny Service
+| [1024740] Mac OS X Server Dovecot Memory Aliasing Bug May Cause Mail to Be Delivered to the Wrong User
+| [1017288] Dovecot POP3/IMAP Cache File Buffer Overflow May Let Remote Users Execute Arbitrary Code
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [86382] Dovecot POP3 Service denial of service
+| [84396] Dovecot IMAP APPEND denial of service
+| [80453] Dovecot mail-search.c denial of service
+| [71354] Dovecot SSL Common Name (CN) weak security
+| [67675] Dovecot script-login security bypass
+| [67674] Dovecot script-login directory traversal
+| [67589] Dovecot header name denial of service
+| [63267] Apple Mac OS X Dovecot information disclosure
+| [62340] Dovecot mailbox security bypass
+| [62339] Dovecot IMAP or POP3 denial of service
+| [62256] Dovecot mailbox security bypass
+| [62255] Dovecot ACL entry security bypass
+| [60639] Dovecot ACL plugin weak security
+| [57267] Apple Mac OS X Dovecot Kerberos security bypass
+| [56763] Dovecot header denial of service
+| [54363] Dovecot base_dir privilege escalation
+| [53248] CMU Sieve plugin for Dovecot unspecified buffer overflow
+| [46323] Dovecot dovecot.conf information disclosure
+| [46227] Dovecot message parsing denial of service
+| [45669] Dovecot ACL mailbox security bypass
+| [45667] Dovecot ACL plugin rights security bypass
+| [41085] Dovecot TAB characters authentication bypass
+| [41009] Dovecot mail_extra_groups option unauthorized access
+| [39342] Dovecot LDAP auth cache configuration security bypass
+| [35767] Dovecot ACL plugin security bypass
+| [34082] Dovecot mbox-storage.c directory traversal
+| [30433] Dovecot IMAP/POP3 server dovecot.index.cache buffer overflow
+| [26578] Cyrus IMAP pop3d buffer overflow
+| [26536] Dovecot IMAP LIST information disclosure
+| [24710] Dovecot dovecot-auth and imap/pop3-login denial of service
+| [24709] Dovecot APPEND command denial of service
+| [13018] akpop3d authentication code SQL injection
+| [7345] Slackware Linux imapd and ipop3d core dump
+| [6269] imap, ipop2d and ipop3d buffer overflows
+| [5923] Linuxconf vpop3d symbolic link
+| [4918] IPOP3D, Buffer overflow attack
+| [1560] IPOP3D, user login successful
+| [1559] IPOP3D user login to remote host successful
+| [1525] IPOP3D, user logout
+| [1524] IPOP3D, user auto-logout
+| [1523] IPOP3D, user login failure
+| [1522] IPOP3D, brute force attack
+| [1521] IPOP3D, user kiss of death logout
+| [418] pop3d mktemp creates insecure temporary files
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [25297] Dovecot with Exim sender_address Parameter - Remote Command Execution
+| [23053] Vpop3d Remote Denial of Service Vulnerability
+| [16836] Cyrus IMAPD pop3d popsubfolders USER Buffer Overflow
+| [11893] tPop3d 1.5.3 DoS
+| [5257] Dovecot IMAP 1.0.10 <= 1.1rc2 - Remote Email Disclosure Exploit
+| [2185] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (3)
+| [2053] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit (2)
+| [1813] Cyrus IMAPD 2.3.2 (pop3d) Remote Buffer Overflow Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [901026] Dovecot Sieve Plugin Multiple Buffer Overflow Vulnerabilities
+| [901025] Dovecot Version Detection
+| [881402] CentOS Update for dovecot CESA-2011:1187 centos5 x86_64
+| [881358] CentOS Update for dovecot CESA-2011:1187 centos4 x86_64
+| [880980] CentOS Update for dovecot CESA-2011:1187 centos5 i386
+| [880967] CentOS Update for dovecot CESA-2011:1187 centos4 i386
+| [870607] RedHat Update for dovecot RHSA-2011:0600-01
+| [870471] RedHat Update for dovecot RHSA-2011:1187-01
+| [870153] RedHat Update for dovecot RHSA-2008:0297-02
+| [863272] Fedora Update for dovecot FEDORA-2011-7612
+| [863115] Fedora Update for dovecot FEDORA-2011-7258
+| [861525] Fedora Update for dovecot FEDORA-2007-664
+| [861394] Fedora Update for dovecot FEDORA-2007-493
+| [861333] Fedora Update for dovecot FEDORA-2007-1485
+| [860845] Fedora Update for dovecot FEDORA-2008-9202
+| [860663] Fedora Update for dovecot FEDORA-2008-2475
+| [860169] Fedora Update for dovecot FEDORA-2008-2464
+| [860089] Fedora Update for dovecot FEDORA-2008-9232
+| [840950] Ubuntu Update for dovecot USN-1295-1
+| [840668] Ubuntu Update for dovecot USN-1143-1
+| [840583] Ubuntu Update for dovecot vulnerabilities USN-1059-1
+| [840335] Ubuntu Update for dovecot vulnerabilities USN-593-1
+| [840290] Ubuntu Update for dovecot vulnerability USN-567-1
+| [840234] Ubuntu Update for dovecot vulnerability USN-666-1
+| [840072] Ubuntu Update for dovecot vulnerability USN-487-1
+| [831405] Mandriva Update for dovecot MDVSA-2011:101 (dovecot)
+| [831230] Mandriva Update for dovecot MDVSA-2010:217 (dovecot)
+| [831197] Mandriva Update for dovecot MDVSA-2010:196 (dovecot)
+| [831054] Mandriva Update for dovecot MDVSA-2010:104 (dovecot)
+| [830496] Mandriva Update for dovecot MDVSA-2008:232 (dovecot)
+| [801055] Dovecot 'base_dir' Insecure Permissions Security Bypass Vulnerability
+| [800030] Dovecot ACL Plugin Security Bypass Vulnerabilities
+| [70767] Gentoo Security Advisory GLSA 201110-04 (Dovecot)
+| [70259] FreeBSD Ports: dovecot
+| [69959] Debian Security Advisory DSA 2252-1 (dovecot)
+| [66522] FreeBSD Ports: dovecot
+| [65010] Ubuntu USN-838-1 (dovecot)
+| [64978] Debian Security Advisory DSA 1892-1 (dovecot)
+| [64953] Mandrake Security Advisory MDVSA-2009:242-1 (dovecot)
+| [64952] Mandrake Security Advisory MDVSA-2009:242 (dovecot)
+| [64861] Fedora Core 10 FEDORA-2009-9559 (dovecot)
+| [62965] Gentoo Security Advisory GLSA 200812-16 (dovecot)
+| [62854] FreeBSD Ports: dovecot-managesieve
+| [61916] FreeBSD Ports: dovecot
+| [60588] Gentoo Security Advisory GLSA 200803-25 (dovecot)
+| [60568] Debian Security Advisory DSA 1516-1 (dovecot)
+| [60528] FreeBSD Ports: dovecot
+| [60134] Debian Security Advisory DSA 1457-1 (dovecot)
+| [60089] FreeBSD Ports: dovecot
+| [58578] Debian Security Advisory DSA 1359-1 (dovecot)
+| [56834] Debian Security Advisory DSA 1080-1 (dovecot)
+|_
+Service Info: Host:  mail.prosversusjoes.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 10:12:38 2018 -- 1 IP address (1 host up) scanned in 76.54 seconds

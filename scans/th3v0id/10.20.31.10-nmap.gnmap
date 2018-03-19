@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:54:41 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.31.10-nmap 10.20.31.10
+Host: 10.20.31.10 ()	Status: Up
+Host: 10.20.31.10 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3p1 Debian 3ubuntu7.1 (Ubuntu Linux; protocol 2.0)/, 25/open/tcp//smtp//Postfix smtpd/, 80/open/tcp//http//Apache httpd 2.2.14 ((Ubuntu))/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 2049/open/tcp//nfs//2-4 (RPC #100003)/	Ignored State: closed (993)
+# Nmap done at Mon Mar 19 09:55:50 2018 -- 1 IP address (1 host up) scanned in 69.15 seconds

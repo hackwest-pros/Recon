@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 06:47:21 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.105.203-nmap 10.100.105.203
+Host: 10.100.105.203 ()	Status: Up
+Host: 10.100.105.203 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)/, 25/open/tcp//smtp//Postfix smtpd/, 80/open/tcp//http//Apache httpd 2.2.14 ((Ubuntu))/, 110/open/tcp//pop3//Courier pop3d/, 143/open/tcp//imap//Dovecot imapd/, 993/open/tcp//ssl|imap//Dovecot imapd/, 9001/open/tcp//tor-orport?///	Ignored State: closed (993)
+# Nmap done at Mon Mar 19 06:51:09 2018 -- 1 IP address (1 host up) scanned in 228.43 seconds

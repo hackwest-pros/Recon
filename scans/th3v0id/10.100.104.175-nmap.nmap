@@ -1,0 +1,1472 @@
+# Nmap 7.60 scan initiated Mon Mar 19 06:15:43 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.104.175-nmap 10.100.104.175
+Nmap scan report for 10.100.104.175
+Host is up (0.12s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 2.0)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [80267] OpenSSH up to 5.x/6.x/7.1p1 Forward Option roaming_common.c roaming_read/roaming_write memory corruption
+| [80266] OpenSSH up to 5.x/6.x/7.1p1 roaming_common.c resend_bytes information disclosure
+| [4584] OpenSSH up to 5.7 auth-options.c information disclosure
+| [4282] OpenSSH 5.6/5.7 Legacy Certificate memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2006-0883] OpenSSH on FreeBSD 5.3 and 5.4, when used with OpenPAM, does not properly handle when a forked child process terminates during PAM authentication, which allows remote attackers to cause a denial of service (client connection refusal) by connecting multiple times to the SSH server, waiting for the password prompt, then disconnecting.
+| [CVE-2012-0814] The auth_parse_options function in auth-options.c in sshd in OpenSSH before 5.7 provides debug messages containing authorized_keys command options, which allows remote authenticated users to obtain potentially sensitive information by reading these messages, as demonstrated by the shared user account required by Gitolite.  NOTE: this can cross privilege boundaries because a user account may intentionally have no shell or filesystem access, and therefore may have no supported way to read an authorized_keys file in its own home directory.
+| [CVE-2011-5000] The ssh_gssapi_parse_ename function in gss-serv.c in OpenSSH 5.8 and earlier, when gssapi-with-mic authentication is enabled, allows remote authenticated users to cause a denial of service (memory consumption) via a large value in a certain length field.  NOTE: there may be limited scenarios in which this issue is relevant.
+| [CVE-2011-0539] The key_certify function in usr.bin/ssh/key.c in OpenSSH 5.6 and 5.7, when generating legacy certificates using the -t command-line option in ssh-keygen, does not initialize the nonce field, which might allow remote attackers to obtain sensitive stack memory contents or make it easier to conduct hash collision attacks.
+| [CVE-2010-4755] The (1) remote_glob function in sftp-glob.c and the (2) process_put function in sftp.c in OpenSSH 5.8 and earlier, as used in FreeBSD 7.3 and 8.1, NetBSD 5.0.2, OpenBSD 4.7, and other products, allow remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in SSH_FXP_STAT requests to an sftp daemon, a different vulnerability than CVE-2010-2632.
+| [CVE-2010-4478] OpenSSH 5.6 and earlier, when J-PAKE is enabled, does not properly validate the public parameters in the J-PAKE protocol, which allows remote attackers to bypass the need for knowledge of the shared secret, and successfully authenticate, by sending crafted values in each round of the protocol, a related issue to CVE-2010-4252.
+| [CVE-2009-2904] A certain Red Hat modification to the ChrootDirectory feature in OpenSSH 4.8, as used in sshd in OpenSSH 4.3 in Red Hat Enterprise Linux (RHEL) 5.4 and Fedora 11, allows local users to gain privileges via hard links to setuid programs that use configuration files within the chroot directory, related to requirements for directory ownership.
+| [CVE-2008-3844] Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact.  NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points.  As of 20080827, no unofficial distributions of this software are known.
+| [CVE-2008-3259] OpenSSH before 5.1 sets the SO_REUSEADDR socket option when the X11UseLocalhost configuration setting is disabled, which allows local users on some platforms to hijack the X11 forwarding port via a bind to a single IP address, as demonstrated on the HP-UX platform.
+| 
+| OSVDB - http://www.osvdb.org:
+| [92034] GSI-OpenSSH auth-pam.c Memory Management Authentication Bypass
+| [90474] Red Hat / Fedora PAM Module for OpenSSH Incorrect error() Function Calling Local Privilege Escalation
+| [90007] OpenSSH logingracetime / maxstartup Threshold Connection Saturation Remote DoS
+| [81500] OpenSSH gss-serv.c ssh_gssapi_parse_ename Function Field Length Value Parsing Remote DoS
+| [78706] OpenSSH auth-options.c sshd auth_parse_options Function authorized_keys Command Option Debug Message Information Disclosure
+| [75753] OpenSSH PAM Module Aborted Conversation Local Information Disclosure
+| [75249] OpenSSH sftp-glob.c remote_glob Function Glob Expression Parsing Remote DoS
+| [75248] OpenSSH sftp.c process_put Function Glob Expression Parsing Remote DoS
+| [72183] Portable OpenSSH ssh-keysign ssh-rand-helper Utility File Descriptor Leak Local Information Disclosure
+| [70873] OpenSSH Legacy Certificates Stack Memory Disclosure
+| [69658] OpenSSH J-PAKE Public Parameter Validation Shared Secret Authentication Bypass
+| [67743] Novell NetWare OpenSSH SSHD.NLM Absolute Path Handling Remote Overflow
+| [59353] OpenSSH sshd Local TCP Redirection Connection Masking Weakness
+| [58495] OpenSSH sshd ChrootDirectory Feature SetUID Hard Link Local Privilege Escalation
+| [56921] OpenSSH Unspecified Remote Compromise
+| [53021] OpenSSH on ftp.openbsd.org Trojaned Distribution
+| [50036] OpenSSH CBC Mode Chosen Ciphertext 32-bit Chunk Plaintext Context Disclosure
+| [49386] OpenSSH sshd TCP Connection State Remote Account Enumeration
+| [48791] OpenSSH on Debian sshd Crafted Username Arbitrary Remote SELinux Role Access
+| [47635] OpenSSH Packages on Red Hat Enterprise Linux Compromised Distribution
+| [47227] OpenSSH X11UseLocalhost X11 Forwarding Port Hijacking
+| [45873] Cisco WebNS SSHield w/ OpenSSH Crafted Large Packet Remote DoS
+| [43911] OpenSSH ~/.ssh/rc ForceCommand Bypass Arbitrary Command Execution
+| [43745] OpenSSH X11 Forwarding Local Session Hijacking
+| [43371] OpenSSH Trusted X11 Cookie Connection Policy Bypass
+| [39214] OpenSSH linux_audit_record_event Crafted Username Audit Log Injection
+| [37315] pam_usb OpenSSH Authentication Unspecified Issue
+| [34850] OpenSSH on Mac OS X Key Generation Remote Connection DoS
+| [34601] OPIE w/ OpenSSH Account Enumeration
+| [34600] OpenSSH S/KEY Authentication Account Enumeration
+| [32721] OpenSSH Username Password Complexity Account Enumeration
+| [30232] OpenSSH Privilege Separation Monitor Weakness
+| [29494] OpenSSH packet.c Invalid Protocol Sequence Remote DoS
+| [29266] OpenSSH GSSAPI Authentication Abort Username Enumeration
+| [29264] OpenSSH Signal Handler Pre-authentication Race Condition Code Execution
+| [29152] OpenSSH Identical Block Packet DoS
+| [27745] Apple Mac OS X OpenSSH Nonexistent Account Login Enumeration DoS
+| [23797] OpenSSH with OpenPAM Connection Saturation Forked Process Saturation DoS
+| [22692] OpenSSH scp Command Line Filename Processing Command Injection
+| [20216] OpenSSH with KerberosV Remote Authentication Bypass
+| [19142] OpenSSH Multiple X11 Channel Forwarding Leaks
+| [19141] OpenSSH GSSAPIAuthentication Credential Escalation
+| [18236] OpenSSH no pty Command Execution Local PAM Restriction Bypass
+| [16567] OpenSSH Privilege Separation LoginGraceTime DoS
+| [16039] Solaris 108994 Series Patch OpenSSH LDAP Client Authentication DoS
+| [9562] OpenSSH Default Configuration Anon SSH Service Port Bounce Weakness
+| [9550] OpenSSH scp Traversal Arbitrary File Overwrite
+| [6601] OpenSSH *realloc() Unspecified Memory Errors
+| [6245] OpenSSH SKEY/BSD_AUTH Challenge-Response Remote Overflow
+| [6073] OpenSSH on FreeBSD libutil Arbitrary File Read
+| [6072] OpenSSH PAM Conversation Function Stack Modification
+| [6071] OpenSSH SSHv1 PAM Challenge-Response Authentication Privilege Escalation
+| [5536] OpenSSH sftp-server Restricted Keypair Restriction Bypass
+| [5408] OpenSSH echo simulation Information Disclosure
+| [5113] OpenSSH NIS YP Netgroups Authentication Bypass
+| [4536] OpenSSH Portable AIX linker Privilege Escalation
+| [3938] OpenSSL and OpenSSH /dev/random Check Failure
+| [3456] OpenSSH buffer_append_space() Heap Corruption
+| [2557] OpenSSH Multiple Buffer Management Multiple Overflows
+| [2140] OpenSSH w/ PAM Username Validity Timing Attack
+| [2112] OpenSSH Reverse DNS Lookup Bypass
+| [2109] OpenSSH sshd Root Login Timing Side-Channel Weakness
+| [1853] OpenSSH Symbolic Link 'cookies' File Removal
+| [839] OpenSSH PAMAuthenticationViaKbdInt Challenge-Response Remote Overflow
+| [781] OpenSSH Kerberos TGT/AFS Token Passing Remote Overflow
+| [730] OpenSSH Channel Code Off by One Remote Privilege Escalation
+| [688] OpenSSH UseLogin Environment Variable Local Command Execution
+| [642] OpenSSH Multiple Key Type ACL Bypass
+| [504] OpenSSH SSHv2 Public Key Authentication Bypass
+| [341] OpenSSH UseLogin Local Privilege Escalation
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [101552] OpenSSH 'sftp-server.c' Remote Security Bypass Vulnerability
+| [94977] OpenSSH CVE-2016-10011 Local Information Disclosure Vulnerability
+| [94975] OpenSSH CVE-2016-10012 Security Bypass Vulnerability
+| [94972] OpenSSH CVE-2016-10010 Privilege Escalation Vulnerability
+| [94968] OpenSSH CVE-2016-10009 Remote Code Execution Vulnerability
+| [93776] OpenSSH 'ssh/kex.c' Denial of Service Vulnerability
+| [92212] OpenSSH CVE-2016-6515 Denial of Service Vulnerability
+| [92210] OpenSSH CBC Padding Weak Encryption Security Weakness
+| [92209] OpenSSH MAC Verification Security Bypass Vulnerability
+| [91812] OpenSSH CVE-2016-6210 User Enumeration Vulnerability
+| [90440] OpenSSH CVE-2004-1653 Remote Security Vulnerability
+| [90340] OpenSSH CVE-2004-2760 Remote Security Vulnerability
+| [89385] OpenSSH CVE-2005-2666 Local Security Vulnerability
+| [88655] OpenSSH CVE-2001-1382 Remote Security Vulnerability
+| [88513] OpenSSH CVE-2000-0999 Remote Security Vulnerability
+| [88367] OpenSSH CVE-1999-1010 Local Security Vulnerability
+| [87789] OpenSSH CVE-2003-0682 Remote Security Vulnerability
+| [86187] OpenSSH 'session.c' Local Security Bypass Vulnerability
+| [86144] OpenSSH CVE-2007-2768 Remote Security Vulnerability
+| [84427] OpenSSH CVE-2016-1908 Security Bypass Vulnerability
+| [84314] OpenSSH CVE-2016-3115 Remote Command Injection Vulnerability
+| [84185] OpenSSH CVE-2006-4925 Denial-Of-Service Vulnerability
+| [81293] OpenSSH CVE-2016-1907 Denial of Service Vulnerability
+| [80698] OpenSSH CVE-2016-0778 Heap Based Buffer Overflow Vulnerability
+| [80695] OpenSSH CVE-2016-0777 Information Disclosure Vulnerability
+| [76497] OpenSSH CVE-2015-6565 Local Security Bypass Vulnerability
+| [76317] OpenSSH PAM Support Multiple Remote Code Execution Vulnerabilities
+| [75990] OpenSSH Login Handling Security Bypass Weakness
+| [75525] OpenSSH 'x11_open_helper()' Function Security Bypass Vulnerability
+| [71420] Portable OpenSSH 'gss-serv-krb5.c' Security Bypass Vulnerability
+| [68757] OpenSSH Multiple Remote Denial of Service Vulnerabilities
+| [66459] OpenSSH Certificate Validation Security Bypass Vulnerability
+| [66355] OpenSSH 'child_set_env()' Function Security Bypass Vulnerability
+| [65674] OpenSSH 'ssh-keysign.c' Local Information Disclosure Vulnerability
+| [65230] OpenSSH 'schnorr.c' Remote Memory Corruption Vulnerability
+| [63605] OpenSSH 'sshd' Process Remote Memory Corruption Vulnerability
+| [61286] OpenSSH Remote Denial of Service Vulnerability
+| [58894] GSI-OpenSSH PAM_USER Security Bypass Vulnerability
+| [58162] OpenSSH CVE-2010-5107 Denial of Service Vulnerability
+| [54114] OpenSSH 'ssh_gssapi_parse_ename()' Function Denial of Service Vulnerability
+| [51702] Debian openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [50416] Linux Kernel 'kdump' and 'mkdumprd' OpenSSH Integration Remote Information Disclosure Vulnerability
+| [49473] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [48507] OpenSSH 'pam_thread()' Remote Buffer Overflow Vulnerability
+| [47691] Portable OpenSSH 'ssh-keysign' Local Unauthorized Access Vulnerability
+| [46155] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [45304] OpenSSH J-PAKE Security Bypass Vulnerability
+| [36552] Red Hat Enterprise Linux OpenSSH 'ChrootDirectory' Option Local Privilege Escalation Vulnerability
+| [32319] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [30794] Red Hat OpenSSH Backdoor Vulnerability
+| [30339] OpenSSH 'X11UseLocalhost' X11 Forwarding Session Hijacking Vulnerability
+| [30276] Debian OpenSSH SELinux Privilege Escalation Vulnerability
+| [28531] OpenSSH ForceCommand Command Execution Weakness
+| [28444] OpenSSH X Connections Session Hijacking Vulnerability
+| [26097] OpenSSH LINUX_AUDIT_RECORD_EVENT Remote Log Injection Weakness
+| [25628] OpenSSH X11 Cookie Local Authentication Bypass Vulnerability
+| [23601] OpenSSH S/Key Remote Information Disclosure Vulnerability
+| [20956] OpenSSH Privilege Separation Key Signature Weakness
+| [20418] OpenSSH-Portable Existing Password Remote Information Disclosure Weakness
+| [20245] OpenSSH-Portable GSSAPI Authentication Abort Information Disclosure Weakness
+| [20241] Portable OpenSSH GSSAPI Remote Code Execution Vulnerability
+| [20216] OpenSSH Duplicated Block Remote Denial of Service Vulnerability
+| [16892] OpenSSH Remote PAM Denial Of Service Vulnerability
+| [14963] OpenSSH LoginGraceTime Remote Denial Of Service Vulnerability
+| [14729] OpenSSH GSSAPI Credential Disclosure Vulnerability
+| [14727] OpenSSH DynamicForward Inadvertent GatewayPorts Activation Vulnerability
+| [11781] OpenSSH-portable PAM Authentication Remote Information Disclosure Vulnerability
+| [9986] RCP, OpenSSH SCP Client File Corruption Vulnerability
+| [9040] OpenSSH PAM Conversation Memory Scrubbing Weakness
+| [8677] Multiple Portable OpenSSH PAM Vulnerabilities
+| [8628] OpenSSH Buffer Mismanagement Vulnerabilities
+| [7831] OpenSSH Reverse DNS Lookup Access Control Bypass Vulnerability
+| [7482] OpenSSH Remote Root Authentication Timing Side-Channel Weakness
+| [7467] OpenSSH-portable Enabled PAM Delay Information Disclosure Vulnerability
+| [7343] OpenSSH Authentication Execution Path Timing Information Leakage Weakness
+| [6168] OpenSSH Visible Password Vulnerability
+| [5374] OpenSSH Trojan Horse Vulnerability
+| [5093] OpenSSH Challenge-Response Buffer Overflow Vulnerabilities
+| [4560] OpenSSH Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [4241] OpenSSH Channel Code Off-By-One Vulnerability
+| [3614] OpenSSH UseLogin Environment Variable Passing Vulnerability
+| [3560] OpenSSH Kerberos Arbitrary Privilege Elevation Vulnerability
+| [3369] OpenSSH Key Based Source IP Access Control Bypass Vulnerability
+| [3345] OpenSSH SFTP Command Restriction Bypassing Vulnerability
+| [2917] OpenSSH PAM Session Evasion Vulnerability
+| [2825] OpenSSH Client X11 Forwarding Cookie Removal File Symbolic Link Vulnerability
+| [2356] OpenSSH Private Key Authentication Check Vulnerability
+| [1949] OpenSSH Client Unauthorized Remote Forwarding Vulnerability
+| [1334] OpenSSH UseLogin Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028187] OpenSSH pam_ssh_agent_auth Module on Red Hat Enterprise Linux Lets Remote Users Execute Arbitrary Code
+| [1026593] OpenSSH Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1025739] OpenSSH on FreeBSD Has Buffer Overflow in pam_thread() That Lets Remote Users Execute Arbitrary Code
+| [1025482] OpenSSH ssh-keysign Utility Lets Local Users Gain Elevated Privileges
+| [1025028] OpenSSH Legacy Certificates May Disclose Stack Contents to Remote Users
+| [1022967] OpenSSH on Red Hat Enterprise Linux Lets Remote Authenticated Users Gain Elevated Privileges
+| [1021235] OpenSSH CBC Mode Error Handling May Let Certain Remote Users Obtain Plain Text in Certain Cases
+| [1020891] OpenSSH on Debian Lets Remote Users Prevent Logins
+| [1020730] OpenSSH for Red Hat Enterprise Linux Packages May Have Been Compromised
+| [1020537] OpenSSH on HP-UX Lets Local Users Hijack X11 Sessions
+| [1019733] OpenSSH Unsafe Default Configuration May Let Local Users Execute Arbitrary Commands
+| [1019707] OpenSSH Lets Local Users Hijack Forwarded X Sessions in Certain Cases
+| [1017756] Apple OpenSSH Key Generation Process Lets Remote Users Deny Service
+| [1017183] OpenSSH Privilege Separation Monitor Validation Error May Cause the Monitor to Fail to Properly Control the Unprivileged Process
+| [1016940] OpenSSH Race Condition in Signal Handler Lets Remote Users Deny Service and May Potentially Permit Code Execution
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016931] OpenSSH SSH v1 CRC Attack Detection Implementation Lets Remote Users Deny Service
+| [1016672] OpenSSH on Mac OS X Lets Remote Users Deny Service
+| [1015706] OpenSSH Interaction With OpenPAM Lets Remote Users Deny Service
+| [1015540] OpenSSH scp Double Shell Character Expansion During Local-to-Local Copying May Let Local Users Gain Elevated Privileges in Certain Cases
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1011193] OpenSSH scp Directory Traversal Flaw Lets Remote SSH Servers Overwrite Files in Certain Cases
+| [1011143] OpenSSH Default Configuration May Be Unsafe When Used With Anonymous SSH Services
+| [1007791] Portable OpenSSH PAM free() Bug May Let Remote Users Execute Root Code
+| [1007716] OpenSSH buffer_append_space() and Other Buffer Management Errors May Let Remote Users Execute Arbitrary Code
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006688] OpenSSH Timing Flaw With Pluggable Authentication Modules Can Disclose Valid User Account Names to Remote Users
+| [1004818] OpenSSH's Secure Shell (SSH) Implementation Weakness May Disclose User Passwords to Remote Users During Man-in-the-Middle Attacks
+| [1004616] OpenSSH Integer Overflow and Buffer Overflow May Allow Remote Users to Gain Root Access to the System
+| [1004391] OpenSSH 'BSD_AUTH' Access Control Bug May Allow Unauthorized Remote Users to Authenticated to the System
+| [1004115] OpenSSH Buffer Overflow in Kerberos Ticket and AFS Token Processing Lets Local Users Execute Arbitrary Code With Root Level Permissions
+| [1003758] OpenSSH Off-by-one 'Channels' Bug May Let Authorized Remote Users Execute Arbitrary Code with Root Privileges
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002748] OpenSSH 3.0 Denial of Service Condition May Allow Remote Users to Crash the sshd Daemon and KerberosV Configuration Error May Allow Remote Users to Partially Authenticate When Authentication Should Not Be Permitted
+| [1002734] OpenSSH's S/Key Implementation Information Disclosure Flaw Provides Remote Users With Information About Valid User Accounts
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1001683] OpenSSH Allows Authorized Users to Delete Other User Files Named Cookies
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [83258] GSI-OpenSSH auth-pam.c security bypass
+| [82781] OpenSSH time limit denial of service
+| [82231] OpenSSH pam_ssh_agent_auth PAM code execution
+| [74809] OpenSSH ssh_gssapi_parse_ename denial of service
+| [72756] Debian openssh-server commands information disclosure
+| [68339] OpenSSH pam_thread buffer overflow
+| [67264] OpenSSH ssh-keysign unauthorized access
+| [65910] OpenSSH remote_glob function denial of service
+| [65163] OpenSSH certificate information disclosure
+| [64387] OpenSSH J-PAKE security bypass
+| [63337] Cisco Unified Videoconferencing OpenSSH weak security
+| [46620] OpenSSH and multiple SSH Tectia products CBC mode information disclosure
+| [45202] OpenSSH signal handler denial of service
+| [44747] RHEL OpenSSH backdoor
+| [44280] OpenSSH PermitRootLogin information disclosure
+| [44279] OpenSSH sshd weak security
+| [44037] OpenSSH sshd SELinux role unauthorized access
+| [43940] OpenSSH X11 forwarding information disclosure
+| [41549] OpenSSH ForceCommand directive security bypass
+| [41438] OpenSSH sshd session hijacking
+| [40897] OpenSSH known_hosts weak security
+| [40587] OpenSSH username weak security
+| [37371] OpenSSH username data manipulation
+| [37118] RHSA update for OpenSSH privilege separation monitor authentication verification weakness not installed
+| [37112] RHSA update for OpenSSH signal handler race condition not installed
+| [37107] RHSA update for OpenSSH identical block denial of service not installed
+| [36637] OpenSSH X11 cookie privilege escalation
+| [35167] OpenSSH packet.c newkeys[mode] denial of service
+| [34490] OpenSSH OPIE information disclosure
+| [33794] OpenSSH ChallengeResponseAuthentication information disclosure
+| [32975] Apple Mac OS X OpenSSH denial of service
+| [32387] RHSA-2006:0738 updates for openssh not installed
+| [32359] RHSA-2006:0697 updates for openssh not installed
+| [32230] RHSA-2006:0298 updates for openssh not installed
+| [32132] RHSA-2006:0044 updates for openssh not installed
+| [30120] OpenSSH privilege separation monitor authentication verification weakness
+| [29255] OpenSSH GSSAPI user enumeration
+| [29254] OpenSSH signal handler race condition
+| [29158] OpenSSH identical block denial of service
+| [28147] Apple Mac OS X OpenSSH nonexistent user login denial of service
+| [25116] OpenSSH OpenPAM denial of service
+| [24305] OpenSSH SCP shell expansion command execution
+| [22665] RHSA-2005:106 updates for openssh not installed
+| [22117] OpenSSH GSSAPI allows elevated privileges
+| [22115] OpenSSH GatewayPorts security bypass
+| [20930] OpenSSH sshd.c LoginGraceTime denial of service
+| [19441] Sun Solaris OpenSSH LDAP (1) client authentication denial of service
+| [17213] OpenSSH allows port bouncing attacks
+| [16323] OpenSSH scp file overwrite
+| [13797] OpenSSH PAM information leak
+| [13271] OpenSSH could allow an attacker to corrupt the PAM conversion stack
+| [13264] OpenSSH PAM code could allow an attacker to gain access
+| [13215] OpenSSH buffer management errors could allow an attacker to execute code
+| [13214] OpenSSH memory vulnerabilities
+| [13191] OpenSSH large packet buffer overflow
+| [12196] OpenSSH could allow an attacker to bypass login restrictions
+| [11970] OpenSSH could allow an attacker to obtain valid administrative account
+| [11902] OpenSSH PAM support enabled information leak
+| [9803] OpenSSH &quot
+| [9763] OpenSSH downloaded from the OpenBSD FTP site or OpenBSD FTP mirror sites could contain a Trojan Horse
+| [9307] OpenSSH is running on the system
+| [9169] OpenSSH &quot
+| [8896] OpenSSH Kerberos 4 TGT/AFS buffer overflow
+| [8697] FreeBSD libutil in OpenSSH fails to drop privileges prior to using the login class capability database
+| [8383] OpenSSH off-by-one error in channel code
+| [7647] OpenSSH UseLogin option arbitrary code execution
+| [7634] OpenSSH using sftp and restricted keypairs could allow an attacker to bypass restrictions
+| [7598] OpenSSH with Kerberos allows attacker to gain elevated privileges
+| [7179] OpenSSH source IP access control bypass
+| [6757] OpenSSH &quot
+| [6676] OpenSSH X11 forwarding symlink attack could allow deletion of arbitrary files
+| [6084] OpenSSH 2.3.1 allows remote users to bypass authentication
+| [5517] OpenSSH allows unauthorized access to resources
+| [4646] OpenSSH UseLogin option allows remote users to execute commands as root
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21579] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (2)
+| [21578] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (1)
+| [21402] OpenSSH 2.x/3.x Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [21314] OpenSSH 2.x/3.0.1/3.0.2 Channel Code Off-By-One Vulnerability
+| [20253] OpenSSH 1.2 scp File Create/Overwrite Vulnerability
+| [17462] FreeBSD OpenSSH 3.5p1 - Remote Root Exploit
+| [14866] Novell Netware 6.5 - OpenSSH Remote Stack Overflow
+| [6094] Debian OpenSSH Remote SELinux Privilege Elevation Exploit (auth)
+| [3303] Portable OpenSSH <= 3.6.1p-PAM / 4.1-SUSE Timing Attack Exploit
+| [2444] OpenSSH <= 4.3 p1 (Duplicated Block) Remote Denial of Service Exploit
+| [1572] Dropbear / OpenSSH Server (MAX_UNAUTH_CLIENTS) Denial of Service
+| [258] glibc-2.2 and openssh-2.3.0p1 exploits glibc => 2.1.9x
+| [26] OpenSSH/PAM <= 3.6.1p1 Remote Users Ident (gossh.sh)
+| [25] OpenSSH/PAM <= 3.6.1p1 Remote Users Discovery Tool
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [900179] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [881183] CentOS Update for openssh CESA-2012:0884 centos6 
+| [880802] CentOS Update for openssh CESA-2009:1287 centos5 i386
+| [880746] CentOS Update for openssh CESA-2009:1470 centos5 i386
+| [870763] RedHat Update for openssh RHSA-2012:0884-04
+| [870129] RedHat Update for openssh RHSA-2008:0855-01
+| [861813] Fedora Update for openssh FEDORA-2010-5429
+| [861319] Fedora Update for openssh FEDORA-2007-395
+| [861170] Fedora Update for openssh FEDORA-2007-394
+| [861012] Fedora Update for openssh FEDORA-2007-715
+| [840345] Ubuntu Update for openssh vulnerability USN-597-1
+| [840300] Ubuntu Update for openssh update USN-612-5
+| [840271] Ubuntu Update for openssh vulnerability USN-612-2
+| [840268] Ubuntu Update for openssh update USN-612-7
+| [840259] Ubuntu Update for openssh vulnerabilities USN-649-1
+| [840214] Ubuntu Update for openssh vulnerability USN-566-1
+| [831074] Mandriva Update for openssh MDVA-2010:162 (openssh)
+| [830929] Mandriva Update for openssh MDVA-2010:090 (openssh)
+| [830807] Mandriva Update for openssh MDVA-2010:026 (openssh)
+| [830603] Mandriva Update for openssh MDVSA-2008:098 (openssh)
+| [830523] Mandriva Update for openssh MDVSA-2008:078 (openssh)
+| [830317] Mandriva Update for openssh-askpass-qt MDKA-2007:127 (openssh-askpass-qt)
+| [830191] Mandriva Update for openssh MDKSA-2007:236 (openssh)
+| [802407] OpenSSH 'sshd' Challenge Response Authentication Buffer Overflow Vulnerability
+| [103503] openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [103247] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [103064] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [100584] OpenSSH X Connections Session Hijacking Vulnerability
+| [100153] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [66170] CentOS Security Advisory CESA-2009:1470 (openssh)
+| [65987] SLES10: Security update for OpenSSH
+| [65819] SLES10: Security update for OpenSSH
+| [65514] SLES9: Security update for OpenSSH
+| [65513] SLES9: Security update for OpenSSH
+| [65334] SLES9: Security update for OpenSSH
+| [65248] SLES9: Security update for OpenSSH
+| [65218] SLES9: Security update for OpenSSH
+| [65169] SLES9: Security update for openssh,openssh-askpass
+| [65126] SLES9: Security update for OpenSSH
+| [65019] SLES9: Security update for OpenSSH
+| [65015] SLES9: Security update for OpenSSH
+| [64931] CentOS Security Advisory CESA-2009:1287 (openssh)
+| [61639] Debian Security Advisory DSA 1638-1 (openssh)
+| [61030] Debian Security Advisory DSA 1576-2 (openssh)
+| [61029] Debian Security Advisory DSA 1576-1 (openssh)
+| [60840] FreeBSD Security Advisory (FreeBSD-SA-08:05.openssh.asc)
+| [60803] Gentoo Security Advisory GLSA 200804-03 (openssh)
+| [60667] Slackware Advisory SSA:2008-095-01 openssh 
+| [59014] Slackware Advisory SSA:2007-255-01 openssh 
+| [58741] Gentoo Security Advisory GLSA 200711-02 (openssh)
+| [57919] Gentoo Security Advisory GLSA 200611-06 (openssh)
+| [57895] Gentoo Security Advisory GLSA 200609-17 (openssh)
+| [57585] Debian Security Advisory DSA 1212-1 (openssh (1:3.8.1p1-8.sarge.6))
+| [57492] Slackware Advisory SSA:2006-272-02 openssh 
+| [57483] Debian Security Advisory DSA 1189-1 (openssh-krb5)
+| [57476] FreeBSD Security Advisory (FreeBSD-SA-06:22.openssh.asc)
+| [57470] FreeBSD Ports: openssh
+| [56352] FreeBSD Security Advisory (FreeBSD-SA-06:09.openssh.asc)
+| [56330] Gentoo Security Advisory GLSA 200602-11 (OpenSSH)
+| [56294] Slackware Advisory SSA:2006-045-06 openssh 
+| [53964] Slackware Advisory SSA:2003-266-01 New OpenSSH packages 
+| [53885] Slackware Advisory SSA:2003-259-01 OpenSSH Security Advisory 
+| [53884] Slackware Advisory SSA:2003-260-01 OpenSSH updated again 
+| [53788] Debian Security Advisory DSA 025-1 (openssh)
+| [52638] FreeBSD Security Advisory (FreeBSD-SA-03:15.openssh.asc)
+| [52635] FreeBSD Security Advisory (FreeBSD-SA-03:12.openssh.asc)
+| [11343] OpenSSH Client Unauthorized Remote Forwarding
+| [10954] OpenSSH AFS/Kerberos ticket/token passing
+| [10883] OpenSSH Channel Code Off by 1
+| [10823] OpenSSH UseLogin Environment Variables
+|_
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+3306/tcp open  mysql   MySQL 5.1.61
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [5159] Oracle MySQL Server up to 5.1.61/5.5.21 Optimizer denial of service
+| [5158] Oracle MySQL Server up to 5.1.61/5.5.21 DML denial of service
+| [9665] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 Server Options denial of service
+| [9663] Oracle MySQL Server up to 5.1.69/5.5.31/5.6.11 Server Optimizer denial of service
+| [9660] Oracle MySQL Server up to 5.1.69/5.5.31/5.6.11 Full Text Search denial of service
+| [9655] Oracle MySQL Server up to 5.1.69/5.5.31/5.6.11 GIS Crash denial of service
+| [8418] Oracle MySQL Server up to 5.1.67/5.5.29/5.6.10 Server Locking unknown vulnerability
+| [8416] Oracle MySQL Server up to 5.1.63 Server Types unknown vulnerability
+| [8410] Oracle MySQL Server up to 5.1.67/5.5.29 Server XML denial of service
+| [8408] Oracle MySQL Server up to 5.1.67/5.5.29 Server Partition unknown vulnerability
+| [8407] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 Server Optimizer unknown vulnerability
+| [8406] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 InnoDB unknown vulnerability
+| [8405] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 Information Schema unknown vulnerability
+| [8403] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 Data Manipulation Language unknown vulnerability
+| [8400] Oracle MySQL Server up to 5.1.68/5.5.30/5.6.10 Server Privileges unknown vulnerability
+| [8399] Oracle MySQL Server up to 5.1.66/5.5.28 Server Privileges unknown vulnerability
+| [8398] Oracle MySQL Server up to 5.1.67/5.5.29 unknown vulnerability
+| [8397] Oracle MySQL Server up to 5.1.67/5.5.29/5.6.10 Information Schema unknown vulnerability
+| [8396] Oracle MySQL Server up to 5.1.67/5.5.29 Server Locking unknown vulnerability
+| [7428] Oracle MySQL Server up to 5.1.66/5.5.28 Optimizer unknown vulnerability
+| [7427] Oracle MySQL Server up to 5.1.66/5.5.28 unknown vulnerability
+| [7425] Oracle MySQL Server up to 5.1.66/5.5.28 InnoDB unknown vulnerability
+| [7423] Oracle MySQL Server up to 5.1.66/5.5.28 Locking unknown vulnerability
+| [7422] Oracle MySQL Server up to 5.1.66/5.5.28 unknown vulnerability
+| [7421] Oracle MySQL Server up to 5.1.66/5.1.28 Replication unknown vulnerability
+| [7418] Oracle MySQL Server up to 5.1.66/5.5.28 Server Optimizer unknown vulnerability
+| [7417] Oracle MySQL Server up to 5.1.66/5.5.28 Information Schema unknown vulnerability
+| [7416] Oracle MySQL Server up to 5.1.65/5.5.27 GIS Extension denial of service
+| [7415] Oracle MySQL Server up to 5.1.66/5.5.28 Privileges Stack-based memory corruption
+| [6795] Oracle MySQL Server up to 5.1.64/5.5.26 Server Replication denial of service
+| [6794] Oracle MySQL Server up to 5.1.63/5.5.25 Server Full Text Search denial of service
+| [6791] Oracle MySQL Server up to 5.1.65/5.5.27 Server Optimizer denial of service
+| [6790] Oracle MySQL Server up to 5.1.64/5.5.26 Server Optimizer denial of service
+| [6788] Oracle MySQL Server up to 5.1.63/5.5.25 InnoDB Plugin denial of service
+| [6787] Oracle MySQL Server up to 5.1.63/5.5.25 InnoDB unknown vulnerability
+| [6785] Oracle MySQL Server up to 5.1.65/5.5.27 denial of service
+| [6784] Oracle MySQL Server up to 5.1.64/5.5.26 Protocol unknown vulnerability
+| [6783] Oracle MySQL Server up to 5.1.64/5.5.26 Information Schema memory corruption
+| [5783] Oracle MySQL Server up to 5.1.62/5.5.22 Server Optimizer denial of service
+| [5782] Oracle MySQL Server up to 5.1.62/5.5.23 Server Optimizer denial of service
+| [5779] Oracle MySQL Server up to 5.1.62/5.5.23 GIS Extension unknown vulnerability
+| [5151] Oracle MySQL Server up to 5.1.60/5.5.19 MyISAM denial of service
+| [5981] Oracle MySQL Server 5.1.62/5.5.23 Sort Order Index Calculation denial of service
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-1703] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.61 and earlier, and 5.5.21 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-1690] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.61 and earlier, and 5.5.21 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-1688] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.61 and earlier, and 5.5.21 and earlier, allows remote authenticated users to affect availability, related to Server DML.
+| [CVE-2013-3808] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 allows remote authenticated users to affect availability via unknown vectors related to Server Options.
+| [CVE-2013-3804] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.69 and earlier, 5.5.31 and earlier, and 5.6.11 and earlier allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2013-3802] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.69 and earlier, 5.5.31 and earlier, and 5.6.11 and earlier allows remote authenticated users to affect availability via unknown vectors related to Full Text Search.
+| [CVE-2013-2392] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2013-2391] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows local users to affect confidentiality and integrity via unknown vectors related to Server Install.
+| [CVE-2013-2389] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect availability via unknown vectors related to InnoDB.
+| [CVE-2013-2378] Unspecified vulnerability in Oracle MySQL 5.1.67 and earlier, 5.5.29 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors related to Information Schema.
+| [CVE-2013-2375] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors.
+| [CVE-2013-1861] MariaDB 5.5.x before 5.5.30, 5.3.x before 5.3.13, 5.2.x before 5.2.15, and 5.1.x before 5.1.68, and Oracle MySQL 5.1.69 and earlier, 5.5.31 and earlier, and 5.6.11 and earlier allows remote attackers to cause a denial of service (crash) via a crafted geometry feature that specifies a large number of points, which is not properly handled when processing the binary representation of this feature, related to a numeric calculation error.
+| [CVE-2013-1555] Unspecified vulnerability in Oracle MySQL 5.1.67 and earlier, and 5.5.29 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Partition.
+| [CVE-2013-1552] Unspecified vulnerability in Oracle MySQL 5.1.67 and earlier and 5.5.29 and earlier allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors.
+| [CVE-2013-1548] Unspecified vulnerability in Oracle MySQL 5.1.63 and earlier allows remote authenticated users to affect availability via unknown vectors related to Server Types.
+| [CVE-2013-1544] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect availability via unknown vectors related to Data Manipulation Language.
+| [CVE-2013-1532] Unspecified vulnerability in Oracle MySQL 5.1.68 and earlier, 5.5.30 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect availability via unknown vectors related to Information Schema.
+| [CVE-2013-1531] Unspecified vulnerability in Oracle MySQL 5.1.66 and earlier and 5.5.28 and earlier allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors related to Server Privileges.
+| [CVE-2013-1521] Unspecified vulnerability in Oracle MySQL 5.1.67 and earlier and 5.5.29 and earlier allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors related to Server Locking.
+| [CVE-2013-1506] Unspecified vulnerability in Oracle MySQL 5.1.67 and earlier, 5.5.29 and earlier, and 5.6.10 and earlier allows remote authenticated users to affect availability via unknown vectors related to Server Locking.
+| [CVE-2013-1492] Buffer overflow in yaSSL, as used in MySQL 5.1.x before 5.1.68 and 5.5.x before 5.5.30, has unspecified impact and attack vectors, a different vulnerability than CVE-2012-0553.
+| [CVE-2013-0389] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.5.28 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2013-0385] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.5.28 and earlier, allows local users to affect confidentiality and integrity via unknown vectors related to Server Replication.
+| [CVE-2013-0384] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.5.28 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Information Schema.
+| [CVE-2013-0383] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.5.28 and earlier, allows remote attackers to affect availability via unknown vectors related to Server Locking.
+| [CVE-2013-0375] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.1.28 and earlier, allows remote authenticated users to affect confidentiality and integrity via unknown vectors related to Server Replication.
+| [CVE-2012-5615] MySQL 5.5.19 and possibly other versions, and MariaDB 5.5.28a, 5.3.11, 5.2.13, 5.1.66, and possibly other versions, generates different error messages with different time delays depending on whether a user name exists, which allows remote attackers to enumerate valid usernames.
+| [CVE-2012-5614] Oracle MySQL 5.1.67 and earlier and 5.5.29 and earlier, and MariaDB 5.5.28a and possibly other versions, allows remote authenticated users to cause a denial of service (mysqld crash) via a SELECT command with an UpdateXML command containing XML with a large number of unique, nested elements.
+| [CVE-2012-5611] Stack-based buffer overflow in the acl_get function in Oracle MySQL 5.5.19 and other versions through 5.5.28, and 5.1.53 and other versions through 5.1.66, and MariaDB 5.5.2.x before 5.5.28a, 5.3.x before 5.3.11, 5.2.x before 5.2.13 and 5.1.x before 5.1.66, allows remote authenticated users to execute arbitrary code via a long argument to the GRANT FILE command.
+| [CVE-2012-5060] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.65 and earlier and 5.5.27 and earlier allows remote authenticated users to affect availability, related to GIS Extension.
+| [CVE-2012-4414] Multiple SQL injection vulnerabilities in the replication code in Oracle MySQL possibly before 5.5.29, and MariaDB 5.1.x through 5.1.62, 5.2.x through 5.2.12, 5.3.x through 5.3.7, and 5.5.x through 5.5.25, allow remote authenticated users to execute arbitrary SQL commands via vectors related to the binary log.  NOTE: as of 20130116, Oracle has not commented on claims from a downstream vendor that the fix in MySQL 5.5.29 is incomplete.
+| [CVE-2012-3197] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.64 and earlier, and 5.5.26 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Replication.
+| [CVE-2012-3180] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.65 and earlier, and 5.5.27 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-3177] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.65 and earlier, and 5.5.27 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server.
+| [CVE-2012-3173] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.63 and earlier, and 5.5.25 and earlier, allows remote authenticated users to affect availability via unknown vectors related to InnoDB Plugin.
+| [CVE-2012-3167] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.63 and earlier, and 5.5.25 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Full Text Search.
+| [CVE-2012-3166] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.63 and earlier, and 5.5.25 and earlier, allows remote authenticated users to affect availability via unknown vectors related to InnoDB.
+| [CVE-2012-3163] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.64 and earlier, and 5.5.26 and earlier, allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors related to Information Schema.
+| [CVE-2012-3160] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.65 and earlier, and 5.5.27 and earlier, allows local users to affect confidentiality via unknown vectors related to Server Installation.
+| [CVE-2012-3158] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.64 and earlier, and 5.5.26 and earlier, allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Protocol.
+| [CVE-2012-3150] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.64 and earlier, and 5.5.26 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-2749] MySQL 5.1.x before 5.1.63 and 5.5.x before 5.5.24 allows remote authenticated users to cause a denial of service (mysqld crash) via vectors related to incorrect calculation and a sort order index.
+| [CVE-2012-2122] sql/password.c in Oracle MySQL 5.1.x before 5.1.63, 5.5.x before 5.5.24, and 5.6.x before 5.6.6, and MariaDB 5.1.x before 5.1.62, 5.2.x before 5.2.12, 5.3.x before 5.3.6, and 5.5.x before 5.5.23, when running in certain environments with certain implementations of the memcmp function, allows remote attackers to bypass authentication by repeatedly authenticating with the same incorrect password, which eventually causes a token comparison to succeed due to an improperly-checked return value.
+| [CVE-2012-2102] MySQL 5.1.x before 5.1.62 and 5.5.x before 5.5.22 allows remote authenticated users to cause a denial of service (assertion failure and mysqld abort) by deleting a record and using HANDLER READ NEXT.
+| [CVE-2012-1734] Unspecified vulnerability in Oracle MySQL Server 5.1.62 and earlier, and 5.5.23 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-1705] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier and 5.5.28 and earlier allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-1702] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier and 5.5.28 and earlier allows remote attackers to affect availability via unknown vectors.
+| [CVE-2012-1689] Unspecified vulnerability in Oracle MySQL Server 5.1.62 and earlier, and 5.5.22 and earlier, allows remote authenticated users to affect availability via unknown vectors related to Server Optimizer.
+| [CVE-2012-0882] Buffer overflow in yaSSL, as used in MySQL 5.5.20 and possibly other versions including 5.5.x before 5.5.22 and 5.1.x before 5.1.62, allows remote attackers to execute arbitrary code via unspecified vectors, as demonstrated by VulnDisco Pack Professional 9.17.  NOTE: as of 20120224, this disclosure has no actionable information. However, because the module author is a reliable researcher, the issue is being assigned a CVE identifier for tracking purposes.  NOTE: due to lack of details, it is not clear whether this issue is a duplicate of CVE-2012-0492 or another CVE.
+| [CVE-2012-0583] Unspecified vulnerability in the MySQL Server component in Oracle MySQL 5.1.60 and earlier, and 5.5.19 and earlier, allows remote authenticated users to affect availability, related to MyISAM.
+| [CVE-2012-0574] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier, and 5.5.28 and earlier, allows remote authenticated users to affect availability via unknown vectors.
+| [CVE-2012-0572] Unspecified vulnerability in the Server component in Oracle MySQL 5.1.66 and earlier and 5.5.28 and earlier allows remote authenticated users to affect availability via unknown vectors related to InnoDB.
+| [CVE-2012-0553] Buffer overflow in yaSSL, as used in MySQL 5.1.x before 5.1.68 and 5.5.x before 5.5.28, has unspecified impact and attack vectors, a different vulnerability than CVE-2013-1492.
+| [CVE-2012-0540] Unspecified vulnerability in Oracle MySQL Server 5.1.62 and earlier and 5.5.23 and earlier allows remote authenticated users to affect availability, related to GIS Extension.
+| [CVE-2006-3081] mysqld in MySQL 4.1.x before 4.1.18, 5.0.x before 5.0.19, and 5.1.x before 5.1.6 allows remote authorized users to cause a denial of service (crash) via a NULL second argument to the str_to_date function.
+| 
+| OSVDB - http://www.osvdb.org:
+| [95337] Oracle MySQL Server XA Transactions Subcomponent Unspecified Remote DoS
+| [95336] Oracle MySQL Server Replication Subcomponent Unspecified Remote DoS
+| [95335] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS
+| [95334] Oracle MySQL Server Privileges Subcomponent Unspecified Remote Issue
+| [95333] Oracle MySQL Server Partition Subcomponent Unspecified Remote DoS
+| [95332] Oracle MySQL Server Parser Subcomponent Unspecified Remote DoS
+| [95331] Oracle MySQL Server Options Subcomponent Unspecified Remote DoS (2013-3801)
+| [95330] Oracle MySQL Server Options Subcomponent Unspecified Remote DoS (2013-3808)
+| [95329] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS (2013-3796)
+| [95328] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS (2013-3804)
+| [95327] Oracle MySQL Server Prepared Statements Subcomponent Unspecified Remote DoS
+| [95326] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS
+| [95325] Oracle MySQL Server Full Text Search Subcomponent Unspecified Remote DoS
+| [95324] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-3795)
+| [95323] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-3793)
+| [95322] Oracle MySQL Server Audit Log Subcomponent Unspecified Remote Issue
+| [95321] Oracle MySQL Server MemCached Subcomponent Unspecified Remote Issue
+| [95131] AutoMySQLBackup /usr/sbin/automysqlbackup Database Name Arbitrary Code Injection
+| [94076] Debian Linux MySQL Server mysql-server-5.5.postinst Race Condition debian.cnf Plaintext Credential Local Disclosure
+| [93505] Wireshark MySQL Dissector (packet-mysql.c) Malformed Packet Handling Infinite Loop Remote DoS
+| [93174] MySQL Crafted Derived Table Handling DoS
+| [92967] MySQL2JSON (mn_mysql2json) Extension for TYPO3 Unspecified SQL Injection
+| [92950] MySQL Running START SLAVE Statement Process Listing Plaintext Local Password Disclosure
+| [92485] Oracle MySQL Server Partition Subcomponent Unspecified Local DoS
+| [92484] Oracle MySQL Server Locking Subcomponent Unspecified Remote DoS (2013-1506)
+| [92483] Oracle MySQL Server Install Subcomponent Unspecified Local Issue
+| [92482] Oracle MySQL Server Types Subcomponent Unspecified Remote DoS
+| [92481] Oracle MySQL Server Privileges Subcomponent Unspecified Remote Issue (2013-2381)
+| [92480] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS (2013-1566)
+| [92479] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS (2013-1511)
+| [92478] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-1567)
+| [92477] Oracle MySQL Server Stored Procedure Subcomponent Unspecified Remote DoS
+| [92476] Oracle MySQL Server Replication Subcomponent Unspecified Remote DoS
+| [92475] Oracle MySQL Server Partition Subcomponent Unspecified Remote DoS
+| [92474] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS
+| [92473] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS (2013-2389)
+| [92472] Oracle MySQL Server Information Schema Subcomponent Unspecified Remote DoS
+| [92471] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-1512)
+| [92470] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-1544)
+| [92469] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote Issue
+| [92468] Oracle MySQL Server MemCached Subcomponent Unspecified Remote DoS
+| [92467] Oracle MySQL Server Privileges Subcomponent Unspecified Remote Issue (2013-2375)
+| [92466] Oracle MySQL Server Privileges Subcomponent Unspecified Remote Issue (2013-1531)
+| [92465] Oracle MySQL Server Server Subcomponent Unspecified Remote Issue
+| [92464] Oracle MySQL Server Information Schema Subcomponent Unspecified Remote Issue
+| [92463] Oracle MySQL Server Locking Subcomponent Unspecified Remote Issue (2013-1521)
+| [92462] Oracle MySQL Server Data Manipulation Language Subcomponent Unspecified Remote DoS (2013-2395)
+| [91536] Oracle MySQL yaSSL Unspecified Overflow (2012-0553)
+| [91534] Oracle MySQL yaSSL Unspecified Overflow (2013-1492)
+| [91415] MySQL Raw Geometry Object String Conversion Remote DoS
+| [91108] Juju mysql Charm Install Script mysql.passwd MySQL Password Plaintext Local Disclosure
+| [89970] Site Go /site-go/admin/extra/mysql/index.php idm Parameter Traversal Arbitrary File Access
+| [89265] Oracle MySQL Server Server Privileges Subcomponent Unspecified Remote DoS
+| [89264] Oracle MySQL Server Server Partition Subcomponent Unspecified Remote DoS
+| [89263] Oracle MySQL Server Server Optimizer Subcomponent Unspecified Remote DoS (2012-0578)
+| [89262] Oracle MySQL Server Server Optimizer Subcomponent Unspecified Remote DoS (2012-1705)
+| [89261] Oracle MySQL Server Server Subcomponent Unspecified Remote DoS (2012-0574)
+| [89260] Oracle MySQL Server MyISAM Subcomponent Unspecified Remote DoS
+| [89259] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS (2012-0572)
+| [89258] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS (2013-0368)
+| [89257] Oracle MySQL Server Server Locking Subcomponent Unspecified Remote DoS
+| [89256] Oracle MySQL Server Server Subcomponent Unspecified Remote DoS (2012-1702)
+| [89255] Oracle MySQL Server Server Replication Subcomponent Unspecified Remote Issue
+| [89254] Oracle MySQL Server Server Replication Subcomponent Unspecified Local Issue
+| [89253] Oracle MySQL Server Stored Procedure Subcomponent Unspecified Remote DoS
+| [89252] Oracle MySQL Server Server Optimizer Subcomponent Unspecified Remote DoS
+| [89251] Oracle MySQL Server Information Schema Subcomponent Unspecified Remote DoS
+| [89250] Oracle MySQL Server GIS Extension Subcomponent Unspecified Remote DoS
+| [89042] ViciBox Server MySQL cron Service Default Credentials
+| [88415] Oracle MySQL Server COM_CHANGE_USER Account Password Brute-Force Weakness
+| [88118] Oracle MySQL Server FILE Privilege Database Privilege Escalation
+| [88067] Oracle MySQL Server Authentication Error Message User Enumeration
+| [88066] Oracle MySQL Server for Linux Access Rights Checking Routine Database Name Handling Stack Buffer Overflow
+| [88065] Oracle MySQL Server COM_BINLOG_DUMP Invalid Data Handling DoS
+| [88064] Oracle MySQL Server Multiple-Table DELETE Heap Buffer Overflow
+| [87704] CodeIgniter MySQL / MySQLi Driver Database Client Multi-byte Character Set Unspecified SQL Injection
+| [87507] Oracle MySQL Statement Logging Multiple Log Plaintext Local Password Disclosure
+| [87501] Oracle MySQL optimizer_switch Malformed Value Processing Local DoS
+| [87494] Oracle MySQL on Windows Field_new_decimal::store_value dbug_buff Variable Overflow DoS
+| [87480] MySQL Malformed XML Comment Handling DoS
+| [87466] MySQL SSL Certificate Revocation Weakness
+| [87356] Oracle MySQL do_div_mod DIV Expression Handling Remote DoS
+| [87355] Oracle MySQL handler::pushed_cond Table Cache Handling mysqld DoS
+| [87354] Oracle MySQL Polygon Union / Intersection Spatial Operations DoS
+| [86273] Oracle MySQL Server Server Installation Subcomponent Unspecified Local Information Disclosure
+| [86272] Oracle MySQL Server Server Replication Subcomponent Unspecified Remote DoS
+| [86271] Oracle MySQL Server Server Full Text Search Subcomponent Unspecified Remote DoS
+| [86270] Oracle MySQL Server Server Subcomponent Unspecified Remote DoS (2012-3156)
+| [86269] Oracle MySQL Server MySQL Client Subcomponent Unspecified Remote Information Disclosure
+| [86268] Oracle MySQL Server Server Optimizer Subcomponent Unspecified Remote DoS (2012-3180)
+| [86267] Oracle MySQL Server Server Optimizer Subcomponent Unspecified Remote DoS (2012-3150)
+| [86266] Oracle MySQL Server Server Subcomponent Unspecified Remote DoS (2012-3144)
+| [86265] Oracle MySQL Server InnoDB Plugin Subcomponent Unspecified Remote DoS
+| [86264] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS
+| [86263] Oracle MySQL Server MySQL Client Subcomponent Unspecified Remote Issue
+| [86262] Oracle MySQL Server Server Subcomponent Unspecified Remote DoS (2012-3177)
+| [86261] Oracle MySQL Server Protocol Subcomponent Unspecified Remote Issue
+| [86260] Oracle MySQL Server Information Schema Subcomponent Unspecified Remote Code Execution
+| [86175] Oracle MySQL on Windows Path Subversion Arbitrary DLL Injection Code Execution
+| [85155] Icinga module/idoutils/db/scripts/create_mysqldb.sh Icinga User Database Access Restriction Bypass
+| [84755] Oracle MySQL Sort Order Index Calculation Remote DoS
+| [84719] MySQLDumper index.php page Parameter XSS
+| [84680] MySQL Squid Access Report access.log File Path XSS
+| [83980] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS (2012-1689)
+| [83979] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS (2012-1734)
+| [83978] Oracle MySQL Server Subcomponent Unspecified Remote DoS
+| [83977] Oracle MySQL Server InnoDB Subcomponent Unspecified Remote DoS
+| [83976] Oracle MySQL Server GIS Extension Subcomponent Unspecified Remote DoS
+| [83975] Oracle MySQL Server Optimizer Subcomponent Unspecified Remote DoS (2012-1735)
+| [83661] Oracle MySQL Unspecified Issue (59533)
+| [82804] Oracle MySQL Authentication Protocol Token Comparison Casting Failure Password Bypass
+| [82803] Oracle MySQL Unspecified Issue (59387)
+| [82120] Oracle MySQL Version Specific Comment Handling Arbitrary SQL Command Execution
+| [81897] Viscacha classes/database/mysql.inc.php Multiple Parameter SQL Injection
+| [81616] MySQLDumper Multiple Script Direct Request Information Disclosure
+| [81615] MySQLDumper filemanagement.php f Parameter Traversal Arbitrary File Access
+| [81614] MySQLDumper File Upload PHP Code Execution
+| [81613] MySQLDumper main.php Multiple Function CSRF
+| [81612] MySQLDumper restore.php filename Parameter XSS
+| [81611] MySQLDumper sql.php Multiple Parameter XSS
+| [81610] MySQLDumper install.php Multiple Parameter XSS
+| [81609] MySQLDumper install.php language Parameter Traversal Arbitrary File Access
+| [81378] Oracle MySQL Server Server Optimizer Component Unspecified Remote DoS (2012-1690)
+| [81377] Oracle MySQL Server Server Optimizer Component Unspecified Remote DoS (2012-1696)
+| [81376] Oracle MySQL Server Server DML Component Unspecified Remote DoS
+| [81375] Oracle MySQL Server Partition Component Unspecified Remote DoS
+| [81374] Oracle MySQL Server MyISAM Component Unspecified Remote DoS
+| [81373] Oracle MySQL Server Server Optimizer Component Unspecified Remote DoS (2012-1703)
+| [81059] Oracle MySQL Server Multiple Unspecified Issues
+| [79038] Webmin Process Listing MySQL Password Local Disclosure
+| [78919] Oracle MySQL Unspecified Pre-authentication Remote Code Execution
+| [78710] WordPress wp-admin/setup-config.php MySQL Query Saturation Brute-Force Proxy Weakness
+| [78708] WordPress wp-admin/setup-config.php MySQL Database Verification Code Injection Weakness
+| [78707] WordPress wp-admin/setup-config.php MySQL Credentials Error Message Brute-Force Weakness
+| [78394] Oracle MySQL Server Unspecified Remote DoS (2012-0493)
+| [78393] Oracle MySQL Server Unspecified Remote DoS (2012-0492)
+| [78392] Oracle MySQL Server Unspecified Remote DoS (2012-0117)
+| [78391] Oracle MySQL Server Unspecified Remote DoS (2012-0112)
+| [78390] Oracle MySQL Server Unspecified Remote DoS (2012-0495)
+| [78389] Oracle MySQL Server Unspecified Remote DoS (2012-0491)
+| [78388] Oracle MySQL Server Unspecified Remote DoS (2012-0490)
+| [78387] Oracle MySQL Server Unspecified Remote DoS (2012-0489)
+| [78386] Oracle MySQL Server Unspecified Remote DoS (2012-0488)
+| [78385] Oracle MySQL Server Unspecified Remote DoS (2012-0487)
+| [78384] Oracle MySQL Server Unspecified Remote DoS (2012-0486)
+| [78383] Oracle MySQL Server Unspecified Remote DoS (2012-0485)
+| [78382] Oracle MySQL Server Unspecified Remote DoS (2012-0120)
+| [78381] Oracle MySQL Server Unspecified Remote DoS (2012-0119)
+| [78380] Oracle MySQL Server Unspecified Remote DoS (2012-0115)
+| [78379] Oracle MySQL Server Unspecified Remote DoS (2012-0102)
+| [78378] Oracle MySQL Server Unspecified Remote DoS (2012-0101)
+| [78377] Oracle MySQL Server Unspecified Remote DoS (2012-0087)
+| [78376] Oracle MySQL Server Unspecified Remote DoS (2011-2262)
+| [78375] Oracle MySQL Server Unspecified Local DoS
+| [78374] Oracle MySQL Server Unspecified Remote Issue (2012-0075)
+| [78373] Oracle MySQL Server Unspecified Local Issue
+| [78372] Oracle MySQL Server Unspecified Remote Information Disclosure
+| [78371] Oracle MySQL Server Unspecified Remote Issue (2012-0496)
+| [78370] Oracle MySQL Server Unspecified Remote Issue (2012-0118)
+| [78369] Oracle MySQL Server Unspecified Remote Issue (2012-0116)
+| [78368] Oracle MySQL Server Unspecified Remote Issue (2012-0113)
+| [78283] Oracle MySQL NULL Pointer Dereference Packet Parsing Remote DoS
+| [77042] e107 CMS install_.php MySQL Server Name Parsing Remote PHP Code Execution
+| [77040] DBD::mysqlPP Unspecified SQL Injection
+| [75888] TaskFreak! multi-mysql Multiple Script Direct Request Path Disclosure
+| [74120] Apache HTTP Server mod_authnz_external mysql/mysql-auth.pl user Field SQL Injection
+| [73555] Prosody MySQL Value Column Invalid Data Type Handling DoS
+| [73387] Zend Framework PDO_MySql Character Set Security Bypass
+| [72836] Arctic Fox CMS Multiple Script Direct Request MySQL Settings Disclosure
+| [72660] MySQL GUI Tools Administrator / Query Browser Command Line Credentials Local Disclosure
+| [72120] DirectAdmin mysql_backups Folder MySQL Database Backup Local Disclosure
+| [71368] Accellion File Transfer Appliance Weak MySQL root Password
+| [70967] MySQL Eventum Admin User Creation CSRF
+| [70966] MySQL Eventum preferences.php full_name Parameter XSS
+| [70961] MySQL Eventum list.php Multiple Parameter XSS
+| [70960] MySQL Eventum forgot_password.php URI XSS
+| [70947] PyWebDAV DAVServer/mysqlauth.py get_userinfo() Multiple Parameter SQL Injection
+| [70610] PHP MySQLi Extension set_magic_quotes_runtime Function mysqli_fetch_assoc Function Interaction Weakness
+| [69885] SilverStripe modules/sapphire/trunk/core/model/MySQLDatabase.php showqueries Parameter SQL Command Disclosure
+| [69395] MySQL Derived Table Grouping DoS
+| [69394] MySQL Temporary Table Expression Re-Evaluation DoS
+| [69393] MySQL GROUP_CONCAT() WITH ROLLUP Modifier DoS
+| [69392] MySQL Extreme-Value Functions Mixed Arguments DoS
+| [69391] MySQL Stored Procedures / Prepared Statements Nested Joins DoS
+| [69390] MySQL Extreme-Value Functions Argument Parsing Type Error DoS
+| [69389] MySQL CONVERT_TZ() Function Empty SET Column DoS
+| [69388] MySQL InnoDB Storage Engine Table Handling Overflow
+| [69387] MySQL LIKE Predicates Pre-Evaluation DoS
+| [69001] MySQL PolyFromWKB() Function WKB Data Remote DoS
+| [69000] MySQL HANDLER Interface Unspecified READ Request DoS
+| [68997] MySQL Prepared-Statement Mode EXPLAIN DoS
+| [68996] MySQL EXPLAIN EXTENDED Statement DoS
+| [68995] MySQL GeometryCollection non-Geometry Value Assignment DoS
+| [67488] phpMyAdmin libraries/dbi/mysqli.dbi.lib.php Unspecified Parameter XSS
+| [67487] phpMyAdmin libraries/dbi/mysql.dbi.lib.php Unspecified Parameter XSS
+| [67421] PHP Mysqlnd Extension mysqlnd_wireprotocol.c php_mysqlnd_rset_header_read Function Overflow
+| [67420] PHP Mysqlnd Extension mysqlnd_wireprotocol.c php_mysqlnd_ok_read Function Arbitrary Memory Content Disclosure
+| [67419] PHP Mysqlnd Extension php_mysqlnd_read_error_from_line Function Negative Buffer Length Value Overflow
+| [67418] PHP Mysqlnd Extension php_mysqlnd_auth_write Function Multiple Overflows
+| [67384] MySQL LOAD DATA INFILE Statement Incorrect OK Packet DoS
+| [67383] MySQL EXPLAIN Statement Item_singlerow_subselect::store Function NULL Dereference DoS
+| [67381] MySQL InnoDB Temporary Table Handling DoS
+| [67380] MySQL BINLOG Statement Unspecified Argument DoS
+| [67379] MySQL Multiple Operation NULL Argument Handling DoS
+| [67378] MySQL Unique SET Column Join Statement Remote DoS
+| [67377] MySQL DDL Statement Multiple Configuration Parameter DoS
+| [66800] PHP Multiple mysqlnd_* Function Unspecified Overflow
+| [66799] PHP mysqlnd Error Packet Handling Multiple Overflows
+| [66731] PHP Bundled MySQL Library Unspecified Issue
+| [66665] PHP MySQL LOAD DATA LOCAL open_basedir Bypass
+| [65851] MySQL ALTER DATABASE #mysql50# Prefix Handling DoS
+| [65450] phpGraphy mysql_cleanup.php include_path Parameter Remote File Inclusion
+| [65085] MySQL Enterprise Monitor Unspecified CSRF
+| [64843] MySQL DROP TABLE Command Symlink MyISAM Table Local Data Deletion
+| [64588] MySQL sql/net_serv.cc my_net_skip_rest Function Large Packet Handling Remote DoS
+| [64587] MySQL COM_FIELD_LIST Command Packet Table Name Argument Overflow
+| [64586] MySQL COM_FIELD_LIST Command Packet Authentication Bypass
+| [64524] Advanced Poll misc/get_admin.php mysql_host Parameter XSS
+| [64447] Tirzen Framework (TZN) tzn_mysql.php Username Parameter SQL Injection Authentication Bypass
+| [64320] ClanSphere MySQL Driver s_email Parameter SQL Injection
+| [63903] MySQL sql/sql_plugin.cc mysql_uninstall_plugin Function UNINSTALL PLUGIN Command Privilege Check Weakness
+| [63115] Quicksilver Forums mysqldump Process List Database Password Disclosure
+| [62830] Employee Timeclock Software mysqldump Command-line Database Password Disclosure
+| [62640] PHP mysqli_real_escape_string() Function Error Message Path Disclosure
+| [62216] Flex MySQL Connector ActionScript SQL Query Arbitrary Code Execution
+| [61752] kiddog_mysqldumper Extension for TYPO3 Unspecified Information Disclosure
+| [61497] microTopic admin/mysql.php rating Parameter SQL Injection
+| [60665] MySQL CREATE TABLE MyISAM Table mysql_unpacked_real_data_home Local Restriction Bypass
+| [60664] MySQL sql/sql_table.cc Data Home Directory Symlink CREATE TABLE Access Restriction Bypass
+| [60516] RADIO istek scripti estafresgaftesantusyan.inc Direct Request MySQL Database Credentials Disclosure
+| [60489] MySQL GeomFromWKB() Function First Argument Geometry Value Handling DoS
+| [60488] MySQL SELECT Statement WHERE Clause Sub-query DoS
+| [60487] MySQL vio_verify_callback() Function Crafted Certificate MiTM Weakness
+| [60356] MySql Client Library (libmysqlclient) mysql_real_connect Function Local Overflow
+| [59907] MySQL on Windows bind-address Remote Connection Weakness
+| [59906] MySQL on Windows Default Configuration Logging Weakness
+| [59616] MySQL Hashed Password Weakness
+| [59609] Suckbot mod_mysql_logger Shared Object Unspecified Remote DoS
+| [59495] Cyrus SASL LDAP / MySQL Authentication Patch password Field SQL Injection Authentication Bypass
+| [59062] phpMyAdmin Extension for TYPO3 MySQL Table Name Unspecified XSS
+| [59045] phpMyAdmin Crafted MYSQL Table Name XSS
+| [59030] mysql-ocaml for MySQL mysql_real_escape_string() Function Character Escaping Weakness
+| [57587] Zmanda Recovery Manager for MySQL socket-server.pl system() Function Local Privilege Escalation
+| [57586] Zmanda Recovery Manager for MySQL socket-server.pl system() Function Remote Shell Command Execution
+| [56741] MySQL Connector/J Unicode w/ SJIS/Windows-31J Charset SQL Injection
+| [56134] Virtualmin MySQL Module Execute SQL Feature Arbitrary File Access
+| [55734] MySQL sql_parse.cc dispatch_command() Function Format String DoS
+| [55566] MySQL Connector/NET SSL Certificate Verification Weakness
+| [53525] MyBlog /config/mysqlconnection.inc Direct Request Information Disclosure
+| [53524] blog+ includes/window_top.php row_mysql_bloginfo[theme] Parameter Traversal Local File Inclusion
+| [53523] blog+ includes/block_center_down.php row_mysql_blocks_center_down[file] Parameter Traversal Local File Inclusion
+| [53522] blog+ includes/block_center_top.php row_mysql_blocks_center_top[file] Parameter Traversal Local File Inclusion
+| [53521] blog+ includes/block_left.php row_mysql_blocks_left[file] Parameter Traversal Local File Inclusion
+| [53520] blog+ includes/block_right.php row_mysql_blocks_right[file] Parameter Traversal Local File Inclusion
+| [53519] blog+ includes/window_down.php row_mysql_bloginfo[theme] Parameter Traversal Local File Inclusion
+| [53366] GEDCOM_TO_MYSQL php/info.php Multiple Parameter XSS
+| [53365] GEDCOM_TO_MYSQL php/index.php nom_branche Parameter XSS
+| [53364] GEDCOM_TO_MYSQL php/prenom.php Multiple Parameter XSS
+| [53360] Blogplus includes/window_top.php row_mysql_bloginfo[theme] Parameter Traversal Local File Inclusion
+| [53359] Blogplus includes/window_down.php row_mysql_bloginfo[theme] Parameter Traversal Local File Inclusion
+| [53358] Blogplus includes/block_right.php row_mysql_blocks_right[file] Parameter Traversal Local File Inclusion
+| [53357] Blogplus includes/block_left.php row_mysql_blocks_left[file] Parameter Traversal Local File Inclusion
+| [53356] Blogplus block_center_top.php row_mysql_blocks_center_top[file] Parameter Traversal Local File Inclusion
+| [53355] Blogplus includes/block_center_down.php row_mysql_blocks_center_down[file] Parameter Traversal Local File Inclusion
+| [53110] XOOPS Cube Legacy ErrorHandler::show() Function MySQL Error Message XSS
+| [52729] Asterisk-addon cdr_addon_mysql.c Call Detail Record SQL Injection
+| [52728] Tribox cdr_addon_mysql.c Call Detail Record XSS
+| [52727] FreePBX cdr_addon_mysql.c Call Detail Record XSS
+| [52726] Areski cdr_addon_mysql.c Call Detail Record XSS
+| [52464] MySQL charset Column Truncation Weakness
+| [52453] MySQL sql/item_xmlfunc.cc ExtractValue() / UpdateXML() Functions Scalar XPath DoS
+| [52378] Cisco ANM MySQL root Account Default Password
+| [52264] Broadcast Machine MySQLController.php controllers/baseDir Parameter Remote File Inclusion
+| [51923] Apache HTTP Server mod-auth-mysql Module mod_auth_mysql.c Multibyte Character Encoding SQL Injection
+| [51171] MySQL InnoDB convert_search_mode_to_innobase Function DoS
+| [50892] MySQL Calendar index.php username Parameter SQL Injection
+| [50827] Nodstrum MySQL Calendar nodstrumCalendarV2 Cookie Manipulation Admin Authentication Bypass
+| [49875] PromoteWeb MySQL go.php id Parameter SQL Injection
+| [48710] MySQL Command Line Client HTML Output XSS
+| [48709] MySQL Quick Admin actions.php lang Parameter Traversal Local File Inclusion
+| [48708] MySQL Quick Admin index.php language Cookie Traversal Local File Inclusion
+| [48021] MySQL Empty Bit-String Literal Token SQL Statement DoS
+| [47789] mysql-lists Unspecified XSS
+| [47394] Keld PHP-MySQL News Script login.php username Parameter SQL Injection
+| [45073] MySQLDumper Extension for TYPO3 Unspecified Authentication Bypass
+| [44937] MySQL MyISAM Table CREATE TABLE Privilege Check Bypass
+| [44138] Debian GNU/Linux libdspam7-drv-mysql Cron MySQL dspam Database Password Local Disclosure
+| [44071] Phorum /include/db/mysql.php Unspecified Search SQL Injection
+| [43180] MySQL sql_select.cc INFORMATION_SCHEMA Table Crafted Query Remote DoS
+| [43179] MySQL Server BINLOG Statement Rights Checking Failure
+| [42610] MySQL DEFINER View Value Crafted Statements Remote Privilege Escalation
+| [42609] MySQL Federated Engine SHOW TABLE STATUS Query Remote DoS
+| [42608] MySQL RENAME TABLE Symlink System Table Overwrite
+| [42607] MySQL Multiple table-level DIRECTORY Remote Privilege Escalation
+| [42460] MySQLDumper HTTP POST Request Remote Authentication Bypass
+| [42423] AdventNet EventLog Analyzer MySQL Installation Default root Account
+| [41861] Bacula make_catalog_backup Function MySQL Director Password Cleartext Disclosure
+| [40232] PHP MySQL Banner Exchange inc/lib.inc Direct Request Database Disclosure
+| [40188] Password Manager Pro (PMP) mysql Unspecified Remote Command Injection
+| [39279] PHP mysql_error() Function XSS
+| [39145] aurora framework db_mysql.lib pack_var() value Parameter SQL Injection
+| [38567] NetClassifieds Mysql_db.php Halt_On_Error Setting Error Message Path Disclosure
+| [38112] Excel Parser Pro sample/xls2mysql parser_path Parameter Remote File Inclusion
+| [37880] Asterisk-Addons source/destination Numbers cdr_addon_mysql Module SQL Injection
+| [37784] PHP MySQL Extension Multiple Function Security Restriction Bypass
+| [37783] MySQL Community Server CREATE TABLE LIKE Table Structure Disclosure
+| [37782] MySQL Community Server External Table View Privilege Escalation
+| [37781] MySQL ALTER TABLE Information Disclosure
+| [37539] GPL PHP Board db.mysql.inc.php root_path Parameter Remote File Inclusion
+| [37195] Eve-Nuke Module for PHP-Nuke db/mysql.php phpbb_root_path
+| [37015] paBugs class.mysql.php path_to_bt_dir Parameter Remote File Inclusion
+| [36868] PHP MySQLi Extension LOCAL INFILE Operation Security Restriction Bypass
+| [36867] PHP MySQL Extension LOCAL INFILE Operation Security Restriction Bypass
+| [36771] InterWorx-CP SiteWorx mysql.php PATH_INFO Parameter XSS
+| [36757] InterWorx-CP NodeWorx mysql.php PATH_INFO Parameter XSS
+| [36732] MySQL Community Server Connection Protocol Malformed Password Packet Remote DoS
+| [36251] Associated Press (AP) Newspower Default MySQL root Password
+| [35168] Study Planner (Studiewijzer) db/mysql/db.inc.php SPL_CFG[dirroot] Parameter Remote File Inclusion
+| [35037] Fantastico for cPanel includes/mysqlconfig.php fantasticopath Parameter Traversal Local File Inclusion
+| [34780] Backup Manager Command Line Cleartext MySQL Password Disclosure
+| [34766] MySQL RENAME TABLE Statement Arbitrary Table Name Modification
+| [34765] MySQL mysql_change_db Function THD::db_access Privilege Escalation
+| [34734] MySQL Crafted IF Clause Divide-by-zero NULL Dereference DoS
+| [34038] MySQL Commander ressourcen/dbopen.php home Parameter Remote File Inclusion
+| [33974] MySQL information_schema Table Subselect Single-Row DoS
+| [33678] MySQLNewsEngine affichearticles.php3 newsenginedir Parameter Remote File Inclusion
+| [33447] WGS-PPC (PPC Search Engine) config/mysql_config.php INC Parameter Remote File Inclusion
+| [33372] deV!L'z Clanportal inc/filebrowser/browser.php MySQL Data Disclosure
+| [33147] ActiveCalendar data/mysqlevents.php css Parameter XSS
+| [32784] Storystream mysqli.php baseDir Parameter Remote File Inclusion
+| [32783] Storystream mysql.php baseDir Parameter Remote File Inclusion
+| [32421] Contenido CMS conlib/db_mysqli.inc Direct Request Path Disclosure
+| [32272] JevonCMS /phplib/db_mysql.inc Direct Request Path Disclosure
+| [32171] Blue Magic Board db_mysql_error.php Direct Request Path Disclosure
+| [32056] BTSaveMySql Direct Request Config File Disclosure
+| [32044] cPanel WebHost Manager (WHM) scripts/passwdmysql password Parameter XSS
+| [32024] TikiWiki tiki-wiki_rss.php ver MySQL Credential Disclosure
+| [31963] Agora MysqlfinderAdmin.php _SESSION[PATH_COMPOSANT] Parameter Remote File Inclusion
+| [31431] ZoomStats libs/dbmax/mysql.php GLOBALS[lib][db][path] Parameter Remote File Inclusion
+| [30172] TikiWiki Multiple Script Empty sort_mode Parameter MySQL Authentication Credential Disclosure
+| [29696] MySQLDumper sql.php db Parameter XSS
+| [29453] ConPresso CMS db_mysql.inc.php msg Parameter XSS
+| [29122] cPanel mysqladmin/hooksadmin Unspecified Privilege Escalation
+| [28296] MySQL Crafted multiupdate / subselects Query Local DoS
+| [28288] MySQL Instance_options::complete_initialization Function Overflow
+| [28030] Tutti Nova class.novaRead.mysql.php TNLIB_DIR Parameter Remote File Inclusion
+| [28029] Tutti Nova class.novaAdmin.mysql.php TNLIB_DIR Parameter Remote File Inclusion
+| [28028] Tutti Nova class.novaEdit.mysql.php TNLIB_DIR Parameter Remote File Inclusion
+| [28013] MySQL SUID Routine Miscalculation Arbitrary DML Statement Execution
+| [28012] MySQL Case Sensitivity Unauthorized Database Creation
+| [27919] MySQL VIEW Access information_schema.views Information Disclosure
+| [27703] MySQL MERGE Table Privilege Persistence
+| [27593] Drupal database.mysqli.inc Multiple Parameter SQL Injection
+| [27549] Opsware NAS /etc/init.d/mysqll MySQL root Cleartext Password Local Disclosure
+| [27416] MySQL Server time.cc date_format Function Format String
+| [27054] MySQL mysqld str_to_date Function NULL Argument DoS
+| [26923] PHP/MySQL Classifieds (PHP Classifieds) search.php rate Parameter SQL Injection
+| [26922] PHP/MySQL Classifieds (PHP Classifieds) AddAsset1.php Multiple Field XSS
+| [26822] Bee-hive Lite include/listall.inc.php mysqlcall Parameter Remote File Inclusion
+| [26821] Bee-hive Lite conad/include/mysqlCall.inc.php config Parameter Remote File Inclusion
+| [26820] Bee-hive Lite conad/logout.inc.php mysqlCall Parameter Remote File Inclusion
+| [26819] Bee-hive Lite conad/login.inc.php mysqlCall Parameter Remote File Inclusion
+| [26818] Bee-hive Lite conad/checkPasswd.inc.php mysqlCall Parameter Remote File Inclusion
+| [26817] Bee-hive Lite conad/changeUserDetails.inc.php mysqlCall Parameter Remote File Inclusion
+| [26816] Bee-hive Lite conad/changeEmail.inc.php mysqlCall Parameter Remote File Inclusion
+| [26125] Open Searchable Image Catalogue core.php do_mysql_query Function Error Message XSS
+| [26123] Open Searchable Image Catalogue core.php do_mysql_query Function SQL Injection
+| [25987] MySQL Multibyte Encoding SQL Injection Filter Bypass
+| [25908] Drupal database.mysql.inc Multiple Parameter SQL Injection
+| [25595] Apple Mac OS X MySQL Manager Blank root Password
+| [25228] MySQL Crafted COM_TABLE_DUMP Request Arbitrary Memory Disclosure
+| [25227] MySQL COM_TABLE_DUMP Packet Overflow
+| [25226] MySQL Malformed Login Packet Remote Memory Disclosure
+| [24245] Cholod Mysql Based Message Board Unspecified XSS
+| [24244] Cholod Mysql Based Message Board mb.cgi showmessage Action SQL Injection
+| [23963] WoltLab Burning Board class_db_mysql.php SQL Error Message XSS
+| [23915] Netcool/NeuSecure MySQL Database Connection Restriction Bypass
+| [23611] Aztek Forum index.php msg Variable Forced MySQL Error Information Disclosure
+| [23526] MySQL Query NULL Charcter Logging Bypass
+| [23157] PHP/MYSQL Timesheet changehrs.php Multiple Parameter SQL Injection
+| [23156] PHP/MYSQL Timesheet index.php Multiple Parameter SQL Injection
+| [22995] PAM-MySQL Authentication pam_get_item() Function Unspecified Privilege Escalation
+| [22994] PAM-MySQL SQL Logging Facility Segfault DoS
+| [22485] Recruitment Software admin/site.xml MySQL Authentication Credential Disclosure
+| [22479] PHP mysqli Extension Error Message Format String
+| [22232] PHP Pipe Variable mysql_connect() Function Overflow
+| [21685] MySQL Auction Search Module keyword XSS
+| [20698] Campsite notifyendsubs Cron MySQL Password Cleartext Remote Disclosure
+| [20145] Proofpoint Protection Server Embedded MySQL Server Unpassworded root Account
+| [19457] aMember Pro mysql.inc.php Remote File Inclusion
+| [19377] MAXdev MD-Pro /MySQL_Tools/admin.php Path Disclosure
+| [18899] MySQL UDF Library Arbitrary Function Load Privilege Escalation
+| [18898] MySQL UDF LoadLibraryEx Function Nonexistent Library Load DoS
+| [18897] MySQL on Windows UDF Create Function Traversal Privilege Escalation
+| [18896] MySQL User-Defined Function init_syms() Function Overflow
+| [18895] MySQL libmysqlclient.so host Parameter Remote Overflow
+| [18894] MySQL drop database Request Remote Overflow
+| [18622] FunkBoard mysql_install.php Email Field Arbitrary PHP Code Injection
+| [18620] FunkBoard mysql_install.php Admin/Database Password Manipulation
+| [18406] MySQL Eventum releases.php SQL Injection
+| [18405] MySQL Eventum custom_fields_graph.php SQL Injection
+| [18404] MySQL Eventum custom_fields.php SQL Injection
+| [18403] MySQL Eventum login.php email Parameter SQL Injection Authentication Bypass
+| [18402] MySQL Eventum get_jsrs_data.php F Parameter XSS
+| [18401] MySQL Eventum list.php release Parameter XSS
+| [18400] MySQL Eventum view.php id Parameter XSS
+| [18173] MySQL on Windows USE Command MS-DOS Device Name DoS
+| [17801] Bugzilla MySQL Replication Race Condition Information Disclosure
+| [17223] xMySQLadmin Symlink Arbitrary File Deletion
+| [16727] MySQL Nonexistent '--user' Error Incorrect Privilege Database Invocation
+| [16689] MySQL mysql_install_db Symlink Arbitrary File Overwrite
+| [16056] Plans Unspecified mySQL Remote Password Disclosure
+| [15993] MySQL MaxDB Webtool Remote getIfHeader() WebDAV Function Remote Overflow
+| [15817] MySQL MaxDB Web Tool getLockTokenHeader() Function Remote Overflow
+| [15816] MySQL MaxDB Web Administration Service Malformed GET Request Overflow
+| [15451] paNews auth.php mysql_prefix Parameter SQL Injection
+| [14748] MySQL MS-DOS Device Names Request DoS
+| [14678] MySQL CREATE FUNCTION Arbitrary libc Code Execution
+| [14677] MySQL CREATE FUNCTION mysql.func Table Arbitrary Library Injection
+| [14676] MySQL CREATE TEMPORARY TABLE Symlink Privilege Escalation
+| [14386] phpMyAdmin mysqli.dbi.lib.php Path Disclosure
+| [14052] Symantec Brightmail AntiSpam Multiple Default MySQL Accounts
+| [13086] MySQL MaxDB Web Agent Malformed HTTP Header DoS
+| [13085] MySQL MaxDB Web Agent WebDAV sapdbwa_GetUserData() Function Remote DoS
+| [13013] MySQL mysqlaccess.sh Symlink Arbitrary File Manipulation
+| [12919] MySQL MaxDB WebAgent websql Remote Overflow
+| [12779] MySQL User Defined Function Privilege Escalation
+| [12609] MySQL Eventum projects.php Multiple Parameter XSS
+| [12608] MySQL Eventum preferences.php Multiple Parameter XSS
+| [12607] MySQL Eventum forgot_password.php email Parameter XSS
+| [12606] MySQL Eventum index.php email Parameter XSS
+| [12605] MySQL Eventum Default Vendor Account
+| [12275] MySQL MaxDB Web Tools wahttp Nonexistent File Request DoS
+| [12274] MySQL MaxDB Web Tools WebDAV Handler Remote Overflow
+| [11689] Roxen Web Server MySQL Socket Permission Weakness
+| [10985] MySQL MATCH..AGAINST Query DoS
+| [10959] MySQL GRANT ALL ON Privilege Escalation
+| [10660] MySQL ALTER TABLE/RENAME Forces Old Permission Checks
+| [10659] MySQL ALTER MERGE Tables to Change the UNION DoS
+| [10658] MySQL mysql_real_connect() Function Remote Overflow
+| [10532] MySQL MaxDB webdbm Server Field DoS
+| [10491] AWS MySQLguest AWSguest.php Script Insertion
+| [10244] MySQL libmysqlclient Prepared Statements API Overflow
+| [10226] MySQLGuest AWSguest.php Multiple Field XSS
+| [9912] PHP safe_mode MySQL Database Access Restriction Bypass
+| [9911] Inter7 vpopmail MySQL Module Authentication Credential Disclosure
+| [9910] MySQL mysql_change_user() Double-free Memory Pointer DoS
+| [9909] MySQL datadir/my.cnf Modification Privilege Escalation
+| [9908] MySQL my.ini Initialization File datadir Parameter Overflow
+| [9907] MySQL SELECT Statement String Handling Overflow
+| [9906] MySQL GRANT Privilege Arbitrary Password Modification
+| [9509] teapop MySQL Authentication Module SQL Injection
+| [9018] MySQL Backup Pro getbackup() Method Unspecified Issue
+| [9015] MySQL mysqlhotcopy Insecure Temporary File Creation
+| [8997] Cacti config.php MySQL Authentication Credential Cleartext Disclosure
+| [8979] MySQL SHOW GRANTS Encrypted Password Disclosure
+| [8889] MySQL COM_TABLE_DUMP Package Negative Integer DoS
+| [8888] MySQL COM_CHANGE_USER Command Long Repsonse Overflow
+| [8887] MySQL COM_CHANGE_USER Command One Character Password Brute Force
+| [8886] MySQL libmysqlclient Library read_one_row Overflow
+| [8885] MySQL libmysqlclient Library read_rows Overflow
+| [7476] MySQL Protocol 4.1 Authentication Scramble String Overflow
+| [7475] MySQL Zero-length Scrambled String Crafted Packet Authentication Bypass
+| [7245] MySQL Pluggable Authentication Module (pam_mysql) Password Disclosure
+| [7128] MySQL show database Database Name Exposure
+| [6716] MySQL Database Engine Weak Authentication Information Disclosure
+| [6605] MySQL mysqld Readable Log File Information Disclosure
+| [6443] PowerPhlogger db_dump.php View Arbitrary mySQL Dump
+| [6421] MySQL mysqld_multi Symlink Arbitrary File Overwrite
+| [6420] MySQL mysqlbug Symlink Arbitrary File Overwrite
+| [2537] MySQL sql_acl.cc get_salt_from_password Function Password Handling Remote Overflow
+| [2144] WinMySQLadmin my.ini Cleartext Password Disclosure
+| [653] PCCS-Linux MySQL Database Admin Tool Authentication Credential Disclosure
+| [520] MySQL Database Name Traversal Arbitrary File Modification
+| [380] MySQL Server on Windows Default Null Root Password
+| [261] MySQL Short Check String Authentication Bypass
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [47871] Oracle MySQL Prior to 5.1.52 Multiple Denial Of Service Vulnerabilities
+| [43677] Oracle MySQL Prior to 5.1.50 Privilege Escalation Vulnerability
+| [43676] Oracle MySQL Prior to 5.1.51 Multiple Denial Of Service Vulnerabilities
+| [42646] Oracle MySQL Prior to 5.1.49 'JOIN' Statement Denial Of Service Vulnerability
+| [42643] Oracle MySQL Prior to 5.1.49 'DDL' Statements Denial Of Service Vulnerability
+| [42638] Oracle MySQL Prior to 5.1.49 Malformed 'BINLOG' Arguments Denial Of Service Vulnerability
+| [42596] Oracle MySQL Prior to 5.1.49 'WITH ROLLUP' Denial Of Service Vulnerability
+| [42586] RETIRED: Oracle MySQL Prior to 5.1.49 Multiple Denial Of Service Vulnerabilities
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028790] MySQL Multiple Bugs Let Remote Users Deny Service and Partially Access and Modify Data
+| [1028449] MySQL Multiple Bugs Let Remote Authenticated Users Deny Service and Partially Access and Modify Data
+| [1028004] MySQL Multiple Bugs Let Remote Authenticated Users Take Full Control or Deny Service and Let Local Users Access and Modify Data
+| [1027829] MySQL Bug in UpdateXML() Lets Remote Authenticated Users Deny Service
+| [1027828] MySQL Heap Overflow May Let Remote Authenticated Users Execute Arbitrary Code
+| [1027827] MySQL Stack Overflow May Let Remote Authenticated Users Execute Arbitrary Code
+| [1027665] MySQL Multiple Bugs Let Remote Authenticated Users Access and Modify Data and Deny Service and Local Users Access Data
+| [1027263] MySQL Multiple Bugs Let Remote Authenticated Users Deny Service
+| [1027143] MySQL memcmp() Comparison Error Lets Remote Users Bypass Authentication
+| [1026934] MySQL Multiple Bugs Let Remote Users Deny Service
+| [1026896] MySQL Unspecified Flaws Have Unspecified Impact
+| [1026659] MySQL Unspecified Flaw Lets Remote Users Execute Arbitrary Code
+| [1026530] MySQL Multiple Bugs Let Local and Remote Users Partially Access and Modifiy Data and Partially Deny Service
+| [1024508] MySQL Replication Flaw Lets Remote Authenticated Users Gain Elevated Privileges
+| [1024507] MySQL Multiple Flaws Let Remote Authenticated Users Deny Service
+| [1024360] MySQL Multiple Flaws Let Remote Authenticated Users Deny Service
+| [1024160] MySQL ALTER DATABASE Processing Error Lets Remote Authenticated Users Deny Service
+| [1024033] MySQL COM_FIELD_LIST Packet Buffer Overflow Lets Remote Authenticated Users Execute Arbitrary Code
+| [1024032] MySQL Large Packet Processing Flaw in my_net_skip_rest() Lets Remote Users Deny Service
+| [1024031] MySQL COM_FIELD_LIST Validation Flaw Lets Remote Authenticated Users Gain Elevated Privileges
+| [1024004] MySQL mi_delete_table() Symlink Flaw Lets Remote Authenticated Users Delete Data and Index Files
+| [1023402] MySQL Unspecified Flaw Lets Remote Users Execute Arbitrary Code
+| [1023220] MySQL Client Fails to Check Server Certificates in Certain Cases
+| [1022812] MySQL Unspecified Buffer Overflow Lets Remote Users Execute Arbitrary Code
+| [1022533] MySQL Format String Bug in dispatch_command() Lets Remote Users Deny Service
+| [1022482] MySQL Connector/Net is Missing SSL Certificate Validation
+| [1021786] MySQL Bug in ExtractValue()/UpdateXML() in Processing XPath Expressions Lets Remote Authenticated Users Deny Service
+| [1021714] (Red Hat Issues Fix) mod_auth_mysql Input Validation Flaw Lets Remote Users Inject SQL Commands
+| [1020858] MySQL Item_bin_string::Item_bin_string() Binary Value Processing Bug Lets Remote Authenticated Users Deny Service
+| [1019995] MySQL MyISAM Options Let Local Users Overwrite Table Files
+| [1019085] MySQL Bugs Let Remote Authenticated Users Gain Elevated Privileges and Deny Service
+| [1019084] MySQL DATA DIRECTORY and INDEX DIRECTORY Options May Let Remote Authenticated Users Gain Elevated Privileges
+| [1019083] MySQL BINLOG Filename Path Bug May Let Remote Authenticated Users Gain Elevated Privileges
+| [1019060] MySQL Rename Table Bug Lets Remote Authenticated Users Modify System Table Information
+| [1018978] MySQL convert_search_mode_to_innobase() Bug Lets Remote Authenticated Users Deny Service
+| [1018824] Asterisk-Addons Input Validation Flaw in cdr_addon_mysql Lets Remote Users Inject SQL Commands
+| [1018663] MySQL Table View Access Bug Lets Remote Authenticated Users Gain Elevated Privileges
+| [1018629] MySQL Authentication Protocol Bug Lets Remote Users Deny Service
+| [1018071] MySQL ALTER TABLE Function Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1018070] MySQL SQL SECURITY INVOKER Routines Let Remote Authenticated Users Gain Elevated Privileges
+| [1018069] MySQL Lets Remote Authenticated Users Issue the RENAME TABLE Command
+| [1017746] MySQL Single Row Subselect Statements Let Remote Users Deny Service
+| [1016790] MySQL Replication Error Lets Local Users Deny Service
+| [1016710] MySQL Case-Sensitive Database Names May Let Users Access Restricted Databases
+| [1016709] MySQL Error in Checking suid Routine Arguments May Let Users Gain Elevated Privileges
+| [1016617] MySQL MERGE Access Control Error May Let Users Access a Restricted Table
+| [1016566] Opsware Network Automation System Discloses MySQL Password to Local Users
+| [1016216] MySQL Error in Parsing Multibyte Encoded Data in mysql_real_escape() Lets Remote Users Inject SQL Commands
+| [1016077] Apple MySQL Manager Database Initialization Bug May Let Local Users Access the Database
+| [1016017] MySQL Anonymous Login Processing May Disclose Some Memory Contents to Remote Users
+| [1016016] MySQL COM_TABLE_DUMP Processing Lets Remote Authenticated Users Execute Arbitrary Code or Obtain Information
+| [1015789] Woltlab Burning Board Input Validation Hole in 'class_db_mysql.php' Permits Cross-Site Scripting Attacks
+| [1015693] MySQL Query Bug Lets Remote Users Bypass Query Logging
+| [1015603] PAM-MySQL pam_get_item() Double Free May Let Remote Users Execute Arbitrary Code
+| [1015485] PHP mysqli Extension Error Mode Format String Flaw May Let Users Execute Arbitrary Code
+| [1014603] MySQL Eventum Input Validation Hole in 'class.auth.php' Permits SQL Injection and Other Input Validation Bugs Permit Cross-Site Scripting Attacks
+| [1014172] xMySQLadmin Lets Local Users Delete Files
+| [1013995] MySQL 'mysql_install_db' Uses Unsafe Temporary Files and May Let Local Users Gain Elevated Privilege
+| [1013994] MySQL Non-existent '--user' Error May Allow the Database to Run With Incorrect Privileges
+| [1013415] MySQL CREATE FUNCTION Lets Authenticated Users Invoke libc Functions to Execute Arbitrary Code
+| [1013414] MySQL udf_init() Path Validation Flaw Lets Authenticated Users Execute Arbitrary Libraries
+| [1013413] MySQL CREATE TEMPORARY TABLE Uses Predictable Temporary Files That May Let Users Gain Elevated Privileges
+| [1012914] MySQL 'mysqlaccess.sh' Unsafe Temporary Files May Let Local Users Gain Elevated Privileges
+| [1012893] MySQL MaxDB Buffer Overflow in websql Password Parameter Lets Remote Users Execute Arbitrary Code
+| [1012500] mysql_auth Memory Leak Has Unspecified Impact
+| [1011741] MySQL Access Control Error in Databases With Underscore Wildcard Character May Grant Unauthorized Access
+| [1011606] MySQL May Let Remote Authenticated Users Access Restricted Tables or Crash the System
+| [1011408] MySQL libmysqlclient Buffer Overflow in Executing Prepared Statements Has Unspecified Impact
+| [1011376] MySQLGuest Lack of Input Validation Lets Remote Users Conduct Cross-Site Scripting Attacks
+| [1011008] MySQL Buffer Overflow in mysql_real_connect() May Let Remote Users Execute Arbitrary Code
+| [1010979] MySQL 'mysqlhotcopy' Unsafe Temporary Files May Let Local Users Gain Elevated Privileges
+| [1010645] MySQL check_scramble_323() Zero-Length Comparison Lets Remote Users Bypass Authentication
+| [1009784] MySQL 'mysqld_multi' Temporary File Flaw Lets Local Users Overwrite Files
+| [1009554] MySQL 'mysqlbug' Temporary File Flaw Lets Local Users Overwrite Files
+| [1007979] MySQL  mysql_change_user() Double Free Error Lets Remote Authenticated Users Crash mysqld
+| [1007673] MySQL acl_init() Buffer Overflow Permits Remote Authenticated Administrators to Execute Arbitrary Code
+| [1007518] DWebPro Discloses MySQL Database Password to Local Users
+| [1007312] MySQL World-Writable Configuration File May Let Local Users Gain Root Privileges
+| [1006976] MySQL Buffer Overflow in 'mysql_real_connect()' Client Function May Let Remote or Local Users Execute Arbitrary Code
+| [1005800] MySQL Overflow and Authentication Bugs May Let Remote Users Execute Code or Access Database Accounts
+| [1005345] MySQL Buffer Overflow Lets Local Users Gain System Privileges on Windows NT
+| [1004506] vBulletin PHP-based Forum Software Has Unspecified Security Flaw in the 'db_mysql.php' Module
+| [1004172] PHP-Survey Script Discloses Underlying MySQL Database Username and Password to Remote Users
+| [1003955] 3rd Party Patch for Cyrus SASL ('auxprop for mysql and ldap') Lets Remote Users Access Protected POP Mail Accounts Without Authentication
+| [1003290] Conectiva Linux MySQL Distribution May Allow Local Users to Obtain Sensitive Information
+| [1002993] PurePostPro Script Add-on for PureFTPd and MySQL Allows Remote Users to Execute SQL Commands on the Server
+| [1002485] WinMySQLadmin Database Administration Tool Discloses MySQL Password to Local Users
+| [1002324] Vpopmail Mail Server Discloses Database Password to Local Users When Installed with MySQL
+| [1001411] phpMyAdmin Administration Tool for MySQL Allows Remote Users to Execute Commands on the Server
+| [1001118] MySQL Database Allows Authorized Users to Modify Server Files to Deny Service or Obtain Additional Access
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [85724] Oracle MySQL Server XA Transactions denial of service
+| [85723] Oracle MySQL Server Server Replication denial of service
+| [85722] Oracle MySQL Server InnoDB denial of service
+| [85721] Oracle MySQL Server Server Privileges unspecified
+| [85720] Oracle MySQL Server Server Partition denial of service
+| [85719] Oracle MySQL Server Server Parser denial of service
+| [85718] Oracle MySQL Server Server Options denial of service
+| [85717] Oracle MySQL Server Server Options denial of service
+| [85716] Oracle MySQL Server Server Optimizer denial of service
+| [85715] Oracle MySQL Server Server Optimizer denial of service
+| [85714] Oracle MySQL Server Prepared Statements denial of service
+| [85713] Oracle MySQL Server InnoDB denial of service
+| [85712] Oracle MySQL Server Full Text Search denial of service
+| [85711] Oracle MySQL Server Data Manipulation Language denial of service
+| [85710] Oracle MySQL Server Data Manipulation Language denial of service
+| [85709] Oracle MySQL Server Audit Log unspecified
+| [85708] Oracle MySQL Server MemCached unspecified
+| [84846] Debian mysql-server package information disclosure
+| [84375] Wireshark MySQL dissector denial of service
+| [83554] Oracle MySQL Server Server Partition denial of service
+| [83553] Oracle MySQL Server Server Locking denial of service
+| [83552] Oracle MySQL Server Server Install unspecified
+| [83551] Oracle MySQL Server Server Types denial of service
+| [83550] Oracle MySQL Server Server Privileges unspecified
+| [83549] Oracle MySQL Server InnoDB denial of service
+| [83548] Oracle MySQL Server InnoDB denial of service
+| [83547] Oracle MySQL Server Data Manipulation Language denial of service
+| [83546] Oracle MySQL Server Stored Procedure denial of service
+| [83545] Oracle MySQL Server Server Replication denial of service
+| [83544] Oracle MySQL Server Server Partition denial of service
+| [83543] Oracle MySQL Server Server Optimizer denial of service
+| [83542] Oracle MySQL Server InnoDB denial of service
+| [83541] Oracle MySQL Server Information Schema denial of service
+| [83540] Oracle MySQL Server Data Manipulation Language denial of service
+| [83539] Oracle MySQL Server Data Manipulation Language denial of service
+| [83538] Oracle MySQL Server Server Optimizer unspecified
+| [83537] Oracle MySQL Server MemCached denial of service
+| [83536] Oracle MySQL Server Server Privileges unspecified
+| [83535] Oracle MySQL Server Server Privileges unspecified
+| [83534] Oracle MySQL Server Server unspecified
+| [83533] Oracle MySQL Server Information Schema unspecified
+| [83532] Oracle MySQL Server Server Locking unspecified
+| [83531] Oracle MySQL Server Data Manipulation Language denial of service
+| [83388] MySQL administrative login attempt detected
+| [82963] Mambo MySQL database information disclosure
+| [82946] Oracle MySQL buffer overflow
+| [82945] Oracle MySQL buffer overflow
+| [82895] Oracle MySQL and MariaDB geometry queries denial of service
+| [81577] MySQL2JSON extension for TYPO3 unspecified SQL injection
+| [81325] Oracle MySQL Server Server Privileges denial of service
+| [81324] Oracle MySQL Server Server Partition denial of service
+| [81323] Oracle MySQL Server Server Optimizer denial of service
+| [81322] Oracle MySQL Server Server Optimizer denial of service
+| [81321] Oracle MySQL Server Server denial of service
+| [81320] Oracle MySQL Server MyISAM denial of service
+| [81319] Oracle MySQL Server InnoDB denial of service
+| [81318] Oracle MySQL Server InnoDB denial of service
+| [81317] Oracle MySQL Server Server Locking denial of service
+| [81316] Oracle MySQL Server Server denial of service
+| [81315] Oracle MySQL Server Server Replication unspecified
+| [81314] Oracle MySQL Server Server Replication unspecified
+| [81313] Oracle MySQL Server Stored Procedure denial of service
+| [81312] Oracle MySQL Server Server Optimizer denial of service
+| [81311] Oracle MySQL Server Information Schema denial of service
+| [81310] Oracle MySQL Server GIS Extension denial of service
+| [80790] Oracle MySQL yaSSL buffer overflow
+| [80553] Oracle MySQL and MariaDB salt security bypass
+| [80443] Oracle MySQL Server unspecified code execution
+| [80442] Oracle MySQL Server acl_get() buffer overflow
+| [80440] Oracle MySQL Server table buffer overflow
+| [80435] Oracle MySQL Server database privilege escalation
+| [80434] Oracle MySQL Server COM_BINLOG_DUMP denial of service
+| [80433] Oracle MySQL Server Stuxnet privilege escalation
+| [80432] Oracle MySQL Server authentication information disclosure
+| [79394] Oracle MySQL Server Server Installation information disclosure
+| [79393] Oracle MySQL Server Server Replication denial of service
+| [79392] Oracle MySQL Server Server Full Text Search denial of service
+| [79391] Oracle MySQL Server Server denial of service
+| [79390] Oracle MySQL Server Client information disclosure
+| [79389] Oracle MySQL Server Server Optimizer denial of service
+| [79388] Oracle MySQL Server Server Optimizer denial of service
+| [79387] Oracle MySQL Server Server denial of service
+| [79386] Oracle MySQL Server InnoDB Plugin denial of service
+| [79385] Oracle MySQL Server InnoDB denial of service
+| [79384] Oracle MySQL Server Client unspecified
+| [79383] Oracle MySQL Server Server denial of service
+| [79382] Oracle MySQL Server Protocol unspecified
+| [79381] Oracle MySQL Server Information Schema unspecified
+| [78954] SilverStripe MySQLDatabase.php information disclosure
+| [78948] MySQL MyISAM table symlink
+| [77865] MySQL unknown vuln
+| [77864] MySQL sort order denial of service
+| [77768] MySQLDumper refresh_dblist.php information disclosure
+| [77177] MySQL Squid Access Report unspecified cross-site scripting
+| [77065] Oracle MySQL Server Optimizer denial of service
+| [77064] Oracle MySQL Server Optimizer denial of service
+| [77063] Oracle MySQL Server denial of service
+| [77062] Oracle MySQL InnoDB denial of service
+| [77061] Oracle MySQL GIS Extension denial of service
+| [77060] Oracle MySQL Server Optimizer denial of service
+| [76189] MySQL unspecified error
+| [76188] MySQL attempts security bypass
+| [75287] MySQLDumper restore.php information disclosure
+| [75286] MySQLDumper filemanagement.php directory traversal
+| [75285] MySQLDumper main.php cross-site request forgery
+| [75284] MySQLDumper install.php cross-site scripting
+| [75283] MySQLDumper install.php file include
+| [75282] MySQLDumper menu.php code execution
+| [75022] Oracle MySQL Server Server Optimizer denial of service
+| [75021] Oracle MySQL Server Server Optimizer denial of service
+| [75020] Oracle MySQL Server Server DML denial of service
+| [75019] Oracle MySQL Server Partition denial of service
+| [75018] Oracle MySQL Server MyISAM denial of service
+| [75017] Oracle MySQL Server Server Optimizer denial of service
+| [74672] Oracle MySQL Server multiple unspecified
+| [73092] MySQL unspecified code execution
+| [72540] Oracle MySQL Server denial of service
+| [72539] Oracle MySQL Server unspecified
+| [72538] Oracle MySQL Server denial of service
+| [72537] Oracle MySQL Server denial of service
+| [72536] Oracle MySQL Server unspecified
+| [72535] Oracle MySQL Server denial of service
+| [72534] Oracle MySQL Server denial of service
+| [72533] Oracle MySQL Server denial of service
+| [72532] Oracle MySQL Server denial of service
+| [72531] Oracle MySQL Server denial of service
+| [72530] Oracle MySQL Server denial of service
+| [72529] Oracle MySQL Server denial of service
+| [72528] Oracle MySQL Server denial of service
+| [72527] Oracle MySQL Server denial of service
+| [72526] Oracle MySQL Server denial of service
+| [72525] Oracle MySQL Server information disclosure
+| [72524] Oracle MySQL Server denial of service
+| [72523] Oracle MySQL Server denial of service
+| [72522] Oracle MySQL Server denial of service
+| [72521] Oracle MySQL Server denial of service
+| [72520] Oracle MySQL Server denial of service
+| [72519] Oracle MySQL Server denial of service
+| [72518] Oracle MySQL Server unspecified
+| [72517] Oracle MySQL Server unspecified
+| [72516] Oracle MySQL Server unspecified
+| [72515] Oracle MySQL Server denial of service
+| [72514] Oracle MySQL Server unspecified
+| [71965] MySQL port denial of service
+| [70680] DBD::mysqlPP unspecified SQL injection
+| [70370] TaskFreak! multi-mysql unspecified path disclosure
+| [68799] mod_authnz_external module for Apache mysql-auth.pl SQL injection
+| [68294] MySQLDriverCS statement.cs sql injection
+| [68175] Prosody MySQL denial of service
+| [67539] Zend Framework MySQL PDO security bypass
+| [67254] DirectAdmin MySQL information disclosure
+| [66567] Xoops mysql.sql information disclosure
+| [65871] PyWebDAV MySQLAuthHandler class SQL injection
+| [65543] MySQL Select Arbitrary data into a File
+| [65529] MySQL Eventum full_name field cross-site scripting
+| [65380] Oracle MySQL Eventum forgot_password.php cross-site scripting
+| [65379] Oracle MySQL Eventum list.php cross-site scripting
+| [65266] Accellion File Transfer Appliance MySQL default password
+| [64878] MySQL Geometry denial of service
+| [64877] MySQL EXPLAIN EXTENDED denial of service
+| [64876] MySQL prepared statement denial of service
+| [64845] MySQL extreme-value denial of service
+| [64844] MySQL Gis_line_string::init_from_wkb denial of service
+| [64843] MySQL user-variable denial of service
+| [64842] MySQL view preparation denial of service
+| [64841] MySQL prepared statement denial of service
+| [64840] MySQL LONGBLOB denial of service
+| [64839] MySQL invocations denial of service
+| [64838] MySQL Gis_line_string::init_from_wkb denial of service
+| [64689] MySQL dict0crea.c denial of service
+| [64688] MySQL SET column denial of service
+| [64687] MySQL BINLOG command denial of service
+| [64686] MySQL InnoDB denial of service
+| [64685] MySQL HANDLER interface denial of service
+| [64684] MySQL Item_singlerow_subselect::store denial of service
+| [64683] MySQL OK packet denial of service
+| [63518] MySQL Query Browser GUI Tools information disclosure
+| [63517] MySQL Administrator GUI Tools information disclosure
+| [62272] MySQL PolyFromWKB() denial of service
+| [62269] MySQL LIKE predicates denial of service
+| [62268] MySQL joins denial of service
+| [62267] MySQL GREATEST() or LEAST() denial of service
+| [62266] MySQL GROUP_CONCAT() denial of service
+| [62265] MySQL expression values denial of service
+| [62264] MySQL temporary table denial of service
+| [62263] MySQL LEAST() or GREATEST() denial of service
+| [62262] MySQL replication privilege escalation
+| [61739] MySQL WITH ROLLUP denial of service
+| [61343] MySQL LOAD DATA INFILE denial of service
+| [61342] MySQL EXPLAIN denial of service
+| [61341] MySQL HANDLER denial of service
+| [61340] MySQL BINLOG denial of service
+| [61339] MySQL IN() or CASE denial of service
+| [61338] MySQL SET denial of service
+| [61337] MySQL DDL denial of service
+| [61318] PHP mysqlnd_wireprotocol.c buffer overflow
+| [61317] PHP php_mysqlnd_read_error_from_line buffer overflow
+| [61316] PHP php_mysqlnd_auth_write buffer overflow
+| [61274] MySQL TEMPORARY InnoDB denial of service
+| [59905] MySQL ALTER DATABASE denial of service
+| [59841] CMySQLite updateUser.php cross-site request forgery
+| [59112] MySQL Enterprise Monitor unspecified cross-site request forgery
+| [59075] PHP php_mysqlnd_auth_write() buffer overflow
+| [59074] PHP php_mysqlnd_read_error_from_line() buffer overflow
+| [59073] PHP php_mysqlnd_rset_header_read() buffer overflow
+| [59072] PHP php_mysqlnd_ok_read() information disclosure
+| [58842] MySQL DROP TABLE file deletion
+| [58676] Template Shares MySQL information disclosure
+| [58531] MySQL COM_FIELD_LIST buffer overflow
+| [58530] MySQL packet denial of service
+| [58529] MySQL COM_FIELD_LIST security bypass
+| [58311] ClanSphere the captcha generator and MySQL driver SQL injection
+| [57925] MySQL UNINSTALL PLUGIN security bypass
+| [57006] Quicksilver Forums mysqldump information disclosure
+| [56800] Employee Timeclock Software mysqldump information disclosure
+| [56200] Flex MySQL Connector ActionScript SQL injection
+| [55877] MySQL yaSSL buffer overflow
+| [55622] kiddog_mysqldumper extension for TYPO3 information disclosure
+| [55416] MySQL unspecified buffer overflow
+| [55382] Ublog UblogMySQL.sql information disclosure
+| [55251] PHP-MySQL-Quiz editquiz.php SQL injection
+| [54597] MySQL sql_table.cc security bypass
+| [54596] MySQL mysqld denial of service
+| [54365] MySQL OpenSSL security bypass
+| [54364] MySQL MyISAM table symlink
+| [53950] The mysql-ocaml mysql_real_escape_string weak security
+| [52978] Zmanda Recovery Manager for MySQL mysqlhotcopy privilege escalation
+| [52977] Zmanda Recovery Manager for MySQL socket-server.pl command execution
+| [52660] iScouter PHP Web Portal MySQL Password Retrieval
+| [52220] aa33code mysql.inc information disclosure
+| [52122] MySQL Connector/J unicode SQL injection
+| [51614] MySQL dispatch_command() denial of service
+| [51406] MySQL Connector/NET SSL spoofing
+| [49202] MySQL UDF command execution
+| [49050] MySQL XPath denial of service
+| [48919] Cisco Application Networking Manager MySQL default account password
+| [48163] libapache2-mod-auth-mysql module for Debian multibyte encoding SQL injection
+| [47544] MySQL Calendar index.php SQL injection
+| [47476] MySQL Calendar index.php nodstrumCalendarV2 security bypass
+| [45649] MySQL MyISAM symlink security bypass
+| [45648] MySQL MyISAM symlinks security bypass
+| [45607] MySQL Quick Admin actions.php file include
+| [45606] MySQL Quick Admin index.php file include
+| [45590] MySQL command-line client cross-site scripting
+| [45436] PromoteWeb MySQL go.php SQL injection
+| [45042] MySQL empty bit-string literal denial of service
+| [44662] mysql-lists unspecified cross-site scripting
+| [42267] MySQL MyISAM security bypass
+| [42211] GEDCOM_to_MySQL2 index.php, info.php and prenom.php cross-site scripting
+| [42014] miniBB setup_mysql.php and setup_options.php SQL injection
+| [40920] MySQL sql_select.cc denial of service
+| [40734] MySQL Server BINLOG privilege escalation
+| [40350] MySQL password information disclosure
+| [39415] Debian GNU/Linux libdspam7-drv-mysql cron job password disclosure
+| [39402] PHP LOCAL INFILE and MySQL extension security bypass
+| [38999] aurora framework db_mysql.lib SQL injection
+| [38990] MySQL federated engine denial of service
+| [38989] MySQL DEFINER value privilege escalation
+| [38988] MySQL DATA DIRECTORY and INDEX DIRECTORY privilege escalation
+| [38964] MySQL RENAME TABLE symlink
+| [38733] ManageEngine EventLog Analyzer MySQL default password
+| [38284] MySQL ha_innodb.cc convert_search_mode_to_innobase() denial of service
+| [38189] MySQL default root password
+| [37235] Asterisk-Addons cdr_addon_mysql module SQL injection
+| [37099] RHSA update for MySQL case sensistive database name privilege escalation not installed
+| [36555] PHP MySQL extension multiple functions security bypass
+| [35960] MySQL view privilege escalation
+| [35959] MySQL CREATE TABLE LIKE information disclosure
+| [35958] MySQL connection protocol denial of service
+| [35291] MySQLDumper main.php security bypass
+| [34811] MySQL udf_init and mysql_create_function command execution
+| [34809] MySQL mysql_update privilege escalation
+| [34349] MySQL ALTER information disclosure
+| [34348] MySQL mysql_change_db privilege escalation
+| [34347] MySQL RENAME TABLE weak security
+| [34232] MySQL IF clause denial of service
+| [33388] Advanced Website Creator (AWC) mysql_escape_string SQL injection
+| [33285] Eve-Nuke mysql.php file include
+| [32957] MySQL Commander dbopen.php file include
+| [32933] cPanel load_language.php and mysqlconfig.php file include
+| [32911] MySQL filesort function denial of service
+| [32462] cPanel passwdmysql cross-site scripting
+| [32288] RHSA-2006:0544 updates for mysql not installed
+| [32266] MySQLNewsEngine affichearticles.php3 file include
+| [31244] The Address Book MySQL export.php password information disclosure
+| [31037] Php/Mysql Site Builder (PHPBuilder) htm2php.php directory traversal
+| [30760] BTSaveMySql URL file disclosure
+| [30191] StoryStream mysql.php and mysqli.php file include
+| [30085] MySQL MS-DOS device name denial of service
+| [30031] Agora MysqlfinderAdmin.php file include
+| [29438] MySQLDumper mysqldumper_path/sql.php cross-site scripting
+| [29179] paBugs class.mysql.php file include
+| [29120] ZoomStats MySQL file include
+| [28448] MySQL case sensitive database name privilege escalation
+| [28442] MySQL GRANT EXECUTE privilege escalation
+| [28387] FunkBoard admin/mysql_install.php and admin/pg_install.php unauthorized access
+| [28202] MySQL multiupdate subselect query denial of service
+| [28180] MySQL MERGE table security bypass
+| [28176] PHP MySQL Banner Exchange lib.inc information disclosure
+| [27995] Opsware Network Automation System MySQL plaintext password
+| [27904] MySQL date_format() format string
+| [27635] MySQL Instance Manager denial of service
+| [27212] MySQL SELECT str_to_date denial of service
+| [26875] MySQL ASCII escaping SQL injection
+| [26420] Apple Mac OS X MySQL Manager blank password
+| [26236] MySQL login packet information disclosure
+| [26232] MySQL COM_TABLE_DUMP buffer overflow
+| [26228] MySQL sql_parce.cc information disclosure
+| [26042] MySQL running
+| [25313] WoltLab Burning Board class_db_mysql.php cross-site scripting
+| [24966] MySQL mysql_real_query logging bypass
+| [24653] PAM-MySQL logging function denial of service
+| [24652] PAM-MySQL authentication double free code execution
+| [24567] PHP/MYSQL Timesheet index.php and changehrs.php SQL injection
+| [24095] PHP ext/mysqli exception handling format string
+| [23990] PHP mysql_connect() buffer overflow
+| [23596] MySQL Auction search module could allow cross-site scripting
+| [22642] RHSA-2005:334 updates for mysql not installed
+| [21757] MySQL UDF library functions command execution
+| [21756] MySQL LoadLibraryEx function denial of service
+| [21738] MySQL UDF mysql_create_function function directory traversal
+| [21737] MySQL user defined function buffer overflow
+| [21640] MySQL Eventum multiple class SQL injection
+| [21638] MySQL Eventum multiple scripts cross-site scripting
+| [20984] xmysqladmin temporary file symlink
+| [20656] MySQL mysql_install_db script symlink
+| [20333] Plans MySQL password information disclosure
+| [19659] MySQL CREATE TEMPORARY TABLE command creates insecure files
+| [19658] MySQL udf_init function gain access
+| [19576] auraCMS mysql_fetch_row function path disclosure
+| [18922] MySQL mysqlaccess script symlink attack
+| [18824] MySQL UDF root privileges
+| [18464] mysql_auth unspecified vulnerability
+| [18449] Sugar Sales plaintext MySQL password
+| [17783] MySQL underscore allows elevated privileges
+| [17768] MySQL MATCH ... AGAINST SQL statement denial of service
+| [17667] MySQL UNION change denial of service
+| [17666] MySQL ALTER TABLE RENAME bypass restriction
+| [17493] MySQL libmysqlclient bulk inserts buffer overflow
+| [17462] MySQLGuest AWSguest.php script cross-site scripting
+| [17047] MySQL mysql_real_connect buffer overflow
+| [17030] MySQL mysqlhotcopy insecure temporary file
+| [16612] MySQL my_rnd buffer overflow
+| [16604] MySQL check_scramble_323 function allows unauthorized access
+| [15883] MySQL mysqld_multi script symlink attack
+| [15617] MySQL mysqlbug script symlink attack
+| [15417] Confixx db_mysql_loeschen2.php SQL injection
+| [15280] Proofpoint Protection Server MySQL allows unauthorized access
+| [13404] HP Servicecontrol Manager multiple vulnerabilities in MySQL could allow execution of code
+| [13153] MySQL long password buffer overflow
+| [12689] MySQL AB ODBC Driver stores ODBC passwords and usernames in plain text
+| [12540] Teapop PostSQL and MySQL modules SQL injection
+| [12337] MySQL mysql_real_connect function buffer overflow
+| [11510] MySQL datadir/my.cnf modification could allow root privileges
+| [11493] mysqlcc configuration and connection files are world writable
+| [11340] SuckBot mod_mysql_logger denial of service
+| [11199] MySQL mysql_change_user() double-free memory pointer denial of service
+| [10850] MySQL libmysql client read_one_row buffer overflow
+| [10849] MySQL libmysql client read_rows buffer overflow
+| [10848] MySQL COM_CHANGE_USER password buffer overflow
+| [10847] MySQL COM_CHANGE_USER command password authentication bypass
+| [10846] MySQL COM_TABLE_DUMP unsigned integer denial of service
+| [10483] Bugzilla stores passwords in plain text in the MySQL database
+| [10455] gBook MySQL could allow administrative access
+| [10243] MySQL my.ini &quot
+| [9996] MySQL SHOW GRANTS command discloses adminstrator`s encrypted password
+| [9909] MySQL logging disabled by default on Windows
+| [9908] MySQL binding to the loopback adapter is disabled
+| [9902] MySQL default root password could allow unauthorized access
+| [8748] Cyrus SASL LDAP+MySQL patch allows user unauthorized POP access
+| [8105] PHP MySQL client library allows an attacker to bypass safe_mode restrictions
+| [7923] Conectiva Linux MySQL /var/log/mysql file has insecure permissions
+| [7206] WinMySQLadmin stores MySQL password in plain text
+| [6617] MySQL &quot
+| [6419] MySQL drop database command buffer overflow
+| [6418] MySQL libmysqlclient.so buffer overflow
+| [5969] MySQL select buffer overflow
+| [5447] pam_mysql authentication input
+| [5409] MySQL authentication algorithm obtain password hash
+| [5057] PCCS MySQL Database Admin Tool could reveal username and password
+| [4228] MySQL unauthenticated remote access
+| [3849] MySQL default test account could allow any user to connect to the database
+| [1568] MySQL creates readable log files
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [30744] MySQL <= 5.1.23 Server InnoDB CONVERT_SEARCH_MODE_TO_INNOBASE Function Denial Of Service Vulnerability
+| [23073] MySQL 5.1/5.5 WiNDOWS REMOTE R00T (mysqljackpot)
+| [15467] Oracle MySQL < 5.1.49 'WITH ROLLUP' Denial of Service Vulnerability
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [53251] Debian Security Advisory DSA 562-1 (mysql)
+| [53230] Debian Security Advisory DSA 540-1 (mysql)
+|_
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 06:16:44 2018 -- 1 IP address (1 host up) scanned in 61.24 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 07:19:38 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.44-nmap 172.25.20.44
+Host: 172.25.20.44 ()	Status: Up
+Host: 172.25.20.44 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6 (protocol 2.0)/, 3306/open/tcp//mysql//MariaDB (unauthorized)/, 8000/open/tcp//http-alt//WSGIServer|0.2 CPython|3.6.4/	Ignored State: closed (997)
+# Nmap done at Mon Mar 19 07:21:51 2018 -- 1 IP address (1 host up) scanned in 132.94 seconds

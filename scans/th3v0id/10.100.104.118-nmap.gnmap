@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 10:53:05 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.104.118-nmap 10.100.104.118
+Host: 10.100.104.118 ()	Status: Up
+Host: 10.100.104.118 ()	Ports: 22/open/tcp//ssh//WeOnlyDo sshd 2.1.3 (protocol 2.0)/, 23/open/tcp//telnet//freeSSHd telnetd/, 80/open/tcp//http//Microsoft IIS httpd 8.5/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Microsoft Windows Server 2008 R2 - 2012 microsoft-ds/, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Service/, 49152/open/tcp//msrpc//Microsoft Windows RPC/, 49153/open/tcp//msrpc//Microsoft Windows RPC/, 49154/open/tcp//msrpc//Microsoft Windows RPC/, 49155/open/tcp//msrpc//Microsoft Windows RPC/	Ignored State: closed (989)
+# Nmap done at Mon Mar 19 10:56:05 2018 -- 1 IP address (1 host up) scanned in 180.43 seconds

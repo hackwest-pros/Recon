@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 06:34:48 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.105.99-nmap 10.100.105.99
+Host: 10.100.105.99 ()	Status: Up
+Host: 10.100.105.99 ()	Ports: 21/open/tcp//ftp//vsftpd/, 22/open/tcp//ssh//OpenSSH 6.9p1 Ubuntu 2ubuntu0.2 (Ubuntu Linux; protocol 2.0)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 9200/open/tcp//http//Elasticsearch REST API 5.4.0 (name: U9ceaa6; cluster: elasticsearch; Lucene 6.5.0)/	Ignored State: closed (995)
+# Nmap done at Mon Mar 19 06:36:09 2018 -- 1 IP address (1 host up) scanned in 81.51 seconds

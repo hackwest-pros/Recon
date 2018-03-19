@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 07:11:44 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.200.100.81-nmap 10.200.100.81
+Host: 10.200.100.81 ()	Status: Up
+Host: 10.200.100.81 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.7 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.7 ((Ubuntu))/, 6667/open/tcp//irc//UnrealIRCd/	Ignored State: closed (997)
+# Nmap done at Mon Mar 19 07:12:33 2018 -- 1 IP address (1 host up) scanned in 49.61 seconds

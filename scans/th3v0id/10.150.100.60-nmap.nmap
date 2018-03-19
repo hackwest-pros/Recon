@@ -1,0 +1,536 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:52:04 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.150.100.60-nmap 10.150.100.60
+Nmap scan report for 10.150.100.60
+Host is up (0.16s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [80267] OpenSSH up to 5.x/6.x/7.1p1 Forward Option roaming_common.c roaming_read/roaming_write memory corruption
+| [80266] OpenSSH up to 5.x/6.x/7.1p1 roaming_common.c resend_bytes information disclosure
+| [4584] OpenSSH up to 5.7 auth-options.c information disclosure
+| [4282] OpenSSH 5.6/5.7 Legacy Certificate memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-0814] The auth_parse_options function in auth-options.c in sshd in OpenSSH before 5.7 provides debug messages containing authorized_keys command options, which allows remote authenticated users to obtain potentially sensitive information by reading these messages, as demonstrated by the shared user account required by Gitolite.  NOTE: this can cross privilege boundaries because a user account may intentionally have no shell or filesystem access, and therefore may have no supported way to read an authorized_keys file in its own home directory.
+| [CVE-2011-5000] The ssh_gssapi_parse_ename function in gss-serv.c in OpenSSH 5.8 and earlier, when gssapi-with-mic authentication is enabled, allows remote authenticated users to cause a denial of service (memory consumption) via a large value in a certain length field.  NOTE: there may be limited scenarios in which this issue is relevant.
+| [CVE-2011-0539] The key_certify function in usr.bin/ssh/key.c in OpenSSH 5.6 and 5.7, when generating legacy certificates using the -t command-line option in ssh-keygen, does not initialize the nonce field, which might allow remote attackers to obtain sensitive stack memory contents or make it easier to conduct hash collision attacks.
+| [CVE-2010-4755] The (1) remote_glob function in sftp-glob.c and the (2) process_put function in sftp.c in OpenSSH 5.8 and earlier, as used in FreeBSD 7.3 and 8.1, NetBSD 5.0.2, OpenBSD 4.7, and other products, allow remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in SSH_FXP_STAT requests to an sftp daemon, a different vulnerability than CVE-2010-2632.
+| [CVE-2010-4478] OpenSSH 5.6 and earlier, when J-PAKE is enabled, does not properly validate the public parameters in the J-PAKE protocol, which allows remote attackers to bypass the need for knowledge of the shared secret, and successfully authenticate, by sending crafted values in each round of the protocol, a related issue to CVE-2010-4252.
+| [CVE-2009-2904] A certain Red Hat modification to the ChrootDirectory feature in OpenSSH 4.8, as used in sshd in OpenSSH 4.3 in Red Hat Enterprise Linux (RHEL) 5.4 and Fedora 11, allows local users to gain privileges via hard links to setuid programs that use configuration files within the chroot directory, related to requirements for directory ownership.
+| [CVE-2008-3844] Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact.  NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points.  As of 20080827, no unofficial distributions of this software are known.
+| [CVE-2008-3259] OpenSSH before 5.1 sets the SO_REUSEADDR socket option when the X11UseLocalhost configuration setting is disabled, which allows local users on some platforms to hijack the X11 forwarding port via a bind to a single IP address, as demonstrated on the HP-UX platform.
+| [CVE-2006-0883] OpenSSH on FreeBSD 5.3 and 5.4, when used with OpenPAM, does not properly handle when a forked child process terminates during PAM authentication, which allows remote attackers to cause a denial of service (client connection refusal) by connecting multiple times to the SSH server, waiting for the password prompt, then disconnecting.
+| 
+| OSVDB - http://www.osvdb.org:
+| [92034] GSI-OpenSSH auth-pam.c Memory Management Authentication Bypass
+| [90474] Red Hat / Fedora PAM Module for OpenSSH Incorrect error() Function Calling Local Privilege Escalation
+| [90007] OpenSSH logingracetime / maxstartup Threshold Connection Saturation Remote DoS
+| [81500] OpenSSH gss-serv.c ssh_gssapi_parse_ename Function Field Length Value Parsing Remote DoS
+| [78706] OpenSSH auth-options.c sshd auth_parse_options Function authorized_keys Command Option Debug Message Information Disclosure
+| [75753] OpenSSH PAM Module Aborted Conversation Local Information Disclosure
+| [75249] OpenSSH sftp-glob.c remote_glob Function Glob Expression Parsing Remote DoS
+| [75248] OpenSSH sftp.c process_put Function Glob Expression Parsing Remote DoS
+| [72183] Portable OpenSSH ssh-keysign ssh-rand-helper Utility File Descriptor Leak Local Information Disclosure
+| [70873] OpenSSH Legacy Certificates Stack Memory Disclosure
+| [69658] OpenSSH J-PAKE Public Parameter Validation Shared Secret Authentication Bypass
+| [67743] Novell NetWare OpenSSH SSHD.NLM Absolute Path Handling Remote Overflow
+| [59353] OpenSSH sshd Local TCP Redirection Connection Masking Weakness
+| [58495] OpenSSH sshd ChrootDirectory Feature SetUID Hard Link Local Privilege Escalation
+| [56921] OpenSSH Unspecified Remote Compromise
+| [53021] OpenSSH on ftp.openbsd.org Trojaned Distribution
+| [50036] OpenSSH CBC Mode Chosen Ciphertext 32-bit Chunk Plaintext Context Disclosure
+| [49386] OpenSSH sshd TCP Connection State Remote Account Enumeration
+| [48791] OpenSSH on Debian sshd Crafted Username Arbitrary Remote SELinux Role Access
+| [47635] OpenSSH Packages on Red Hat Enterprise Linux Compromised Distribution
+| [47227] OpenSSH X11UseLocalhost X11 Forwarding Port Hijacking
+| [45873] Cisco WebNS SSHield w/ OpenSSH Crafted Large Packet Remote DoS
+| [43911] OpenSSH ~/.ssh/rc ForceCommand Bypass Arbitrary Command Execution
+| [43745] OpenSSH X11 Forwarding Local Session Hijacking
+| [43371] OpenSSH Trusted X11 Cookie Connection Policy Bypass
+| [39214] OpenSSH linux_audit_record_event Crafted Username Audit Log Injection
+| [37315] pam_usb OpenSSH Authentication Unspecified Issue
+| [34850] OpenSSH on Mac OS X Key Generation Remote Connection DoS
+| [34601] OPIE w/ OpenSSH Account Enumeration
+| [34600] OpenSSH S/KEY Authentication Account Enumeration
+| [32721] OpenSSH Username Password Complexity Account Enumeration
+| [30232] OpenSSH Privilege Separation Monitor Weakness
+| [29494] OpenSSH packet.c Invalid Protocol Sequence Remote DoS
+| [29266] OpenSSH GSSAPI Authentication Abort Username Enumeration
+| [29264] OpenSSH Signal Handler Pre-authentication Race Condition Code Execution
+| [29152] OpenSSH Identical Block Packet DoS
+| [27745] Apple Mac OS X OpenSSH Nonexistent Account Login Enumeration DoS
+| [23797] OpenSSH with OpenPAM Connection Saturation Forked Process Saturation DoS
+| [22692] OpenSSH scp Command Line Filename Processing Command Injection
+| [20216] OpenSSH with KerberosV Remote Authentication Bypass
+| [19142] OpenSSH Multiple X11 Channel Forwarding Leaks
+| [19141] OpenSSH GSSAPIAuthentication Credential Escalation
+| [18236] OpenSSH no pty Command Execution Local PAM Restriction Bypass
+| [16567] OpenSSH Privilege Separation LoginGraceTime DoS
+| [16039] Solaris 108994 Series Patch OpenSSH LDAP Client Authentication DoS
+| [9562] OpenSSH Default Configuration Anon SSH Service Port Bounce Weakness
+| [9550] OpenSSH scp Traversal Arbitrary File Overwrite
+| [6601] OpenSSH *realloc() Unspecified Memory Errors
+| [6245] OpenSSH SKEY/BSD_AUTH Challenge-Response Remote Overflow
+| [6073] OpenSSH on FreeBSD libutil Arbitrary File Read
+| [6072] OpenSSH PAM Conversation Function Stack Modification
+| [6071] OpenSSH SSHv1 PAM Challenge-Response Authentication Privilege Escalation
+| [5536] OpenSSH sftp-server Restricted Keypair Restriction Bypass
+| [5408] OpenSSH echo simulation Information Disclosure
+| [5113] OpenSSH NIS YP Netgroups Authentication Bypass
+| [4536] OpenSSH Portable AIX linker Privilege Escalation
+| [3938] OpenSSL and OpenSSH /dev/random Check Failure
+| [3456] OpenSSH buffer_append_space() Heap Corruption
+| [2557] OpenSSH Multiple Buffer Management Multiple Overflows
+| [2140] OpenSSH w/ PAM Username Validity Timing Attack
+| [2112] OpenSSH Reverse DNS Lookup Bypass
+| [2109] OpenSSH sshd Root Login Timing Side-Channel Weakness
+| [1853] OpenSSH Symbolic Link 'cookies' File Removal
+| [839] OpenSSH PAMAuthenticationViaKbdInt Challenge-Response Remote Overflow
+| [781] OpenSSH Kerberos TGT/AFS Token Passing Remote Overflow
+| [730] OpenSSH Channel Code Off by One Remote Privilege Escalation
+| [688] OpenSSH UseLogin Environment Variable Local Command Execution
+| [642] OpenSSH Multiple Key Type ACL Bypass
+| [504] OpenSSH SSHv2 Public Key Authentication Bypass
+| [341] OpenSSH UseLogin Local Privilege Escalation
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [101552] OpenSSH 'sftp-server.c' Remote Security Bypass Vulnerability
+| [94977] OpenSSH CVE-2016-10011 Local Information Disclosure Vulnerability
+| [94975] OpenSSH CVE-2016-10012 Security Bypass Vulnerability
+| [94972] OpenSSH CVE-2016-10010 Privilege Escalation Vulnerability
+| [94968] OpenSSH CVE-2016-10009 Remote Code Execution Vulnerability
+| [93776] OpenSSH 'ssh/kex.c' Denial of Service Vulnerability
+| [92212] OpenSSH CVE-2016-6515 Denial of Service Vulnerability
+| [92210] OpenSSH CBC Padding Weak Encryption Security Weakness
+| [92209] OpenSSH MAC Verification Security Bypass Vulnerability
+| [91812] OpenSSH CVE-2016-6210 User Enumeration Vulnerability
+| [90440] OpenSSH CVE-2004-1653 Remote Security Vulnerability
+| [90340] OpenSSH CVE-2004-2760 Remote Security Vulnerability
+| [89385] OpenSSH CVE-2005-2666 Local Security Vulnerability
+| [88655] OpenSSH CVE-2001-1382 Remote Security Vulnerability
+| [88513] OpenSSH CVE-2000-0999 Remote Security Vulnerability
+| [88367] OpenSSH CVE-1999-1010 Local Security Vulnerability
+| [87789] OpenSSH CVE-2003-0682 Remote Security Vulnerability
+| [86187] OpenSSH 'session.c' Local Security Bypass Vulnerability
+| [86144] OpenSSH CVE-2007-2768 Remote Security Vulnerability
+| [84427] OpenSSH CVE-2016-1908 Security Bypass Vulnerability
+| [84314] OpenSSH CVE-2016-3115 Remote Command Injection Vulnerability
+| [84185] OpenSSH CVE-2006-4925 Denial-Of-Service Vulnerability
+| [81293] OpenSSH CVE-2016-1907 Denial of Service Vulnerability
+| [80698] OpenSSH CVE-2016-0778 Heap Based Buffer Overflow Vulnerability
+| [80695] OpenSSH CVE-2016-0777 Information Disclosure Vulnerability
+| [76497] OpenSSH CVE-2015-6565 Local Security Bypass Vulnerability
+| [76317] OpenSSH PAM Support Multiple Remote Code Execution Vulnerabilities
+| [75990] OpenSSH Login Handling Security Bypass Weakness
+| [75525] OpenSSH 'x11_open_helper()' Function Security Bypass Vulnerability
+| [71420] Portable OpenSSH 'gss-serv-krb5.c' Security Bypass Vulnerability
+| [68757] OpenSSH Multiple Remote Denial of Service Vulnerabilities
+| [66459] OpenSSH Certificate Validation Security Bypass Vulnerability
+| [66355] OpenSSH 'child_set_env()' Function Security Bypass Vulnerability
+| [65674] OpenSSH 'ssh-keysign.c' Local Information Disclosure Vulnerability
+| [65230] OpenSSH 'schnorr.c' Remote Memory Corruption Vulnerability
+| [63605] OpenSSH 'sshd' Process Remote Memory Corruption Vulnerability
+| [61286] OpenSSH Remote Denial of Service Vulnerability
+| [58894] GSI-OpenSSH PAM_USER Security Bypass Vulnerability
+| [58162] OpenSSH CVE-2010-5107 Denial of Service Vulnerability
+| [54114] OpenSSH 'ssh_gssapi_parse_ename()' Function Denial of Service Vulnerability
+| [51702] Debian openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [50416] Linux Kernel 'kdump' and 'mkdumprd' OpenSSH Integration Remote Information Disclosure Vulnerability
+| [49473] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [48507] OpenSSH 'pam_thread()' Remote Buffer Overflow Vulnerability
+| [47691] Portable OpenSSH 'ssh-keysign' Local Unauthorized Access Vulnerability
+| [46155] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [45304] OpenSSH J-PAKE Security Bypass Vulnerability
+| [36552] Red Hat Enterprise Linux OpenSSH 'ChrootDirectory' Option Local Privilege Escalation Vulnerability
+| [32319] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [30794] Red Hat OpenSSH Backdoor Vulnerability
+| [30339] OpenSSH 'X11UseLocalhost' X11 Forwarding Session Hijacking Vulnerability
+| [30276] Debian OpenSSH SELinux Privilege Escalation Vulnerability
+| [28531] OpenSSH ForceCommand Command Execution Weakness
+| [28444] OpenSSH X Connections Session Hijacking Vulnerability
+| [26097] OpenSSH LINUX_AUDIT_RECORD_EVENT Remote Log Injection Weakness
+| [25628] OpenSSH X11 Cookie Local Authentication Bypass Vulnerability
+| [23601] OpenSSH S/Key Remote Information Disclosure Vulnerability
+| [20956] OpenSSH Privilege Separation Key Signature Weakness
+| [20418] OpenSSH-Portable Existing Password Remote Information Disclosure Weakness
+| [20245] OpenSSH-Portable GSSAPI Authentication Abort Information Disclosure Weakness
+| [20241] Portable OpenSSH GSSAPI Remote Code Execution Vulnerability
+| [20216] OpenSSH Duplicated Block Remote Denial of Service Vulnerability
+| [16892] OpenSSH Remote PAM Denial Of Service Vulnerability
+| [14963] OpenSSH LoginGraceTime Remote Denial Of Service Vulnerability
+| [14729] OpenSSH GSSAPI Credential Disclosure Vulnerability
+| [14727] OpenSSH DynamicForward Inadvertent GatewayPorts Activation Vulnerability
+| [11781] OpenSSH-portable PAM Authentication Remote Information Disclosure Vulnerability
+| [9986] RCP, OpenSSH SCP Client File Corruption Vulnerability
+| [9040] OpenSSH PAM Conversation Memory Scrubbing Weakness
+| [8677] Multiple Portable OpenSSH PAM Vulnerabilities
+| [8628] OpenSSH Buffer Mismanagement Vulnerabilities
+| [7831] OpenSSH Reverse DNS Lookup Access Control Bypass Vulnerability
+| [7482] OpenSSH Remote Root Authentication Timing Side-Channel Weakness
+| [7467] OpenSSH-portable Enabled PAM Delay Information Disclosure Vulnerability
+| [7343] OpenSSH Authentication Execution Path Timing Information Leakage Weakness
+| [6168] OpenSSH Visible Password Vulnerability
+| [5374] OpenSSH Trojan Horse Vulnerability
+| [5093] OpenSSH Challenge-Response Buffer Overflow Vulnerabilities
+| [4560] OpenSSH Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [4241] OpenSSH Channel Code Off-By-One Vulnerability
+| [3614] OpenSSH UseLogin Environment Variable Passing Vulnerability
+| [3560] OpenSSH Kerberos Arbitrary Privilege Elevation Vulnerability
+| [3369] OpenSSH Key Based Source IP Access Control Bypass Vulnerability
+| [3345] OpenSSH SFTP Command Restriction Bypassing Vulnerability
+| [2917] OpenSSH PAM Session Evasion Vulnerability
+| [2825] OpenSSH Client X11 Forwarding Cookie Removal File Symbolic Link Vulnerability
+| [2356] OpenSSH Private Key Authentication Check Vulnerability
+| [1949] OpenSSH Client Unauthorized Remote Forwarding Vulnerability
+| [1334] OpenSSH UseLogin Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028187] OpenSSH pam_ssh_agent_auth Module on Red Hat Enterprise Linux Lets Remote Users Execute Arbitrary Code
+| [1026593] OpenSSH Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1025739] OpenSSH on FreeBSD Has Buffer Overflow in pam_thread() That Lets Remote Users Execute Arbitrary Code
+| [1025482] OpenSSH ssh-keysign Utility Lets Local Users Gain Elevated Privileges
+| [1025028] OpenSSH Legacy Certificates May Disclose Stack Contents to Remote Users
+| [1022967] OpenSSH on Red Hat Enterprise Linux Lets Remote Authenticated Users Gain Elevated Privileges
+| [1021235] OpenSSH CBC Mode Error Handling May Let Certain Remote Users Obtain Plain Text in Certain Cases
+| [1020891] OpenSSH on Debian Lets Remote Users Prevent Logins
+| [1020730] OpenSSH for Red Hat Enterprise Linux Packages May Have Been Compromised
+| [1020537] OpenSSH on HP-UX Lets Local Users Hijack X11 Sessions
+| [1019733] OpenSSH Unsafe Default Configuration May Let Local Users Execute Arbitrary Commands
+| [1019707] OpenSSH Lets Local Users Hijack Forwarded X Sessions in Certain Cases
+| [1017756] Apple OpenSSH Key Generation Process Lets Remote Users Deny Service
+| [1017183] OpenSSH Privilege Separation Monitor Validation Error May Cause the Monitor to Fail to Properly Control the Unprivileged Process
+| [1016940] OpenSSH Race Condition in Signal Handler Lets Remote Users Deny Service and May Potentially Permit Code Execution
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016931] OpenSSH SSH v1 CRC Attack Detection Implementation Lets Remote Users Deny Service
+| [1016672] OpenSSH on Mac OS X Lets Remote Users Deny Service
+| [1015706] OpenSSH Interaction With OpenPAM Lets Remote Users Deny Service
+| [1015540] OpenSSH scp Double Shell Character Expansion During Local-to-Local Copying May Let Local Users Gain Elevated Privileges in Certain Cases
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1011193] OpenSSH scp Directory Traversal Flaw Lets Remote SSH Servers Overwrite Files in Certain Cases
+| [1011143] OpenSSH Default Configuration May Be Unsafe When Used With Anonymous SSH Services
+| [1007791] Portable OpenSSH PAM free() Bug May Let Remote Users Execute Root Code
+| [1007716] OpenSSH buffer_append_space() and Other Buffer Management Errors May Let Remote Users Execute Arbitrary Code
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006688] OpenSSH Timing Flaw With Pluggable Authentication Modules Can Disclose Valid User Account Names to Remote Users
+| [1004818] OpenSSH's Secure Shell (SSH) Implementation Weakness May Disclose User Passwords to Remote Users During Man-in-the-Middle Attacks
+| [1004616] OpenSSH Integer Overflow and Buffer Overflow May Allow Remote Users to Gain Root Access to the System
+| [1004391] OpenSSH 'BSD_AUTH' Access Control Bug May Allow Unauthorized Remote Users to Authenticated to the System
+| [1004115] OpenSSH Buffer Overflow in Kerberos Ticket and AFS Token Processing Lets Local Users Execute Arbitrary Code With Root Level Permissions
+| [1003758] OpenSSH Off-by-one 'Channels' Bug May Let Authorized Remote Users Execute Arbitrary Code with Root Privileges
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002748] OpenSSH 3.0 Denial of Service Condition May Allow Remote Users to Crash the sshd Daemon and KerberosV Configuration Error May Allow Remote Users to Partially Authenticate When Authentication Should Not Be Permitted
+| [1002734] OpenSSH's S/Key Implementation Information Disclosure Flaw Provides Remote Users With Information About Valid User Accounts
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1001683] OpenSSH Allows Authorized Users to Delete Other User Files Named Cookies
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [83258] GSI-OpenSSH auth-pam.c security bypass
+| [82781] OpenSSH time limit denial of service
+| [82231] OpenSSH pam_ssh_agent_auth PAM code execution
+| [74809] OpenSSH ssh_gssapi_parse_ename denial of service
+| [72756] Debian openssh-server commands information disclosure
+| [68339] OpenSSH pam_thread buffer overflow
+| [67264] OpenSSH ssh-keysign unauthorized access
+| [65910] OpenSSH remote_glob function denial of service
+| [65163] OpenSSH certificate information disclosure
+| [64387] OpenSSH J-PAKE security bypass
+| [63337] Cisco Unified Videoconferencing OpenSSH weak security
+| [46620] OpenSSH and multiple SSH Tectia products CBC mode information disclosure
+| [45202] OpenSSH signal handler denial of service
+| [44747] RHEL OpenSSH backdoor
+| [44280] OpenSSH PermitRootLogin information disclosure
+| [44279] OpenSSH sshd weak security
+| [44037] OpenSSH sshd SELinux role unauthorized access
+| [43940] OpenSSH X11 forwarding information disclosure
+| [41549] OpenSSH ForceCommand directive security bypass
+| [41438] OpenSSH sshd session hijacking
+| [40897] OpenSSH known_hosts weak security
+| [40587] OpenSSH username weak security
+| [37371] OpenSSH username data manipulation
+| [37118] RHSA update for OpenSSH privilege separation monitor authentication verification weakness not installed
+| [37112] RHSA update for OpenSSH signal handler race condition not installed
+| [37107] RHSA update for OpenSSH identical block denial of service not installed
+| [36637] OpenSSH X11 cookie privilege escalation
+| [35167] OpenSSH packet.c newkeys[mode] denial of service
+| [34490] OpenSSH OPIE information disclosure
+| [33794] OpenSSH ChallengeResponseAuthentication information disclosure
+| [32975] Apple Mac OS X OpenSSH denial of service
+| [32387] RHSA-2006:0738 updates for openssh not installed
+| [32359] RHSA-2006:0697 updates for openssh not installed
+| [32230] RHSA-2006:0298 updates for openssh not installed
+| [32132] RHSA-2006:0044 updates for openssh not installed
+| [30120] OpenSSH privilege separation monitor authentication verification weakness
+| [29255] OpenSSH GSSAPI user enumeration
+| [29254] OpenSSH signal handler race condition
+| [29158] OpenSSH identical block denial of service
+| [28147] Apple Mac OS X OpenSSH nonexistent user login denial of service
+| [25116] OpenSSH OpenPAM denial of service
+| [24305] OpenSSH SCP shell expansion command execution
+| [22665] RHSA-2005:106 updates for openssh not installed
+| [22117] OpenSSH GSSAPI allows elevated privileges
+| [22115] OpenSSH GatewayPorts security bypass
+| [20930] OpenSSH sshd.c LoginGraceTime denial of service
+| [19441] Sun Solaris OpenSSH LDAP (1) client authentication denial of service
+| [17213] OpenSSH allows port bouncing attacks
+| [16323] OpenSSH scp file overwrite
+| [13797] OpenSSH PAM information leak
+| [13271] OpenSSH could allow an attacker to corrupt the PAM conversion stack
+| [13264] OpenSSH PAM code could allow an attacker to gain access
+| [13215] OpenSSH buffer management errors could allow an attacker to execute code
+| [13214] OpenSSH memory vulnerabilities
+| [13191] OpenSSH large packet buffer overflow
+| [12196] OpenSSH could allow an attacker to bypass login restrictions
+| [11970] OpenSSH could allow an attacker to obtain valid administrative account
+| [11902] OpenSSH PAM support enabled information leak
+| [9803] OpenSSH &quot
+| [9763] OpenSSH downloaded from the OpenBSD FTP site or OpenBSD FTP mirror sites could contain a Trojan Horse
+| [9307] OpenSSH is running on the system
+| [9169] OpenSSH &quot
+| [8896] OpenSSH Kerberos 4 TGT/AFS buffer overflow
+| [8697] FreeBSD libutil in OpenSSH fails to drop privileges prior to using the login class capability database
+| [8383] OpenSSH off-by-one error in channel code
+| [7647] OpenSSH UseLogin option arbitrary code execution
+| [7634] OpenSSH using sftp and restricted keypairs could allow an attacker to bypass restrictions
+| [7598] OpenSSH with Kerberos allows attacker to gain elevated privileges
+| [7179] OpenSSH source IP access control bypass
+| [6757] OpenSSH &quot
+| [6676] OpenSSH X11 forwarding symlink attack could allow deletion of arbitrary files
+| [6084] OpenSSH 2.3.1 allows remote users to bypass authentication
+| [5517] OpenSSH allows unauthorized access to resources
+| [4646] OpenSSH UseLogin option allows remote users to execute commands as root
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21579] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (2)
+| [21578] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (1)
+| [21402] OpenSSH 2.x/3.x Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [21314] OpenSSH 2.x/3.0.1/3.0.2 Channel Code Off-By-One Vulnerability
+| [20253] OpenSSH 1.2 scp File Create/Overwrite Vulnerability
+| [17462] FreeBSD OpenSSH 3.5p1 - Remote Root Exploit
+| [14866] Novell Netware 6.5 - OpenSSH Remote Stack Overflow
+| [6094] Debian OpenSSH Remote SELinux Privilege Elevation Exploit (auth)
+| [3303] Portable OpenSSH <= 3.6.1p-PAM / 4.1-SUSE Timing Attack Exploit
+| [2444] OpenSSH <= 4.3 p1 (Duplicated Block) Remote Denial of Service Exploit
+| [1572] Dropbear / OpenSSH Server (MAX_UNAUTH_CLIENTS) Denial of Service
+| [258] glibc-2.2 and openssh-2.3.0p1 exploits glibc => 2.1.9x
+| [26] OpenSSH/PAM <= 3.6.1p1 Remote Users Ident (gossh.sh)
+| [25] OpenSSH/PAM <= 3.6.1p1 Remote Users Discovery Tool
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [900179] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [881183] CentOS Update for openssh CESA-2012:0884 centos6 
+| [880802] CentOS Update for openssh CESA-2009:1287 centos5 i386
+| [880746] CentOS Update for openssh CESA-2009:1470 centos5 i386
+| [870763] RedHat Update for openssh RHSA-2012:0884-04
+| [870129] RedHat Update for openssh RHSA-2008:0855-01
+| [861813] Fedora Update for openssh FEDORA-2010-5429
+| [861319] Fedora Update for openssh FEDORA-2007-395
+| [861170] Fedora Update for openssh FEDORA-2007-394
+| [861012] Fedora Update for openssh FEDORA-2007-715
+| [840345] Ubuntu Update for openssh vulnerability USN-597-1
+| [840300] Ubuntu Update for openssh update USN-612-5
+| [840271] Ubuntu Update for openssh vulnerability USN-612-2
+| [840268] Ubuntu Update for openssh update USN-612-7
+| [840259] Ubuntu Update for openssh vulnerabilities USN-649-1
+| [840214] Ubuntu Update for openssh vulnerability USN-566-1
+| [831074] Mandriva Update for openssh MDVA-2010:162 (openssh)
+| [830929] Mandriva Update for openssh MDVA-2010:090 (openssh)
+| [830807] Mandriva Update for openssh MDVA-2010:026 (openssh)
+| [830603] Mandriva Update for openssh MDVSA-2008:098 (openssh)
+| [830523] Mandriva Update for openssh MDVSA-2008:078 (openssh)
+| [830317] Mandriva Update for openssh-askpass-qt MDKA-2007:127 (openssh-askpass-qt)
+| [830191] Mandriva Update for openssh MDKSA-2007:236 (openssh)
+| [802407] OpenSSH 'sshd' Challenge Response Authentication Buffer Overflow Vulnerability
+| [103503] openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [103247] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [103064] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [100584] OpenSSH X Connections Session Hijacking Vulnerability
+| [100153] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [66170] CentOS Security Advisory CESA-2009:1470 (openssh)
+| [65987] SLES10: Security update for OpenSSH
+| [65819] SLES10: Security update for OpenSSH
+| [65514] SLES9: Security update for OpenSSH
+| [65513] SLES9: Security update for OpenSSH
+| [65334] SLES9: Security update for OpenSSH
+| [65248] SLES9: Security update for OpenSSH
+| [65218] SLES9: Security update for OpenSSH
+| [65169] SLES9: Security update for openssh,openssh-askpass
+| [65126] SLES9: Security update for OpenSSH
+| [65019] SLES9: Security update for OpenSSH
+| [65015] SLES9: Security update for OpenSSH
+| [64931] CentOS Security Advisory CESA-2009:1287 (openssh)
+| [61639] Debian Security Advisory DSA 1638-1 (openssh)
+| [61030] Debian Security Advisory DSA 1576-2 (openssh)
+| [61029] Debian Security Advisory DSA 1576-1 (openssh)
+| [60840] FreeBSD Security Advisory (FreeBSD-SA-08:05.openssh.asc)
+| [60803] Gentoo Security Advisory GLSA 200804-03 (openssh)
+| [60667] Slackware Advisory SSA:2008-095-01 openssh 
+| [59014] Slackware Advisory SSA:2007-255-01 openssh 
+| [58741] Gentoo Security Advisory GLSA 200711-02 (openssh)
+| [57919] Gentoo Security Advisory GLSA 200611-06 (openssh)
+| [57895] Gentoo Security Advisory GLSA 200609-17 (openssh)
+| [57585] Debian Security Advisory DSA 1212-1 (openssh (1:3.8.1p1-8.sarge.6))
+| [57492] Slackware Advisory SSA:2006-272-02 openssh 
+| [57483] Debian Security Advisory DSA 1189-1 (openssh-krb5)
+| [57476] FreeBSD Security Advisory (FreeBSD-SA-06:22.openssh.asc)
+| [57470] FreeBSD Ports: openssh
+| [56352] FreeBSD Security Advisory (FreeBSD-SA-06:09.openssh.asc)
+| [56330] Gentoo Security Advisory GLSA 200602-11 (OpenSSH)
+| [56294] Slackware Advisory SSA:2006-045-06 openssh 
+| [53964] Slackware Advisory SSA:2003-266-01 New OpenSSH packages 
+| [53885] Slackware Advisory SSA:2003-259-01 OpenSSH Security Advisory 
+| [53884] Slackware Advisory SSA:2003-260-01 OpenSSH updated again 
+| [53788] Debian Security Advisory DSA 025-1 (openssh)
+| [52638] FreeBSD Security Advisory (FreeBSD-SA-03:15.openssh.asc)
+| [52635] FreeBSD Security Advisory (FreeBSD-SA-03:12.openssh.asc)
+| [11343] OpenSSH Client Unauthorized Remote Forwarding
+| [10954] OpenSSH AFS/Kerberos ticket/token passing
+| [10883] OpenSSH Channel Code Off by 1
+| [10823] OpenSSH UseLogin Environment Variables
+|_
+53/tcp open  domain  ISC BIND 9.8.1-P1
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [13184] ISC BIND 9.8.1-P1 Smoothed Round Trip Time Algorithm DNS spoofing
+| [9946] ISC BIND 9.8.1-P1 SRTT Algorithm privilege escalation
+| [93249] ISC BIND up to 9.8.x/9.9.9-P3/9.9.9-S5/9.10.4-P3/9.11.0 DNAME Response db.c denial of service
+| [93015] ISC BIND up to 9.8.4/9.9.2 Packet Option DNS Packet Crash denial of service
+| [80354] ISC BIND up to 9.8.8/9.9.8-P2/9.9.8-S3/9.10.3-P2 Address Prefix List apl_42.c denial of service
+| [77552] ISC BIND up to 9.8.8/9.9.7-P2/9.10.2-P3 OpenPGP Key openpgpkey_61.c denial of service
+| [77551] ISC BIND up to 9.8.8/9.9.7-P2/9.10.2-P3 DNSSEC Key buffer.c denial of service
+| [4443] ISC BIND up to 9.8.x Recursive Query Processor denial of service
+| [57895] ISC BIND 9.8.0/9.8.1 Crash denial of service
+| [4357] ISC BIND up to 9.8.x Negative Caching RRSIG RRsets denial of service
+| [57404] ISC BIND 9.8.0 denial of service
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-1033] The resolver in ISC BIND 9 through 9.8.1-P1 overwrites cached server names and TTL values in NS records during the processing of a response to an A record query, which allows remote attackers to trigger continued resolvability of revoked domain names via a "ghost domain names" attack.
+| [CVE-2011-4313] query.c in ISC BIND 9.0.x through 9.6.x, 9.4-ESV through 9.4-ESV-R5, 9.6-ESV through 9.6-ESV-R5, 9.7.0 through 9.7.4, 9.8.0 through 9.8.1, and 9.9.0a1 through 9.9.0b1 allows remote attackers to cause a denial of service (assertion failure and named exit) via unknown vectors related to recursive DNS queries, error logging, and the caching of an invalid record by the resolver.
+| [CVE-2011-2465] Unspecified vulnerability in ISC BIND 9 9.8.0, 9.8.0-P1, 9.8.0-P2, and 9.8.1b1, when recursion is enabled and the Response Policy Zone (RPZ) contains DNAME or certain CNAME records, allows remote attackers to cause a denial of service (named daemon crash) via an unspecified query.
+| [CVE-2013-4854] The RFC 5011 implementation in rdata.c in ISC BIND 9.7.x and 9.8.x before 9.8.5-P2, 9.8.6b1, 9.9.x before 9.9.3-P2, and 9.9.4b1, and DNSco BIND 9.9.3-S1 before 9.9.3-S1-P1 and 9.9.4-S1b1, allows remote attackers to cause a denial of service (assertion failure and named daemon exit) via a query with a malformed RDATA section that is not properly handled during construction of a log message, as exploited in the wild in July 2013.
+| [CVE-2013-3919] resolver.c in ISC BIND 9.8.5 before 9.8.5-P1, 9.9.3 before 9.9.3-P1, and 9.6-ESV-R9 before 9.6-ESV-R9-P1, when a recursive resolver is configured, allows remote attackers to cause a denial of service (assertion failure and named daemon exit) via a query for a record in a malformed zone.
+| [CVE-2013-2266] libdns in ISC BIND 9.7.x and 9.8.x before 9.8.4-P2, 9.8.5 before 9.8.5b2, 9.9.x before 9.9.2-P2, and 9.9.3 before 9.9.3b2 on UNIX platforms allows remote attackers to cause a denial of service (memory consumption) via a crafted regular expression, as demonstrated by a memory-exhaustion attack against a machine running a named process.
+| [CVE-2012-5689] ISC BIND 9.8.x through 9.8.4-P1 and 9.9.x through 9.9.2-P1, in certain configurations involving DNS64 with a Response Policy Zone that lacks an AAAA rewrite rule, allows remote attackers to cause a denial of service (assertion failure and named daemon exit) via a query for an AAAA record.
+| [CVE-2012-5688] ISC BIND 9.8.x before 9.8.4-P1 and 9.9.x before 9.9.2-P1, when DNS64 is enabled, allows remote attackers to cause a denial of service (assertion failure and daemon exit) via a crafted query.
+| [CVE-2012-5166] ISC BIND 9.x before 9.7.6-P4, 9.8.x before 9.8.3-P4, 9.9.x before 9.9.1-P4, and 9.4-ESV and 9.6-ESV before 9.6-ESV-R7-P4 allows remote attackers to cause a denial of service (named daemon hang) via unspecified combinations of resource records.
+| [CVE-2012-4244] ISC BIND 9.x before 9.7.6-P3, 9.8.x before 9.8.3-P3, 9.9.x before 9.9.1-P3, and 9.4-ESV and 9.6-ESV before 9.6-ESV-R7-P3 allows remote attackers to cause a denial of service (assertion failure and named daemon exit) via a query for a long resource record.
+| [CVE-2012-1667] ISC BIND 9.x before 9.7.6-P1, 9.8.x before 9.8.3-P1, 9.9.x before 9.9.1-P1, and 9.4-ESV and 9.6-ESV before 9.6-ESV-R7-P1 does not properly handle resource records with a zero-length RDATA section, which allows remote DNS servers to cause a denial of service (daemon crash or data corruption) or obtain sensitive information from process memory via a crafted record.
+| [CVE-2011-2464] Unspecified vulnerability in ISC BIND 9 9.6.x before 9.6-ESV-R4-P3, 9.7.x before 9.7.3-P3, and 9.8.x before 9.8.0-P4 allows remote attackers to cause a denial of service (named daemon crash) via a crafted UPDATE request.
+| [CVE-2011-1910] Off-by-one error in named in ISC BIND 9.x before 9.7.3-P1, 9.8.x before 9.8.0-P2, 9.4-ESV before 9.4-ESV-R4-P1, and 9.6-ESV before 9.6-ESV-R4-P1 allows remote DNS servers to cause a denial of service (assertion failure and daemon exit) via a negative response containing large RRSIG RRsets.
+| [CVE-2011-1907] ISC BIND 9.8.x before 9.8.0-P1, when Response Policy Zones (RPZ) RRset replacement is enabled, allows remote attackers to cause a denial of service (assertion failure and daemon exit) via an RRSIG query.
+| [CVE-2010-1567] The SIP implementation on the Cisco PGW 2200 Softswitch with software before 9.8(1)S5 allows remote attackers to cause a denial of service (device crash) via a malformed header, aka Bug ID CSCsz13590.
+| 
+| OSVDB - http://www.osvdb.org:
+| [72941] Aastra 9480i IP Phone Multiple Configuration File Direct Request Information Disclosure
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [48264] Aastra 9480i CT Multiple Information Disclosure Vulnerabilities
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1025811] Cisco ASR 9000 Series Router IPv4 Packet Processing Flaw Lets Remote Users Deny Service
+| [1012995] BIND 9 Validator Assumption Error May Let Remote Users Deny Service
+| [1005048] Oracle Enterprise Manager Web Service Component of Oracle 9i Application Server Discloses the Web Cache Administrator Password to Local Users
+| [1003675] Oracle 9iAS Application Server Discloses CGI-BIN Script Source Code to Remote Users
+| [1001186] Microsoft Windows Me Operating System and Windows 98 with the Plus! 98 Package Disclose Data Compression Passwords
+| [1028901] (McAfee Issues Advisory for McAfee Email Gateway) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028900] (McAfee Issues Advisory for McAfee Email and Web Security Appliance) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028899] (McAfee Issues Fix for McAfee Web Gateway) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028866] (McAfee Issues Fix for McAfee Firewall Enterprise) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028854] (NetBSD Issues Fix) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028849] (Red Hat Issues Fix) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028848] (Red Hat Issues Fix) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028839] (FreeBSD Issues Fix) ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028838] ISC BIND RDATA Processing Bug Lets Remote Users Deny Service
+| [1028632] ISC BIND RUNTIME_CHECK Error Lets Remote Users Deny Service Against Recursive Resolvers
+| [1028046] ISC BIND DNS64 and Response Policy Zones (RPZ) Bug Lets Remote Users Deny Service
+| [1027835] ISC BIND DNS64 Bug Lets Remote Users Deny Service
+| [1027642] ISC BIND RDATA Processing Flaw Lets Remote Users Deny Service
+| [1027529] ISC BIND RDATA Processing Flaw Lets Remote Users Deny Service
+| [1026647] ISC BIND Cache Update Policy Can Be Bypassed to Allow Revoked Domain Names to Remain Resolvable
+| [1026335] ISC BIND Invalid Record Caching Flaw Lets Remote Users Deny Service
+| [1025743] ISC BIND Response Policy Zones DNAME/CNAME Processing Flaw Lets Remote Users Deny Service
+| [1025742] ISC BIND Packet Processing Flaw Lets Remote Users Deny Service
+| [1015850] Samba winbindd Daemon Discloses Server Password to Local Users
+| [1003359] BindView NETinventory Discloses Password to Local Users During Auditing
+| [1001721] BIND Domain Name System Software May Disclose DNS Transactional Signature (TSIG) Keys to Local Users
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [85799] Cisco Unified IP Phones 9900 Series directory traversal
+| [75412] Cisco Unified IP Phones 9900 series RT privilege escalation
+| [68733] Cisco 9000 Series Aggregation Service Router IPv4 packet denial of service
+| [9704] Multiple Lucent router UDP port 9 could disclose sensitive information
+| [9250] BIND 9 dns_message_findtype() denial of service
+| [1852] BIND prior to 4.9.7 buffer overflow affects Digital Firewall 97 users
+| [539] Microsoft Windows 95 and Internet Explorer password disclosure
+| [86004] ISC BIND RDATA denial of service
+| [84767] ISC BIND denial of service
+| [83066] ISC BIND denial of service
+| [81504] ISC BIND AAAA denial of service
+| [80510] ISC BIND DNS64 denial of service
+| [79121] ISC BIND queries denial of service
+| [78479] ISC BIND RDATA denial of service
+| [77185] ISC BIND TCP queries denial of service
+| [77184] ISC BIND bad cache denial of service
+| [76034] ISC BIND rdata denial of service
+| [73053] ISC BIND cache update policy security bypass
+| [71332] ISC BIND recursive queries denial of service
+| [68375] ISC BIND UPDATE denial of service
+| [68374] ISC BIND Response Policy Zones denial of service
+| [67665] ISC BIND RRSIG Rrsets denial of service
+| [67297] ISC BIND RRSIG denial of service
+| [65554] ISC BIND IXFR transfer denial of service
+| [63602] ISC BIND allow-query security bypass
+| [63596] ISC BIND zone data security bypass
+| [63595] ISC BIND RRSIG denial of service
+| [62072] ISC BIND DNSSEC query denial of service
+| [62071] ISC BIND ACL security bypass
+| [61871] ISC BIND anchors denial of service
+| [60421] ISC BIND RRSIG denial of service
+| [56049] ISC BIND out-of-bailiwick weak security
+| [55937] ISC Bind unspecified cache poisoning
+| [55753] ISC BIND DNSSEC NSEC/NSEC3 cache poisoning
+| [54416] ISC BIND DNSSEC cache poisoning
+| [52073] ISC BIND dns_db_findrdataset() denial of service
+| [47409] Multiple Mozilla products XBL loadBindingDocument information disclosure
+| [45234] ISC BIND UDP denial of service
+| [39670] ISC BIND inet_network buffer overflow
+| [37233] libgssapi ISC BIND Novell SUSE Linux Enterprise Server GSS-TSIG request denial of service
+| [37128] RHSA update for ISC BIND RRset denial of service not installed
+| [37127] RHSA update for ISC BIND named service denial of service not installed
+| [36275] ISC BIND DNS query spoofing
+| [35575] ISC BIND query ID cache poisoning
+| [35571] ISC BIND ACL security bypass
+| [31838] ISC BIND RRset denial of service
+| [31799] ISC BIND named service denial of service
+| [29876] HP Tru64 ypbind core dump information disclosure
+| [28745] ISC BIND DNSSEC RRset denial of service
+| [28744] ISC BIND recursive INSIST denial of service
+| [22041] BEA WebLogic Server and Express LDAP anonymous bind information disclosure
+| [18836] BIND hostname disclosure
+| [10624] ISC BIND DNS stub resolver library (libresolv.a) stack buffer overflows
+| [10333] ISC BIND SIG null pointer dereference denial of service
+| [10332] ISC BIND OPT resource record (RR) denial of service
+| [10304] ISC BIND SIG cached resource records (RR) heap buffer overflow
+| [7027] Cisco CBOS Web-based configuration utility binds to port 80 by default
+| [5814] ISC BIND &quot
+| [5540] ISC BIND can be remotely crashed by issuing ZXFR requests
+| [5462] ISC BIND AXFR host command remote buffer overflow
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [17376] Aastra IP Phone 9480i Web Interface Data disclosure Vulnerability
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [103090] ISC BIND 9 IXFR Transfer/DDNS Update Remote Denial of Service Vulnerability
+| [103031] ISC BIND 9 < 9.7.2-P2 Multiple Vulnerabilities
+| [103030] ISC BIND 9 'RRSIG' Record Type Negative Cache Remote Denial of Service Vulnerability
+| [100717] ISC BIND 9 'RRSIG' Record Type Remote Denial of Service Vulnerability
+| [100458] ISC BIND 9 DNSSEC Bogus NXDOMAIN Response Remote Cache Poisoning Vulnerability
+| [100362] ISC BIND 9 DNSSEC Query Response Additional Section Remote Cache Poisoning Vulnerability
+| [100251] ISC BIND 9 Remote Dynamic Update Message Denial of Service Vulnerability
+| [63208] Fedora Core 9 FEDORA-2009-0350 (bind)
+| [11226] Oracle 9iAS default error information disclosure
+|_
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 09:52:49 2018 -- 1 IP address (1 host up) scanned in 44.72 seconds

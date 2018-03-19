@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 08:50:47 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.102-nmap 172.25.20.102
+Host: 172.25.20.102 ()	Status: Up
+Host: 172.25.20.102 ()	Ports: 21/open/tcp//ftp//Synology DiskStation Manager 5.2 ftpd/, 22/open/tcp//ssh//OpenSSH 6.6p2 (protocol 2.0; HPN-SSH patch 14v4)/, 23/open/tcp//telnet//BusyBox telnetd/, 80/open/tcp//http//Apache httpd/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 161/open/tcp//snmp?///, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 515/open/tcp//printer?///, 2049/open/tcp//nfs//2-3 (RPC #100003)/, 5000/open/tcp//http//Apache httpd/	Ignored State: closed (989)
+# Nmap done at Mon Mar 19 08:54:36 2018 -- 1 IP address (1 host up) scanned in 228.54 seconds

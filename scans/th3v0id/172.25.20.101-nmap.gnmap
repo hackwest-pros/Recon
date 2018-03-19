@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 08:48:58 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.101-nmap 172.25.20.101
+Host: 172.25.20.101 ()	Status: Up
+Host: 172.25.20.101 ()	Ports: 21/open/tcp//ftp//Synology DS200-series NAS device ftpd/, 22/open/tcp//ssh//OpenSSH 5.8p1 (protocol 2.0; HPN-SSH patch 13v11)/, 23/open/tcp//telnet//BusyBox telnetd/, 80/open/tcp//http//Apache httpd 2.2.23 ((Unix))/, 111/open/tcp//rpcbind//2-4 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 161/open/tcp//snmp?///, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 515/open/tcp//printer///, 631/open/tcp//ipp//CUPS 1.5/, 2049/open/tcp//nfs//2-4 (RPC #100003)/, 5000/open/tcp//http//Apache httpd 2.2.23 ((Unix))/, 5432/open/tcp//postgresql//PostgreSQL DB 8.3.20 - 8.3.23/	Ignored State: filtered (987)
+# Nmap done at Mon Mar 19 08:50:47 2018 -- 1 IP address (1 host up) scanned in 109.42 seconds

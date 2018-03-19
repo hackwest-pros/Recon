@@ -1,0 +1,1271 @@
+# Nmap 7.60 scan initiated Mon Mar 19 07:41:00 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.75-nmap 172.25.20.75
+Nmap scan report for 172.25.20.75
+Host is up (0.17s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.7p1 Debian 5+deb8u4 (protocol 2.0)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [76870] OpenSSH up to 6.9 auth2-chall.c kbdint_next_device privilege escalation
+| [76326] OpenSSH 6.8 XSECURITY privilege escalation
+| [12724] OpenSSH up to 6.6 Fingerprint Record Check sshconnect.c verify_host_key HostCertificate weak authentication
+| [12683] OpenBSD OpenSSH up to 6.5 Configuration child_set_env() Wildcard privilege escalation
+| [12124] OpenSSH 6.4 J-PAKE Protocol schnorr.c hash_buffer denial of service
+| [11124] OpenSSH 6.2/6.3 Post Authentication sshd process initialize mm_newkeys_from_blob privilege escalation
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-5975] The SSH USERAUTH CHANGE REQUEST feature in SSH Tectia Server 6.0.4 through 6.0.20, 6.1.0 through 6.1.12, 6.2.0 through 6.2.5, and 6.3.0 through 6.3.2 on UNIX and Linux, when old-style password authentication is enabled, allows remote attackers to bypass authentication via a crafted session involving entry of blank passwords, as demonstrated by a root login session from a modified OpenSSH client with an added input_userauth_passwd_changereq call in sshconnect2.c.
+| [CVE-2012-5536] A certain Red Hat build of the pam_ssh_agent_auth module on Red Hat Enterprise Linux (RHEL) 6 and Fedora Rawhide calls the glibc error function instead of the error function in the OpenSSH codebase, which allows local users to obtain sensitive information from process memory or possibly gain privileges via crafted use of an application that relies on this module, as demonstrated by su and sudo.
+| [CVE-2010-5107] The default configuration of OpenSSH through 6.1 enforces a fixed time limit between establishing a TCP connection and completing a login, which makes it easier for remote attackers to cause a denial of service (connection-slot exhaustion) by periodically making many new TCP connections.
+| [CVE-2008-1483] OpenSSH 4.3p2, and probably other versions, allows local users to hijack forwarded X connections by causing ssh to set DISPLAY to :10, even when another process is listening on the associated port, as demonstrated by opening TCP port 6010 (IPv4) and sniffing a cookie sent by Emacs.
+| [CVE-2007-3102] Unspecified vulnerability in the linux_audit_record_event function in OpenSSH 4.3p2, as used on Fedora Core 6 and possibly other systems, allows remote attackers to write arbitrary characters to an audit log via a crafted username.  NOTE: some of these details are obtained from third party information.
+| [CVE-2004-2414] Novell NetWare 6.5 SP 1.1, when installing or upgrading using the Overlay CDs and performing a custom installation with OpenSSH, includes sensitive password information in the (1) NIOUTPUT.TXT and (2) NI.LOG log files, which might allow local users to obtain the passwords.
+| 
+| OSVDB - http://www.osvdb.org:
+| [92034] GSI-OpenSSH auth-pam.c Memory Management Authentication Bypass
+| [90474] Red Hat / Fedora PAM Module for OpenSSH Incorrect error() Function Calling Local Privilege Escalation
+| [90007] OpenSSH logingracetime / maxstartup Threshold Connection Saturation Remote DoS
+| [81500] OpenSSH gss-serv.c ssh_gssapi_parse_ename Function Field Length Value Parsing Remote DoS
+| [78706] OpenSSH auth-options.c sshd auth_parse_options Function authorized_keys Command Option Debug Message Information Disclosure
+| [75753] OpenSSH PAM Module Aborted Conversation Local Information Disclosure
+| [75249] OpenSSH sftp-glob.c remote_glob Function Glob Expression Parsing Remote DoS
+| [75248] OpenSSH sftp.c process_put Function Glob Expression Parsing Remote DoS
+| [72183] Portable OpenSSH ssh-keysign ssh-rand-helper Utility File Descriptor Leak Local Information Disclosure
+| [70873] OpenSSH Legacy Certificates Stack Memory Disclosure
+| [69658] OpenSSH J-PAKE Public Parameter Validation Shared Secret Authentication Bypass
+| [67743] Novell NetWare OpenSSH SSHD.NLM Absolute Path Handling Remote Overflow
+| [59353] OpenSSH sshd Local TCP Redirection Connection Masking Weakness
+| [58495] OpenSSH sshd ChrootDirectory Feature SetUID Hard Link Local Privilege Escalation
+| [56921] OpenSSH Unspecified Remote Compromise
+| [53021] OpenSSH on ftp.openbsd.org Trojaned Distribution
+| [50036] OpenSSH CBC Mode Chosen Ciphertext 32-bit Chunk Plaintext Context Disclosure
+| [49386] OpenSSH sshd TCP Connection State Remote Account Enumeration
+| [48791] OpenSSH on Debian sshd Crafted Username Arbitrary Remote SELinux Role Access
+| [47635] OpenSSH Packages on Red Hat Enterprise Linux Compromised Distribution
+| [47227] OpenSSH X11UseLocalhost X11 Forwarding Port Hijacking
+| [45873] Cisco WebNS SSHield w/ OpenSSH Crafted Large Packet Remote DoS
+| [43911] OpenSSH ~/.ssh/rc ForceCommand Bypass Arbitrary Command Execution
+| [43745] OpenSSH X11 Forwarding Local Session Hijacking
+| [43371] OpenSSH Trusted X11 Cookie Connection Policy Bypass
+| [39214] OpenSSH linux_audit_record_event Crafted Username Audit Log Injection
+| [37315] pam_usb OpenSSH Authentication Unspecified Issue
+| [34850] OpenSSH on Mac OS X Key Generation Remote Connection DoS
+| [34601] OPIE w/ OpenSSH Account Enumeration
+| [34600] OpenSSH S/KEY Authentication Account Enumeration
+| [32721] OpenSSH Username Password Complexity Account Enumeration
+| [30232] OpenSSH Privilege Separation Monitor Weakness
+| [29494] OpenSSH packet.c Invalid Protocol Sequence Remote DoS
+| [29266] OpenSSH GSSAPI Authentication Abort Username Enumeration
+| [29264] OpenSSH Signal Handler Pre-authentication Race Condition Code Execution
+| [29152] OpenSSH Identical Block Packet DoS
+| [27745] Apple Mac OS X OpenSSH Nonexistent Account Login Enumeration DoS
+| [23797] OpenSSH with OpenPAM Connection Saturation Forked Process Saturation DoS
+| [22692] OpenSSH scp Command Line Filename Processing Command Injection
+| [20216] OpenSSH with KerberosV Remote Authentication Bypass
+| [19142] OpenSSH Multiple X11 Channel Forwarding Leaks
+| [19141] OpenSSH GSSAPIAuthentication Credential Escalation
+| [18236] OpenSSH no pty Command Execution Local PAM Restriction Bypass
+| [16567] OpenSSH Privilege Separation LoginGraceTime DoS
+| [16039] Solaris 108994 Series Patch OpenSSH LDAP Client Authentication DoS
+| [9562] OpenSSH Default Configuration Anon SSH Service Port Bounce Weakness
+| [9550] OpenSSH scp Traversal Arbitrary File Overwrite
+| [6601] OpenSSH *realloc() Unspecified Memory Errors
+| [6245] OpenSSH SKEY/BSD_AUTH Challenge-Response Remote Overflow
+| [6073] OpenSSH on FreeBSD libutil Arbitrary File Read
+| [6072] OpenSSH PAM Conversation Function Stack Modification
+| [6071] OpenSSH SSHv1 PAM Challenge-Response Authentication Privilege Escalation
+| [5536] OpenSSH sftp-server Restricted Keypair Restriction Bypass
+| [5408] OpenSSH echo simulation Information Disclosure
+| [5113] OpenSSH NIS YP Netgroups Authentication Bypass
+| [4536] OpenSSH Portable AIX linker Privilege Escalation
+| [3938] OpenSSL and OpenSSH /dev/random Check Failure
+| [3456] OpenSSH buffer_append_space() Heap Corruption
+| [2557] OpenSSH Multiple Buffer Management Multiple Overflows
+| [2140] OpenSSH w/ PAM Username Validity Timing Attack
+| [2112] OpenSSH Reverse DNS Lookup Bypass
+| [2109] OpenSSH sshd Root Login Timing Side-Channel Weakness
+| [1853] OpenSSH Symbolic Link 'cookies' File Removal
+| [839] OpenSSH PAMAuthenticationViaKbdInt Challenge-Response Remote Overflow
+| [781] OpenSSH Kerberos TGT/AFS Token Passing Remote Overflow
+| [730] OpenSSH Channel Code Off by One Remote Privilege Escalation
+| [688] OpenSSH UseLogin Environment Variable Local Command Execution
+| [642] OpenSSH Multiple Key Type ACL Bypass
+| [504] OpenSSH SSHv2 Public Key Authentication Bypass
+| [341] OpenSSH UseLogin Local Privilege Escalation
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [101552] OpenSSH 'sftp-server.c' Remote Security Bypass Vulnerability
+| [94977] OpenSSH CVE-2016-10011 Local Information Disclosure Vulnerability
+| [94975] OpenSSH CVE-2016-10012 Security Bypass Vulnerability
+| [94972] OpenSSH CVE-2016-10010 Privilege Escalation Vulnerability
+| [94968] OpenSSH CVE-2016-10009 Remote Code Execution Vulnerability
+| [93776] OpenSSH 'ssh/kex.c' Denial of Service Vulnerability
+| [92212] OpenSSH CVE-2016-6515 Denial of Service Vulnerability
+| [92210] OpenSSH CBC Padding Weak Encryption Security Weakness
+| [92209] OpenSSH MAC Verification Security Bypass Vulnerability
+| [91812] OpenSSH CVE-2016-6210 User Enumeration Vulnerability
+| [90440] OpenSSH CVE-2004-1653 Remote Security Vulnerability
+| [90340] OpenSSH CVE-2004-2760 Remote Security Vulnerability
+| [89385] OpenSSH CVE-2005-2666 Local Security Vulnerability
+| [88655] OpenSSH CVE-2001-1382 Remote Security Vulnerability
+| [88513] OpenSSH CVE-2000-0999 Remote Security Vulnerability
+| [88367] OpenSSH CVE-1999-1010 Local Security Vulnerability
+| [87789] OpenSSH CVE-2003-0682 Remote Security Vulnerability
+| [86187] OpenSSH 'session.c' Local Security Bypass Vulnerability
+| [86144] OpenSSH CVE-2007-2768 Remote Security Vulnerability
+| [84427] OpenSSH CVE-2016-1908 Security Bypass Vulnerability
+| [84314] OpenSSH CVE-2016-3115 Remote Command Injection Vulnerability
+| [84185] OpenSSH CVE-2006-4925 Denial-Of-Service Vulnerability
+| [81293] OpenSSH CVE-2016-1907 Denial of Service Vulnerability
+| [80698] OpenSSH CVE-2016-0778 Heap Based Buffer Overflow Vulnerability
+| [80695] OpenSSH CVE-2016-0777 Information Disclosure Vulnerability
+| [76497] OpenSSH CVE-2015-6565 Local Security Bypass Vulnerability
+| [76317] OpenSSH PAM Support Multiple Remote Code Execution Vulnerabilities
+| [75990] OpenSSH Login Handling Security Bypass Weakness
+| [75525] OpenSSH 'x11_open_helper()' Function Security Bypass Vulnerability
+| [71420] Portable OpenSSH 'gss-serv-krb5.c' Security Bypass Vulnerability
+| [68757] OpenSSH Multiple Remote Denial of Service Vulnerabilities
+| [66459] OpenSSH Certificate Validation Security Bypass Vulnerability
+| [66355] OpenSSH 'child_set_env()' Function Security Bypass Vulnerability
+| [65674] OpenSSH 'ssh-keysign.c' Local Information Disclosure Vulnerability
+| [65230] OpenSSH 'schnorr.c' Remote Memory Corruption Vulnerability
+| [63605] OpenSSH 'sshd' Process Remote Memory Corruption Vulnerability
+| [61286] OpenSSH Remote Denial of Service Vulnerability
+| [58894] GSI-OpenSSH PAM_USER Security Bypass Vulnerability
+| [58162] OpenSSH CVE-2010-5107 Denial of Service Vulnerability
+| [54114] OpenSSH 'ssh_gssapi_parse_ename()' Function Denial of Service Vulnerability
+| [51702] Debian openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [50416] Linux Kernel 'kdump' and 'mkdumprd' OpenSSH Integration Remote Information Disclosure Vulnerability
+| [49473] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [48507] OpenSSH 'pam_thread()' Remote Buffer Overflow Vulnerability
+| [47691] Portable OpenSSH 'ssh-keysign' Local Unauthorized Access Vulnerability
+| [46155] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [45304] OpenSSH J-PAKE Security Bypass Vulnerability
+| [36552] Red Hat Enterprise Linux OpenSSH 'ChrootDirectory' Option Local Privilege Escalation Vulnerability
+| [32319] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [30794] Red Hat OpenSSH Backdoor Vulnerability
+| [30339] OpenSSH 'X11UseLocalhost' X11 Forwarding Session Hijacking Vulnerability
+| [30276] Debian OpenSSH SELinux Privilege Escalation Vulnerability
+| [28531] OpenSSH ForceCommand Command Execution Weakness
+| [28444] OpenSSH X Connections Session Hijacking Vulnerability
+| [26097] OpenSSH LINUX_AUDIT_RECORD_EVENT Remote Log Injection Weakness
+| [25628] OpenSSH X11 Cookie Local Authentication Bypass Vulnerability
+| [23601] OpenSSH S/Key Remote Information Disclosure Vulnerability
+| [20956] OpenSSH Privilege Separation Key Signature Weakness
+| [20418] OpenSSH-Portable Existing Password Remote Information Disclosure Weakness
+| [20245] OpenSSH-Portable GSSAPI Authentication Abort Information Disclosure Weakness
+| [20241] Portable OpenSSH GSSAPI Remote Code Execution Vulnerability
+| [20216] OpenSSH Duplicated Block Remote Denial of Service Vulnerability
+| [16892] OpenSSH Remote PAM Denial Of Service Vulnerability
+| [14963] OpenSSH LoginGraceTime Remote Denial Of Service Vulnerability
+| [14729] OpenSSH GSSAPI Credential Disclosure Vulnerability
+| [14727] OpenSSH DynamicForward Inadvertent GatewayPorts Activation Vulnerability
+| [11781] OpenSSH-portable PAM Authentication Remote Information Disclosure Vulnerability
+| [9986] RCP, OpenSSH SCP Client File Corruption Vulnerability
+| [9040] OpenSSH PAM Conversation Memory Scrubbing Weakness
+| [8677] Multiple Portable OpenSSH PAM Vulnerabilities
+| [8628] OpenSSH Buffer Mismanagement Vulnerabilities
+| [7831] OpenSSH Reverse DNS Lookup Access Control Bypass Vulnerability
+| [7482] OpenSSH Remote Root Authentication Timing Side-Channel Weakness
+| [7467] OpenSSH-portable Enabled PAM Delay Information Disclosure Vulnerability
+| [7343] OpenSSH Authentication Execution Path Timing Information Leakage Weakness
+| [6168] OpenSSH Visible Password Vulnerability
+| [5374] OpenSSH Trojan Horse Vulnerability
+| [5093] OpenSSH Challenge-Response Buffer Overflow Vulnerabilities
+| [4560] OpenSSH Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [4241] OpenSSH Channel Code Off-By-One Vulnerability
+| [3614] OpenSSH UseLogin Environment Variable Passing Vulnerability
+| [3560] OpenSSH Kerberos Arbitrary Privilege Elevation Vulnerability
+| [3369] OpenSSH Key Based Source IP Access Control Bypass Vulnerability
+| [3345] OpenSSH SFTP Command Restriction Bypassing Vulnerability
+| [2917] OpenSSH PAM Session Evasion Vulnerability
+| [2825] OpenSSH Client X11 Forwarding Cookie Removal File Symbolic Link Vulnerability
+| [2356] OpenSSH Private Key Authentication Check Vulnerability
+| [1949] OpenSSH Client Unauthorized Remote Forwarding Vulnerability
+| [1334] OpenSSH UseLogin Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028187] OpenSSH pam_ssh_agent_auth Module on Red Hat Enterprise Linux Lets Remote Users Execute Arbitrary Code
+| [1026593] OpenSSH Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1025739] OpenSSH on FreeBSD Has Buffer Overflow in pam_thread() That Lets Remote Users Execute Arbitrary Code
+| [1025482] OpenSSH ssh-keysign Utility Lets Local Users Gain Elevated Privileges
+| [1025028] OpenSSH Legacy Certificates May Disclose Stack Contents to Remote Users
+| [1022967] OpenSSH on Red Hat Enterprise Linux Lets Remote Authenticated Users Gain Elevated Privileges
+| [1021235] OpenSSH CBC Mode Error Handling May Let Certain Remote Users Obtain Plain Text in Certain Cases
+| [1020891] OpenSSH on Debian Lets Remote Users Prevent Logins
+| [1020730] OpenSSH for Red Hat Enterprise Linux Packages May Have Been Compromised
+| [1020537] OpenSSH on HP-UX Lets Local Users Hijack X11 Sessions
+| [1019733] OpenSSH Unsafe Default Configuration May Let Local Users Execute Arbitrary Commands
+| [1019707] OpenSSH Lets Local Users Hijack Forwarded X Sessions in Certain Cases
+| [1017756] Apple OpenSSH Key Generation Process Lets Remote Users Deny Service
+| [1017183] OpenSSH Privilege Separation Monitor Validation Error May Cause the Monitor to Fail to Properly Control the Unprivileged Process
+| [1016940] OpenSSH Race Condition in Signal Handler Lets Remote Users Deny Service and May Potentially Permit Code Execution
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016931] OpenSSH SSH v1 CRC Attack Detection Implementation Lets Remote Users Deny Service
+| [1016672] OpenSSH on Mac OS X Lets Remote Users Deny Service
+| [1015706] OpenSSH Interaction With OpenPAM Lets Remote Users Deny Service
+| [1015540] OpenSSH scp Double Shell Character Expansion During Local-to-Local Copying May Let Local Users Gain Elevated Privileges in Certain Cases
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1011193] OpenSSH scp Directory Traversal Flaw Lets Remote SSH Servers Overwrite Files in Certain Cases
+| [1011143] OpenSSH Default Configuration May Be Unsafe When Used With Anonymous SSH Services
+| [1007791] Portable OpenSSH PAM free() Bug May Let Remote Users Execute Root Code
+| [1007716] OpenSSH buffer_append_space() and Other Buffer Management Errors May Let Remote Users Execute Arbitrary Code
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006688] OpenSSH Timing Flaw With Pluggable Authentication Modules Can Disclose Valid User Account Names to Remote Users
+| [1004818] OpenSSH's Secure Shell (SSH) Implementation Weakness May Disclose User Passwords to Remote Users During Man-in-the-Middle Attacks
+| [1004616] OpenSSH Integer Overflow and Buffer Overflow May Allow Remote Users to Gain Root Access to the System
+| [1004391] OpenSSH 'BSD_AUTH' Access Control Bug May Allow Unauthorized Remote Users to Authenticated to the System
+| [1004115] OpenSSH Buffer Overflow in Kerberos Ticket and AFS Token Processing Lets Local Users Execute Arbitrary Code With Root Level Permissions
+| [1003758] OpenSSH Off-by-one 'Channels' Bug May Let Authorized Remote Users Execute Arbitrary Code with Root Privileges
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002748] OpenSSH 3.0 Denial of Service Condition May Allow Remote Users to Crash the sshd Daemon and KerberosV Configuration Error May Allow Remote Users to Partially Authenticate When Authentication Should Not Be Permitted
+| [1002734] OpenSSH's S/Key Implementation Information Disclosure Flaw Provides Remote Users With Information About Valid User Accounts
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1001683] OpenSSH Allows Authorized Users to Delete Other User Files Named Cookies
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [83258] GSI-OpenSSH auth-pam.c security bypass
+| [82781] OpenSSH time limit denial of service
+| [82231] OpenSSH pam_ssh_agent_auth PAM code execution
+| [74809] OpenSSH ssh_gssapi_parse_ename denial of service
+| [72756] Debian openssh-server commands information disclosure
+| [68339] OpenSSH pam_thread buffer overflow
+| [67264] OpenSSH ssh-keysign unauthorized access
+| [65910] OpenSSH remote_glob function denial of service
+| [65163] OpenSSH certificate information disclosure
+| [64387] OpenSSH J-PAKE security bypass
+| [63337] Cisco Unified Videoconferencing OpenSSH weak security
+| [46620] OpenSSH and multiple SSH Tectia products CBC mode information disclosure
+| [45202] OpenSSH signal handler denial of service
+| [44747] RHEL OpenSSH backdoor
+| [44280] OpenSSH PermitRootLogin information disclosure
+| [44279] OpenSSH sshd weak security
+| [44037] OpenSSH sshd SELinux role unauthorized access
+| [43940] OpenSSH X11 forwarding information disclosure
+| [41549] OpenSSH ForceCommand directive security bypass
+| [41438] OpenSSH sshd session hijacking
+| [40897] OpenSSH known_hosts weak security
+| [40587] OpenSSH username weak security
+| [37371] OpenSSH username data manipulation
+| [37118] RHSA update for OpenSSH privilege separation monitor authentication verification weakness not installed
+| [37112] RHSA update for OpenSSH signal handler race condition not installed
+| [37107] RHSA update for OpenSSH identical block denial of service not installed
+| [36637] OpenSSH X11 cookie privilege escalation
+| [35167] OpenSSH packet.c newkeys[mode] denial of service
+| [34490] OpenSSH OPIE information disclosure
+| [33794] OpenSSH ChallengeResponseAuthentication information disclosure
+| [32975] Apple Mac OS X OpenSSH denial of service
+| [32387] RHSA-2006:0738 updates for openssh not installed
+| [32359] RHSA-2006:0697 updates for openssh not installed
+| [32230] RHSA-2006:0298 updates for openssh not installed
+| [32132] RHSA-2006:0044 updates for openssh not installed
+| [30120] OpenSSH privilege separation monitor authentication verification weakness
+| [29255] OpenSSH GSSAPI user enumeration
+| [29254] OpenSSH signal handler race condition
+| [29158] OpenSSH identical block denial of service
+| [28147] Apple Mac OS X OpenSSH nonexistent user login denial of service
+| [25116] OpenSSH OpenPAM denial of service
+| [24305] OpenSSH SCP shell expansion command execution
+| [22665] RHSA-2005:106 updates for openssh not installed
+| [22117] OpenSSH GSSAPI allows elevated privileges
+| [22115] OpenSSH GatewayPorts security bypass
+| [20930] OpenSSH sshd.c LoginGraceTime denial of service
+| [19441] Sun Solaris OpenSSH LDAP (1) client authentication denial of service
+| [17213] OpenSSH allows port bouncing attacks
+| [16323] OpenSSH scp file overwrite
+| [13797] OpenSSH PAM information leak
+| [13271] OpenSSH could allow an attacker to corrupt the PAM conversion stack
+| [13264] OpenSSH PAM code could allow an attacker to gain access
+| [13215] OpenSSH buffer management errors could allow an attacker to execute code
+| [13214] OpenSSH memory vulnerabilities
+| [13191] OpenSSH large packet buffer overflow
+| [12196] OpenSSH could allow an attacker to bypass login restrictions
+| [11970] OpenSSH could allow an attacker to obtain valid administrative account
+| [11902] OpenSSH PAM support enabled information leak
+| [9803] OpenSSH &quot
+| [9763] OpenSSH downloaded from the OpenBSD FTP site or OpenBSD FTP mirror sites could contain a Trojan Horse
+| [9307] OpenSSH is running on the system
+| [9169] OpenSSH &quot
+| [8896] OpenSSH Kerberos 4 TGT/AFS buffer overflow
+| [8697] FreeBSD libutil in OpenSSH fails to drop privileges prior to using the login class capability database
+| [8383] OpenSSH off-by-one error in channel code
+| [7647] OpenSSH UseLogin option arbitrary code execution
+| [7634] OpenSSH using sftp and restricted keypairs could allow an attacker to bypass restrictions
+| [7598] OpenSSH with Kerberos allows attacker to gain elevated privileges
+| [7179] OpenSSH source IP access control bypass
+| [6757] OpenSSH &quot
+| [6676] OpenSSH X11 forwarding symlink attack could allow deletion of arbitrary files
+| [6084] OpenSSH 2.3.1 allows remote users to bypass authentication
+| [5517] OpenSSH allows unauthorized access to resources
+| [4646] OpenSSH UseLogin option allows remote users to execute commands as root
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [14866] Novell Netware 6.5 - OpenSSH Remote Stack Overflow
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [900179] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [881183] CentOS Update for openssh CESA-2012:0884 centos6 
+| [880802] CentOS Update for openssh CESA-2009:1287 centos5 i386
+| [880746] CentOS Update for openssh CESA-2009:1470 centos5 i386
+| [870763] RedHat Update for openssh RHSA-2012:0884-04
+| [870129] RedHat Update for openssh RHSA-2008:0855-01
+| [861813] Fedora Update for openssh FEDORA-2010-5429
+| [861319] Fedora Update for openssh FEDORA-2007-395
+| [861170] Fedora Update for openssh FEDORA-2007-394
+| [861012] Fedora Update for openssh FEDORA-2007-715
+| [840345] Ubuntu Update for openssh vulnerability USN-597-1
+| [840300] Ubuntu Update for openssh update USN-612-5
+| [840271] Ubuntu Update for openssh vulnerability USN-612-2
+| [840268] Ubuntu Update for openssh update USN-612-7
+| [840259] Ubuntu Update for openssh vulnerabilities USN-649-1
+| [840214] Ubuntu Update for openssh vulnerability USN-566-1
+| [831074] Mandriva Update for openssh MDVA-2010:162 (openssh)
+| [830929] Mandriva Update for openssh MDVA-2010:090 (openssh)
+| [830807] Mandriva Update for openssh MDVA-2010:026 (openssh)
+| [830603] Mandriva Update for openssh MDVSA-2008:098 (openssh)
+| [830523] Mandriva Update for openssh MDVSA-2008:078 (openssh)
+| [830317] Mandriva Update for openssh-askpass-qt MDKA-2007:127 (openssh-askpass-qt)
+| [830191] Mandriva Update for openssh MDKSA-2007:236 (openssh)
+| [802407] OpenSSH 'sshd' Challenge Response Authentication Buffer Overflow Vulnerability
+| [103503] openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [103247] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [103064] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [100584] OpenSSH X Connections Session Hijacking Vulnerability
+| [100153] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [66170] CentOS Security Advisory CESA-2009:1470 (openssh)
+| [65987] SLES10: Security update for OpenSSH
+| [65819] SLES10: Security update for OpenSSH
+| [65514] SLES9: Security update for OpenSSH
+| [65513] SLES9: Security update for OpenSSH
+| [65334] SLES9: Security update for OpenSSH
+| [65248] SLES9: Security update for OpenSSH
+| [65218] SLES9: Security update for OpenSSH
+| [65169] SLES9: Security update for openssh,openssh-askpass
+| [65126] SLES9: Security update for OpenSSH
+| [65019] SLES9: Security update for OpenSSH
+| [65015] SLES9: Security update for OpenSSH
+| [64931] CentOS Security Advisory CESA-2009:1287 (openssh)
+| [61639] Debian Security Advisory DSA 1638-1 (openssh)
+| [61030] Debian Security Advisory DSA 1576-2 (openssh)
+| [61029] Debian Security Advisory DSA 1576-1 (openssh)
+| [60840] FreeBSD Security Advisory (FreeBSD-SA-08:05.openssh.asc)
+| [60803] Gentoo Security Advisory GLSA 200804-03 (openssh)
+| [60667] Slackware Advisory SSA:2008-095-01 openssh 
+| [59014] Slackware Advisory SSA:2007-255-01 openssh 
+| [58741] Gentoo Security Advisory GLSA 200711-02 (openssh)
+| [57919] Gentoo Security Advisory GLSA 200611-06 (openssh)
+| [57895] Gentoo Security Advisory GLSA 200609-17 (openssh)
+| [57585] Debian Security Advisory DSA 1212-1 (openssh (1:3.8.1p1-8.sarge.6))
+| [57492] Slackware Advisory SSA:2006-272-02 openssh 
+| [57483] Debian Security Advisory DSA 1189-1 (openssh-krb5)
+| [57476] FreeBSD Security Advisory (FreeBSD-SA-06:22.openssh.asc)
+| [57470] FreeBSD Ports: openssh
+| [56352] FreeBSD Security Advisory (FreeBSD-SA-06:09.openssh.asc)
+| [56330] Gentoo Security Advisory GLSA 200602-11 (OpenSSH)
+| [56294] Slackware Advisory SSA:2006-045-06 openssh 
+| [53964] Slackware Advisory SSA:2003-266-01 New OpenSSH packages 
+| [53885] Slackware Advisory SSA:2003-259-01 OpenSSH Security Advisory 
+| [53884] Slackware Advisory SSA:2003-260-01 OpenSSH updated again 
+| [53788] Debian Security Advisory DSA 025-1 (openssh)
+| [52638] FreeBSD Security Advisory (FreeBSD-SA-03:15.openssh.asc)
+| [52635] FreeBSD Security Advisory (FreeBSD-SA-03:12.openssh.asc)
+| [11343] OpenSSH Client Unauthorized Remote Forwarding
+| [10954] OpenSSH AFS/Kerberos ticket/token passing
+| [10883] OpenSSH Channel Code Off by 1
+| [10823] OpenSSH UseLogin Environment Variables
+|_
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100021  1,3,4      43621/tcp  nlockmgr
+|   100021  1,3,4      45249/udp  nlockmgr
+|   100024  1          45195/tcp  status
+|_  100024  1          55645/udp  status
+3128/tcp open  http    Proxmox Virtual Environment REST API 3.0
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [73424] Facebook HipHop Virtual Machine up to 3.0.0 Access Restriction unknown vulnerability
+| [107895] oVirt up to 3.5.0 restapi Session Session Token weak authentication
+| [107867] Luracast Restler up to 3.0.0 getsource.php directory traversal
+| [104375] Sony WG-C10 up to 3.0.79 Access Restriction privilege escalation
+| [103785] Oracle REST Data Services up to 3.0.10 unknown vulnerability
+| [94605] dotCMS up to 3.3.1 REST API api/content/save/1 sql injection
+| [88510] Cisco Prime Infrastructure up to 3.0 API privilege escalation
+| [87621] Cisco Prime Infrastructure up to 3.0 API Web Interface privilege escalation
+| [79922] EMC Secure Remote Services Virtual Edition up to 3.9 API Log directory traversal
+| [79209] Cisco Content Delivery System Manager 3.2 on Videoscape REST API information disclosure
+| [76272] EMC Secure Remote Services Virtual Edition up to 3.05 Session Cookie weak authentication
+| [76271] EMC Secure Remote Services Virtual Edition up to 3.05 X.509 Certificate Chain Validation spoofing
+| [74101] Proxy 3.0 Restart File denial of service
+| [69214] Mozilla Firefox 35 CSS Restyling SetCapitalization memory corruption
+| [73712] IBM API Management up to 3.0.2.0 unknown vulnerability
+| [73236] Zenoss Core up to 3.0.2 Access Restriction unknown vulnerability
+| [73235] Zenoss Core up to 3.0.2 Access Restriction unknown vulnerability
+| [70658] Red Hat RESTEasy up to 3.0.8 resteasy.document.expand.entity.references unknown vulnerability
+| [69980] IBM API Management 3.0.0.0 information disclosure
+| [65614] Samba up to 3.0.2a Access Restriction winbind_name_list_to_sid_string_list unknown vulnerability
+| [65358] Puppetlabs Puppet 3.0.0/3.0.1 Access Restriction unknown vulnerability
+| [65245] Menalto gallery up to 3.0.8 Access Restriction information disclosure
+| [64938] Red Hat Enterprise Virtualization 3.0 addAlert cross site scripting
+| [64704] Red Hat Enterprise Virtualization 3.0 unknown vulnerability
+| [64698] Red Hat Enterprise Virtualization 3.0 unknown vulnerability
+| [8394] Oracle GlassFish Server 3.0.1/3.1.2 REST Interface cross site scripting
+| [63744] Red Hat Enterprise Virtualization Manager up to 3.0 denial of service
+| [63256] IBM Rational Automation Framework up to 3.0 Access Restriction privilege escalation
+| [5929] Ruby on Rails 3.0.16/3.1.7/3.2.7 HTML Escaping cross site scripting
+| [53357] Novell Access Manager up to 3.0 Access Restriction unknown vulnerability
+| [53272] phpBB 3.0.7 Access Restriction feed.php unknown vulnerability
+| [52409] TikiWiki 3.0/3.1/3.2/3.3/3.4 Access Restriction userslib.php unknown vulnerability
+| [50753] Sun Virtual Desktop Infrastructure 3.0 unknown vulnerability
+| [49481] Sun Virtual Desktop Infrastructure 3.0 Cleartext unknown vulnerability
+| [3927] Mozilla Firefox 3.0 Tab Restore Designfehler
+| [41445] Sun Java Web Console 3.0.3 Access Restriction unknown vulnerability
+| [31330] Seyeon FlexWATCH Network Camera up to 3.0 Access Restriction directory traversal
+| [26311] Linksys WRT54G 3.01.3/3.03.6/4.00.7 User Authentication restore.cgi privilege escalation
+| [18687] Macromedia JRun 3.0/3.1 ISAPI DLL Filter memory corruption
+| [20518] Neoteris Instant Virtual Extranet up to 3.01 Authentication swsrv.cgi cross site scripting
+| [18985] ZyXEL Prestige 310/642R ICMP denial of service
+| [18984] ZyXEL Prestige 310/642r Telnet/FTP/DHCP Service denial of service
+| [17932] Adobe PhotoDeluxe 3.0/3.1/4.0 Applet Environment Variable privilege escalation
+| [16340] FreeBSD 3.0/3.5.1/4.0/4.1/4.1.1 Telnet Daemon Environment Variable denial of service
+| [14771] Microsoft IIS 3.0 SSL ISAPI Filter Plaintext information disclosure
+| [13618] FreeBSD 3.0/3.1/3.2/3.3/3.4 libmytinfo Environment Variable memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2013-0426] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, 5.0 through Update 38, and 1.4.2_40 and earlier, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Libraries, a different vulnerability than CVE-2013-0425 and CVE-2013-0428.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue is related to incorrect "access control checks" in the logging API that allow remote attackers to bypass Java sandbox restrictions.
+| [CVE-2013-0425] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, 5.0 through Update 38, and 1.4.2_40 and earlier, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Libraries, a different vulnerability than CVE-2013-0428 and CVE-2013-0426.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue is related to incorrect "access control checks" in the logging API that allow remote attackers to bypass Java sandbox restrictions.
+| [CVE-2012-4816] IBM Rational Automation Framework (RAF) 3.x through 3.0.0.5 allows remote attackers to bypass intended Env Gen Wizard (aka Environment Generation Wizard) access restrictions by visiting context roots in HTTP sessions on port 8080.
+| [CVE-2010-3321] RSA Authentication Client 2.0.x, 3.0, and 3.5.x before 3.5.3 does not properly handle a SENSITIVE or NON-EXTRACTABLE tag on a secret key object that is stored on a SecurID 800 authenticator, which allows local users to bypass intended access restrictions and read keys via unspecified PKCS#11 API requests.
+| [CVE-2009-2011] Worldweaver DX Studio Player 3.0.29.0, 3.0.22.0, 3.0.12.0, and probably other versions before 3.0.29.1, when used as a plug-in for Firefox, does not restrict access to the shell.execute JavaScript API method, which allows remote attackers to execute arbitrary commands via a .dxstudio file that invokes this method.
+| [CVE-2002-0076] Java Runtime Environment (JRE) Bytecode Verifier allows remote attackers to escape the Java sandbox and execute commands via an applet containing an illegal cast operation, as seen in (1) Microsoft VM build 3802 and earlier as used in Internet Explorer 4.x and 5.x, (2) Netscape 6.2.1 and earlier, and possibly other implementations that use vulnerable versions of SDK or JDK, aka a variant of the "Virtual Machine Verifier" vulnerability.
+| [CVE-2013-2323] HP SQL/MX 3.0 through 3.2 on NonStop servers, when SQL/MP Objects are used, allows remote authenticated users to bypass intended access restrictions and modify data via unspecified vectors, aka the "SQL/MP tables" issue.
+| [CVE-2013-1856] The ActiveSupport::XmlMini_JDOM backend in lib/active_support/xml_mini/jdom.rb in the Active Support component in Ruby on Rails 3.0.x and 3.1.x before 3.1.12 and 3.2.x before 3.2.13, when JRuby is used, does not properly restrict the capabilities of the XML parser, which allows remote attackers to read arbitrary files or cause a denial of service (resource consumption) via vectors involving (1) an external DTD or (2) an external entity declaration in conjunction with an entity reference.
+| [CVE-2013-1508] Unspecified vulnerability in the Oracle GlassFish Server component in Oracle Sun Middleware Products 3.0.1 and 3.1.2 allows remote attackers to affect integrity via vectors related to REST Interface.
+| [CVE-2013-1476] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, 5.0 through Update 38, and 1.4.2_40 and earlier, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via vectors related to CORBA, a different vulnerability than CVE-2013-0441 and CVE-2013-1475.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue allows remote attackers to bypass Java sandbox restrictions via "certain value handler constructors."
+| [CVE-2013-0441] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, 5.0 through Update 38, and 1.4.2_40 and earlier, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via vectors related to CORBA, a different vulnerability than CVE-2013-1476 and CVE-2013-1475.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue allows remote attackers to bypass Java sandbox restrictions via certain methods that should not be serialized, aka "missing serialization restriction."
+| [CVE-2013-0435] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11 and 6 through Update 38, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality via vectors related to JAX-WS.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue is related to improper restriction of com.sun.xml.internal packages and "Better handling of UI elements."
+| [CVE-2013-0429] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, and 5.0 through Update 38, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via vectors related to CORBA.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue involves the creation of a single PresentationManager that is shared across multiple thread groups, which allows remote attackers to bypass Java sandbox restrictions.
+| [CVE-2013-0428] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 through Update 11, 6 through Update 38, 5.0 through Update 38, and 1.4.2_40 and earlier, and OpenJDK 6 and 7, allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Libraries, a different vulnerability than CVE-2013-0425 and CVE-2013-0426.  NOTE: the previous information is from the February 2013 CPU. Oracle has not commented on claims from another vendor that this issue is related to "incorrect checks for proxy classes" in the Reflection API.
+| [CVE-2013-0156] active_support/core_ext/hash/conversions.rb in Ruby on Rails before 2.3.15, 3.0.x before 3.0.19, 3.1.x before 3.1.10, and 3.2.x before 3.2.11 does not properly restrict casts of string values, which allows remote attackers to conduct object-injection attacks and execute arbitrary code, or cause a denial of service (memory and CPU consumption) involving nested XML entity references, by leveraging Action Pack support for (1) YAML type conversion or (2) Symbol type conversion.
+| [CVE-2013-0155] Ruby on Rails 3.0.x before 3.0.19, 3.1.x before 3.1.10, and 3.2.x before 3.2.11 does not properly consider differences in parameter handling between the Active Record component and the JSON implementation, which allows remote attackers to bypass intended database-query restrictions and perform NULL checks or trigger missing WHERE clauses via a crafted request, as demonstrated by certain "[nil]" values, a related issue to CVE-2012-2660 and CVE-2012-2694.
+| [CVE-2013-0110] nvSCPAPISvr.exe in the NVIDIA Stereoscopic 3D Driver service, as distributed with the NVIDIA driver before 307.78, and Release 310 before 311.00, on Windows, lacks " (double quote) characters in the service path, which allows local users to gain privileges via a Trojan horse program.
+| [CVE-2012-6509] Unrestricted file upload vulnerability in NetArt Media Car Portal 3.0 allows remote attackers to execute arbitrary PHP code by uploading a file a double extension, as demonstrated by .php%00.jpg.
+| [CVE-2012-5616] Apache CloudStack 4.0.0-incubating and Citrix CloudPlatform (formerly Citrix CloudStack) before 3.0.6 stores sensitive information in the log4j.conf log file, which allows local users to obtain (1) the SSH private key as recorded by the createSSHKeyPair API, (2) the password of an added host as recorded by the AddHost API, or the password of an added VM as recorded by the (3) DeployVM or (4) ResetPasswordForVM API.
+| [CVE-2012-4466] Ruby 1.8.7 before patchlevel 371, 1.9.3 before patchlevel 286, and 2.0 before revision r37068 allows context-dependent attackers to bypass safe-level restrictions and modify untainted strings via the name_err_mesg_to_str API function, which marks the string as tainted, a different vulnerability than CVE-2011-1005.
+| [CVE-2012-3317] IBM WebSphere Message Broker 6.1 before 6.1.0.11, 7.0 before 7.0.0.5, and 8.0 before 8.0.0.2 has incorrect ownership of certain uninstaller Java Runtime Environment (JRE) files, which might allow local users to gain privileges by leveraging access to uid 501 or gid 300.
+| [CVE-2012-3241] The VMware Broker in Eucalyptus 2.0.3 and 3.0.x before 3.0.2 does not properly authenticate SOAP requests, which allows remote attackers to execute arbitrary VMware Broker API commands.
+| [CVE-2012-3240] The Walrus service in Eucalyptus 2.0.3 and 3.0.x before 3.0.2 allows remote attackers to gain administrator privileges via a crafted REST request.
+| [CVE-2012-2694] actionpack/lib/action_dispatch/http/request.rb in Ruby on Rails before 3.0.14, 3.1.x before 3.1.6, and 3.2.x before 3.2.6 does not properly consider differences in parameter handling between the Active Record component and the Rack interface, which allows remote attackers to bypass intended database-query restrictions and perform NULL checks via a crafted request, as demonstrated by certain "['xyz', nil]" values, a related issue to CVE-2012-2660.
+| [CVE-2012-2660] actionpack/lib/action_dispatch/http/request.rb in Ruby on Rails before 3.0.13, 3.1.x before 3.1.5, and 3.2.x before 3.2.4 does not properly consider differences in parameter handling between the Active Record component and the Rack interface, which allows remote attackers to bypass intended database-query restrictions and perform NULL checks via a crafted request, as demonstrated by certain "[nil]" values, a related issue to CVE-2012-2694.
+| [CVE-2012-2496] A certain Java applet in the VPN downloader implementation in the WebLaunch feature in Cisco AnyConnect Secure Mobility Client 3.x before 3.0 MR7 on 64-bit Linux platforms does not properly restrict use of Java components, which allows remote attackers to execute arbitrary code via a crafted web site, aka Bug ID CSCty45925.
+| [CVE-2012-0507] Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 Update 2 and earlier, 6 Update 30 and earlier, and 5.0 Update 33 and earlier allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Concurrency.  NOTE: the previous information was obtained from the February 2012 Oracle CPU. Oracle has not commented on claims from a downstream vendor and third party researchers that this issue occurs because the AtomicReferenceArray class implementation does not ensure that the array is of the Object[] type, which allows attackers to cause a denial of service (JVM crash) or bypass Java sandbox restrictions.  NOTE: this issue was originally mapped to CVE-2011-3571, but that identifier was already assigned to a different issue.
+| [CVE-2011-5094] ** DISPUTED ** Mozilla Network Security Services (NSS) 3.x, with certain settings of the SSL_ENABLE_RENEGOTIATION option, does not properly restrict client-initiated renegotiation within the SSL and TLS protocols, which might make it easier for remote attackers to cause a denial of service (CPU consumption) by performing many renegotiations within a single connection, a different vulnerability than CVE-2011-1473.  NOTE: it can also be argued that it is the responsibility of server deployments, not a security library, to prevent or limit renegotiation when it is inappropriate within a specific environment.
+| [CVE-2011-5035] Oracle Glassfish 2.1.1, 3.0.1, and 3.1.1, as used in Communications Server 2.0, Sun Java System Application Server 8.1 and 8.2, and possibly other products, computes hash values for form parameters without restricting the ability to trigger hash collisions predictably, which allows remote attackers to cause a denial of service (CPU consumption) by sending many crafted parameters, aka Oracle security ticket S0104869.
+| [CVE-2011-3571] Unspecified vulnerability in the Virtual Desktop Infrastructure (VDI) component in Oracle Virtualization 3.2 allows remote authenticated users to affect confidentiality and integrity via unknown vectors related to Session.  NOTE: this CVE identifier was accidentally used for a Concurrency issue in Java Runtime Environment, but that issue has been reassigned to CVE-2012-0507.
+| [CVE-2011-3205] Buffer overflow in the gopherToHTML function in gopher.cc in the Gopher reply parser in Squid 3.0 before 3.0.STABLE26, 3.1 before 3.1.15, and 3.2 before 3.2.0.11 allows remote Gopher servers to cause a denial of service (memory corruption and daemon restart) or possibly have unspecified other impact via a long line in a response.  NOTE: This issue exists because of a CVE-2005-0094 regression.
+| [CVE-2011-2932] Cross-site scripting (XSS) vulnerability in activesupport/lib/active_support/core_ext/string/output_safety.rb in Ruby on Rails 2.x before 2.3.13, 3.0.x before 3.0.10, and 3.1.x before 3.1.0.rc5 allows remote attackers to inject arbitrary web script or HTML via a malformed Unicode string, related to a "UTF-8 escaping vulnerability."
+| [CVE-2011-2894] Spring Framework 3.0.0 through 3.0.5, Spring Security 3.0.0 through 3.0.5 and 2.0.0 through 2.0.6, and possibly other versions deserialize objects from untrusted sources, which allows remote attackers to bypass intended security restrictions and execute untrusted code by (1) serializing a java.lang.Proxy instance and using InvocationHandler, or (2) accessing internal AOP interfaces, as demonstrated using deserialization of a DefaultListableBeanFactory instance to execute arbitrary commands via the java.lang.Runtime class.
+| [CVE-2011-2581] The ACL implementation in Cisco NX-OS 5.0(2) and 5.0(3) before 5.0(3)N2(1) on Nexus 5000 series switches, and NX-OS before 5.0(3)U1(2a) on Nexus 3000 series switches, does not properly handle comments in conjunction with deny statements, which allows remote attackers to bypass intended access restrictions in opportunistic circumstances by sending packets, aka Bug IDs CSCto09813 and CSCtr61490.
+| [CVE-2011-2305] Unspecified vulnerability in Oracle VM VirtualBox 3.0, 3.1, 3.2, and 4.0 allows local users to affect confidentiality, integrity, and availability via unknown vectors.
+| [CVE-2011-1252] Cross-site scripting (XSS) vulnerability in the SafeHTML function in the toStaticHTML API in Microsoft Internet Explorer 7 and 8, Office SharePoint Server 2007 SP2, Office SharePoint Server 2010 Gold and SP1, Groove Server 2010 Gold and SP1, Windows SharePoint Services 3.0 SP2, and SharePoint Foundation 2010 Gold and SP1 allows remote attackers to inject arbitrary web script or HTML via unspecified strings, aka "toStaticHTML Information Disclosure Vulnerability" or "HTML Sanitization Vulnerability."
+| [CVE-2011-1032] IBM Lotus Connections 3.0, when IBM WebSphere Application Server 7.0.0.11 is used, does not properly restrict access to the internal login module, which has unspecified impact and attack vectors.
+| [CVE-2011-0700] Multiple cross-site scripting (XSS) vulnerabilities in WordPress before 3.0.5 allow remote authenticated users to inject arbitrary web script or HTML via vectors related to (1) the Quick/Bulk Edit title (aka post title or post_title), (2) post_status, (3) comment_status, (4) ping_status, and (5) escaping of tags within the tags meta box.
+| [CVE-2011-0678] Unrestricted file upload vulnerability in the EasyEdit module in Lomtec ActiveWeb Professional 3.0 allows remote attackers to execute arbitrary code by uploading an executable file via the UploadDirectory and Accepted Extensions fields in the getImagefile component of EasyEdit.cfm.
+| [CVE-2011-0449] actionpack/lib/action_view/template/resolver.rb in Ruby on Rails 3.0.x before 3.0.4, when a case-insensitive filesystem is used, does not properly implement filters associated with the list of available templates, which allows remote attackers to bypass intended access restrictions via an action name that uses an unintended case for alphabetic characters.
+| [CVE-2011-0447] Ruby on Rails 2.1.x, 2.2.x, and 2.3.x before 2.3.11, and 3.x before 3.0.4, does not properly validate HTTP requests that contain an X-Requested-With header, which makes it easier for remote attackers to conduct cross-site request forgery (CSRF) attacks via forged (1) AJAX or (2) API requests that leverage "combinations of browser plugins and HTTP redirects," a related issue to CVE-2011-0696.
+| [CVE-2010-5215] Multiple untrusted search path vulnerabilities in SWiSH Max3 3.0 2009.11.30 allow local users to gain privileges via a Trojan horse (1) dwmapi.dll or (2) SWiSHmax3res.dll file in the current working directory, as demonstrated by a directory that contains a .swi file. NOTE: some of these details are obtained from third party information.
+| [CVE-2010-5106] The XML-RPC remote publishing interface in xmlrpc.php in WordPress before 3.0.3 does not properly check capabilities, which allows remote authenticated users to bypass intended access restrictions, and publish, edit, or delete posts, by leveraging the Author or Contributor role.
+| [CVE-2010-4763] The ACL-customer-status Ticket Type setting in Open Ticket Request System (OTRS) before 3.0.0-beta1 does not restrict the ticket options after an AJAX reload, which allows remote authenticated users to bypass intended ACL restrictions on the (1) Status, (2) Service, and (3) Queue via selections.
+| [CVE-2010-4761] The customer-interface ticket-print dialog in Open Ticket Request System (OTRS) before 3.0.0-beta3 does not properly restrict customer-visible data, which allows remote authenticated users to obtain potentially sensitive information from the (1) responsible, (2) owner, (3) accounted time, (4) pending until, and (5) lock fields by reading this dialog.
+| [CVE-2010-4759] Open Ticket Request System (OTRS) before 3.0.0-beta7 does not properly restrict the ticket ages that are within the scope of a search, which allows remote authenticated users to cause a denial of service (daemon hang) via a fulltext search.
+| [CVE-2010-4353] Unrestricted file upload vulnerability in modules/gallery/models/item.php in Menalto Gallery before 3.0 and beta allows remote authenticated users with upload permissions to execute arbitrary code by uploading a file with an executable extension, then accessing it via a direct request to the file in an unspecified directory.
+| [CVE-2010-3858] The setup_arg_pages function in fs/exec.c in the Linux kernel before 2.6.36, when CONFIG_STACK_GROWSDOWN is used, does not properly restrict the stack memory consumption of the (1) arguments and (2) environment for a 32-bit application on a 64-bit platform, which allows local users to cause a denial of service (system crash) via a crafted exec system call, a related issue to CVE-2010-2240.
+| [CVE-2010-3168] Mozilla Firefox before 3.5.12 and 3.6.x before 3.6.9, Thunderbird before 3.0.7 and 3.1.x before 3.1.3, and SeaMonkey before 2.0.7 do not properly restrict the role of property changes in triggering XUL tree removal, which allows remote attackers to cause a denial of service (deleted memory access and application crash) or possibly execute arbitrary code by setting unspecified properties.
+| [CVE-2010-3131] Untrusted search path vulnerability in Mozilla Firefox before 3.5.12 and 3.6.x before 3.6.9, Thunderbird before 3.0.7 and 3.1.x before 3.1.3, and SeaMonkey before 2.0.7 on Windows XP allows local users, and possibly remote attackers, to execute arbitrary code and conduct DLL hijacking attacks via a Trojan horse dwmapi.dll that is located in the same folder as a .htm, .html, .jtx, .mfp, or .eml file.
+| [CVE-2010-2768] Mozilla Firefox before 3.5.12 and 3.6.x before 3.6.9, Thunderbird before 3.0.7 and 3.1.x before 3.1.3, and SeaMonkey before 2.0.7 do not properly restrict use of the type attribute of an OBJECT element to set a document's charset, which allows remote attackers to bypass cross-site scripting (XSS) protection mechanisms via UTF-7 encoding.
+| [CVE-2010-2764] Mozilla Firefox before 3.5.12 and 3.6.x before 3.6.9, Thunderbird before 3.0.7 and 3.1.x before 3.1.3, and SeaMonkey before 2.0.7 do not properly restrict read access to the statusText property of XMLHttpRequest objects, which allows remote attackers to discover the existence of intranet web servers via cross-origin requests.
+| [CVE-2010-2763] The XPCSafeJSObjectWrapper class in the SafeJSObjectWrapper (aka SJOW) implementation in Mozilla Firefox before 3.5.12, Thunderbird before 3.0.7, and SeaMonkey before 2.0.7 does not properly restrict scripted functions, which allows remote attackers to bypass the Same Origin Policy and conduct cross-site scripting (XSS) attacks via a crafted function.
+| [CVE-2010-2754] dom/base/nsJSEnvironment.cpp in Mozilla Firefox 3.5.x before 3.5.11 and 3.6.x before 3.6.7, Thunderbird 3.0.x before 3.0.6 and 3.1.x before 3.1.1, and SeaMonkey before 2.0.6 does not properly suppress a script's URL in certain circumstances involving a redirect and an error message, which allows remote attackers to obtain sensitive information about script parameters via a crafted HTML document, related to the window.onerror handler.
+| [CVE-2010-1898] The Common Language Runtime (CLR) in Microsoft .NET Framework 2.0 SP1, 2.0 SP2, 3.5, 3.5 SP1, and 3.5.1, and Microsoft Silverlight 2 and 3 before 3.0.50611.0 on Windows and before 3.0.41130.0 on Mac OS X, does not properly handle interfaces and delegations to virtual methods, which allows remote attackers to execute arbitrary code via (1) a crafted XAML browser application (aka XBAP), (2) a crafted ASP.NET application, or (3) a crafted .NET Framework application, aka "Microsoft Silverlight and Microsoft .NET Framework CLR Virtual Method Delegate Vulnerability."
+| [CVE-2010-1627] feed.php in phpBB 3.0.7 before 3.0.7-PL1 does not properly check permissions for feeds, which allows remote attackers to bypass intended access restrictions via unspecified attack vectors related to permission settings on a private forum.
+| [CVE-2010-1264] Unspecified vulnerability in Microsoft Windows SharePoint Services 3.0 SP1 and SP2 allows remote attackers to cause a denial of service (hang) via crafted requests to the Help page that cause repeated restarts of the application pool, aka "Sharepoint Help Page Denial of Service Vulnerability."
+| [CVE-2010-1138] The virtual networking stack in VMware Workstation 7.0 before 7.0.1 build 227600, VMware Workstation 6.5.x before 6.5.4 build 246459 on Windows, VMware Player 3.0 before 3.0.1 build 227600, VMware Player 2.5.x before 2.5.4 build 246459 on Windows, VMware ACE 2.6 before 2.6.1 build 227600 and 2.5.x before 2.5.4 build 246459, VMware Server 2.x, and VMware Fusion 3.0 before 3.0.1 build 232708 and 2.x before 2.0.7 build 246742 allows remote attackers to obtain sensitive information from memory on the host OS by examining received network packets, related to interaction between the guest OS and the host vmware-vmx process.
+| [CVE-2010-1137] Cross-site scripting (XSS) vulnerability in WebAccess in VMware VirtualCenter 2.0.2 and 2.5 and VMware ESX 3.0.3 and 3.5, and the Server Console in VMware Server 1.0, allows remote attackers to inject arbitrary web script or HTML via the name of a virtual machine.
+| [CVE-2010-0686] WebAccess in VMware VirtualCenter 2.0.2 and 2.5, VMware Server 2.0, and VMware ESX 3.0.3 and 3.5 allows remote attackers to leverage proxy-server functionality to spoof the origin of requests via unspecified vectors, related to a "URL forwarding vulnerability."
+| [CVE-2010-0600] Cisco Mediator Framework 1.5.1 before 1.5.1.build.14-eng, 2.2 before 2.2.1.dev.1, and 3.0 before 3.0.9.release.1 on the Cisco Network Building Mediator NBM-2400 and NBM-4800 and the Richards-Zeta Mediator 2500 does not properly restrict network access to an unspecified configuration file, which allows remote attackers to read passwords and unspecified other account details via a (1) XML RPC or (2) XML RPC over HTTPS session, aka Bug ID CSCtb83512.
+| [CVE-2010-0395] OpenOffice.org 2.x and 3.0 before 3.2.1 allows user-assisted remote attackers to bypass Python macro security restrictions and execute arbitrary Python code via a crafted OpenDocument Text (ODT) file that triggers code execution when the macro directory structure is previewed.
+| [CVE-2010-0232] The kernel in Microsoft Windows NT 3.1 through Windows 7, including Windows 2000 SP4, Windows XP SP2 and SP3, Windows Server 2003 SP2, Windows Vista Gold, SP1, and SP2, and Windows Server 2008 Gold and SP2, when access to 16-bit applications is enabled on a 32-bit x86 platform, does not properly validate certain BIOS calls, which allows local users to gain privileges by crafting a VDM_TIB data structure in the Thread Environment Block (TEB), and then calling the NtVdmControl function to start the Windows Virtual DOS Machine (aka NTVDM) subsystem, leading to improperly handled exceptions involving the #GP trap handler (nt!KiTrap0D), aka "Windows Kernel Exception Handler Vulnerability."
+| [CVE-2010-0182] The XMLDocument::load function in Mozilla Firefox before 3.5.9 and 3.6.x before 3.6.2, Thunderbird before 3.0.4, and SeaMonkey before 2.0.4 does not perform the expected nsIContentPolicy checks during loading of content by XML documents, which allows attackers to bypass intended access restrictions via crafted content.
+| [CVE-2009-5054] Smarty before 3.0.0 beta 4 does not consider the umask value when setting the permissions of files, which might allow attackers to bypass intended access restrictions via standard filesystem operations.
+| [CVE-2009-4849] Multiple cross-site request forgery (CSRF) vulnerabilities in ToutVirtual VirtualIQ Pro 3.2 build 7882 and 3.5 build 8691 allow remote attackers to hijack the authentication of administrators for requests that (1) create a new user account via a save action to tvserver/user/user.do, (2) shutdown a virtual machine, (3) start a virtual machine, (4) restart a virtual machine, or (5) schedule an activity.
+| [CVE-2009-4844] ToutVirtual VirtualIQ Pro 3.2 build 7882 does not restrict access to the /status URI on port 9080, which allows remote attackers to obtain sensitive Tomcat information via a direct request.
+| [CVE-2009-3988] Mozilla Firefox 3.0.x before 3.0.18 and 3.5.x before 3.5.8, and SeaMonkey before 2.0.3, does not properly restrict read access to object properties in showModalDialog, which allows remote attackers to bypass the Same Origin Policy and conduct cross-site scripting (XSS) attacks via crafted dialogArguments values.
+| [CVE-2009-3940] Unspecified vulnerability in Guest Additions in Sun xVM VirtualBox 1.6.x and 2.0.x before 2.0.12, 2.1.x, and 2.2.x, and Sun VirtualBox before 3.0.10, allows guest OS users to cause a denial of service (memory consumption) on the guest OS via unknown vectors.
+| [CVE-2009-3932] The Gears plugin in Google Chrome before 3.0.195.32 allows user-assisted remote attackers to cause a denial of service (memory corruption and plugin crash) or possibly execute arbitrary code via unspecified use of the Gears SQL API, related to putting "SQL metadata into a bad state."
+| [CVE-2009-3923] The VirtualBox 2.0.8 and 2.0.10 web service in Sun Virtual Desktop Infrastructure (VDI) 3.0 does not require authentication, which allows remote attackers to obtain unspecified access via vectors involving requests to an Apache HTTP Server.
+| [CVE-2009-3692] Unspecified vulnerability in the VBoxNetAdpCtl configuration tool in Sun VirtualBox 3.0.x before 3.0.8 on Solaris x86, Linux, and Mac OS X allows local users to gain privileges via unknown vectors.
+| [CVE-2009-3525] The pyGrub boot loader in Xen 3.0.3, 3.3.0, and Xen-3.3.1 does not support the password option in grub.conf for para-virtualized guests, which allows attackers with access to the para-virtualized guest console to boot the guest or modify the guest's kernel boot parameters without providing the expected password.
+| [CVE-2009-3374] The XPCVariant::VariantDataToJS function in the XPCOM implementation in Mozilla Firefox 3.0.x before 3.0.15 and 3.5.x before 3.5.4 does not enforce intended restrictions on interaction between chrome privileged code and objects obtained from remote web sites, which allows remote attackers to execute arbitrary JavaScript with chrome privileges via unspecified method calls, related to "doubly-wrapped objects."
+| [CVE-2009-3369] CgiUserConfigEdit in BackupPC 3.1.0, when SSH keys and Rsync are in use in a multi-user environment, does not restrict users from the ClientNameAlias function, which allows remote authenticated users to read and write sensitive files by modifying ClientNameAlias to match another system, then initiating a backup or restore.
+| [CVE-2009-2856] Sun Virtual Desktop Infrastructure (VDI) 3.0, when anonymous binding is enabled, does not properly handle a client's attempt to establish an authenticated and encrypted connection, which might allow remote attackers to read cleartext VDI configuration-data requests by sniffing LDAP sessions on the network.
+| [CVE-2009-2813] Samba 3.4 before 3.4.2, 3.3 before 3.3.8, 3.2 before 3.2.15, and 3.0.12 through 3.0.36, as used in the SMB subsystem in Apple Mac OS X 10.5.8 when Windows File Sharing is enabled, Fedora 11, and other operating systems, does not properly handle errors in resolving pathnames, which allows remote authenticated users to bypass intended sharing restrictions, and read, create, or modify files, in certain circumstances involving user accounts that lack home directories.
+| [CVE-2009-2715] Sun VirtualBox 2.2 through 3.0.2 r49928 allows guest OS users to cause a denial of service (Linux host OS reboot) via a sysenter instruction.
+| [CVE-2009-2714] Unspecified vulnerability in Sun VirtualBox 3.0.0 and 3.0.2 allows guest OS users to cause a denial of service (host OS reboot) via unknown vectors.
+| [CVE-2009-2664] The js_watch_set function in js/src/jsdbgapi.cpp in the JavaScript engine in Mozilla Firefox before 3.0.12 allows remote attackers to cause a denial of service (assertion failure and application exit) or possibly execute arbitrary code via a crafted .js file, related to a "memory safety bug." NOTE: this was originally reported as affecting versions before 3.0.13.
+| [CVE-2009-2277] Cross-site scripting (XSS) vulnerability in WebAccess in VMware VirtualCenter 2.0.2 and 2.5 and VMware ESX 3.0.3 and 3.5 allows remote attackers to inject arbitrary web script or HTML via vectors related to "context data."
+| [CVE-2009-2267] VMware Workstation 6.5.x before 6.5.3 build 185404, VMware Player 2.5.x before 2.5.3 build 185404, VMware ACE 2.5.x before 2.5.3 build 185404, VMware Server 1.x before 1.0.10 build 203137 and 2.x before 2.0.2 build 203138, VMware Fusion 2.x before 2.0.6 build 196839, VMware ESXi 3.5 and 4.0, and VMware ESX 2.5.5, 3.0.3, 3.5, and 4.0, when Virtual-8086 mode is used, do not properly set the exception code upon a page fault (aka #PF) exception, which allows guest OS users to gain privileges on the guest OS by specifying a crafted value for the cs register.
+| [CVE-2009-1840] Mozilla Firefox before 3.0.11, Thunderbird, and SeaMonkey do not check content policy before loading a script file into a XUL document, which allows remote attackers to bypass intended access restrictions via a crafted HTML document, as demonstrated by a "web bug" in an e-mail message, or web script or an advertisement in a web page.
+| [CVE-2009-1839] Mozilla Firefox 3 before 3.0.11 associates an incorrect principal with a file: URL loaded through the location bar, which allows user-assisted remote attackers to bypass intended access restrictions and read files via a crafted HTML document, aka a "file-URL-to-file-URL scripting" attack.
+| [CVE-2009-1307] The view-source: URI implementation in Mozilla Firefox before 3.0.9, Thunderbird, and SeaMonkey does not properly implement the Same Origin Policy, which allows remote attackers to (1) bypass crossdomain.xml restrictions and connect to arbitrary web sites via a Flash file
+| [CVE-2009-0357] Mozilla Firefox before 3.0.6 and SeaMonkey before 1.1.15 do not properly restrict access from web pages to the (1) Set-Cookie and (2) Set-Cookie2 HTTP response headers, which allows remote attackers to obtain sensitive information from cookies via XMLHttpRequest calls, related to the HTTPOnly protection mechanism.
+| [CVE-2009-0355] components/sessionstore/src/nsSessionStore.js in Mozilla Firefox before 3.0.6 does not block changes of INPUT elements to type="file" during tab restoration, which allows user-assisted remote attackers to read arbitrary files on a client machine via a crafted INPUT element.
+| [CVE-2008-6506] Unspecified vulnerability in phpBB before 3.0.4 allows attackers to bypass intended access restrictions and activate de-activated accounts via unknown vectors.
+| [CVE-2008-5513] Unspecified vulnerability in the session-restore feature in Mozilla Firefox 3.x before 3.0.5 and 2.x before 2.0.0.19 allows remote attackers to bypass the same origin policy, inject content into documents associated with other domains, and conduct cross-site scripting (XSS) attacks via unknown vectors related to restoration of SessionStore data.
+| [CVE-2008-5507] Mozilla Firefox 3.x before 3.0.5 and 2.x before 2.0.0.19, Thunderbird 2.x before 2.0.0.19, and SeaMonkey 1.x before 1.1.14 allow remote attackers to bypass the same origin policy and access portions of data from another domain via a JavaScript URL that redirects to the target resource, which generates an error if the target data does not have JavaScript syntax, which can be accessed using the window.onerror DOM API.
+| [CVE-2008-5505] Mozilla Firefox 3.x before 3.0.5 allows remote attackers to bypass intended privacy restrictions by using the persist attribute in an XUL element to create and access data entities that are similar to cookies.
+| [CVE-2008-5019] The session restore feature in Mozilla Firefox 3.x before 3.0.4 and 2.x before 2.0.0.18 allows remote attackers to violate the same origin policy to conduct cross-site scripting (XSS) attacks and execute arbitrary JavaScript with chrome privileges via unknown vectors.
+| [CVE-2008-4405] xend in Xen 3.0.3 does not properly limit the contents of the /local/domain xenstore directory tree, and does not properly restrict a guest VM's write access within this tree, which allows guest OS users to cause a denial of service and possibly have unspecified other impact by writing to (1) console/tty, (2) console/limit, or (3) image/device-model-pid.  NOTE: this issue was originally reported as an issue in libvirt 0.3.3 and xenstore, but CVE is considering the core issue to be related to Xen.
+| [CVE-2008-4343] The Chilkat XML ChilkatUtil.CkData.1 ActiveX control (ChilkatUtil.dll) 3.0.3.0 and earlier allows remote attackers to create, overwrite, and modify arbitrary files for execution via a call to the (1) SaveToFile, (2) SaveToTempFile, or (3) AppendBinary method.  NOTE: this issue might only be exploitable in limited environments or non-default browser settings.  NOTE: this can be leveraged for remote code execution by accessing files using hcp:// URLs.
+| [CVE-2008-4068] Directory traversal vulnerability in Mozilla Firefox before 2.0.0.17 and 3.x before 3.0.2, Thunderbird before 2.0.0.17, and SeaMonkey before 1.1.12 allows remote attackers to bypass "restrictions imposed on local HTML files," and obtain sensitive information and prompt users to write this information into a file, via directory traversal sequences in a resource: URI.
+| [CVE-2008-2105] email_in.pl in Bugzilla 2.23.4, 3.0.x before 3.0.4, and 3.1.x before 3.1.4 allows remote authenticated users to more easily spoof the changer of a bug via a @reporter command in the body of an e-mail message, which overrides the e-mail address as normally obtained from the From e-mail header.  NOTE: since From headers are easily spoofed, this only crosses privilege boundaries in environments that provide additional verification of e-mail addresses.
+| [CVE-2008-2100] Multiple buffer overflows in VIX API 1.1.x before 1.1.4 build 93057 on VMware Workstation 5.x and 6.x, VMware Player 1.x and 2.x, VMware ACE 2.x, VMware Server 1.x, VMware Fusion 1.x, VMware ESXi 3.5, and VMware ESX 3.0.1 through 3.5 allow guest OS users to execute arbitrary code on the host OS via unspecified vectors.
+| [CVE-2008-1944] Buffer overflow in the backend framebuffer of XenSource Xen Para-Virtualized Framebuffer (PVFB) Message 3.0 through 3.0.3 allows local users to cause a denial of service (SDL crash) and possibly execute arbitrary code via "bogus screen updates," related to missing validation of the "format of messages."
+| [CVE-2008-1943] Buffer overflow in the backend of XenSource Xen Para Virtualized Frame Buffer (PVFB) 3.0 through 3.1.2 allows local users to cause a denial of service (crash) and possibly execute arbitrary code via a crafted description of a shared framebuffer.
+| [CVE-2008-1286] Unspecified vulnerability in Sun Java Web Console 3.0.2, 3.0.3, and 3.0.4 allows remote attackers to bypass intended access restrictions and determine the existence of files or directories via unknown vectors.
+| [CVE-2008-0628] The XML parsing code in Sun Java Runtime Environment JDK and JRE 6 Update 3 and earlier processes external entity references even when the "external general entities" property is false, which allows remote attackers to conduct XML external entity (XXE) attacks and cause a denial of service or access restricted resources.
+| [CVE-2007-6530] Buffer overflow in the XUpload.ocx ActiveX control in Persits Software XUpload 2.1.0.1, and probably other versions before 3.0, as used by HP Mercury LoadRunner and Groove Virtual Office, allows remote attackers to execute arbitrary code via a long argument to the AddFolder function.
+| [CVE-2007-6199] rsync before 3.0.0pre6, when running a writable rsync daemon that is not using chroot, allows remote attackers to access restricted files via unknown vectors that cause rsync to create a symlink that points outside of the module's hierarchy.
+| [CVE-2007-5038] The offer_account_by_email function in User.pm in the WebService for Bugzilla before 3.0.2, and 3.1.x before 3.1.2, does not check the value of the createemailregexp parameter, which allows remote attackers to bypass intended restrictions on account creation.
+| [CVE-2007-4749] The cmdjob utility in Autodesk Backburner 3.0.2 allows remote attackers to execute arbitrary commands on render servers by queueing jobs that contain these commands.  NOTE: this is only a vulnerability in environments in which the administrator has not followed documentation that outlines the security risks of operating Backburner on untrusted networks.
+| [CVE-2007-3514] Cross-domain vulnerability in Apple Safari for Windows 3.0.2 allows remote attackers to bypass the Same Origin Policy and access restricted information from other domains via JavaScript that overwrites the document variable and statically sets the document.domain attribute to a file:// location, a different vector than CVE-2007-3482.
+| [CVE-2007-3482] Cross-domain vulnerability in Apple Safari for Windows 3.0.1 allows remote attackers to bypass the "same origin policy" and access restricted information from other domains via JavaScript that overwrites the document variable and statically sets the document.domain attribute.
+| [CVE-2007-2835] Multiple stack-based buffer overflows in (1) CCE_pinyin.c and (2) xl_pinyin.c in ImmModules/cce/ in unicon-imc2 3.0.4, as used by zhcon and other applications, allow local users to gain privileges via a long HOME environment variable.
+| [CVE-2007-0856] TmComm.sys 1.5.0.1052 in the Trend Micro Anti-Rootkit Common Module (RCM), with the VsapiNI.sys 3.320.0.1003 scan engine, as used in Trend Micro PC-cillin Internet Security 2007, Antivirus 2007, Anti-Spyware for SMB 3.2 SP1, Anti-Spyware for Consumer 3.5, Anti-Spyware for Enterprise 3.0 SP2, Client / Server / Messaging Security for SMB 3.5, Damage Cleanup Services 3.2, and possibly other products, assigns Everyone write permission for the \\.\TmComm DOS device interface, which allows local users to access privileged IOCTLs and execute arbitrary code or overwrite arbitrary memory in the kernel context.
+| [CVE-2006-6621] Filseclab Personal Firewall 3.0.0.8686 relies on the Process Environment Block (PEB) to identify a process, which allows local users to bypass the product's controls on a process by spoofing the (1) ImagePathName, (2) CommandLine, and (3) WindowTitle fields in the PEB.
+| [CVE-2006-6618] AntiHook 3.0.0.23 - Desktop relies on the Process Environment Block (PEB) to identify a process, which allows local users to bypass the product's controls on a process by spoofing the (1) ImagePathName, (2) CommandLine, and (3) WindowTitle fields in the PEB.
+| [CVE-2006-4803] The Fan-Out Linux and UNIX receiver scripts in Novell Identity Manager (IDM) 3.0.1 allows local users to execute arbitrary commands via unspecified vectors involving certain environment variables and "code injection."
+| [CVE-2006-4527] includes/content/gateway.inc.php in CubeCart 3.0.12 and earlier, when magic_quotes_gpc is disabled, uses an insufficiently restrictive regular expression to validate the gateway parameter, which allows remote attackers to conduct PHP remote file inclusion attacks.
+| [CVE-2006-4462] Gonafish.com LinksCaffe 2.0 and 3.0 do not properly restrict access to administrator functions, which allows remote attackers to gain full administration rights via a direct request to Admin/admin1953.php.
+| [CVE-2006-3697] Agnitum Outpost Firewall Pro 3.51.759.6511 (462), as used in (1) Lavasoft Personal Firewall 1.0.543.5722 (433) and (2) Novell BorderManager Novell Client Firewall 2.0, does not properly restrict user activities in application windows that run in a LocalSystem context, which allows local users to gain privileges and execute commands (a) via the "open folder" option when no instance of explorer.exe is running, possibly related to the ShellExecute API function
+| [CVE-2006-3604] Directory traversal vulnerability in FlexWATCH Network Camera 3.0 and earlier allows remote attackers to bypass access restrictions for (1) admin/aindex.asp or (2) admin/aindex.html via a .. (dot dot) and encoded / (%2f) sequence in the URL.
+| [CVE-2006-3549] services/go.php in Horde Application Framework 3.0.0 through 3.0.10 and 3.1.0 through 3.1.1 does not properly restrict its image proxy capability, which allows remote attackers to perform "Web tunneling" attacks and use the server as a proxy via (1) http, (2) https, and (3) ftp URL in the url parameter, which is requested from the server.
+| [CVE-2006-2112] Fuji Xerox Printing Systems (FXPS) print engine, as used in products including (1) Dell 3000cn through 5110cn and (2) Fuji Xerox DocuPrint firmware before 20060628 and Network Option Card firmware before 5.13, allows remote attackers to use the FTP printing interface as a proxy ("FTP bounce") by using arbitrary PORT arguments to connect to systems for which access would be otherwise restricted.
+| [CVE-2005-3786] Novell ZENworks for Desktops 4.0.1, ZENworks for Servers 3.0.2, and ZENworks 6.5 Desktop Management does not restrict access to Remote Diagnostics, which allows local users to bypass security policies by using Console One.
+| [CVE-2005-3134] Citrix Metaframe Presentation Server 3.0 and 4.0 allows remote attackers to bypass policy restrictions by downloading the launch.ica file and changing the client device name (ClientName).
+| [CVE-2005-2916] Linksys WRT54G 3.01.03, 3.03.6, 4.00.7, and possibly other versions before 4.20.7, does not verify user authentication until after an HTTP POST request has been processed, which allows remote attackers to (1) modify configuration using restore.cgi or (2) upload new firmware using upgrade.cgi.
+| [CVE-2005-1677] Unknown vulnerability in Groove Virtual Office before 3.1 build 2338, before 3.1a build 2364, and Groove Workspace before 2.5n build 1871 allows remote attackers to bypass restrictions on COM objects.
+| [CVE-2005-1580] users.ini.php in BoastMachine 3.0 does not properly restrict the types of files that can be uploaded, which allows remote attackers to execute arbitrary code.
+| [CVE-2005-1337] Apple Help Viewer 2.0.7 and 3.0.0 in Mac OS X 10.3.9 allows remote attackers to read and execute arbitrary scrpts with less restrictive privileges via a help:// URI.
+| [CVE-2005-0968] Computer Associates (CA) eTrust Intrusion Detection 3.0 allows remote attackers to cause a denial of service via large size values that are not properly validated before calling the CPImportKey function in the Crypto API.
+| [CVE-2005-0821] Unknown vulnerability in Citrix MetaFrame Conferencing Manager 3.0 allows conference members to bypass organizer restrictions to control the keyboard and mouse.
+| [CVE-2005-0811] The web interface in NotifyLink 3.0 does not properly restrict access to functions that have been disabled in the GUI, which allows remote authenticated users to bypass intended restrictions via a direct request to certain URLs.
+| [CVE-2004-1115] The init scripts in Search for Extraterrestrial Intelligence (SETI) project 3.08-r3 and earlier execute user-owned programs with root privileges, which allows local users to gain privileges by modifying the programs.
+| [CVE-2004-0815] The unix_clean_name function in Samba 2.2.x through 2.2.11, and 3.0.x before 3.0.2a, trims certain directory names down to absolute paths, which could allow remote attackers to bypass the specified share restrictions and read, write, or list arbitrary files via "/.////" style sequences in pathnames.
+| [CVE-2004-0461] The DHCP daemon (DHCPD) for ISC DHCP 3.0.1rc12 and 3.0.1rc13, when compiled in environments that do not provide the vsnprintf function, uses C include files that define vsnprintf to use the less safe vsprintf function, which can lead to buffer overflow vulnerabilities that enable a denial of service (server crash) and possibly execute arbitrary code.
+| [CVE-2003-1031] Cross-site scripting (XSS) vulnerability in register.php for vBulletin 3.0 Beta 2 allows remote attackers to inject arbitrary HTML or web script via optional fields such as (1) "Interests-Hobbies", (2) "Biography", or (3) "Occupation."
+| [CVE-2003-0828] Buffer overflow in freesweep in Debian GNU/Linux 3.0 allows local users to gain "games" group privileges when processing environment variables.
+| [CVE-2003-0217] Cross-site scripting (XSS) vulnerability in Neoteris Instant Virtual Extranet (IVE) 3.01 and earlier allows remote attackers to insert arbitrary web script and bypass authentication via a certain CGI script.
+| [CVE-2003-0039] ISC dhcrelay (dhcp-relay) 3.0rc9 and earlier, and possibly other versions, allows remote attackers to cause a denial of service (packet storm) via a certain BOOTP packet that is forwarded to a broadcast MAC address, causing an infinite loop that is not restricted by a hop count.
+| [CVE-2002-1419] The upgrade of IRIX on Origin 3000 to 6.5.13 through 6.5.16 changes the MAC address of the system, which could modify intended access restrictions that are based on a MAC address.
+| [CVE-2002-1104] Cisco Virtual Private Network (VPN) Client software 2.x.x and 3.x before 3.0.5 allows remote attackers to cause a denial of service (crash) via TCP packets with source and destination ports of 137 (NETBIOS).
+| [CVE-2002-1097] Cisco VPN 3000 Concentrator 2.2.x, and 3.x before 3.5.2, allows restricted administrators to obtain certificate passwords that are stored in plaintext in the HTML source code for Certificate Management pages.
+| [CVE-2002-1096] Cisco VPN 3000 Concentrator 2.2.x, and 3.x before 3.5.1, allows restricted administrators to obtain user passwords that are stored in plaintext in HTML source code.
+| [CVE-2002-1072] ZyXEL Prestige 642R 2.50(FA.1) and Prestige 310 V3.25(M.01), allows remote attackers to cause a denial of service via an oversized, fragmented "jolt" style ICMP packet.
+| [CVE-2002-0229] Safe Mode feature (safe_mode) in PHP 3.0 through 4.1.0 allows attackers with access to the MySQL database to bypass Safe Mode access restrictions and read arbitrary files using "LOAD DATA INFILE LOCAL" SQL statements.
+| [CVE-2002-0132] Buffer overflow in Chinput 3.0 allows local users to execute arbitrary code via a long HOME environment variable.
+| [CVE-2002-0058] Vulnerability in Java Runtime Environment (JRE) allows remote malicious web sites to hijack or sniff a web client's sessions, when an HTTP proxy is being used, via a Java applet that redirects the session to another server, as seen in (1) Netscape 6.0 through 6.1 and 4.79 and earlier, (2) Microsoft VM build 3802 and earlier as used in Internet Explorer 4.x and 5.x, and possibly other implementations that use vulnerable versions of SDK or JDK.
+| [CVE-2001-0872] OpenSSH 3.0.1 and earlier with UseLogin enabled does not properly cleanse critical environment variables such as LD_PRELOAD, which allows local users to gain root privileges.
+| [CVE-2000-1230] Backdoor in auth.php3 in Phorum 3.0.7 allows remote attackers to access restricted web pages via an HTTP request with the PHP_AUTH_USER parameter set to "boogieman".
+| [CVE-2000-1101] Directory traversal vulnerability in Winsock FTPd (WFTPD) 3.00 and 2.41 with the "Restrict to home directory" option enabled allows local users to escape the home directory via a "/../" string, a variation of the .. (dot dot) attack.
+| [CVE-2000-1024] eWave ServletExec 3.0C and earlier does not restrict access to the UploadServlet Java/JSP servlet, which allows remote attackers to upload files and execute arbitrary commands.
+| [CVE-2000-0025] IIS 4.0 and Site Server 3.0 allow remote attackers to read source code for ASP files if the file is in a virtual directory whose name includes extensions such as .com, .exe, .sh, .cgi, or .dll, aka the "Virtual Directory Naming" vulnerability.
+| [CVE-1999-1584] Unknown vulnerability in (1) loadmodule, and (2) modload if modload is installed with setuid/setgid privileges, in SunOS 4.1.1 through 4.1.3c, and Open Windows 3.0, allows local users to gain root privileges via environment variables, a different vulnerability than CVE-1999-1586.
+| [CVE-1999-1527] Internal HTTP server in Sun Netbeans Java IDE in Netbeans Developer 3.0 Beta and Forte Community Edition 1.0 Beta does not properly restrict access to IP addresses as specified in its configuration, which allows arbitrary remote attackers to access the server.
+| [CVE-1999-0297] Buffer overflow in Vixie Cron library up to version 3.0 allows local users to obtain root access via a long environmental variable.
+| 
+| OSVDB - http://www.osvdb.org:
+| [91720] Konftel 300IP /cgi-bin/dorestart.cgi Remote DoS
+| [6995] Symantec Gateway Security 360R VPN Wireless Restriction Bypass
+| [95261] Huawei E587 3G Mobile Hotspot /api/device/time Unspecified Remote Command Execution
+| [88268] Red Hat Enterprise Virtualization Manager Multiple API Request Parsing Remote Access Restriction Bypass
+| [52462] Linux Kernel seccomp Subsystem kernel/seccomp.c __secure_computing Function 32/64 Bit Syscall Cross-handling Access Restriction Bypass
+| [52461] Linux Kernel 32bit/64bit audit_syscall_entry Function 32/64 Bit Syscall Cross-handling Audit Configuration Restriction Bypass
+| [43657] 3Com 3CRWER100-75 Router Virtual Server Remote Administration Bypass
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [58755] Konftel 300IP 'dorestart.cgi' Remote Denial of Service Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1025429] HP Virtual Server Environment Lets Remote Authenticated Users Gain Elevated Privileges
+| [1024640] HP Virtual Server Environment Lets Remote Users Download Arbitrary Files
+| [1021919] Java Runtime Environment (JRE) Virtual Machine Lets Remote Users Read/Write Files and Execute Local Applications
+| [1021311] Java Runtime Environment UTF-8 Decoding Bug May Let Users Bypass Access Restrictions
+| [1020460] Java Runtime Environment (JRE) Lets Remote Applets Bypass Secure Static Versioning Restrictions
+| [1020455] Java Runtime Environment (JRE) Virtual Machine Bug Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1019971] Adobe Acrobat Javascript API app.checkForUpdate() Function Lets Remote Users Execute Restricted Functions
+| [1019555] Java Runtime Environment Virtual Machine Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1019553] Java Runtime Environment Java APIs Let Remote JavaScript Gain Access to Network Resources
+| [1018771] Java Runtime Environment (JRE) Bugs Let Remote Users Bypass Network Access Restrictions
+| [1017499] Cisco Unified Contact Center JTapi Gateway Can Be Restarted By Remote Users
+| [1017050] Netscape Portable Runtime API Environment Variable Lets Local Users Create Arbitrary Files
+| [1015596] Sun Java Runtime Environment (JRE) Reflection API Multiple Bugs Let Applets Gain Elevated Privileges
+| [1015280] Sun Java Runtime Environment (JRE) Reflection API Bugs Let Applets Gain Elevated Privileges
+| [1005701] Sun Java Runtime Environment (JRE) Bytecode Verifier Analysis Flaw Lets Remote Users Bypass Many Java Security Restrictions
+| [1005698] Microsoft Java Virtual Machine (VM) Class Loader Security Flaw Lets Remote Users Bypass Java Security Restrictions
+| [1003446] Microsoft Internet Information Server Can Be Stopped By Local Users Removing Virtual Directories in a Shared Hosting Environment
+| [1028846] IBM WebSphere Commerce REST Services Session Management Flaw Lets Remote Users Hijack Sessions
+| [1028822] Symantec Workspace Virtualization Flaw in 'fslx.sys' Lets Local Users Gain Elevated Privileges
+| [1028809] IBM API Management Lets Remote Users Gain Unauthorized Access to the API
+| [1028793] Oracle Virtualization Flaws Let Remote Users Partially Access and Modify Data and Partially Deny Service
+| [1028772] HP StoreVirtual Storage Undocumented Administrative Account Lets Remote Users Access the System
+| [1028771] HP LeftHand Virtual SAN Appliance Undocumented Administrative Account Lets Remote Users Access the System
+| [1028764] Cisco Virtualization Experience Client Permissions Error Lets Local Users Gain Elevated Privileges
+| [1028756] Microsoft .NET Bug Lets Remote Users Execute Arbitrary Code and Bypass Security Restrictions
+| [1028735] Red Hat Enterprise Virtualization Manager Permission Check Flaw Lets Local Users Deny Service
+| [1028712] Oracle VirtualBox 'tracepath' Bug Lets Local Guest Users Deny Service on the Target Host
+| [1028625] Apple OS X Bugs Let Remote Users Execute Arbitrary Code and Local Users Bypass Security Restrictions
+| [1028466] Oracle Java Reflection API Flaw Lets Remote Users Execute Arbitrary Code
+| [1028357] McAfee Virtual Technician ActiveX Control Save() Function Lets Local Users Gain Elevated Privileges
+| [1028208] Cisco Cloud Portal nsAPI Permission Validation Flaw Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1028123] Microsoft .NET Bug Lets Remote Users Execute Arbitrary Code and Bypass Security Restrictions
+| [1028110] Rails attr_protected Bug Lets Remote Users Bypass Security Restrictions
+| [1028083] HP LeftHand Virtual SAN Appliance Bugs Let Remote Users Execute Arbitrary Code
+| [1028076] Red Hat Enterprise Virtualization Manager Lets Local Users Obtain Passwords and Remote Authenticated Users Deny Service
+| [1028031] Linux Kernel IPv6 Fragmentation Bug Lets Remote Users Bypass Security Restrictions
+| [1028017] Cisco TelePresence Video Communication Server (VCS) Lets Remote Users Access a Restricted Policy Service
+| [1027963] Cisco Prime LAN Management Solution Virtual Appliance Lets Remote Users Execute Commands With Root Privileges
+| [1027945] Microsoft .NET Flaws Let Remote Users Execute Arbitrary Code, Obtain Potentially Sensitive Information, and Bypass Security Restrictions
+| [1027860] Windows IP-HTTPS Certificate Processing Flaw Lets Remote Users Bypass Security Restrictions
+| [1027853] Adobe ColdFusion Lets Local Users Bypass Sandbox Restrictions
+| [1027838] Red Hat Enterprise Virtualization Manager Bugs Let Local Users Gain Elevated Privileges and Remote Authenticated Users Access Data
+| [1027782] VMware ESX/ESXi vSphere API Bug Lets Remote Users Deny Service
+| [1027781] RSA Data Protection Manager Bugs Permit Cross-Site Scripting Attacks and Let Local Users Bypass Security Restrictions
+| [1027753] Microsoft .NET Flaws Let Remote Users Execute Arbitrary Code, Obtain Potentially Sensitive Information, and Bypass Security Restrictions
+| [1027706] mod_security Multipart Processing Flaw Lets Remote Users Bypass Security Restrictions
+| [1027681] IBM AIX FTP Client Lets Remote Authenticated Users Access Restricted Files
+| [1027672] Oracle Java Runtime Environment (JRE) Bugs Let Remote Users Gain Full Control of the Target System
+| [1027666] Oracle Virtualization Bugs Let Remote Users Partially Modify Data and Local Users Partially Deny Service
+| [1027609] SAPID Include File Bug Lets Remote Users Execute Arbitrary Code
+| [1027552] Apple iOS Multiple Bugs Let Remote Users Execute Arbitrary Code and Obtain Information and Local Users Bypass Security Restrictions
+| [1027537] Moodle Multiple Bugs Let Remote Authenticated Users Bypass Security Restrictions and Gain Elevated Privileges
+| [1027341] bind-dyndb-ldap DN Escaping Flaw Lets Remote Users Deny Service
+| [1027286] PHP SQLite Bug Lets Users Bypass open_basedir Restrictions
+| [1027072] Linux Kernel fcap Lets Local Users Bypass Personality Flag Restrictions
+| [1027050] Xinetd TCPMUX Bug Lets Remote Users Access Restricted Services
+| [1027019] VMware ESX/ESXi Virtual Floppy Configuration and SCSI Device Registration Flaws Let Local Guest Users Gain Elevated Privileges
+| [1027017] VMware Workstation/Player/Fusion Virtual Floppy Configuration and SCSI Device Registration Flaws Let Local Guest Users Gain Elevated Privileges
+| [1026996] McAfee Virtual Technician ActiveX Control GetObject() Function Lets Remote Users Execute Arbitrary Code
+| [1026848] Red Hat Enterprise Virtualization Manager XML External Entity Processing Lets Remote Users Obtain Potentially Sensitive Information
+| [1026785] Apple Safari Bugs Let Remote Users Spoof the URL Address Bar, Bypass Cookie Restrictions, and Obtain Authentication Information
+| [1026737] Bugzilla Input Validation Flaw in XML-RPC API Permits Cross-Site Request Forgery Attacks
+| [1026610] Mozilla Thunderbird IPv6 Address Processing Lets Remote Users Bypass Same-Origin Restrictions to Obtain Error Messages
+| [1026609] Mozilla Seamonkey IPv6 Address Processing Lets Remote Users Bypass Same-Origin Restrictions to Obtain Error Messages
+| [1026608] Mozilla Firefox IPv6 Address Processing Lets Remote Users Bypass Same-Origin Restrictions to Obtain Error Messages
+| [1026591] RSA enVision Discloses Environment Variable Information to Remote Users
+| [1026545] JBoss mod_cluster Lets Remote Workers Bypass Security Restrictions
+| [1026531] Oracle Virtualization Bugs Let Local Users Partially Deny Service and Remote Authenticated Users Partially Access and Modify Data
+| [1026345] HP Operations Agent and Performance Agent Lets Local Users Access a Restricted Directory
+| [1026316] HP StorageWorks P4000 Virtual SAN Appliance Lets Remote Users Execute Arbitrary Code
+| [1026314] Adobe Flash Player Multiple Flaws Let Remote Users Execute Arbitrary Code and Bypass Cross-Domain Origin Restrictions
+| [1026304] IcedTea-Web Lets Remote Users Bypass Cross-Origin Restrictions
+| [1026275] Citrix XenDesktop Lets Remote Authenticated Users Bypass Client Drive Mapping Restrictions
+| [1026216] Oracle Java Runtime Environment (JRE) Lets Remote Users Decrypt SSL/TLS Traffic
+| [1026215] Oracle Java Runtime Environment (JRE) Multiple Flaws Let Remote Users Execute Arbitrary Code and Deny Service
+| [1026178] Apple Safari Bugs Let Remote Users Conduct Cross-Site Scripting Attacks, Execute Arbitrary Code, and Bypass Cookie Restrictions
+| [1026162] Microsoft .NET Inheritance Restriction Error Lets Remote Users Execute Arbitrary Code
+| [1026161] Microsoft Silverlight Inheritance Restriction Error Lets Remote Users Execute Arbitrary Code
+| [1025992] IBM WebSphere Application Server Discloses Restricted Files to Remote Users
+| [1025898] Windows Remote Access Service NDISTAPI Driver Lets Local Users Gain Elevated Privileges
+| [1025853] Red Hat Enterprise Virtualization Hypervisor VLAN Packet Processing Flaw Lets Remote Users Deny Service
+| [1025805] Oracle VM VirtualBox Lets Local Users Gain Elevated Privileges
+| [1025773] BlackBerry Enterprise Server BlackBerry Administration API Lets Remote Users View Sensitive Information and Deny Service
+| [1025610] Oracle Java Runtime Environment (JRE) Multiple Flaws Let Remote Users Execute Arbitrary Code
+| [1025609] HP Mercury LoadRunner Buffer Overflow in Processing Virtual User Script Files Lets Remote Users Execute Arbitrary Code
+| [1025458] Mozilla Thunderbird Multiple Flaws Let Remote Users Execute Arbitrary Code and Access Restricted Resources
+| [1025457] Mozilla Seamonkey Multiple Flaws Let Remote Users Execute Arbitrary Code, Access Information, and Access Restricted Resources
+| [1025456] Mozilla Firefox Multiple Flaws Let Remote Users Execute Arbitrary Code, Access Information, and Access Restricted Resources
+| [1025348] Windows Operating System Loader Driver Signing Restrictions Can Be Bypassed
+| [1025282] Juniper Instant Virtual Extranet (IVE) Bug in Network Connect Credential Provider Lets Users Bypass Access Controls
+| [1025262] libvirt API Access Control Flaw Lets Remote Users Deny Service and Potentially Gain Elevated Privileges
+| [1025249] HP Virtual SAN Appliance Stack Overflow in 'hydra.exe' Lets Remote Users Execute Arbitrary Code
+| [1025222] SugarCRM Lets Remote Authenticated Users Bypass 'List' Restrictions
+| [1025062] Oracle Java Runtime Environment (JRE) Double Precision Conversion Error Lets Remote Users Deny Service
+| [1024825] Red Hat Enterprise Virtualization Manager Race Condition Lets Local Users Gain Elevated Privileges
+| [1024647] Palm webOS Flaw in Service API Lets Local Users Gain Elevated Privileges
+| [1024641] HP Insight Control Virtual Machine Management Lets Local Users Gain Elevated Privileges and Permits Remote Cross-Site Scripting and Cross-Site Request Forgery Attacks
+| [1024636] GNU C Library LD_AUDIT Environment Variable May Let Local Users Gain Elevated Privileges
+| [1024631] HP Virtual Connect Enterprise Manager Discloses Files to Remote Users
+| [1024573] Java Runtime Environment Multiple Flaws Let Remote Users Execute Arbitrary Code
+| [1024457] IBM DB2 Privilege Revocation Error May Let Remote Authenticated Users Access Restricted Objects
+| [1024420] RSA Access Manager Server Unspecified Bug Lets Remote Users Bypass Security Restrictions
+| [1024382] cPanel Error in 'autoinstallhome.php' Lets Local Users Bypass PHP Restrictions
+| [1024347] Red Hat Virtual Desktop Server Manager (VDSM) SSL Connection Handling Flaw Lets Remote Users Deny Service
+| [1024345] Windows Kernel win32k!GreStretchBltInternal() Bug Lets Local Users Deny Service
+| [1024305] Microsoft .NET Framework Virtual Method Delegate Processing Error Lets Remote Users Execute Arbitrary Code
+| [1024276] VxWorks loginLib Authentication API Hashing Collision Lets Remote Users Conduct Brute Force Password Guessing Attacks
+| [1024269] Wireshark Buffer Oveflow in SigComp Universal Decompressor Virtual Machine Lets Remote Users Execute Arbitrary Code
+| [1024181] HP Virtual Connect Enterprise Manager Input Validation Hole Permits Cross-Site Scripting Attacks
+| [1024163] Trend Micro InterScan Web Security Virtual Appliance Input Validation Hole Permits Cross-Site Scripting Attacks
+| [1024153] Trend Micro InterScan Web Security Virtual Appliance Flaws Let Local Users Gain Elevated Privileges and Remote Users Upload/Download Arbitrary Files
+| [1024137] Red Hat Virtual Desktop Server Manager Lets Local Users Obtain Potentially Sensitive Information From Deleted Virtual Machines
+| [1024101] Sudo Error in Processing Duplicate Environment Variables Lets Local Users Bypass Access Controls
+| [1024088] Google Chrome Multiple Flaws Let Remote Users Execute Arbitrary Code and Bypass Same-Origin Restrictions
+| [1024084] Microsoft Help and Support Center URL Escaping Flaw Lets Remote Users Execute Arbitrary Commands
+| [1024078] Microsoft SharePoint Input Validation Flaw in toStaticHTML API Permits Cross-Site Scripting Attacks
+| [1024038] FreeBSD jail() Lets Local Users Access Restricted Files
+| [1024032] MySQL Large Packet Processing Flaw in my_net_skip_rest() Lets Remote Users Deny Service
+| [1023989] Kerberos GSS-API Library Null Pointer Dereference Lets Remote Authenticated Users Deny Service
+| [1023951] teTeX Buffer Overflow in Processing Virtual Font Files Lets Remote Users Execute Arbitrary Code
+| [1023928] Google Chrome Multiple Flaws Let Remote Users Execute Arbitrary Code and Conduct Bypass Same-Origin Restrictions
+| [1023913] HP Virtual Machine Manager for Windows Lets Remote Authenticated Users Gain Elevated Privileges
+| [1023801] Apple AirPort Base Station Lets Remote Users Access Restricted Networks
+| [1023733] Kerberos SPNEGO GSS-API Mechanism Flaw Lets Remote Users Deny Service
+| [1023727] CA ARCserve Backup Includes a Vulnerable Distribution of Java Runtime Environment
+| [1023720] Microsoft Virtual PC/Server Lets Local Users Gain Elevated Privileges
+| [1023701] Apache mod_isapi Error Processing Flaw May Let Remote Users Deny Service
+| [1023689] Juniper Instant Virtual Extranet (IVE) Input Validation Hole in 'editbk.cgi' Permits Cross-Site Scripting Attacks
+| [1023656] Windows API Bug Lets Local Users Deny Service
+| [1023530] Citrix XenServer XAPI Bug Lets Local Users Gain Elevated Privileges
+| [1023255] Cisco ASA Clientless SSL VPN Feature Lets Remote Users Bypass Web Browser Same-Origin Policy Restrictions
+| [1023244] Sun Java Runtime Environment Deployment Toolkit Plugin Launch Method Flaw Lets Remote Users Execute Arbitrary Code
+| [1023182] Sun xVM VirtualBox Guest Additions Kernel Memory Consumption Flaw Lets Local Users Deny Service
+| [1023153] Microsoft Web Services on Devices API (WSDAPI) Validation Error Lets Remote Users Execute Arbitrary Code
+| [1023141] Sun Virtual Desktop Infrastructure VirtualBox Web Service Grants Access to Remote Users
+| [1023132] Sun Java Runtime Environment Buffer Overflows in Processing Audio and Image Files Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1023097] Mozilla Firefox Lets Remote Users Bypass Cross-Domain Restrictions
+| [1023013] Microsoft Crypto API NULL Character Flaw in Common Name Field and ASN.1 Integer Overflow Lets Remote Users Spoof Certficiates
+| [1022990] Sun VirtualBox VBoxNetAdpCtl Configuration Tool Lets Local Users Gain Root Privileges
+| [1022986] Google Android SMS and Dalvik API Bugs Let Remote Users Deny Service
+| [1022943] Solaris Trusted Extensions Common Desktop Environment Lets Local Users Gain Elevated Privileges
+| [1022867] Apple iPhone Lets Physically Local Users Bypass Security Restrictions
+| [1022862] IBM WebSphere Application Server doGet/doTrace Method Flaw Lets Remote Users Bypass Security Restrictions
+| [1022734] Sun Virtual Desktop Infrastructure May Use an Insecure LDAP Connection
+| [1022680] Java Runtime Environment (JRE) XML Parsing Bug Lets Remote Users Deny Service
+| [1022677] Sun VirtualBox Lets Local Users In a Virtual Machine Reboot the Host System
+| [1022661] Java Runtime Environment (JRE) XML Digital Signature Flaw May Let Remote Users Bypass Authentication
+| [1022660] Java Runtime Environment (JRE) Integer Overflow in Processing JPEG Images Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1022659] Java Runtime Environment Proxy Mechanism Flaws Let Remote Applets Obtain Elevated Privileges
+| [1022658] Java Runtime Environment Audio System Bug Lets Remote Users Access Java System Properties
+| [1022656] Java Runtime Environment (JRE) Integer Overflow in Unpack200 Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1022544] Microsoft Virtual PC/Server Lets Local Users Gain Elevated Privileges Within a Guest Operating System
+| [1022519] Perl IO::Socket::SSL Certificate Validation Bug Lets Remote Users Bypass Security Restrictions
+| [1022422] Solaris Event Port API Race Condition Lets Local Users Deny Service
+| [1022412] F-Secure Messaging Security Gateway SMTP Turbo Module Bug Lets Remote Users Bypass Security Filtering Restrictions
+| [1022398] Git Virtualization Support Bug Lets Remote Users Deny Service
+| [1022341] SAP GUI Buffer Overflow in 'SAPIrRfc' Lets Remote Users Execute Arbitrary Code
+| [1022296] Apache IncludesNoExec Options Restrictions Can Be Bypass By Local Users
+| [1022094] Mozilla Firefox XMLHttpRequest and XPCNativeWrapper.toString Bugs Let Remote Users Bypass Same-Origin Restrictions
+| [1022093] Mozilla Firefox Bug in Processing Adobe Flash Contents Lets Remote Users Bypass Cross-Domain Restrictions
+| [1022031] VMware Flaw in Virtual Machine Display Function Lets Local Users on a Guest Operating System Gain Elevated Privileges
+| [1021978] VMware VirtualCenter VI Client May Let Certain Local Users Obtain Passwords
+| [1021973] VMware Guest Virtual Device Driver Bug Lets Local Users Deny Service
+| [1021918] Java Runtime Environment (JRE) HTTP Server Bug Lets Remote Users Deny Service
+| [1021917] Java Runtime Environment (JRE) Flaws in Storing and Processing Temporary Font Files Let Remote Users Deny Service
+| [1021913] Java Runtime Environment (JRE) Buffer Overflow in Processing Image Files and Fonts Lets Remote Users Gain Privileges on the Target System
+| [1021894] Java Runtime Environment Buffer Overflows in unpack200 Utility Lets Remote Users Execute Arbitrary Code
+| [1021893] Java Runtime Environment LDAP Implementation Bugs Lets Remote Users Deny Service and Execute Arbitrary Code
+| [1021867] Kerberos GSS-API SPNEGO Null Pointer Dereference and Invalid Memory Access Bugs Let Remote Denial of Service
+| [1021841] Sun xVM VirtualBox Lets Local Users Gain Root Privileges
+| [1021781] Blue Coat ProxySG Host Header Processing May Let Remote Users Bypass Security Restrictions
+| [1021773] HP Virtual Rooms Unspecified Flaw Lets Remote Users Execute Arbitrary Code
+| [1021732] FreeBSD telnetd Environment Variable Validation Flaw Lets Remote Users Execute Code
+| [1021701] Microsoft Exchange MAPI Command Literal Processing Bug Lets Remote Users Deny Service
+| [1021665] Mozilla Firefox Closed Tab Restoration Flaw Lets Remote Users Obtain Files
+| [1021423] Mozilla Firefox window.onerror DOM API Lets Remote Users Obtain Potentially Sensitive Information
+| [1021384] Sun xVM VirtualBox Unsafe Temporary File Lets Local Users Gain Elevated Privileges
+| [1021378] Asterisk Realtime Configuration API Bug Lets Remote Users Deny Service
+| [1021317] Sun Java Runtime Environment Buffer Overflows in Processing Font/Image Files Lets Remote Users Execute Arbitrary Code
+| [1021316] Sun Java Runtime Environment Non-Random Temporary File Names May Lets Users Gain Elevated Privileges
+| [1021315] Sun Java Runtime Environment Java Update Fails to Validate Digital Signatures
+| [1021314] Sun Java Runtime Environment Manifest Bug Lets Remote Users Read/Write Files and Execute Local Applications
+| [1021313] Sun Java Runtime Environment 'Calendar.readObject' Bug Lets Remote Applets Gain Elevated Privileges
+| [1021312] Sun Java Runtime Environment Buffer Overflow in unpack200 Utility Lets Remote Users Execute Arbitrary Code
+| [1021310] Sun Java Runtime Environment Lets Remote Users View Directory Contents
+| [1021309] Sun Java Runtime Environment RSA Public Key Processing Bug Lets Remote Users Deny Service
+| [1021308] Java Runtime Environment Bug in JAAS Kerberos Authentication Lets Remote or Local Users Deny Service
+| [1021307] Sun Java Runtime Environment JAX-WS and JAXB Lets Remote Applets Gain Elevated Privileges
+| [1021306] Sun Java Runtime Environment zip File Processing Bug Lets Remote Users Read Memory Locations
+| [1021305] Sun Java Runtime Environment (JRE) Lets Remote Users Access 'localhost'
+| [1021301] VMware ESX Virtual Hardware Memory Access Bug Lets Local Users Gain Elevated Privileges
+| [1021300] VMware Virtual Hardware Memory Access Bug Lets Local Users Gain Elevated Privileges
+| [1021184] Mozilla Firefox Session Restore Same-Origin Policy Flaw Permits Cross-Domain Scripting and Privilege Escalation Attacks
+| [1021137] Linux Kernel Virtual Dynamic Shared Objects Boundary Error May Let Local Users Gain Elevated Privileges
+| [1021061] Adobe Flash FileReference API Lets Remote Users Execute Arbitrary Code
+| [1021051] Windows Kernel Virtual Address Descriptor Integer Overflow Lets Local Users Gain Elevated Privileges
+| [1021039] Tomcat May Let Remote Users Access Restricted Contexts
+| [1021020] Cisco Unity Bug in Microsoft API Lets Remote Users Deny Service
+| [1020995] PHP Buffer Overflow in explode() Function May Let Users Bypass Safe Mode Restrictions
+| [1020992] VMware VirtualCenter May Display the User's Password in Clear Text
+| [1020880] Apple SearchKit API Integer Overflows May Let Local Users Gain Elevated Privileges
+| [1020854] Linux Kernel SCTP-AUTH API Bugs Let Local Users Obtain Information and Deny Service
+| [1020789] VMware Server ISAPI Extension Bug Lets Remote Users Deny Service
+| [1020693] VMware VirtualCenter Discloses Usernames to Remote Users
+| [1020625] Sun xVM VirtualBox Lets Local Users Gain Full Privileges
+| [1020623] Tomcat RequestDispatcher Bug Lets Remote Users Bypass Access Restrictions
+| [1020515] Citrix XenServer Input Validation Flaw in  XenAPI HTTP Interface Permits Cross-Site Scripting Attacks
+| [1020461] Java Runtime Environment (JRE) Buffer Overflow in Processing Fonts Lets Remote Users Access Files and Gain Privileges on the Target System
+| [1020459] Java Runtime Environment (JRE) Bugs Let Remote Users Connect to Local Host Ports
+| [1020458] Java Runtime Environment (JRE) JMX Function Lets Remote Users Perform Unspecified Operations
+| [1020457] Java Runtime Environment XML Processing Bug Lets Remote Users Access Resources
+| [1020456] Java Runtime Environment (JRE) Scripting Language Bugs Let Remote Users Access Files and Gain Privileges on the Target System
+| [1020352] Adobe Reader Javascript Method Bug Lets Remote Users Execute Restricted Functions
+| [1020328] PHP File and Directory Function safe_mode Restrictions Can By Bypass With 'http://' Prefix
+| [1020327] PHP posix_access() safe_mode Restrictions Can By Bypass With 'http://' Prefix
+| [1020232] Microsoft Speech API Lets Remote Users Execute Arbitrary Commands
+| [1020200] VMware Buffer Overflows in VIX API Let Local Users Execute Arbitrary Code
+| [1020120] Linux Kernel SPARC Architecture Re-Mapped Virtual Address Validation Bug Lets Local Users Crash the System
+| [1020119] Linux Kernel SPARC Architecture Memory Mapped Virtual Address Validation Bug Lets Local Users Crash the System
+| [1019832] Solaris Trusted Extensions Bug Lets Local Applications Bypass Labeled Networking Restrictions
+| [1019715] Cisco IOS Multicast Virtual Private Network (MVPN) Data Leak Lets Remote Users Obtain VPN Traffic
+| [1019714] Cisco IOS Bugs in Virtual Private Dial-up Network PPTP Connection Termination Let Remote Users Deny Service
+| [1019624] VMware Virtual Machine Communication Interface Memory Corruption Flaw Lets Local Users Deny Service
+| [1019616] GroupWise Windows Client API Bug Lets Remote Authenticated Users Access E-mail
+| [1019603] IBM AIX lsmcode Environment Variable Bug Lets Local Users Gain Root Privileges
+| [1019551] Java Runtime Environment Bugs in Image Parsing Library Let Remote Users Gain Privileges
+| [1019548] Java Runtime Environment Applet XSLT Transformation Bug Lets Remote Users Gain Privileges
+| [1019535] MediaWiki Discloses API Data for Other Sites to Remote Users
+| [1019533] NetBSD  fast_ipsec() Endian Order Lets Remote Users Bypass IPSec Policy Restrictions
+| [1019529] IBM WebSphere MQ Lets Local Users Gain Elevated Privileges in COM+ or .NET Environments
+| [1019527] IBM WebSphere MQ Lets Local Users Bypass Queue Manager Access Restrictions
+| [1019512] D-Bus Policy Flaw Lets Remote Users Execute Restricted Method Calls
+| [1019468] ZyXEL Prestige Gateway Lets Remote Users Conduct Cross-Site Scripting Attacks and Remote Authenticated Users Gain Elevated Privileges
+| [1019454] WebLogic Portal Administrative Policy Errors May Let Remote Users Access Restricted Pages
+| [1019311] HP Virtual Rooms Lets Remote Users Execute Arbitrary Code
+| [1019308] Java Runtime Environment Lets Remote Applets and Applications Gain Elevated Privileges
+| [1019292] Java Runtime Environment (JRE) XML External Entity Property Lets Remote Users Access URL Resources
+| [1019265] AIX 'ps' Command Discloses Process Environment Variables to Local Users
+| [1019049] OpenVMS for Integrity Servers Bugs in glBitmap Function and Kerberos API Let Local Users Deny Service
+| [1018981] Citrix NetScaler Input Validation Hole in 'generic_api_call' Permits Cross-Site Scripting Attacks
+| [1018877] IBM WebSphere Application Server API Grants Access to Remote Users
+| [1018847] Java Runtime Environment Lets Remote Applets Gain Elevated Privileges
+| [1018796] Solaris Virtual File System Bug Lets Local Users Consume Kernel Memory
+| [1018769] Java Runtime Environment (JRE) Lets Remote Applets Obscure the Untrusted Applet Warning Banner Display
+| [1018768] Java Runtime Environment Applet Caching Bug May Let Remote Users Bypass Network Access Controls
+| [1018604] Bugzilla Bugs Let Remote Users Inject Commands, Obtain Restricted Information, and Conduct Cross-Site Scripting Attacks
+| [1018576] Java Runtime Environment Font Parsing Bug Lets Remote Applets Gain Elevated Privileges
+| [1018567] Microsoft Virtual PC/Server Heap Overflow Lets Local Users Gain Elevated Privileges
+| [1018539] Linux Kernel libcapi Buffer Overflow Lets Local Users Deny Service and May Let Local Users Gain Elevated Privileges
+| [1018428] Java Runtime Environment Applet Class Loader Bug Lets Remote Users Connect to Localhost Sockets
+| [1018365] Java Runtime Environment XSLT Stylesheet Bug Lets Remote Users Execute Arbitrary Code
+| [1018329] Oracle E-Business Suite Input Validation Hole in Rapid Install Permits Cross-Site Scripting Attacks
+| [1018230] Windows Input Validation Flaw in Win32 API Lets Remote and Local Users Execute Arbitrary Code
+| [1018182] Sun Java Runtime Environment Buffer Overflow in Applet Image Parsing Lets Remote Users Gain Privileges
+| [1018138] Tomcat JK Connector May Let Remote Users Access Restricted Resources
+| [1018098] Citrix Presentation Server Session Reliability Flaw Lets Remote Users Bypass Security Policy Restrictions
+| [1018017] Microsoft CAPICOM 'CAPICOM.Certificates' ActiveX Control Lets Remote Users Execute Arbitrary Code
+| [1018016] Microsoft BizTalk Server 'CAPICOM.Certificates' ActiveX Control Lets Remote Users Execute Arbitrary Code
+| [1017944] Apple File Protocol Client Environment Variable Bug Lets Local Users Gain System Privileges
+| [1017941] Mac OS X writeconfig Utility Environment Variable Sanitation Bug Lets Local Users Gain Root Privileges
+| [1017931] ProFTPD Auth API State Error May Let Remote Users Access the System in Certain Cases
+| [1017745] Sun Java Dynamic Management Kit Lets Certain Local Users Access Restricted Data
+| [1017731] IBM DB2 Local Fenced Processes Can Access Restricted Directories
+| [1017654] Mozilla Firefox 'location.hostname' Property Lets Remote Users Bypass Domain Security Restrictions
+| [1017592] HP Tru64 UNIX ps Command Discloses Environment Variables to Local Users
+| [1017562] InterScan VirusWall Buffer Overflow in 'libvsapi.so' May Let Local Users Gain Elevated Privileges
+| [1017520] Java Runtime Environment GIF Image Buffer Overflow Lets Remote Applets Gain Elevated Privileges
+| [1017494] Kerberos kadmind GSS-API 'mechglue' Memory Error Lets Remote Users Execute Arbitrary Code
+| [1017427] Java Runtime Environment Discloses Applet Information to Remote Users
+| [1017426] Java Runtime Environment Serialization Bugs Let Remote Applets Gain Elevated Privileges
+| [1017425] Java Runtime Environment Buffer Overflows Let Remote Users Execute Arbitrary Code
+| [1017270] VMware VirtualCenter Client Does Not Validate Server Certificates
+| [1017229] Sun Java Runtime Environment Bug in Swing Library Lets Remote Applets Access Data from Other Applets
+| [1017135] HP NonStop Server Lets Local Users Access Restricted Files in Certain Cases
+| [1017107] Virtual Law Office Include File Bug in 'phpc_root_path' Parameter Lets Remote Users Execute Arbitrary Code
+| [1017103] Hosting Controller 'EnableForum.asp' and 'DisableForum.asp' Scripts Let Remote Users Create or Delete Forums and Virtual Directories
+| [1017013] Solaris Link Aggregation Access Restrictions Let Local Users Monitor Network Packets
+| [1016977] PHP Race Condition Lets Users Bypass open_basedir Restrictions
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016853] Novell Identity Manager Environment Variable Validation Bug Lets Local Users Gain Elevated Privileges
+| [1016744] SSH Tectia Manager Process Restart Flaw May Let Local Users Gain Elevated Privileges
+| [1016710] MySQL Case-Sensitive Database Names May Let Users Access Restricted Databases
+| [1016706] Solaris libnsl or TLI/XTI API Race Condition Lets Local Users Deny Service
+| [1016660] Adobe ColdFusion Grants Users Access to AdminAPI
+| [1016650] SAPID Include File Bugs in 'root_path' and 'GLOBALS[
+| [1016617] MySQL MERGE Access Control Error May Let Users Access a Restricted Table
+| [1016598] ZyXEL Prestige 660H-61 Router Input Validation Hole Permits Cross-Site Scripting Attacks
+| [1016542] Solaris Event Port API Bugs May Let Local or Remote Users Deny Service
+| [1016455] sipXtapi Buffer Overflow in CSeq Field Lets Remote Users Execute Arbitrary Code
+| [1016412] Siemens SpeedStream Wireless Router UPnP Support Lets Remote Users Access Restricted Files
+| [1016404] Novell GroupWise API May Let Remote Authenticated Users Access Random User E-mails
+| [1016395] Apple File Protocol Search Results May Disclose Restricted File and Folder Names
+| [1016377] PHP error_log() Function Lets Users Bypass Safe Mode File Access Restrictions
+| [1016256] SelectaPix Input Validation Flaws in 'albumID' and 'imageID' Parameters Permit Cross-Site Scripting and SQL Injection Attacks
+| [1016175] PHP libcurl Bug in Processing 'file://' URLs Containing NULL Characters Lets Users Bypass Safe Mode Restrictions
+| [1016122] SAP sapdba Command for Informix Environment Variable Bug Lets Local Users Gain Elevated Privileges
+| [1016085] SelectaPix May Disclose the Installation Path to Remote Users
+| [1016080] Apple Mac OS X CoreFoundation Untrusted Bundles or the CFStringGetFileSystemRepresentation() API May Let Users Execute Arbitrary Code
+| [1016000] Juniper NetScreen Instant Virtual Extranet Buffer Overflow in 'JuniperSetup.ocx' ActiveX Control Lets Remote Users Execute Arbitrary Code
+| [1015882] PHP copy() Function Safe Mode Checking Error Lets Users Bypass Safe Mode File Access Restrictions
+| [1015881] PHP tempname() Argument Error Lets Users Bypass open_basedir Restrictions
+| [1015849] Sun Cluster SunPlex Manager May Let Certain Local Users Access Restricted Files
+| [1015843] TWiki Access Control Bugs in rdiff and preview May Let Remote Users Access Restricted Content
+| [1015732] Red Hat initscripts Environment Variable Processing May Let Local Users Gain Elevated Privileges
+| [1015528] BEA WebLogic Multiple Bugs Let Remote Users Deny Service, Obtain Information, and Access Restricted Resources
+| [1015419] OpenOffice WWW-Browser Button May Not Properly Enforce Hyperlink Security Restrictions
+| [1015371] ColdFusion MX Sandbox Lets Local Users Bypass CreateObject Restrictions and Obtain Authentication Information
+| [1015369] ColdFusion MX Bugs Let Remote Users Bypass Sandbox Restrictions and Attach and E-mail Arbitrary Files
+| [1015282] Sun Java Runtime Environment (JRE) Unspecified Bug Lets Applets Gain Elevated Privileges
+| [1015281] Sun Java Runtime Environment (JRE) JMX Bug Lets Applets Gain Elevated Privileges
+| [1015192] Sudo Input Validation Flaw in Perl-related Environment Variables Lets Certain Local Users Execute Arbitrary Perl Code
+| [1015169] VERITAS Cluster Server for UNIX Buffer Overflow in VCSI18N_LANG Environment Variable Lets Local Users Gain Root Privileges
+| [1015101] Microsoft Internet Explorer J2SE Runtime Environment Bug Lets Remote Users Crash the Target User's Browser
+| [1015002] Uim Input Validation Flaw in Environment Variables May Let Local Users Gain Elevated Privileges
+| [1014948] Ruby State Error May Let Users Bypass Safe Level Restrictions
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1014807] phpWebNotes Include File Error in 'php_api.php' Lets Remote Users Execute Arbitrary Commands
+| [1014802] YaPiG Input Validation Bug in Processing EXIF Meta Data Permits Cross-Site Scripting Attacks
+| [1014719] Cisco Clean Access API Does Not Use Authentication
+| [1014579] Sun Multilanguage Environment Library (libmle) Buffer Overflow Lets Local Users Obtain Elevated Privileges
+| [1014504] PowerDNS Input Validation Flaw in LDAP Backend and Error In Processing Restricted Recursion Requests Let Remote Users Deny Service
+| [1014275] Linux Kernel IA64 Architecture restore_sigcontext() Access Control Bug May Let Local Users Gain Elevated Privileges
+| [1014192] Java Runtime Environment Internal Classes Lets Remote Users Access and Execute Files on the Target User's System
+| [1014142] Mac OS X NFS Export Restrictions Are Not Properly Enforced
+| [1014115] Linux Kernel Radionet Open Source Environment (ROSE) ndigis Input Validation Flaw Has Unspecified Impact
+| [1014103] YaPiG Bugs Let Remote Authenticated Users Execute Arbitrary Commands and Create/Delete Directories and Let Remote Users Conduct Cross-Site Scripting Attacks
+| [1014096] LiteWeb Lets Remote Users Access Restricted Pages
+| [1014019] Groove Virtual Office Lets Remote Users Execute Arbitrary Code and Discloses Information to Local Users
+| [1013933] ASP Virtual News Manager Lets Remote Users Inject SQL Commands
+| [1013380] Nokia Symbian OS Phone Bluetooth Nickame Error Lets Remote Users Restart the Target System
+| [1013308] BadBlue Buffer Overflow in 'mfcisapicommand' Lets Remote Users Execute Arbitrary Code
+| [1013249] Uim Environment Variables May Let Local Users Gain Elevated Privileges
+| [1013035] DokuWiki 'userewrite' Mode Discloses Restricted Pages to Remote Users
+| [1012894] SGI InPerson inpview Environment Variable Input Validation Error Lets Local Users Gain Root Privileges
+| [1012826] Virtual Hosting Control System (VHCS) 'sql.php' Include File Error Lets Remote Users Execute Arbitrary Commands
+| [1012684] Microsoft Windows LoadImage API Buffer Overflow Lets Remote Users Execute Arbitrary Code
+| [1012631] KDE Konqueror Java Bugs Let Remote Users Access Restricted Java Classes
+| [1012298] ZyXEL Prestige 650HW 'rpFWUpload.html' Lets Remote Users Reset the Configuration
+| [1012234] Microsoft Internet Explorer on XP SP2 Has Unspecified Flaws That Let Remote Users Bypass File Download Restrictions
+| [1012224] Sudo Environment Variable Validation Error May Let Local Users Run Arbitrary Commands
+| [1011984] PHP cURL Functions Let Scripts Byass the 'open_basedir' Directory Restrictions
+| [1011940] Microsoft Remote Desktop on Windows XP Lets Remote Authenticated Users Restart the System
+| [1011929] Sudosh Has Unspecified Hole in the Processing of the SHELL Environment Variable
+| [1011898] Sun Java 2 Micro Edition (J2ME) Lets Remote Users Bypass Sandbox Restrictions
+| [1011859] Microsoft Internet Explorer on Windows XP Fails to Restrict Drag and Drop Operations When Configured to Disable These Operations
+| [1011760] YaPiG Input Validation Hole in Comments Lets Remote Users Conduct Cross-Site Scripting Attacks
+| [1011614] Squid SNMP Parsing Error Lets Remote Users Restart the Proxy Server
+| [1011606] MySQL May Let Remote Authenticated Users Access Restricted Tables or Crash the System
+| [1011568] Cyrus SASL SASL_PATH Environment Variable May Let Local Users Gain Elevated Privileges and Buffer Overflow May Permit Remote Code Execution
+| [1011561] online-bookmarks Lets Remote Users Access Restricted Scripts
+| [1011385] Apache Satsify Directive Error May Let Remote Users Access Restricted Resources
+| [1011359] VP-ASP 'shoprestoreorder.asp' May Let Remote Users Keep Database Connections Open
+| [1011342] sudo '-u' sudoedit Error Discloses Restricted Files to Local Users
+| [1011228] WebLogic Case-Sensitive 'web.xml' Patterns May Let Remote Users Access Restricted URLs
+| [1010996] Microsoft Windows XP SP2 Local Computer Scripting Restrictions Can Be Bypassed With a Specially Crafted MHT File
+| [1010970] YaPiG Input Validation Holes Let Remote Users Execute Arbitrary Commands
+| [1010779] Subversion mod_authz_svn Lets Remote Authenticated Users View Restricted Sections
+| [1010744] Conceptronic ADSL Router Can Be Restarted By Remote Users
+| [1010724] I-Cafe Access Restrictions Can By Bypassed By Local Users
+| [1010680] INweb Mail Lets Remote Users Deny Service By Multiple Connections in Rapid Succession
+| [1010652] FreeBSD Jail Utilities (jailutils) May Disclose Environment Information to Local Users
+| [1010275] HP OpenView Select Access UTF-8 Decoding Flaw May Let Remote Users Access Restricted Resources
+| [1010189] Microsoft Outlook 2003 Scripting Restrictions Can Be Bypassed By Remote Users
+| [1010109] IBM Parallel Environment Sample Code Lets Local Users Execute Arbitrary Commands With Root Privileges
+| [1010091] Sun Java Virtual Machine Infinite Loop in decodeArrayLoop() Lets Remote Users Deny Service
+| [1010057] SuSE Linux '/proc/scsi/qla2300/HbaApiNode' Permissions Let Local Users Deny Service
+| [1010045] Apple CoreFoundation Environment Variable Flaw Has Unspecified Impact
+| [1009972] JForum May Let Remote Authenticated Users Access Restricted Forums
+| [1009767] Microsoft Windows 2000 Domain Controller LDAP Flaw May Let Remote Users Restart the Authentication Service
+| [1009760] Microsoft Virtual DOS Machine (VDM) Lets Local Users Gain Elevated Privileges
+| [1009655] FTE Command Line and Environment Variable Buffer Overflows May Let Local Users Gain Elevated Privileges
+| [1009536] PHP SQL Library Lets Remote Users Bypass safe_mode Restrictions
+| [1009529] WS_FTP Server REST File Pointer Error Lets Remote Authenticated Users Consume Disk Space
+| [1009365] Opera Cookie Path Restrictions Can Be Bypassed By Remote Servers
+| [1009364] Mozilla Cookie Path Restrictions Can Be Bypassed By Remote Servers
+| [1009363] KDE Konqueror Cookie Path Restrictions Can Be Bypassed By Remote Servers
+| [1009362] Apple Safari Cookie Path Restrictions Can Be Bypassed By Remote Servers
+| [1009361] Microsoft Internet Explorer Cookie Path Restrictions Can Be Bypassed By Remote Servers
+| [1009349] wu-ftpd Access Control Flaw Lets Remote Authenticated Users Bypass Group Restrictions
+| [1009252] Mac OS X TruBlueEnvironment Buffer Overflow Lets Local Users Gain Root Privileges
+| [1009246] XBoing Environment Variable Buffer Overflows Let Local Users Obtain 'games' Group Privileges
+| [1009219] Bochs Buffer Overflow in HOME Environment Variable May Let Local Users Gain Elevated Privileges
+| [1009158] LBreakout2 Buffer Overflow in HOME Environment May Let Local Users Obtain 'Games' Group Privileges
+| [1009009] Microsoft Virtual PC for Mac Temporary File Flaw Lets Local Users Gain Root Privileges
+| [1008999] ZyXEL Prestige Router Discloses Portions of Memory Contents to Remote Users
+| [1008973] PHP May Apply Incorrect php_admin_* Settings To Requests for Apache Virtual Hosts
+| [1008972] Linux-VServer Lets Local Users Break Out of Virtual Server chroot()
+| [1008933] Crawl Environment Variable Buffer Overflow May Let Local Users Gain Elevated Privileges
+| [1008880] BRS WebWeaver Input Validation Flaw in ISAPISkeleton.dll Permits Cross-Site Scripting Attacks
+| [1008760] GoAhead Web Server Input Validation Flaw Discloses Files in Restricted Directories to Remote Users
+| [1008734] RapidCache Can Be Crashed By Remote Users and Discloses Files to Remote Users
+| [1008397] Novell NetWare NFS (XNFS.NLM) Trusted Host Bug May Let Remote Users Access Restricted Shares
+| [1008340] PieterPost Virtual Account May Let Remote Users Send Anonymous E-mail
+| [1008206] SAP DB NETAPI32.DLL Path Specification Flaw Lets Local Users Gain SYSTEM Privileges
+| [1008137] Bugzilla Javascript Buglists May Disclose Restricted Data to Remote Users
+| [1008113] HP-UX libc Flaw Prevents NLSPATH From Being Appropriately Restricted
+| [1008024] Oracle Files Configuration May Disclose Restricted Contents to Remote Authenticated Users
+| [1007980] Sun Java Runtime Environment Classloader Flaw May Let Untrusted Applets Gain Elevated Privileges
+| [1007874] Microsoft Windows OS PostThreadMessage() API Permits Local Users to Terminate Processes That Have Message Queues
+| [1007820] Marbles Game HOME Environment Variable Buffer Overflow Lets Local Users Gain Elevated Privileges
+| [1007713] Liquid War HOME Environment Variable Overflow Lets Local Users Gain Elevated Privileges
+| [1007703] SCO Internet Manager (mana) Environment Variable Validation Flaw Lets Local Users Grab Root Privileges
+| [1007504] SGI Checkpoint/Restart 'libcpr' Flaw Lets Local Users Overwrite Files With Elevated Privileges
+| [1007442] xpcd Buffer Overflow in HOME Environment Variable May Yield Root Privileges to Local Users
+| [1007435] Open Group Distributed Computing Environment (DCE) Null Pointer Dereference Lets Remote Users Crash DCE Services
+| [1007315] Xconq Game USER Environment Variable Buffer Overflow Lets Local Users Gain Elevated Privileges
+| [1007300] 'top' Environment Variable Buffer Overflow Lets Local Users Execute Arbitrary Code
+| [1007291] Opera M2 Mail Client Embedded Image Viewing Restrictions Can Be Bypassed By Remote Users
+| [1007149] terminatorX Environment Variable Buffer Overflow Lets Local Users Run Arbitrary Code With Root Privileges
+| [1006952] Opera Access Control Flaw in Java Lets Malicious Javascript and Java Applets Bypass Security Restrictions
+| [1006951] Netscape Access Control Flaw in Java Lets Malicious Javascript and Java Applets Bypass Security Restrictions
+| [1006950] Mozilla Access Control Flaw in Java Lets Malicious Javascript and Java Applets Bypass Security Restrictions
+| [1006946] Novell iChain Bugs Let Remote Users Access a Restricted Page or Crash the Service
+| [1006943] zblast Game Environment Variable Buffer Overflow Lets Local Users Gain Elevated Privileges
+| [1006930] HP/UX ftpd REST Command Flaw May Disclose Memory Contents to Remote Users
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006843] Encrypted Virtual Filesystem (EVFS) Buffer Overflow May Let Local Users Gain Root Privileges
+| [1006813] Slackware Linux Configuration Flaw in 'sysvinit' May Let Local Users Bypass Some Filesystem Access Restrictions
+| [1006778] Linux 2.4 Kernel Bug in ioperm() Gives Local Users Access to Restricted I/O Ports
+| [1006777] Java Media Framework Bug May Let Remote Applets Crash the Java Virtual Machine or Gain Unauthorized Privileges
+| [1006749] Neoteris Instant Virtual Extranet Input Validation Flaw Lets Remote Users Hijack VPN Sessions
+| [1006286] Microsoft Windows 2000/XP PostMessage() API Flaw May Let Local Users Grab Passwords from Local Dialog Boxes
+| [1006223] SAP R/3 Remote Function Call API Lets Remote Users Conduct Password Guessing Attempts
+| [1006172] VERITAS Bare Metal Restore for Tivoli Storage Manager Has Unspecified Flaw That Yields Root Privileges to Remote Users
+| [1006120] PHP Bug in CGI SAPI Discloses Files on the Server to Remote Users
+| [1006106] MacOS Classic Emulator TruBlueEnvironment Access Control Bug Lets Local Users Create Files With Root Privileges to Gain Root Level Access
+| [1006005] Sun Java Runtime Environment (JRE) Unspecified Hole Lets Java Code Bypass Access Controls
+| [1005766] Fortres 101 Disk Security Software Bug Lets Local Users Gain Unrestriced Disk Access
+| [1005702] Netscape Communicator Java Bytecode Verifier Analysis Flaw Lets Remote Users Bypass Many Java Security Restrictions
+| [1005699] Microsoft Internet Explorer (IE) Java Class Loader Security Flaw Lets Remote Users Bypass Java Security Restrictions
+| [1005544] Perl Safe Module May Allow Sandbox Compartment Access Restrictions to Be Bypassed
+| [1005329] Sendmail Restricted Shell (smrsh) May Let Local Users Bypass Restrictions to Execute Code
+| [1005307] WatchGuard Firebox Vclass and RapidStream Appliance Input Validation Bugs May Give Remote Users Root Access
+| [1005183] Finjan SurfinGate URL Filtering Bugs May Let Users Bypass Restricted URLs
+| [1005163] CGI Debugger Script Discloses Web Server Environment Variables to Remote Users
+| [1005153] Linuxconf Administration Utility Buffer Overflow in Processing the 'LINUXCONF_LANG' Environment Variable Lets Local Users Obtain Root Privileges
+| [1005046] HP-UX Virtual Vault Operating System (VVOS) Has Unspecified Security Defect in the 'passwd(1)' Command That May Result in an Unspecified Security Impact
+| [1004859] HP ChaiVM Java Virtual Machine Access Control Flaws Let Users Add, Delete, and Modify Chai Services
+| [1004824] ZyXEL Prestige Routers Can Be Made to Temporarily Stop Processing Traffic By Remote Users Sending Certain Fragmented Packets
+| [1004800] Sun Solaris PC NetLink Software May Not Retain Access Control List Permissions When Restored After a Backup
+| [1004795] HP Instant Support Enterprise Edition (ISEE) Application Bug Lets Remote Authenticated Users Gain Access to Restricted Files
+| [1004761] Microsoft Foundation Classes (MFC) Information  Server Application Programming Interface (ISAPI) 'mfc42.dll' Contains Buffer Overflows That Can Crash the System or Possibly Allow for the Remote Execution of Arbitrary Code
+| [1004740] Common Desktop Environment (CDE) ToolTalk Server Input Validation and Symlink Bugs Let Local and Remote Users Obtain Root Privileges on the System
+| [1004698] Sun Virtual Network Computing Software (SUNWspvnc) for Sun's PCi Card Discloses the VNC Password to Remote Users, Offering System Access to Remote Users
+| [1004579] Macromedia JRun Java Engine Can Be Crashed in a Multi-user Environment By One User's Malicious Code
+| [1004578] Jakarta Tomcat JSP Engine Can Be Crashed in a Multi-user Environment By One User's Malicious Code
+| [1004557] ZyXEL Prestige Router Management Ports Can Be Crashed By Remote Users Sending Malformed Packets with TCP SYN and ACK Flags Both Set
+| [1004526] Microsoft Internet Information Server (IIS) Heap Overflow in HTR ISAPI Extension While Processing Chunked Encoded Data Lets Remote Users Execute Arbitrary Code
+| [1004420] IBM Informix SE Database Buffer Overflow in Processing the 'INFORMIXDIR' Environment Variable May Allow Local Users to Obtain Root Privileges
+| [1004414] Firestorm Network Intrusion Detection System (NIDS) Can Be Crashed By Remote Users Sending Malformed IP Options
+| [1004400] Macromedia JRun Java Server Host Header ISAPI DLL Buffer Overflow Lets Remote Users Execute Arbitrary Code with SYSTEM Level Privileges to Take Full Control of the System
+| [1004382] Virtual Programming's VP-ASP Shopping Cart Default Configuration May Disclose Internal Database (Including Credit Card Data) to Remote Users
+| [1004373] TightVNC Virtual Network Computing Software May Disclose Passwords to Local Users and May Allow Remote Users to Crash the Server
+| [1004362] User-Mode Linux (UML) Environment System Call Breakpoint Bug Lets Local Users Execute System Calls on the Host (Outside of the UML Environment)
+| [1004356] Cisco IP Phones Allow Remote Users to Cause the Phone to Crash and Restart and Allow Physically Local Users to Modify the Telephone's Configuration
+| [1004354] New Atlanta Communications ServletExec/ISAPI Java Server Can Be Crashed By Remote Users and Discloses the Directory Path and Files in the Web Root Directory to Remote Users
+| [1004285] nCipher MSCAPI CSP Install Wizard Bug May Result in Generated Keys That Are Not Protected By Smart Cards Even if the User Requests This Protection
+| [1004237] HP-UX Virtualvault iPlanet Web Server May Allow Remote Connections to the Administration Server
+| [1004222] 'ASP Client Check' SQL Injection Hole Lets Remote Users Bypass Authentication and Gain Access to Restricted Pages
+| [1004140] MOSIX Cluster Environment for Linux Allows Remote Users to Crash the Cluster With Arbitrary Packets
+| [1004138] PHP Posix_getpw* Functions Ignore Safe_mode and Open_basedir Settings Allowing Restricted Users to Retrieve Password Information
+| [1004080] AOLserver Format String Flaw and Buffer Overflow in 'libnspd.a' API for External Database Driver Proxy Daemons May Let Remote Users Execute Arbitrary Code
+| [1004007] WatchGuard Firebox SOHO Firewall May Fail to Apply IP-based Access Restrictions Under Certain Circumstances
+| [1003988] Tarantella Native Client Password Saving Restriction Can Be Circumvented
+| [1003924] SGI IRIX Operating System HOSTALIASES Environment Variable Flaw Lets Local Users Cause Privileged Processes to Dump Core
+| [1003855] PHP safe_mode Restrictions Can Be Bypassed By Remote Users Via the 'move_uploaded_file' Function
+| [1003847] Sun Java Runtime Environment (JRE) Bytecode Verifier Casting Bug Lets Arbitrary Code Execute Outside of the Java Security Sandbox
+| [1003846] Sun Java Web Start Bug in Java Networking Launching Protocol (JNLP) Lets Remote Users Create Unsigned Applets That Can Access Restricted Resources
+| [1003774] Check Point FireWall-1 SecuRemote/SecureClient Authentication Timeout Restrictions Can Be Circumvented By Users
+| [1003732] Netscape Web Broswer Java Environment Lets Remote Malicious Applets Redirect Web Proxy Connections
+| [1003731] Sun Java Runtime Environment (JRE) Lets Remote Malicious Applets Redirect Web Proxy Connections
+| [1003730] Microsoft Java Virtual Machine in Internet Explorer Lets Remote Malicious Applets Redirect Web Proxy Connections
+| [1003637] Netopia Timbuktu Remote Access Software Lets Users Without Administrator Privileges Modify User Account Restrictions
+| [1003602] GNUJSP Java Server Pages Implementation Discloses Web Files and Source Code to Remote Users and Bypasses Apache Access Control Restrictions
+| [1003553] DansGuardian Web Content Filtering Proxy Bug Lets Remote Users Bypass File Name Extension Filtering Restrictions
+| [1003418] Sun Java Virtual Machine Can Be Crashed By Malicious Java Code
+| [1003384] 'User-mode Linux' (UML) Environment Lets Local Users Obtain Root Privileges Within the Environment and May Let Local Users Break Out of the UML Environment into the Underlying Operating System
+| [1003376] Ganglia Clustering Environment Web Client Lets Remote Users Execute Arbitrary Commands on the Server
+| [1003320] Comprehensive Web Programming API (CwpApi) May Disclose Files Located Outside of the Web Root Directory to Remote Users
+| [1003273] Chinese XIM Input Server (Chinput) Environment Variable Buffer Overflow Yields Root Privileges for Local Users
+| [1003212] Crypto IP Encapsulation (CIPE) Virtual Private Networking (VPN) Software Can Be Crashed By Remote Users Sending a Short Packet
+| [1003184] Legato NetWorker Configuration Error Lets Any NetWorker Server Backup or Restore a Host Running the NetWorker Client
+| [1003131] Apache Web Server in Virtual Hosting Mode Can Be Crashed By a Local User Removing a Log Directory
+| [1003013] Magic Enterprise Edition Application Environment Lets Local Users Obtain Root Privileges and May Give Remote Users Access to the System
+| [1002977] ZyXEL Prestige SDSL Router Can Be Crashed By Remote Users Sending Malformed Packets
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002888] PostNuke Displays User-Supplied HTML Without Escaping The Code, Facilitating Cross-Site Scripting Attacks
+| [1002884] PHP-Nuke Displays User-Supplied HTML Without Escaping The Code, Facilitating Cross-Site Scripting Attacks
+| [1002879] Runas Restricted Process Execution Utility Has Format String Bug That Gives Local Root Access -- Local Users Can Execute Arbitrary Code With Root Level Privileges
+| [1002773] Titan Application Firewall for IIS Web Server Fails to Decode URLs, Letting Remote Users Bypass URL-based Firewall Restrictions
+| [1002656] Common Desktop Environment (CDE) DtSvc Library Buffer Overflow May Let Local Users Obtain Root Privileges
+| [1002618] Sun Java Runtime Environment (JRE) Flaw May Let Malicious Applets Gain Unauthorized Access to the System Clipboard
+| [1002600] Mozilla Browser Will Return HTTP Cookies to an FTP Server at the Same Domain as the HTTP Server, Which Could Be a Different Domain if the HTTP Server is Hosting Virtual Domains
+| [1002558] Dtaction Common Desktop Environment (CDE) Buffer Overflow in the Action Argument May Let Local Users Gain Elevated Privileges
+| [1002557] Caldera Open Unix Common Desktop Environment (CDE) Dt Utilities Have Buffer Overflows That Let Local Users Obtain Root Privileges on the Host
+| [1002542] Apache Web Server Virtual Hosting Split-Logfile Function Lets Remote Users Write Log Entries to Arbitrary Files on the System
+| [1002526] Microsoft Internet Explorer (IE) Web Browser Has Multiple URL-related Flaws That May Allow for Remote Code Execution, Remote HTTP Request Generation, and Application of Incorrect Security Restrictions
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002433] Lotus Notes API Lets Authorized Remote Users Obtain Unauthorized Access to Other User File Attachments
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1002405] HP Warns of Local Denial of Service Vulnerability in 'libsecurity' for HP-UX Virtual Vault Operating System
+| [1002340] WEBsweeper Content Security Software's URL Restrictions Can Be Bypassed By Remote Users
+| [1002245] OpenBSD's Xhost Access Control Utility for X Servers May Not Properly Restrict Access
+| [1002192] Baltimore Technologies WEBsweeper Lets Remote Users Send Malicious Code That Will Bypass Content Security Restrictions
+| [1002174] Sun Solaris Xlock Environment Variable Buffer Overflow Lets Local Users Grab Root Privileges
+| [1002164] Some ZyXEL Prestige Routers Allow Remote Telnet and FTP Access to the Device in the Default Configuration
+| [1002076] SCO Unix su Utility Environment Variable Buffer Overflow Lets Local Users Obtain Root Level Privileges
+| [1002054] HP Virtual Vault mkacct Utility May Let Local Users Obtain Elevated Privileges
+| [1002048] Windows 2000 May Disclose Descriptive Information To Local Users Attempting Password Guessing with the NetUserChangePassword API
+| [1002020] HP-UX Login Command Allows Restricted Shell Users to Execute Unauthorized Commands and Elevate Privileges
+| [1002007] 3Com SuperStack II Switches Fail to Restrict Telnet Login Failures, Making it Possible for Remote Users to Perform Unimpeded Brute Force Password Guessing Attacks to Obtain Administrative Access to the Device
+| [1001797] Netgear Wireless Access Point Fails to Restrict SNMP Access, Allowing Remote Users to Control the Device
+| [1001796] Linksys Instant Network Wireless Access Point Does Not Restrict SNMP Access, Allowing Remote Users to Control the Device
+| [1001719] Apache Web Server on Mac OS X Client Fails to Enforce File and Directory Access Protections, Giving Remote Users Access to Restricted Pages
+| [1001707] VirtualCatalog Commerce Application Discloses Script Source Code to Remote Users and Lets Remote Users Execute Certain Commands via the Web Server
+| [1001677] OpenBSD Virtual File System Permits Race Conditions That Allow Local Users to Crash the Server or Potentially Obtain Root-Level Privileges
+| [1001595] HP-UX Common Desktop Environment Allows Local Users to Increase Privileges or Cause Denial of Service Conditions
+| [1001520] PHProjekt PHP-Based Groupware Software Allows Remote Users to Access Files on the Server Outside of the Restricted Directory
+| [1001494] DSL_Vdns Virtual DNS Client for Dynamic IP Address Allows Remote Users to Crash the Software
+| [1001483] Microsoft IIS Web Server Lets Remote Users Restart the Web Server with Another Specially Crafted PROPFIND XML Command
+| [1001325] Pick System's Processit.pl CGI Script Reveals System Environment Data to Remote Users
+| [1001245] Ultimate Bulletin Board from Infopop Lets Moderators View Restricted Administrator Forums
+| [1001187] Microsoft Internet Explorer Is Vulnerable to Malicious Web Pages That May Obtain the User's Exchange E-mail Messages and May Access Restricted Web Server Directory Listings
+| [1001050] Microsoft IIS 5.0 Web Server Can Be Restarted Remotely By Any User
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [38111] 3Com OfficeConnect 3CRWER100-75 router virtual server unauthorized Web management access
+| [8480] Sun Java Runtime Environment and Microsoft Virtual Machine (VM) Bytecode Verifier could allow a Java Applet to bypass security restrictions
+| [83689] Oracle Java Runtime Environment Reflection API code execution
+| [82880] Eucalyptus REST API security bypass
+| [66977] HP Virtual Server Environment unspecified
+| [63818] Virtual DJ dynamic-linked library (hdjapi.dll) code execution
+| [62779] HP Virtual Server Environment file information disclosure
+| [53221] Rest API module for Drupal multiple unspecified
+| [49412] Sun Java Runtime Environment Virtual Machine privilege escalation
+| [43659] Sun Java Runtime Environment Virtual Machine unauthorized access
+| [41138] Sun Java Runtime Environment Virtual Machine unspecified privilege escalation
+| [41025] Sun Java Runtime Environment and JDK Virtual Machine unspecified privilege escalation
+| [37362] Sun Java Runtime Environment Virtual Machine applet privilege escalation
+| [36943] Sun Java Runtime Environment Java APIs security bypass
+| [34654] Sun Java Runtime Environment Java Virtual Machine denial of service
+| [24561] Sun Java Runtime Environment reflection APIs unstrusted Applet privilege escalation
+| [22292] Groove Virtual Office Guest bypass restrictions
+| [16666] Microsoft Java Virtual Machine sandbox restriction bypass
+| [8351] Sun Java Runtime Environment and Microsoft Virtual Machine (VM) Java Applet could be used to redirect browser traffic when using a proxy
+| [8042] Sun Java Runtime Environment Java Virtual Machine denial of service
+| [5483] restore in Red Hat Linux uses RSH environment variable to execute
+| [5361] HP VirtualVault NSAPI denial of service
+| [3378] Microsoft Virtual Machine could allow a malicious Java applet to bypass security restrictions
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21398] SSH2 3.0 Restricted Shell Escaping Command Execution Vulnerability
+| [23230] Adobe SVG Viewer 3.0 postURL/getURL Restriction Bypass Vulnerability
+| [22027] Microsoft Java Virtual Machine 3802 Series Bytecode Verifier Vulnerability
+| [21231] Chinput 3.0 Environment Variable Buffer Overflow Vulnerability
+| [19426] SGI Advanced Linux Environment 3.0,SGI IRIX <= 6.5.4,SGI UNICOS <= 10.0 6 arrayd.auth Default Configuration Vulnerability
+| [15776] Virtual Store Open 3.0 Acess SQL Injection
+| [9973] Sun VirtualBox <= 3.0.6 - Privilege Escalation
+| [9323] VirtualBox 2.2 - 3.0.2 r49928 Local Host Reboot PoC
+| [8775] Mole Group Restaurant Directory Script 3.0 Change Admin Pass Vuln
+| [5869] virtual support office-xp <= 3.0.29 Multiple Vulnerabilities
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902789] Oracle VM VirtualBox Unspecified Vulnerability (MAC OS X)
+| [902786] Oracle VM VirtualBox Multiple Unspecified Vulnerabilities (Windows)
+| [902606] PHP SAPI_POST_HANDLER_FUNC() Security Bypass Vulnerability
+| [902549] Oracle VM VirtualBox Unspecified Vulnerability (Windows)
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [902199] Wireshark SigComp Universal Decompressor Virtual Machine dissector BOF Vulnerability (Win)
+| [902198] Wireshark SigComp Universal Decompressor Virtual Machine dissector DOS Vulnerability (Win)
+| [901055] Sun VirtualBox or xVM VirtualBox Denial Of Service Vulnerability (Linux)
+| [901054] Sun VirtualBox or xVM VirtualBox Denial Of Service Vulnerability (Win)
+| [900984] Axon Virtual PBX Multiple Cross Site Scripting Vulnerabilities
+| [900983] Axon Virtual PBX Version Detection
+| [900876] Microsoft Windows CryptoAPI X.509 Spoofing Vulnerabilities (974571)
+| [900690] Microsoft Virtual PC/Server Privilege Escalation Vulnerability (969856)
+| [900408] Sun xVM VirtualBox Insecure Temporary Files Vulnerability (Linux)
+| [900407] Sun xVM VirtualBox Insecure Temporary Files Vulnerability (Win)
+| [900402] Pi3Web ISAPI Requests Handling DoS Vulnerability
+| [900351] Mozilla Firefox PDF JavaScript Restriction Bypass Vulnerability (Linux)
+| [900350] Mozilla Firefox PDF JavaScript Restriction Bypass Vulnerability (Win)
+| [900298] MS Windows Remote Access Service NDISTAPI Driver Privilege Elevation Vulnerability (2566454)
+| [900225] Virtual Address Descriptor Manipulation Elevation of Privilege Vulnerability (956841)
+| [900181] Free Directory Script 'API_HOME_DIR' File Inclusion Vulnerability
+| [864422] Fedora Update for evolution-mapi FEDORA-2012-7317
+| [864414] Fedora Update for python-virtualenvwrapper FEDORA-2012-7476
+| [864337] Fedora Update for python-virtualenvwrapper FEDORA-2012-8434
+| [864046] Fedora Update for rest FEDORA-2011-15833
+| [863927] Fedora Update for python-virtualenv FEDORA-2011-17289
+| [863680] Fedora Update for python-virtualenv FEDORA-2011-17341
+| [863648] Fedora Update for rest FEDORA-2011-15839
+| [861579] Fedora Update for firestarter FEDORA-2007-0700
+| [860812] Fedora Update for librapi FEDORA-2008-0680
+| [855496] Solaris Update for /usr/lib/fs/ufs/ufsrestore 109092-10
+| [855201] Solaris Update for /usr/lib/fs/ufs/ufsrestore 109091-10
+| [840166] Ubuntu Update for linux-restricted-modules-2.6.17 vulnerability USN-404-1
+| [840144] Ubuntu Update for linux-restricted-modules-2.6.17 regression USN-416-2
+| [840135] Ubuntu Update for linux-restricted-modules-2.6.17/20, vmware-player-kernel-2.6.15 vulnerabilities USN-543-1
+| [840081] Ubuntu Update for linux-restricted-modules-2.6.15/.17/.20 vulnerabilities USN-479-1
+| [835136] HP-UX Update for Java Runtime Environment HPSBUX00267
+| [835050] HP-UX Update for Java Runtime Environment (JRE) HPSBUX01044
+| [830943] Mandriva Update for virtualbox MDVSA-2010:059 (virtualbox)
+| [803104] Oracle VM VirtualBox Unspecified Denial of Service Vulnerability (Mac OS X)
+| [803103] Oracle VM VirtualBox Unspecified Denial of Service Vulnerability (Windows)
+| [803037] Optima PLC APIFTP Server Denial of Service Vulnerabilities
+| [802966] PHP 'main/SAPI.c' HTTP Header Injection Vulnerability
+| [802951] Oracle Java SE Java Runtime Environment Multiple Unspecified Vulnerabilities(02) - (Windows)
+| [802950] Oracle Java SE Java Runtime Environment Unspecified Vulnerability - (Windows)
+| [802949] Oracle Java SE Java Runtime Environment Multiple Unspecified Vulnerabilities(01) - (Windows)
+| [802948] Oracle Java SE Java Runtime Environment Multiple Unspecified Vulnerabilities - (Windows)
+| [802947] Oracle Java SE Java Runtime Environment Code Execution Vulnerability - (Windows)
+| [802935] Pidgin 'Libpurple' Cipher API Information Disclosure Vulnerability (Windows)
+| [802738] Java Runtime Environment Multiple Vulnerabilities (MAC OS X)
+| [802620] Presto! PageManager Multiple Vulnerabilities
+| [802455] HP SAN/iQ Virtual SAN Appliance Multiple Parameters Command Execution Vulnerabilities
+| [802454] HP SAN/iQ Virtual SAN Appliance Second Parameter Command Execution Vulnerability
+| [802279] Virtual Vertex Muster Web Interface Directory Traversal Vulnerability
+| [802278] Oracle Java SE Java Runtime Environment Unspecified Vulnerability - October 2011 (Windows)
+| [802277] Oracle Java SE Java Runtime Environment Unspecified Vulnerability - October 2011 (Windows)
+| [802029] Freefloat FTP Server POST Auth 'REST' Command Buffer Overflow Vulnerability
+| [801917] VMware Open Virtual Machine Tools File Corruption Vulnerability
+| [801916] VMware Open Virtual Machine Tools Version Detection
+| [801582] Oracle VM VirtualBox Extensions Local Privilege Escalation Vulnerability (Linux)
+| [801578] Oracle VM VirtualBox Extensions Local Privilege Escalation Vulnerability
+| [801480] Microsoft Web Services on Devices API Remote Code Execution Vulnerability (973565)
+| [800168] OpenOffice VBA Macro Restrictions Remote Security Bypass Vulnerability
+| [800007] VMware VIX API Multiple Buffer Overflow Vulnerabilities (Win)
+| [103609] VMSA-2012-0016: VMware security updates for vSphere API and ESX Service Console
+| [103382] SAPID CMS Multiple Remote File Include Vulnerabilities
+| [100733] MediaWiki 'api.php' Information Disclosure Vulnerability
+| [100710] FireStats Multiple Cross Site Scripting Vulnerabilities
+| [100673] Perl Safe Module 'reval()' and 'rdo()' Restriction-Bypass Vulnerabilities
+| [100672] Perl Safe Module 'reval()' and 'rdo()' Restriction-Bypass Vulnerabilities
+| [100352] PHP 'symlink()' 'open_basedir' Restriction Bypass Vulnerability
+| [100281] PHP multiple Restriction-Bypass Vulnerabilities
+| [100230] FireStats Unspecified SQL Injection Vulnerability
+| [100227] FireStats 'firestats-wordpress.php' Remote File Include Vulnerability
+| [100226] FireStats Detection
+| [100172] Apache Web Server Configuration File Environment Variable Local Buffer Overflow Vulnerability
+| [100145] PHP cURL 'safe_mode' and 'open_basedir' Restriction-Bypass Vulnerability
+| [80110] wapiti (NASL wrapper)
+| [71584] Gentoo Security Advisory GLSA 201206-17 (virtualenv)
+| [71311] Gentoo Security Advisory GLSA 201204-01 (virtualbox)
+| [66737] Gentoo Security Advisory GLSA 201001-04 (virtualbox-bin virtualbox-ose virtualbox-guest-additions virtualbox-ose-additions)
+| [66224] SLES9: Security update for sapinit
+| [65753] FreeBSD Ports: virtualbox
+| [64896] FreeBSD Ports: xapian-omega
+| [64865] Debian Security Advisory DSA 1882-1 (xapian-omega)
+| [63791] Debian Security Advisory DSA 1764-1 (tunapie)
+| [63198] Mandrake Security Advisory MDVSA-2009:011 (virtualbox)
+| [58250] Gentoo Security Advisory GLSA 200704-23 (capi4k-utils)
+| [57903] Gentoo Security Advisory GLSA 200610-05 (capi4hylafax)
+| [57333] Debian Security Advisory DSA 1165-1 (capi4hylafax)
+| [18628] YaPiG Password Protected Directory Access Flaw
+| [18523] YaPiG Multiple Flaws
+| [14269] YaPiG Remote Server-Side Script Execution Vulnerability
+| [13848] Subversion Module File Restriction Bypass
+| [12244]  Sun Java Runtime Environment DoS 
+| [12241] Dont print on AppSocket & socketAPI printers
+| [11443] Microsoft IIS UNC Mapped Virtual Host Vulnerability
+| [10960] ServletExec 4.1 ISAPI Physical Path Disclosure
+| [10959] ServletExec 4.1 ISAPI File Reading
+| [10958] ServletExec 4.1 / JRun ISAPI DoS
+| [10823] OpenSSH UseLogin Environment Variables
+| [10695] IIS .IDA ISAPI filter applied
+| [10661] IIS 5 .printer ISAPI filter applied
+|_
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 07:41:49 2018 -- 1 IP address (1 host up) scanned in 49.12 seconds

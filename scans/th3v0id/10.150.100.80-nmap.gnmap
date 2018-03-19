@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 06:59:59 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.150.100.80-nmap 10.150.100.80
+Host: 10.150.100.80 ()	Status: Up
+Host: 10.150.100.80 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6 (protocol 2.0)/, 3306/open/tcp//mysql//MariaDB (unauthorized)/	Ignored State: closed (998)
+# Nmap done at Mon Mar 19 07:00:37 2018 -- 1 IP address (1 host up) scanned in 38.50 seconds

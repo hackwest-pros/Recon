@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 11:20:28 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.31-nmap 172.25.20.31
+Host: 172.25.20.31 ()	Status: Up
+Host: 172.25.20.31 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Debian 4 (protocol 2.0)/, 80/open/tcp//http//Microsoft IIS httpd 7.5/, 4443/open/tcp//ms-pe-exe//Microsoft PE executable file/, 8080/open/tcp//ms-pe-exe//Microsoft PE executable file/, 8081/open/tcp//ms-pe-exe//Microsoft PE executable file/	Ignored State: closed (995)
+# Nmap done at Mon Mar 19 11:21:50 2018 -- 1 IP address (1 host up) scanned in 82.39 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 11:03:11 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.105.18-nmap 10.100.105.18
+Host: 10.100.105.18 ()	Status: Up
+Host: 10.100.105.18 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.3 (protocol 2.0)/, 53/open/tcp//tcpwrapped///, 80/open/tcp//http//Apache httpd 2.2.15 ((CentOS))/, 81/open/tcp//http//Apache httpd 2.2.15 ((CentOS))/, 82/open/tcp//http//Apache httpd 2.2.15/, 83/open/tcp//http//Apache httpd 2.2.15 ((CentOS))/, 84/open/tcp//http//Apache httpd 2.2.15 ((CentOS))/, 85/open/tcp//http//Apache httpd 2.2.15 ((CentOS))/, 5222/open/tcp//jabber//Prosody Jabber client 0.8.0 or newer/, 5269/open/tcp//jabber//Prosody Jabber server/, 5280/open/tcp//http//Prosody XMPP BOSH httpd/, 8001/open/tcp//vcom-tunnel?///, 8088/open/tcp//http//Asterisk 11.16.0/	Ignored State: closed (987)
+# Nmap done at Mon Mar 19 11:05:27 2018 -- 1 IP address (1 host up) scanned in 136.33 seconds

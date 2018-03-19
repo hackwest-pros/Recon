@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 10:28:29 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.101.124-nmap 10.100.101.124
+Host: 10.100.101.124 ()	Status: Up
+Host: 10.100.101.124 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)/, 80/open/tcp//http//lighttpd 1.4.31/, 443/open/tcp//ssl|http//lighttpd 1.4.31/, 3306/open/tcp//mysql//MySQL (blocked - too many connection errors)/	Ignored State: closed (996)
+# Nmap done at Mon Mar 19 10:29:25 2018 -- 1 IP address (1 host up) scanned in 56.70 seconds

@@ -1,0 +1,852 @@
+# Nmap 7.60 scan initiated Mon Mar 19 09:53:21 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.20.30.120-nmap 10.20.30.120
+Nmap scan report for 10.20.30.120
+Host is up (0.093s latency).
+Not shown: 995 filtered ports
+PORT      STATE SERVICE  VERSION
+22/tcp    open  ssh      OpenSSH 5.3 (protocol 2.0)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [80267] OpenSSH up to 5.x/6.x/7.1p1 Forward Option roaming_common.c roaming_read/roaming_write memory corruption
+| [80266] OpenSSH up to 5.x/6.x/7.1p1 roaming_common.c resend_bytes information disclosure
+| [4584] OpenSSH up to 5.7 auth-options.c information disclosure
+| [4282] OpenSSH 5.6/5.7 Legacy Certificate memory corruption
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2006-0883] OpenSSH on FreeBSD 5.3 and 5.4, when used with OpenPAM, does not properly handle when a forked child process terminates during PAM authentication, which allows remote attackers to cause a denial of service (client connection refusal) by connecting multiple times to the SSH server, waiting for the password prompt, then disconnecting.
+| [CVE-2012-0814] The auth_parse_options function in auth-options.c in sshd in OpenSSH before 5.7 provides debug messages containing authorized_keys command options, which allows remote authenticated users to obtain potentially sensitive information by reading these messages, as demonstrated by the shared user account required by Gitolite.  NOTE: this can cross privilege boundaries because a user account may intentionally have no shell or filesystem access, and therefore may have no supported way to read an authorized_keys file in its own home directory.
+| [CVE-2011-5000] The ssh_gssapi_parse_ename function in gss-serv.c in OpenSSH 5.8 and earlier, when gssapi-with-mic authentication is enabled, allows remote authenticated users to cause a denial of service (memory consumption) via a large value in a certain length field.  NOTE: there may be limited scenarios in which this issue is relevant.
+| [CVE-2011-0539] The key_certify function in usr.bin/ssh/key.c in OpenSSH 5.6 and 5.7, when generating legacy certificates using the -t command-line option in ssh-keygen, does not initialize the nonce field, which might allow remote attackers to obtain sensitive stack memory contents or make it easier to conduct hash collision attacks.
+| [CVE-2010-4755] The (1) remote_glob function in sftp-glob.c and the (2) process_put function in sftp.c in OpenSSH 5.8 and earlier, as used in FreeBSD 7.3 and 8.1, NetBSD 5.0.2, OpenBSD 4.7, and other products, allow remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in SSH_FXP_STAT requests to an sftp daemon, a different vulnerability than CVE-2010-2632.
+| [CVE-2010-4478] OpenSSH 5.6 and earlier, when J-PAKE is enabled, does not properly validate the public parameters in the J-PAKE protocol, which allows remote attackers to bypass the need for knowledge of the shared secret, and successfully authenticate, by sending crafted values in each round of the protocol, a related issue to CVE-2010-4252.
+| [CVE-2009-2904] A certain Red Hat modification to the ChrootDirectory feature in OpenSSH 4.8, as used in sshd in OpenSSH 4.3 in Red Hat Enterprise Linux (RHEL) 5.4 and Fedora 11, allows local users to gain privileges via hard links to setuid programs that use configuration files within the chroot directory, related to requirements for directory ownership.
+| [CVE-2008-3844] Certain Red Hat Enterprise Linux (RHEL) 4 and 5 packages for OpenSSH, as signed in August 2008 using a legitimate Red Hat GPG key, contain an externally introduced modification (Trojan Horse) that allows the package authors to have an unknown impact.  NOTE: since the malicious packages were not distributed from any official Red Hat sources, the scope of this issue is restricted to users who may have obtained these packages through unofficial distribution points.  As of 20080827, no unofficial distributions of this software are known.
+| [CVE-2008-3259] OpenSSH before 5.1 sets the SO_REUSEADDR socket option when the X11UseLocalhost configuration setting is disabled, which allows local users on some platforms to hijack the X11 forwarding port via a bind to a single IP address, as demonstrated on the HP-UX platform.
+| 
+| OSVDB - http://www.osvdb.org:
+| [92034] GSI-OpenSSH auth-pam.c Memory Management Authentication Bypass
+| [90474] Red Hat / Fedora PAM Module for OpenSSH Incorrect error() Function Calling Local Privilege Escalation
+| [90007] OpenSSH logingracetime / maxstartup Threshold Connection Saturation Remote DoS
+| [81500] OpenSSH gss-serv.c ssh_gssapi_parse_ename Function Field Length Value Parsing Remote DoS
+| [78706] OpenSSH auth-options.c sshd auth_parse_options Function authorized_keys Command Option Debug Message Information Disclosure
+| [75753] OpenSSH PAM Module Aborted Conversation Local Information Disclosure
+| [75249] OpenSSH sftp-glob.c remote_glob Function Glob Expression Parsing Remote DoS
+| [75248] OpenSSH sftp.c process_put Function Glob Expression Parsing Remote DoS
+| [72183] Portable OpenSSH ssh-keysign ssh-rand-helper Utility File Descriptor Leak Local Information Disclosure
+| [70873] OpenSSH Legacy Certificates Stack Memory Disclosure
+| [69658] OpenSSH J-PAKE Public Parameter Validation Shared Secret Authentication Bypass
+| [67743] Novell NetWare OpenSSH SSHD.NLM Absolute Path Handling Remote Overflow
+| [59353] OpenSSH sshd Local TCP Redirection Connection Masking Weakness
+| [58495] OpenSSH sshd ChrootDirectory Feature SetUID Hard Link Local Privilege Escalation
+| [56921] OpenSSH Unspecified Remote Compromise
+| [53021] OpenSSH on ftp.openbsd.org Trojaned Distribution
+| [50036] OpenSSH CBC Mode Chosen Ciphertext 32-bit Chunk Plaintext Context Disclosure
+| [49386] OpenSSH sshd TCP Connection State Remote Account Enumeration
+| [48791] OpenSSH on Debian sshd Crafted Username Arbitrary Remote SELinux Role Access
+| [47635] OpenSSH Packages on Red Hat Enterprise Linux Compromised Distribution
+| [47227] OpenSSH X11UseLocalhost X11 Forwarding Port Hijacking
+| [45873] Cisco WebNS SSHield w/ OpenSSH Crafted Large Packet Remote DoS
+| [43911] OpenSSH ~/.ssh/rc ForceCommand Bypass Arbitrary Command Execution
+| [43745] OpenSSH X11 Forwarding Local Session Hijacking
+| [43371] OpenSSH Trusted X11 Cookie Connection Policy Bypass
+| [39214] OpenSSH linux_audit_record_event Crafted Username Audit Log Injection
+| [37315] pam_usb OpenSSH Authentication Unspecified Issue
+| [34850] OpenSSH on Mac OS X Key Generation Remote Connection DoS
+| [34601] OPIE w/ OpenSSH Account Enumeration
+| [34600] OpenSSH S/KEY Authentication Account Enumeration
+| [32721] OpenSSH Username Password Complexity Account Enumeration
+| [30232] OpenSSH Privilege Separation Monitor Weakness
+| [29494] OpenSSH packet.c Invalid Protocol Sequence Remote DoS
+| [29266] OpenSSH GSSAPI Authentication Abort Username Enumeration
+| [29264] OpenSSH Signal Handler Pre-authentication Race Condition Code Execution
+| [29152] OpenSSH Identical Block Packet DoS
+| [27745] Apple Mac OS X OpenSSH Nonexistent Account Login Enumeration DoS
+| [23797] OpenSSH with OpenPAM Connection Saturation Forked Process Saturation DoS
+| [22692] OpenSSH scp Command Line Filename Processing Command Injection
+| [20216] OpenSSH with KerberosV Remote Authentication Bypass
+| [19142] OpenSSH Multiple X11 Channel Forwarding Leaks
+| [19141] OpenSSH GSSAPIAuthentication Credential Escalation
+| [18236] OpenSSH no pty Command Execution Local PAM Restriction Bypass
+| [16567] OpenSSH Privilege Separation LoginGraceTime DoS
+| [16039] Solaris 108994 Series Patch OpenSSH LDAP Client Authentication DoS
+| [9562] OpenSSH Default Configuration Anon SSH Service Port Bounce Weakness
+| [9550] OpenSSH scp Traversal Arbitrary File Overwrite
+| [6601] OpenSSH *realloc() Unspecified Memory Errors
+| [6245] OpenSSH SKEY/BSD_AUTH Challenge-Response Remote Overflow
+| [6073] OpenSSH on FreeBSD libutil Arbitrary File Read
+| [6072] OpenSSH PAM Conversation Function Stack Modification
+| [6071] OpenSSH SSHv1 PAM Challenge-Response Authentication Privilege Escalation
+| [5536] OpenSSH sftp-server Restricted Keypair Restriction Bypass
+| [5408] OpenSSH echo simulation Information Disclosure
+| [5113] OpenSSH NIS YP Netgroups Authentication Bypass
+| [4536] OpenSSH Portable AIX linker Privilege Escalation
+| [3938] OpenSSL and OpenSSH /dev/random Check Failure
+| [3456] OpenSSH buffer_append_space() Heap Corruption
+| [2557] OpenSSH Multiple Buffer Management Multiple Overflows
+| [2140] OpenSSH w/ PAM Username Validity Timing Attack
+| [2112] OpenSSH Reverse DNS Lookup Bypass
+| [2109] OpenSSH sshd Root Login Timing Side-Channel Weakness
+| [1853] OpenSSH Symbolic Link 'cookies' File Removal
+| [839] OpenSSH PAMAuthenticationViaKbdInt Challenge-Response Remote Overflow
+| [781] OpenSSH Kerberos TGT/AFS Token Passing Remote Overflow
+| [730] OpenSSH Channel Code Off by One Remote Privilege Escalation
+| [688] OpenSSH UseLogin Environment Variable Local Command Execution
+| [642] OpenSSH Multiple Key Type ACL Bypass
+| [504] OpenSSH SSHv2 Public Key Authentication Bypass
+| [341] OpenSSH UseLogin Local Privilege Escalation
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [101552] OpenSSH 'sftp-server.c' Remote Security Bypass Vulnerability
+| [94977] OpenSSH CVE-2016-10011 Local Information Disclosure Vulnerability
+| [94975] OpenSSH CVE-2016-10012 Security Bypass Vulnerability
+| [94972] OpenSSH CVE-2016-10010 Privilege Escalation Vulnerability
+| [94968] OpenSSH CVE-2016-10009 Remote Code Execution Vulnerability
+| [93776] OpenSSH 'ssh/kex.c' Denial of Service Vulnerability
+| [92212] OpenSSH CVE-2016-6515 Denial of Service Vulnerability
+| [92210] OpenSSH CBC Padding Weak Encryption Security Weakness
+| [92209] OpenSSH MAC Verification Security Bypass Vulnerability
+| [91812] OpenSSH CVE-2016-6210 User Enumeration Vulnerability
+| [90440] OpenSSH CVE-2004-1653 Remote Security Vulnerability
+| [90340] OpenSSH CVE-2004-2760 Remote Security Vulnerability
+| [89385] OpenSSH CVE-2005-2666 Local Security Vulnerability
+| [88655] OpenSSH CVE-2001-1382 Remote Security Vulnerability
+| [88513] OpenSSH CVE-2000-0999 Remote Security Vulnerability
+| [88367] OpenSSH CVE-1999-1010 Local Security Vulnerability
+| [87789] OpenSSH CVE-2003-0682 Remote Security Vulnerability
+| [86187] OpenSSH 'session.c' Local Security Bypass Vulnerability
+| [86144] OpenSSH CVE-2007-2768 Remote Security Vulnerability
+| [84427] OpenSSH CVE-2016-1908 Security Bypass Vulnerability
+| [84314] OpenSSH CVE-2016-3115 Remote Command Injection Vulnerability
+| [84185] OpenSSH CVE-2006-4925 Denial-Of-Service Vulnerability
+| [81293] OpenSSH CVE-2016-1907 Denial of Service Vulnerability
+| [80698] OpenSSH CVE-2016-0778 Heap Based Buffer Overflow Vulnerability
+| [80695] OpenSSH CVE-2016-0777 Information Disclosure Vulnerability
+| [76497] OpenSSH CVE-2015-6565 Local Security Bypass Vulnerability
+| [76317] OpenSSH PAM Support Multiple Remote Code Execution Vulnerabilities
+| [75990] OpenSSH Login Handling Security Bypass Weakness
+| [75525] OpenSSH 'x11_open_helper()' Function Security Bypass Vulnerability
+| [71420] Portable OpenSSH 'gss-serv-krb5.c' Security Bypass Vulnerability
+| [68757] OpenSSH Multiple Remote Denial of Service Vulnerabilities
+| [66459] OpenSSH Certificate Validation Security Bypass Vulnerability
+| [66355] OpenSSH 'child_set_env()' Function Security Bypass Vulnerability
+| [65674] OpenSSH 'ssh-keysign.c' Local Information Disclosure Vulnerability
+| [65230] OpenSSH 'schnorr.c' Remote Memory Corruption Vulnerability
+| [63605] OpenSSH 'sshd' Process Remote Memory Corruption Vulnerability
+| [61286] OpenSSH Remote Denial of Service Vulnerability
+| [58894] GSI-OpenSSH PAM_USER Security Bypass Vulnerability
+| [58162] OpenSSH CVE-2010-5107 Denial of Service Vulnerability
+| [54114] OpenSSH 'ssh_gssapi_parse_ename()' Function Denial of Service Vulnerability
+| [51702] Debian openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [50416] Linux Kernel 'kdump' and 'mkdumprd' OpenSSH Integration Remote Information Disclosure Vulnerability
+| [49473] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [48507] OpenSSH 'pam_thread()' Remote Buffer Overflow Vulnerability
+| [47691] Portable OpenSSH 'ssh-keysign' Local Unauthorized Access Vulnerability
+| [46155] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [45304] OpenSSH J-PAKE Security Bypass Vulnerability
+| [36552] Red Hat Enterprise Linux OpenSSH 'ChrootDirectory' Option Local Privilege Escalation Vulnerability
+| [32319] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [30794] Red Hat OpenSSH Backdoor Vulnerability
+| [30339] OpenSSH 'X11UseLocalhost' X11 Forwarding Session Hijacking Vulnerability
+| [30276] Debian OpenSSH SELinux Privilege Escalation Vulnerability
+| [28531] OpenSSH ForceCommand Command Execution Weakness
+| [28444] OpenSSH X Connections Session Hijacking Vulnerability
+| [26097] OpenSSH LINUX_AUDIT_RECORD_EVENT Remote Log Injection Weakness
+| [25628] OpenSSH X11 Cookie Local Authentication Bypass Vulnerability
+| [23601] OpenSSH S/Key Remote Information Disclosure Vulnerability
+| [20956] OpenSSH Privilege Separation Key Signature Weakness
+| [20418] OpenSSH-Portable Existing Password Remote Information Disclosure Weakness
+| [20245] OpenSSH-Portable GSSAPI Authentication Abort Information Disclosure Weakness
+| [20241] Portable OpenSSH GSSAPI Remote Code Execution Vulnerability
+| [20216] OpenSSH Duplicated Block Remote Denial of Service Vulnerability
+| [16892] OpenSSH Remote PAM Denial Of Service Vulnerability
+| [14963] OpenSSH LoginGraceTime Remote Denial Of Service Vulnerability
+| [14729] OpenSSH GSSAPI Credential Disclosure Vulnerability
+| [14727] OpenSSH DynamicForward Inadvertent GatewayPorts Activation Vulnerability
+| [11781] OpenSSH-portable PAM Authentication Remote Information Disclosure Vulnerability
+| [9986] RCP, OpenSSH SCP Client File Corruption Vulnerability
+| [9040] OpenSSH PAM Conversation Memory Scrubbing Weakness
+| [8677] Multiple Portable OpenSSH PAM Vulnerabilities
+| [8628] OpenSSH Buffer Mismanagement Vulnerabilities
+| [7831] OpenSSH Reverse DNS Lookup Access Control Bypass Vulnerability
+| [7482] OpenSSH Remote Root Authentication Timing Side-Channel Weakness
+| [7467] OpenSSH-portable Enabled PAM Delay Information Disclosure Vulnerability
+| [7343] OpenSSH Authentication Execution Path Timing Information Leakage Weakness
+| [6168] OpenSSH Visible Password Vulnerability
+| [5374] OpenSSH Trojan Horse Vulnerability
+| [5093] OpenSSH Challenge-Response Buffer Overflow Vulnerabilities
+| [4560] OpenSSH Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [4241] OpenSSH Channel Code Off-By-One Vulnerability
+| [3614] OpenSSH UseLogin Environment Variable Passing Vulnerability
+| [3560] OpenSSH Kerberos Arbitrary Privilege Elevation Vulnerability
+| [3369] OpenSSH Key Based Source IP Access Control Bypass Vulnerability
+| [3345] OpenSSH SFTP Command Restriction Bypassing Vulnerability
+| [2917] OpenSSH PAM Session Evasion Vulnerability
+| [2825] OpenSSH Client X11 Forwarding Cookie Removal File Symbolic Link Vulnerability
+| [2356] OpenSSH Private Key Authentication Check Vulnerability
+| [1949] OpenSSH Client Unauthorized Remote Forwarding Vulnerability
+| [1334] OpenSSH UseLogin Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1028187] OpenSSH pam_ssh_agent_auth Module on Red Hat Enterprise Linux Lets Remote Users Execute Arbitrary Code
+| [1026593] OpenSSH Lets Remote Authenticated Users Obtain Potentially Sensitive Information
+| [1025739] OpenSSH on FreeBSD Has Buffer Overflow in pam_thread() That Lets Remote Users Execute Arbitrary Code
+| [1025482] OpenSSH ssh-keysign Utility Lets Local Users Gain Elevated Privileges
+| [1025028] OpenSSH Legacy Certificates May Disclose Stack Contents to Remote Users
+| [1022967] OpenSSH on Red Hat Enterprise Linux Lets Remote Authenticated Users Gain Elevated Privileges
+| [1021235] OpenSSH CBC Mode Error Handling May Let Certain Remote Users Obtain Plain Text in Certain Cases
+| [1020891] OpenSSH on Debian Lets Remote Users Prevent Logins
+| [1020730] OpenSSH for Red Hat Enterprise Linux Packages May Have Been Compromised
+| [1020537] OpenSSH on HP-UX Lets Local Users Hijack X11 Sessions
+| [1019733] OpenSSH Unsafe Default Configuration May Let Local Users Execute Arbitrary Commands
+| [1019707] OpenSSH Lets Local Users Hijack Forwarded X Sessions in Certain Cases
+| [1017756] Apple OpenSSH Key Generation Process Lets Remote Users Deny Service
+| [1017183] OpenSSH Privilege Separation Monitor Validation Error May Cause the Monitor to Fail to Properly Control the Unprivileged Process
+| [1016940] OpenSSH Race Condition in Signal Handler Lets Remote Users Deny Service and May Potentially Permit Code Execution
+| [1016939] OpenSSH GSSAPI Authentication Abort Error Lets Remote Users Determine Valid Usernames
+| [1016931] OpenSSH SSH v1 CRC Attack Detection Implementation Lets Remote Users Deny Service
+| [1016672] OpenSSH on Mac OS X Lets Remote Users Deny Service
+| [1015706] OpenSSH Interaction With OpenPAM Lets Remote Users Deny Service
+| [1015540] OpenSSH scp Double Shell Character Expansion During Local-to-Local Copying May Let Local Users Gain Elevated Privileges in Certain Cases
+| [1014845] OpenSSH May Unexpectedly Activate GatewayPorts and Also May Disclose GSSAPI Credentials in Certain Cases
+| [1011193] OpenSSH scp Directory Traversal Flaw Lets Remote SSH Servers Overwrite Files in Certain Cases
+| [1011143] OpenSSH Default Configuration May Be Unsafe When Used With Anonymous SSH Services
+| [1007791] Portable OpenSSH PAM free() Bug May Let Remote Users Execute Root Code
+| [1007716] OpenSSH buffer_append_space() and Other Buffer Management Errors May Let Remote Users Execute Arbitrary Code
+| [1006926] OpenSSH Host Access Restrictions Can Be Bypassed By Remote Users
+| [1006688] OpenSSH Timing Flaw With Pluggable Authentication Modules Can Disclose Valid User Account Names to Remote Users
+| [1004818] OpenSSH's Secure Shell (SSH) Implementation Weakness May Disclose User Passwords to Remote Users During Man-in-the-Middle Attacks
+| [1004616] OpenSSH Integer Overflow and Buffer Overflow May Allow Remote Users to Gain Root Access to the System
+| [1004391] OpenSSH 'BSD_AUTH' Access Control Bug May Allow Unauthorized Remote Users to Authenticated to the System
+| [1004115] OpenSSH Buffer Overflow in Kerberos Ticket and AFS Token Processing Lets Local Users Execute Arbitrary Code With Root Level Permissions
+| [1003758] OpenSSH Off-by-one 'Channels' Bug May Let Authorized Remote Users Execute Arbitrary Code with Root Privileges
+| [1002895] OpenSSH UseLogin Environment Variable Bug Lets Local Users Execute Commands and Gain Root Access
+| [1002748] OpenSSH 3.0 Denial of Service Condition May Allow Remote Users to Crash the sshd Daemon and KerberosV Configuration Error May Allow Remote Users to Partially Authenticate When Authentication Should Not Be Permitted
+| [1002734] OpenSSH's S/Key Implementation Information Disclosure Flaw Provides Remote Users With Information About Valid User Accounts
+| [1002455] OpenSSH May Fail to Properly Restrict IP Addresses in Certain Configurations
+| [1002432] OpenSSH's Sftp-server Subsystem Lets Authorized Remote Users with Restricted Keypairs Obtain Additional Access on the Server
+| [1001683] OpenSSH Allows Authorized Users to Delete Other User Files Named Cookies
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [83258] GSI-OpenSSH auth-pam.c security bypass
+| [82781] OpenSSH time limit denial of service
+| [82231] OpenSSH pam_ssh_agent_auth PAM code execution
+| [74809] OpenSSH ssh_gssapi_parse_ename denial of service
+| [72756] Debian openssh-server commands information disclosure
+| [68339] OpenSSH pam_thread buffer overflow
+| [67264] OpenSSH ssh-keysign unauthorized access
+| [65910] OpenSSH remote_glob function denial of service
+| [65163] OpenSSH certificate information disclosure
+| [64387] OpenSSH J-PAKE security bypass
+| [63337] Cisco Unified Videoconferencing OpenSSH weak security
+| [46620] OpenSSH and multiple SSH Tectia products CBC mode information disclosure
+| [45202] OpenSSH signal handler denial of service
+| [44747] RHEL OpenSSH backdoor
+| [44280] OpenSSH PermitRootLogin information disclosure
+| [44279] OpenSSH sshd weak security
+| [44037] OpenSSH sshd SELinux role unauthorized access
+| [43940] OpenSSH X11 forwarding information disclosure
+| [41549] OpenSSH ForceCommand directive security bypass
+| [41438] OpenSSH sshd session hijacking
+| [40897] OpenSSH known_hosts weak security
+| [40587] OpenSSH username weak security
+| [37371] OpenSSH username data manipulation
+| [37118] RHSA update for OpenSSH privilege separation monitor authentication verification weakness not installed
+| [37112] RHSA update for OpenSSH signal handler race condition not installed
+| [37107] RHSA update for OpenSSH identical block denial of service not installed
+| [36637] OpenSSH X11 cookie privilege escalation
+| [35167] OpenSSH packet.c newkeys[mode] denial of service
+| [34490] OpenSSH OPIE information disclosure
+| [33794] OpenSSH ChallengeResponseAuthentication information disclosure
+| [32975] Apple Mac OS X OpenSSH denial of service
+| [32387] RHSA-2006:0738 updates for openssh not installed
+| [32359] RHSA-2006:0697 updates for openssh not installed
+| [32230] RHSA-2006:0298 updates for openssh not installed
+| [32132] RHSA-2006:0044 updates for openssh not installed
+| [30120] OpenSSH privilege separation monitor authentication verification weakness
+| [29255] OpenSSH GSSAPI user enumeration
+| [29254] OpenSSH signal handler race condition
+| [29158] OpenSSH identical block denial of service
+| [28147] Apple Mac OS X OpenSSH nonexistent user login denial of service
+| [25116] OpenSSH OpenPAM denial of service
+| [24305] OpenSSH SCP shell expansion command execution
+| [22665] RHSA-2005:106 updates for openssh not installed
+| [22117] OpenSSH GSSAPI allows elevated privileges
+| [22115] OpenSSH GatewayPorts security bypass
+| [20930] OpenSSH sshd.c LoginGraceTime denial of service
+| [19441] Sun Solaris OpenSSH LDAP (1) client authentication denial of service
+| [17213] OpenSSH allows port bouncing attacks
+| [16323] OpenSSH scp file overwrite
+| [13797] OpenSSH PAM information leak
+| [13271] OpenSSH could allow an attacker to corrupt the PAM conversion stack
+| [13264] OpenSSH PAM code could allow an attacker to gain access
+| [13215] OpenSSH buffer management errors could allow an attacker to execute code
+| [13214] OpenSSH memory vulnerabilities
+| [13191] OpenSSH large packet buffer overflow
+| [12196] OpenSSH could allow an attacker to bypass login restrictions
+| [11970] OpenSSH could allow an attacker to obtain valid administrative account
+| [11902] OpenSSH PAM support enabled information leak
+| [9803] OpenSSH &quot
+| [9763] OpenSSH downloaded from the OpenBSD FTP site or OpenBSD FTP mirror sites could contain a Trojan Horse
+| [9307] OpenSSH is running on the system
+| [9169] OpenSSH &quot
+| [8896] OpenSSH Kerberos 4 TGT/AFS buffer overflow
+| [8697] FreeBSD libutil in OpenSSH fails to drop privileges prior to using the login class capability database
+| [8383] OpenSSH off-by-one error in channel code
+| [7647] OpenSSH UseLogin option arbitrary code execution
+| [7634] OpenSSH using sftp and restricted keypairs could allow an attacker to bypass restrictions
+| [7598] OpenSSH with Kerberos allows attacker to gain elevated privileges
+| [7179] OpenSSH source IP access control bypass
+| [6757] OpenSSH &quot
+| [6676] OpenSSH X11 forwarding symlink attack could allow deletion of arbitrary files
+| [6084] OpenSSH 2.3.1 allows remote users to bypass authentication
+| [5517] OpenSSH allows unauthorized access to resources
+| [4646] OpenSSH UseLogin option allows remote users to execute commands as root
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21579] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (2)
+| [21578] OpenSSH 3.x Challenge-Response Buffer Overflow Vulnerabilities (1)
+| [21402] OpenSSH 2.x/3.x Kerberos 4 TGT/AFS Token Buffer Overflow Vulnerability
+| [21314] OpenSSH 2.x/3.0.1/3.0.2 Channel Code Off-By-One Vulnerability
+| [20253] OpenSSH 1.2 scp File Create/Overwrite Vulnerability
+| [17462] FreeBSD OpenSSH 3.5p1 - Remote Root Exploit
+| [14866] Novell Netware 6.5 - OpenSSH Remote Stack Overflow
+| [6094] Debian OpenSSH Remote SELinux Privilege Elevation Exploit (auth)
+| [3303] Portable OpenSSH <= 3.6.1p-PAM / 4.1-SUSE Timing Attack Exploit
+| [2444] OpenSSH <= 4.3 p1 (Duplicated Block) Remote Denial of Service Exploit
+| [1572] Dropbear / OpenSSH Server (MAX_UNAUTH_CLIENTS) Denial of Service
+| [258] glibc-2.2 and openssh-2.3.0p1 exploits glibc => 2.1.9x
+| [26] OpenSSH/PAM <= 3.6.1p1 Remote Users Ident (gossh.sh)
+| [25] OpenSSH/PAM <= 3.6.1p1 Remote Users Discovery Tool
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [902488] OpenSSH 'sshd' GSSAPI Credential Disclosure Vulnerability
+| [900179] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [881183] CentOS Update for openssh CESA-2012:0884 centos6 
+| [880802] CentOS Update for openssh CESA-2009:1287 centos5 i386
+| [880746] CentOS Update for openssh CESA-2009:1470 centos5 i386
+| [870763] RedHat Update for openssh RHSA-2012:0884-04
+| [870129] RedHat Update for openssh RHSA-2008:0855-01
+| [861813] Fedora Update for openssh FEDORA-2010-5429
+| [861319] Fedora Update for openssh FEDORA-2007-395
+| [861170] Fedora Update for openssh FEDORA-2007-394
+| [861012] Fedora Update for openssh FEDORA-2007-715
+| [840345] Ubuntu Update for openssh vulnerability USN-597-1
+| [840300] Ubuntu Update for openssh update USN-612-5
+| [840271] Ubuntu Update for openssh vulnerability USN-612-2
+| [840268] Ubuntu Update for openssh update USN-612-7
+| [840259] Ubuntu Update for openssh vulnerabilities USN-649-1
+| [840214] Ubuntu Update for openssh vulnerability USN-566-1
+| [831074] Mandriva Update for openssh MDVA-2010:162 (openssh)
+| [830929] Mandriva Update for openssh MDVA-2010:090 (openssh)
+| [830807] Mandriva Update for openssh MDVA-2010:026 (openssh)
+| [830603] Mandriva Update for openssh MDVSA-2008:098 (openssh)
+| [830523] Mandriva Update for openssh MDVSA-2008:078 (openssh)
+| [830317] Mandriva Update for openssh-askpass-qt MDKA-2007:127 (openssh-askpass-qt)
+| [830191] Mandriva Update for openssh MDKSA-2007:236 (openssh)
+| [802407] OpenSSH 'sshd' Challenge Response Authentication Buffer Overflow Vulnerability
+| [103503] openssh-server Forced Command Handling Information Disclosure Vulnerability
+| [103247] OpenSSH Ciphersuite Specification Information Disclosure Weakness
+| [103064] OpenSSH Legacy Certificate Signing Information Disclosure Vulnerability
+| [100584] OpenSSH X Connections Session Hijacking Vulnerability
+| [100153] OpenSSH CBC Mode Information Disclosure Vulnerability
+| [66170] CentOS Security Advisory CESA-2009:1470 (openssh)
+| [65987] SLES10: Security update for OpenSSH
+| [65819] SLES10: Security update for OpenSSH
+| [65514] SLES9: Security update for OpenSSH
+| [65513] SLES9: Security update for OpenSSH
+| [65334] SLES9: Security update for OpenSSH
+| [65248] SLES9: Security update for OpenSSH
+| [65218] SLES9: Security update for OpenSSH
+| [65169] SLES9: Security update for openssh,openssh-askpass
+| [65126] SLES9: Security update for OpenSSH
+| [65019] SLES9: Security update for OpenSSH
+| [65015] SLES9: Security update for OpenSSH
+| [64931] CentOS Security Advisory CESA-2009:1287 (openssh)
+| [61639] Debian Security Advisory DSA 1638-1 (openssh)
+| [61030] Debian Security Advisory DSA 1576-2 (openssh)
+| [61029] Debian Security Advisory DSA 1576-1 (openssh)
+| [60840] FreeBSD Security Advisory (FreeBSD-SA-08:05.openssh.asc)
+| [60803] Gentoo Security Advisory GLSA 200804-03 (openssh)
+| [60667] Slackware Advisory SSA:2008-095-01 openssh 
+| [59014] Slackware Advisory SSA:2007-255-01 openssh 
+| [58741] Gentoo Security Advisory GLSA 200711-02 (openssh)
+| [57919] Gentoo Security Advisory GLSA 200611-06 (openssh)
+| [57895] Gentoo Security Advisory GLSA 200609-17 (openssh)
+| [57585] Debian Security Advisory DSA 1212-1 (openssh (1:3.8.1p1-8.sarge.6))
+| [57492] Slackware Advisory SSA:2006-272-02 openssh 
+| [57483] Debian Security Advisory DSA 1189-1 (openssh-krb5)
+| [57476] FreeBSD Security Advisory (FreeBSD-SA-06:22.openssh.asc)
+| [57470] FreeBSD Ports: openssh
+| [56352] FreeBSD Security Advisory (FreeBSD-SA-06:09.openssh.asc)
+| [56330] Gentoo Security Advisory GLSA 200602-11 (OpenSSH)
+| [56294] Slackware Advisory SSA:2006-045-06 openssh 
+| [53964] Slackware Advisory SSA:2003-266-01 New OpenSSH packages 
+| [53885] Slackware Advisory SSA:2003-259-01 OpenSSH Security Advisory 
+| [53884] Slackware Advisory SSA:2003-260-01 OpenSSH updated again 
+| [53788] Debian Security Advisory DSA 025-1 (openssh)
+| [52638] FreeBSD Security Advisory (FreeBSD-SA-03:15.openssh.asc)
+| [52635] FreeBSD Security Advisory (FreeBSD-SA-03:12.openssh.asc)
+| [11343] OpenSSH Client Unauthorized Remote Forwarding
+| [10954] OpenSSH AFS/Kerberos ticket/token passing
+| [10883] OpenSSH Channel Code Off by 1
+| [10823] OpenSSH UseLogin Environment Variables
+|_
+80/tcp    open  http     lighttpd 1.4.35
+|_http-server-header: lighttpd/1.4.35
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [75579] lighttpd 1.4.35 Log File mod_mysql_vhost.c privilege escalation
+| [75566] lighttpd 1.4.35 Log File http_auth.c information disclosure
+| [12614] lighttpd 1.4.34 mod_evhost/mod_simple_vhost directory traversal
+| [11097] lighttpd up to 1.4.33 ssl.cipher-lister weak encryption
+| [7013] lighttpd 1.4.31/1.4.32 src/request.c http_request_split_value() denial of service
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2012-5533] The http_request_split_value function in request.c in lighttpd before 1.4.32 allows remote attackers to cause a denial of service (infinite loop) via a request with a header containing an empty token, as demonstrated using the "Connection: TE,,Keep-Alive" header.
+| [CVE-2011-4362] Integer signedness error in the base64_decode function in the HTTP authentication functionality (http_auth.c) in lighttpd 1.4 before 1.4.30 and 1.5 before SVN revision 2806 allows remote attackers to cause a denial of service (segmentation fault) via crafted base64 input that triggers an out-of-bounds read with a negative index.
+| [CVE-2010-0295] lighttpd before 1.4.26, and 1.5.x, allocates a buffer for each read operation that occurs for a request, which allows remote attackers to cause a denial of service (memory consumption) by breaking a request into small pieces that are sent at a slow rate.
+| [CVE-2008-4360] mod_userdir in lighttpd before 1.4.20, when a case-insensitive operating system or filesystem is used, performs case-sensitive comparisons on filename components in configuration options, which might allow remote attackers to bypass intended access restrictions, as demonstrated by a request for a .PHP file when there is a configuration rule for .php files.
+| [CVE-2008-4359] lighttpd before 1.4.20 compares URIs to patterns in the (1) url.redirect and (2) url.rewrite configuration settings before performing URL decoding, which might allow remote attackers to bypass intended access restrictions, and obtain sensitive information or possibly modify data.
+| [CVE-2008-4298] Memory leak in the http_request_parse function in request.c in lighttpd before 1.4.20 allows remote attackers to cause a denial of service (memory consumption) via a large number of requests with duplicate request headers.
+| [CVE-2008-1531] The connection_state_machine function (connections.c) in lighttpd 1.4.19 and earlier, and 1.5.x before 1.5.0, allows remote attackers to cause a denial of service (active SSL connection loss) by triggering an SSL error, such as disconnecting before a download has finished, which causes all active SSL connections to be lost.
+| [CVE-2008-1270] mod_userdir in lighttpd 1.4.18 and earlier, when userdir.path is not set, uses a default of $HOME, which might allow remote attackers to read arbitrary files, as demonstrated by accessing the ~nobody directory.
+| [CVE-2008-1111] mod_cgi in lighttpd 1.4.18 sends the source code of CGI scripts instead of a 500 error when a fork failure occurs, which might allow remote attackers to obtain sensitive information.
+| [CVE-2008-0983] lighttpd 1.4.18, and possibly other versions before 1.5.0, does not properly calculate the size of a file descriptor array, which allows remote attackers to cause a denial of service (crash) via a large number of connections, which triggers an out-of-bounds access.
+| [CVE-2007-4727] Buffer overflow in the fcgi_env_add function in mod_proxy_backend_fastcgi.c in the mod_fastcgi extension in lighttpd before 1.4.18 allows remote attackers to overwrite arbitrary CGI variables and execute arbitrary code via an HTTP request with a long content length, as demonstrated by overwriting the SCRIPT_FILENAME variable, aka a "header overflow."
+| [CVE-2007-3950] lighttpd 1.4.15, when run on 32 bit platforms, allows remote attackers to cause a denial of service (daemon crash) via unspecified vectors involving the use of incompatible format specifiers in certain debugging messages in the (1) mod_scgi, (2) mod_fastcgi, and (3) mod_webdav modules.
+| [CVE-2007-3949] mod_access.c in lighttpd 1.4.15 ignores trailing / (slash) characters in the URL, which allows remote attackers to bypass url.access-deny settings.
+| [CVE-2007-3948] connections.c in lighttpd before 1.4.16 might accept more connections than the configured maximum, which allows remote attackers to cause a denial of service (failed assertion) via a large number of connection attempts.
+| [CVE-2007-3947] request.c in lighttpd 1.4.15 allows remote attackers to cause a denial of service (daemon crash) by sending an HTTP request with duplicate headers, as demonstrated by a request containing two Location header lines, which results in a segmentation fault.
+| [CVE-2007-3946] mod_auth (http_auth.c) in lighttpd before 1.4.16 allows remote attackers to cause a denial of service (daemon crash) via unspecified vectors involving (1) a memory leak, (2) use of md5-sess without a cnonce, (3) base64 encoded strings, and (4) trailing whitespace in the Auth-Digest header.
+| [CVE-2007-1870] lighttpd before 1.4.14 allows attackers to cause a denial of service (crash) via a request to a file whose mtime is 0, which results in a NULL pointer dereference.
+| [CVE-2007-1869] lighttpd 1.4.12 and 1.4.13 allows remote attackers to cause a denial of service (cpu and resource consumption) by disconnecting while lighttpd is parsing CRLF sequences, which triggers an infinite loop and file descriptor consumption.
+| [CVE-2006-0814] response.c in Lighttpd 1.4.10 and possibly previous versions, when run on Windows, allows remote attackers to read arbitrary source code via requests that contain trailing (1) "." (dot) and (2) space characters, which are ignored by Windows, as demonstrated by PHP files.
+| [CVE-2006-0760] LightTPD 1.4.8 and earlier, when the web root is on a case-insensitive filesystem, allows remote attackers to bypass URL checks and obtain sensitive information via file extensions with unexpected capitalization, as demonstrated by a request for index.PHP when the configuration invokes the PHP interpreter only for ".php" names.
+| 
+| OSVDB - http://www.osvdb.org:
+| [91462] lighttpd on Debian Linux Socket Symlink Web Server Configuration Manipulation
+| [87623] lighttpd src/request.c http_request_split_value() Function Connection HTTP Header Handling Remote DoS
+| [77366] lighttpd src/http_auth.c base64_decode() Function Base64 Data Parsing Out-of-bounds Read Remote DoS
+| [63139] lighttpd on Windows 8.3 Filename Alias Request Access Rules / Authentication Bypass
+| [62068] lighttpd HTTP Session Memory Exhaustion Remote DoS
+| [58154] lighttpd PHP File Trailing Slash Request Source Disclosure
+| [48889] lighttpd mod_userdir Filename Component Case Mismatch Remote Access Restriction Bypass
+| [48886] lighttpd url.redirect / url.rewrite URL Decoding Remote Security Bypass
+| [48682] lighttpd request.c http_request_parse Function Memory Leak Remote DoS
+| [43788] lighttpd Cross-user Forced SSL Session Termination DoS
+| [43170] lighttpd mod_userdir userdir.path Information Disclosure
+| [43169] lighttpd mod_cgi Fork Failure CGI Source Disclosure
+| [42363] lighttpd File Descriptor Array Connection Saturation Remote DoS
+| [38318] lighttpd Unspecified Issue
+| [38317] lighttpd mod_auth (http_auth.c) Malformed Auth-Digest Header Remote DoS
+| [38316] lighttpd mod_auth (http_auth.c) base64_decode Handling Remote DoS
+| [38315] lighttpd mod_auth (http_auth.c) Malformed md5-sess Remote DoS
+| [38314] lighttpd mod_auth (http_auth.c) Unspecified Memory Leak DoS
+| [38313] lighttpd request.c Malformed HTTP Request Remote DoS
+| [38312] lighttpd connections.c Connection Saturation Remote DoS
+| [38311] lighttpd mod_access.c Crafted URL url.access-deny Bypass
+| [38310] lighttpd mod_webdav Debug Message Format Specifier Unspecified DoS
+| [38309] lighttpd mod_fastcgi Debug Message Format Specifier Unspecified DoS
+| [38308] lighttpd mod_scgi Debug Message Format Specifier Unspecified DoS
+| [36933] lighttpd mod_fastcgi HTTP Request Header Overflow
+| [34176] lighttpd 0 mtime Null Pointer DoS
+| [34175] lighttpd CRLF Processing DoS
+| [33718] lighttpd search q Parameter XSS
+| [23542] lighttpd on Windows Crafted Filename Request Script Source Disclosure
+| [23229] lighttpd Unexpected Capitalization File Extension Request Source Disclosure
+| [13844] lighttpd Null Byte Request CGI Script Source Code Disclosure
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [93456] Lighttpd CVE-2016-1000212 Security Bypass Vulnerability
+| [90260] lighttpd CVE-2005-0453 Remote Security Vulnerability
+| [74813] Lighttpd 'http_auth.c' Security Bypass Vulnerability
+| [66599] lighttpd CVE-2014-2469 Remote Denial of Service Vulnerability
+| [66157] lighttpd CVE-2014-2324 Multiple Directory Traversal Vulnerabilities
+| [66153] lighttpd 'mod_mysql_vhost.c' SQL Injection Vulnerability
+| [63688] lighttpd CVE-2013-4559 Local Privilege Escalation Vulnerability
+| [63686] lighttpd CVE-2013-4560 Use-After-Free Remote Denial of Service Vulnerability
+| [63534] lighttpd SSL Weak Cipher CVE-2013-4508 Security Bypass Weakness
+| [58528] lighttpd CVE-2013-1427 Insecure Temporary File Creation Vulnerability
+| [56619] lighttpd 'http_request_split_value()' Function Remote Denial of Service Vulnerability
+| [50851] lighttpd 'http_auth.c' Remote Denial of Service Vulnerability
+| [38036] lighttpd Slow Request Handling Remote Denial Of Service Vulnerability
+| [35097] Lighttpd Trailing Slash Information Disclosure Vulnerability
+| [31600] Lighttpd 'mod_userdir' Case Sensitive Comparison Security Bypass Vulnerability
+| [31599] Lighttpd URI Rewrite/Redirect Information Disclosure Vulnerability
+| [31434] Lighttpd Duplicate Request Header Denial of Service Vulnerability
+| [28489] Lighttpd SSL Error Denial of Service Vulnerability
+| [28226] Lighttpd mod_userdir Information Disclosure Vulnerability
+| [28100] Lighttpd 'mod_cgi' Information Disclosure Vulnerability
+| [27943] Lighttpd File Descriptor Array Remote Denial of Service Vulnerability
+| [25622] Lighttpd Mod_FastCGI Request Headers Remote Header Overflow Vulnerability
+| [24967] Lighttpd Multiple Code Execution, Denial of Service and Information Disclosure Vulnerabilities
+| [23515] Lighttpd Multiple Remote Denial of Service Vulnerabilities
+| [22527] RETIRED: LightTPD Search.PHP Cross-Site Scripting Vulnerability
+| [16893] Lighttpd Remote Script Disclosure Vulnerability
+| [12567] Lighttpd Remote CGI Script Disclosure Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1027802] lighttpd Connection Header Processing Flaw Lets Remote Users Deny Service
+| [1026359] lighttpd Authentication Decoding Bug Lets Remote Users Deny Service
+| [1015703] lighttpd Discloses Script Source Code to Remote Users
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [85519] Linksys lighttpd security bypass
+| [82897] lighttpd /tmp directory symlink
+| [80213] lighttpd http_request_split_value() denial of service
+| [71536] lighttpd base64_decode() denial of service
+| [56038] lighttpd slow request denial of service
+| [50743] Lighttpd slash &quot
+| [45690] lighttpd url.redirect and url.rewrite information disclosure
+| [45689] lighttpd mod_userdir information disclosure
+| [45471] lighttpd http_request_parse() denial of service
+| [41545] lighttpd SSL error denial of service
+| [41173] lighttpd mod_userdir information disclosure
+| [41008] lighttpd mod_cgi information disclosure
+| [40779] lighttpd file descriptor denial of service
+| [36526] lighttpd mod_fastcgi code execution
+| [35532] lighttpd SCGI denial of service
+| [35531] lighttpd server.max-fds denial of service
+| [35530] lighttpd mod_auth Auth-Digest denial of service
+| [35529] lighttpd mod_auth denial of service
+| [35528] lighttpd HTTP header denial of service
+| [35527] lighttpd access-deny security bypass
+| [33678] Lighttpd mtime denial of service
+| [33671] Lighttpd \r\n\r\n denial of service
+| [24976] Lighttpd .php script source code disclosure
+| [24699] lighttpd .php file extension source disclosure
+| [19350] lighttpd buffer_urldecode function source code disclosure
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [22902] lighttpd 1.4.31 Denial of Service PoC
+| [30322] Lighttpd <= 1.4.15 Multiple Code Execution, Denial of Service and Information Disclosure Vulnerabilities
+| [8786] Lighttpd < 1.4.23 Source Code Disclosure Vulnerability (BSD/Solaris bug)
+| [4437] Lighttpd <= 1.4.17 FastCGI Header Overflow Remote Exploit
+| [4391] Lighttpd <= 1.4.16 FastCGI Header Overflow Remote Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [61364] Debian Security Advisory DSA 1540-3 (lighttpd)
+| [60793] Debian Security Advisory DSA 1540-2 (lighttpd)
+| [60786] Debian Security Advisory DSA 1540-1 (lighttpd)
+|_
+443/tcp   open  ssl/http Jetty 9.0.7.v20131107
+|_http-server-header: Jetty(9.0.7.v20131107)
+| vulscan: scip VulDB - http://www.scip.ch/en/?vuldb:
+| [102645] Jetty up to 9.4.x Login Password.java information disclosure
+| [99824] Eclipse Jetty up to 9.3.8 on Windows Path Normalization PathResource Backslash privilege escalation
+| [69235] Jetty httpd up to 9.2.8 HttpParser Memory information disclosure
+| 
+| MITRE CVE - http://cve.mitre.org:
+| [CVE-2011-4461] Jetty 8.1.0.RC2 and earlier computes hash values for form parameters without restricting the ability to trigger hash collisions predictably, which allows remote attackers to cause a denial of service (CPU consumption) by sending many crafted parameters.
+| [CVE-2011-4404] The default configuration of the HTTP server in Jetty in vSphere Update Manager in VMware vCenter Update Manager 4.0 before Update 4 and 4.1 before Update 2 allows remote attackers to conduct directory traversal attacks and read arbitrary files via unspecified vectors, a related issue to CVE-2009-1523.
+| [CVE-2010-1587] The Jetty ResourceHandler in Apache ActiveMQ 5.x before 5.3.2 and 5.4.x before 5.4.0 allows remote attackers to read JSP source code via a // (slash slash) initial substring in a URI for (1) admin/index.jsp, (2) admin/queues.jsp, or (3) admin/topics.jsp.
+| [CVE-2009-4612] Multiple cross-site scripting (XSS) vulnerabilities in the WebApp JSP Snoop page in Mort Bay Jetty 6.1.x through 6.1.21 allow remote attackers to inject arbitrary web script or HTML via the PATH_INFO to the default URI under (1) jspsnoop/, (2) jspsnoop/ERROR/, and (3) jspsnoop/IOException/, and possibly the PATH_INFO to (4) snoop.jsp.
+| [CVE-2009-4611] Mort Bay Jetty 6.x and 7.0.0 writes backtrace data without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator, related to (1) a string value in the Age parameter to the default URI for the Cookie Dump Servlet in test-jetty-webapp/src/main/java/com/acme/CookieDump.java under cookie/, (2) an alphabetic value in the A parameter to jsp/expr.jsp, or (3) an alphabetic value in the Content-Length HTTP header to an arbitrary application.
+| [CVE-2009-4610] Multiple cross-site scripting (XSS) vulnerabilities in Mort Bay Jetty 6.x and 7.0.0 allow remote attackers to inject arbitrary web script or HTML via (1) the query string to jsp/dump.jsp in the JSP Dump feature, or the (2) Name or (3) Value parameter to the default URI for the Session Dump Servlet under session/.
+| [CVE-2009-4609] The Dump Servlet in Mort Bay Jetty 6.x and 7.0.0 allows remote attackers to obtain sensitive information about internal variables and other data via a request to a URI ending in /dump/, as demonstrated by discovering the value of the getPathTranslated variable.
+| [CVE-2009-3579] Cross-site scripting (XSS) vulnerability in the CookieDump.java sample application in Mort Bay Jetty 6.1.19 and 6.1.20 allows remote attackers to inject arbitrary web script or HTML via the Value parameter in a GET request to cookie/.
+| [CVE-2009-1524] Cross-site scripting (XSS) vulnerability in Mort Bay Jetty before 6.1.17 allows remote attackers to inject arbitrary web script or HTML via a directory listing request containing a 
+| [CVE-2009-1523] Directory traversal vulnerability in the HTTP server in Mort Bay Jetty 5.1.14, 6.x before 6.1.17, and 7.x through 7.0.0.M2 allows remote attackers to access arbitrary files via directory traversal sequences in the URI.
+| [CVE-2007-6672] Mortbay Jetty 6.1.5 and 6.1.6 allows remote attackers to bypass protection mechanisms and read the source of files via multiple '/' (slash) characters in the URI.
+| [CVE-2007-5615] CRLF injection vulnerability in Mortbay Jetty before 6.1.6rc0 allows remote attackers to inject arbitrary HTTP headers and conduct HTTP response splitting attacks via unspecified vectors.
+| [CVE-2007-5614] Mortbay Jetty before 6.1.6rc1 does not properly handle "certain quote sequences" in HTML cookie parameters, which allows remote attackers to hijack browser sessions via unspecified vectors.
+| [CVE-2007-5613] Cross-site scripting (XSS) vulnerability in Dump Servlet in Mortbay Jetty before 6.1.6rc1 allows remote attackers to inject arbitrary web script or HTML via unspecified parameters and cookies.
+| [CVE-2006-6969] Jetty before 4.2.27, 5.1 before 5.1.12, 6.0 before 6.0.2, and 6.1 before 6.1.0pre3 generates predictable session identifiers using java.util.random, which makes it easier for remote attackers to guess a session identifier through brute force attacks, bypass authentication requirements, and possibly conduct cross-site request forgery attacks.
+| [CVE-2006-2759] jetty 6.0.x (jetty6) beta16 allows remote attackers to read arbitrary script source code via a capital P in the .jsp extension, and probably other mixed case manipulations.
+| [CVE-2006-2758] Directory traversal vulnerability in jetty 6.0.x (jetty6) beta16 allows remote attackers to read arbitrary files via a %2e%2e%5c (encoded ../) in the URL.  NOTE: this might be the same issue as CVE-2005-3747.
+| [CVE-2005-3747] Unspecified vulnerability in Jetty before 5.1.6 allows remote attackers to obtain source code of JSP pages, possibly involving requests for .jsp files with URL-encoded backslash ("%5C") characters.  NOTE: this might be the same issue as CVE-2006-2758.
+| [CVE-2004-2478] Unspecified vulnerability in Jetty HTTP Server, as used in (1) IBM Trading Partner Interchange before 4.2.4, (2) CA Unicenter Web Services Distributed Management (WSDM) before 3.11, and possibly other products, allows remote attackers to read arbitrary files via a .. (dot dot) in the URL.
+| [CVE-2004-2381] HttpRequest.java in Jetty HTTP Server before 4.2.19 allows remote attackers to cause denial of service (memory usage and application crash) via HTTP requests with a large Content-Length.
+| [CVE-2002-1533] Cross-site scripting (XSS) vulnerability in Jetty JSP servlet engine allows remote attackers to insert arbitrary HTML or script via an HTTP request to a .jsp file whose name contains the malicious script and some encoded linefeed characters (%0a).
+| [CVE-2002-1178] Directory traversal vulnerability in the CGIServlet for Jetty HTTP server before 4.1.0 allows remote attackers to execute arbitrary commands via ..\ (dot-dot backslash) sequences in an HTTP request to the cgi-bin directory.
+| 
+| OSVDB - http://www.osvdb.org:
+| [94643] Jetty Cookie Name Session Hijacking Weakness
+| [94641] Jetty Privileged Process Termination Weakness
+| [94640] Jetty Dispatch Servlet Non-existent Servlet Name XSS
+| [94639] Jetty Dispatcher Servlet (com.acme.DispatchServlet) Recursive Inclusion Remote DoS
+| [94275] Apache Solr JettySolrRunner.java Can Not Find Error Message XSS
+| [88638] Jetty on Windows Mixed Case WEB-INF Request Security Bypass
+| [88589] Jetty with JBoss Role Authentication Failure Object Leak Weakness
+| [88230] Jetty servletConfig Unspecified Downcast Issue
+| [88227] Jetty Malformed URL Request Handling Remote DoS
+| [87500] Jetty servlet.jar HTTP Method Header Request Entity Too Large XSS
+| [87493] Jetty Malformed MultiPart Form Request Handling Remote Filter DoS
+| [87488] Jetty TLS Renegotiation Handshakes MiTM Plaintext Data Injection
+| [87487] Jetty Multi-byte UTF-8 Character Handling Overflow
+| [87482] Jetty Error Handler Exception Message XSS
+| [87468] Jetty Malformed If-Modified-Since Header Handling Remote DoS
+| [87465] Jetty HttpTester POST Request Handling Overflow DoS
+| [87455] Jetty with mod_jk AJP Malformed Request Unspecified Issue
+| [87449] Jetty Chunk Handling Infinite Loop Remote DoS
+| [87447] Jetty HTTPS Session Cookie Secure / HttpOnly Flag Weakness
+| [87438] Jetty HttpFields Cache Unspecified Overflow
+| [87431] Jetty Canonical Path Crafted Traversal Unspecified Issue
+| [78117] Jetty Hash Collision Form Parameter Parsing Remote DoS
+| [75808] Jetty Backtrace Data Manipulation Remote Code Execution
+| [65054] Apache ActiveMQ Jetty Error Handler XSS
+| [64020] Apache ActiveMQ Jetty ResourceHandler Crafted Request JSP File Source Disclosure
+| [61768] Jetty Dump Servlet URI getPathTranslated Variable Value Information Disclosure
+| [61767] Jetty Session Dump Servlet URI Multiple Parameter XSS
+| [61766] Jetty JSP Dump Feature jsp/dump.jsp Query String XSS
+| [61765] Jetty WebApp JSP Snoop Page URI PATH_INFO Parameter XSS
+| [58883] Jetty CookieDump.java Sample Application cookie/ GET Request Value Parameter XSS
+| [58736] Jetty on Windows Double Slash (//) Path Aliasing Unspecified Issue
+| [54187] Jetty Directory Listing Semicolon Character XSS
+| [54186] Jetty HTTP Server Document Root Traversal Arbitrary File Access
+| [44989] Jetty .jsp Mixed Case Request JSP Source Disclosure
+| [43255] Jetty SslEngine Unspecified Overflow
+| [43254] Jetty UTF-8 Handling Unspecified Overflow
+| [43253] Jetty mod_jk AJPParser Packet Handling Overflow
+| [43252] Jetty Unspecified Security Issue
+| [43209] Jetty jasper2 Unspecified Client Scripting Issue
+| [43208] Jetty Trailing Slash Suffix Matching Weakness
+| [43207] Jetty Crafted Slash Request Constraint Bypass
+| [43206] Jetty Null Byte File Request Restriction Bypass
+| [43205] Jetty Error Page Unspecified Script Issue
+| [43204] Jetty Cookie Date Handling Overflow
+| [42497] Jetty Dump Servlet (webapps/test/jsp/dump.jsp) Unspecified XSS
+| [42496] Jetty HTML Cookie Parameter Unspecified Character Sequence Hijacking Weakness
+| [42495] Jetty Unspecified CRLF Injection
+| [39855] Jetty URL Multiple Slash Character Information Disclosure
+| [33108] Jetty Predictable Session Identifier Issue
+| [21000] Jetty Unspecified JSP Source Code Disclosure
+| [10490] IBM Trading Partner Interchange Jetty Server Traversal Arbitrary File Access
+| [9543] Jetty CGI+windows Unspecified Security Issue
+| [9209] Jetty JSP Servlet Engine .jsp Encoded Newline XSS
+| [8948] Jetty HTTP Server CGIServlet Double Dot Arbitrary File Access
+| [4387] Jetty HTTP Server HttpRequest.java Content-Length Handling Remote Overflow DoS
+| 
+| SecurityFocus - http://www.securityfocus.com/bid/:
+| [99104] Jetty CVE-2017-9735 Security Bypass Vulnerability
+| [90945] Jetty CVE-2016-4800 Security Bypass Vulnerability
+| [79858] Jetty CVE-2006-2758 Directory Traversal Vulnerability
+| [79857] Jetty CVE-2006-2759 Remote Security Vulnerability
+| [72768] Jetty CVE-2015-2080 Information Disclosure Vulnerability
+| [63970] Jetty NTFS Remote Security Bypass Vulnerability
+| [51199] Jetty Hash Collision Denial Of Service Vulnerability
+| [50723] Jetty Web Server Directory Traversal Vulnerability
+| [37929] Jetty Terminal Escape Sequence in Logs Command Injection Vulnerability
+| [37927] Jetty JSP Snoop Page Multiple Cross-Site Scripting Vulnerabilities
+| [34800] Jetty Cross Site Scripting and Information Disclosure Vulnerabilities
+| [27117] Jetty Double Slash URI Information Disclosure Vulnerability
+| [26697] Jetty Dump Servlet Cross Site Scripting Vulnerability
+| [26696] Jetty Unspecified HTTP Response Splitting Vulnerability
+| [26695] Jetty Cookie Names Session Hijacking Vulnerability
+| [22405] Jetty Insecure Random Number Generation Vulnerability
+| [15515] Jetty URL Encoded Backslash Source Code Disclosure Vulnerability
+| [11330] Jetty Directory Traversal Vulnerability
+| [9917] Jetty Unspecified Denial Of Service Vulnerability
+| [5852] Jetty Servlet Engine Arbitrary Command Execution Vulnerability
+| [5821] Jetty Servlet Engine Cross Site Scripting Vulnerability
+| [4360] Jetty Double-Slash Request Arbitrary File Access Vulnerability
+| 
+| SecurityTracker - http://www.securitytracker.com:
+| [1026475] Jetty Hash Table Collision Bug Lets Remote Users Deny Service
+| [1026341] VMware vCenter Update Manager Directory Traversal Flaw in Jetty Component Lets Remote Users View Files
+| [1016168] jetty6 Input Validation Flaws Let Remote Users Traverse the Directory
+| [1005348] Jetty Java Server Bug in CGI Servlet Lets Remote Users Execute Specified Binaries
+| [1005311] Jetty Java Server Input Validation Hole Lets Remote Users Conduct Cross-Site Scripting Attacks
+| 
+| IBM X-Force - http://xforce.iss.net:
+| [72017] Jetty hash denial of service
+| [71356] VMware vCenter Update Manager vSphere Update Manager Jetty unspecified directory traversal
+| [55652] Jetty WebApp JSP Snoop page cross-site scripting
+| [55651] Jetty dump.jsp cross-site scripting
+| [55650] Jetty Dump Servlet information disclosure
+| [53777] Jetty CookieDump.java cross-site scripting
+| [50411] Jetty DispatchServlet denial of service
+| [50301] Jetty listing path cross-site scripting
+| [50298] Jetty HTTP server directory traversal
+| [39407] Jetty multiple characters information disclosure
+| [38899] Jetty unspecified CRLF injection
+| [38897] Jetty HTTP cookie session hijacking
+| [38894] Jetty Dump Servlet cross-site scripting
+| [32240] Jetty session identifiers session hijacking
+| [31286] Jetty .jsp extension source code disclosure
+| [28060] Jetty URL encoded format directory traversal
+| [23165] Jetty JSP source code disclosure
+| [17600] Jetty multiple products HTTP directory traversal
+| [15537] Jetty unknown denial of service
+| [10246] Jetty CGIServlet directory traversal could be used to execute commands
+| [10219] Jetty HTTP Server and Servlet Engine cross-site scripting
+| 
+| Exploit-DB - http://www.exploit-db.com:
+| [21895] Jetty 3.1.6/3.1.7/4.1 Servlet Engine Arbitrary Command Execution Vulnerability
+| [21875] Jetty 4.1 Servlet Engine Cross Site Scripting Vulnerability
+| [9887] jetty 6.x - 7.x xss, information disclosure, injection
+| [8646] Mortbay Jetty <= 7.0.0-pre5 Dispatcher Servlet Denial of Service Exploit
+| 
+| OpenVAS (Nessus) - http://www.openvas.org:
+| [64089] Fedora Core 9 FEDORA-2009-5500 (jetty)
+|_
+50003/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequest: 
+|     handle
+|     37848
+|     pversion
+|     trusted
+|   DNSVersionBindReq: 
+|     handle
+|     37832
+|     pversion
+|     trusted
+|   GenericLines: 
+|     handle
+|     37752
+|     pversion
+|     trusted
+|   GetRequest: 
+|     handle
+|     37768
+|     pversion
+|     trusted
+|   HTTPOptions: 
+|     handle
+|     37784
+|     pversion
+|     trusted
+|   Help: 
+|     handle
+|     37864
+|     pversion
+|     trusted
+|   NULL, ibm-db2: 
+|     handle
+|     37736
+|     pversion
+|     trusted
+|   RPCCheck: 
+|     handle
+|     37816
+|     pversion
+|     trusted
+|   RTSPRequest: 
+|     handle
+|     37800
+|     pversion
+|     trusted
+|   SSLSessionReq: 
+|     handle
+|     37880
+|     pversion
+|_    trusted
+50006/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequest: 
+|     handle
+|     1226
+|     pversion
+|     trusted
+|   DNSVersionBindReq: 
+|     handle
+|     1210
+|     pversion
+|     trusted
+|   GenericLines: 
+|     handle
+|     1130
+|     pversion
+|     trusted
+|   GetRequest: 
+|     handle
+|     1146
+|     pversion
+|     trusted
+|   HTTPOptions: 
+|     handle
+|     1162
+|     pversion
+|     trusted
+|   Help: 
+|     handle
+|     1242
+|     pversion
+|     trusted
+|   NULL, ibm-db2: 
+|     handle
+|     1114
+|     pversion
+|     trusted
+|   RPCCheck: 
+|     handle
+|     1194
+|     pversion
+|     trusted
+|   RTSPRequest: 
+|     handle
+|     1178
+|     pversion
+|     trusted
+|   SSLSessionReq: 
+|     handle
+|     1258
+|     pversion
+|_    trusted
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port50003-TCP:V=7.60%I=7%D=3/19%Time=5AAFDD14%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0h\x93\0\x009\0
+SF:\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0037736\x08\0\0\0pversion\x02\0
+SF:\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(ibm-db2,56,"\xa9\0\x01\0N\0\
+SF:0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0h\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0
+SF:handle\x05\0\0\x0037736\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0truste
+SF:d\x01\0\0\x000")%r(GenericLines,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x0
+SF:3@\0\x01\0\0\0x\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x003
+SF:7752\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(
+SF:GetRequest,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x88\x9
+SF:3\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0037768\x08\0\0\0pver
+SF:sion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(HTTPOptions,56,"\x
+SF:a9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x98\x93\0\x009\0\0\0\x0
+SF:3\0\0\0\x06\0\0\0handle\x05\0\0\x0037784\x08\0\0\0pversion\x02\0\0\x009
+SF:8\x07\0\0\0trusted\x01\0\0\x000")%r(RTSPRequest,56,"\xa9\0\x01\0N\0\0\0
+SF:b\0\0\0\x01\0\x03@\0\x01\0\0\0\xa8\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0
+SF:handle\x05\0\0\x0037800\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0truste
+SF:d\x01\0\0\x000")%r(RPCCheck,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0
+SF:\x01\0\0\0\xb8\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0037
+SF:816\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(D
+SF:NSVersionBindReq,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\
+SF:xc8\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0037832\x08\0\0
+SF:\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSStatusReq
+SF:uest,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xd8\x93\0\x0
+SF:09\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0037848\x08\0\0\0pversion\x
+SF:02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(Help,56,"\xa9\0\x01\0N\0
+SF:\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xe8\x93\0\x009\0\0\0\x03\0\0\0\x06\0
+SF:\0\0handle\x05\0\0\x0037864\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0tr
+SF:usted\x01\0\0\x000")%r(SSLSessionReq,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01
+SF:\0\x03@\0\x01\0\0\0\xf8\x93\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\
+SF:0\0\x0037880\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x
+SF:000");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port50006-TCP:V=7.60%I=7%D=3/19%Time=5AAFDD14%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0Z\x04\0\x008\0
+SF:\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x001114\x08\0\0\0pversion\x02\0\
+SF:0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(ibm-db2,55,"\xa9\0\x01\0M\0\0
+SF:\0b\0\0\0\x01\0\x03@\0\x01\0\0\0Z\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0h
+SF:andle\x04\0\0\x001114\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\
+SF:x01\0\0\x000")%r(GenericLines,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@
+SF:\0\x01\0\0\0j\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x00113
+SF:0\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(Get
+SF:Request,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0z\x04\0\x0
+SF:08\0\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x001146\x08\0\0\0pversion\x0
+SF:2\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(HTTPOptions,55,"\xa9\0\x0
+SF:1\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x8a\x04\0\x008\0\0\0\x03\0\0\0
+SF:\x06\0\0\0handle\x04\0\0\x001162\x08\0\0\0pversion\x02\0\0\x0098\x07\0\
+SF:0\0trusted\x01\0\0\x000")%r(RTSPRequest,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\
+SF:x01\0\x03@\0\x01\0\0\0\x9a\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x
+SF:04\0\0\x001178\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0
+SF:\x000")%r(RPCCheck,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\
+SF:0\xaa\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x001194\x08\0\
+SF:0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSVersionB
+SF:indReq,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xba\x04\0\
+SF:x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x001210\x08\0\0\0pversion\
+SF:x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSStatusRequest,55,"\x
+SF:a9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xca\x04\0\x008\0\0\0\x0
+SF:3\0\0\0\x06\0\0\0handle\x04\0\0\x001226\x08\0\0\0pversion\x02\0\0\x0098
+SF:\x07\0\0\0trusted\x01\0\0\x000")%r(Help,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\
+SF:x01\0\x03@\0\x01\0\0\0\xda\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x
+SF:04\0\0\x001242\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0
+SF:\x000")%r(SSLSessionReq,55,"\xa9\0\x01\0M\0\0\0b\0\0\0\x01\0\x03@\0\x01
+SF:\0\0\0\xea\x04\0\x008\0\0\0\x03\0\0\0\x06\0\0\0handle\x04\0\0\x001258\x
+SF:08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 09:54:41 2018 -- 1 IP address (1 host up) scanned in 79.84 seconds

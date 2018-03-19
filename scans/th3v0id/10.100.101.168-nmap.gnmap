@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 05:03:51 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.101.168-nmap 10.100.101.168
+Host: 10.100.101.168 ()	Status: Up
+Host: 10.100.101.168 ()	Ports: 21/open/tcp//ftp?///, 22/open/tcp//ssh//OpenSSH 5.4p1 (FreeBSD 20100308; protocol 2.0)/	Ignored State: closed (998)
+# Nmap done at Mon Mar 19 05:07:05 2018 -- 1 IP address (1 host up) scanned in 194.21 seconds

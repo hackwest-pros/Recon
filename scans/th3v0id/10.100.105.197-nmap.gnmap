@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 06:46:28 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/10.100.105.197-nmap 10.100.105.197
+Host: 10.100.105.197 ()	Status: Up
+Host: 10.100.105.197 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 445/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/	Ignored State: closed (997)
+# Nmap done at Mon Mar 19 06:47:21 2018 -- 1 IP address (1 host up) scanned in 52.82 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Mon Mar 19 07:47:34 2018 as: nmap -sV --script=vulscan/vulscan.nse -oA scans/172.25.20.81-nmap 172.25.20.81
+Host: 172.25.20.81 ()	Status: Up
+Host: 172.25.20.81 ()	Ports: 22/open/tcp//ssh//OpenSSH 5.6 (protocol 2.0)/, 80/open/tcp//http//VMware ESXi Server httpd/, 427/open/tcp//svrloc?///, 443/open/tcp//ssl|http//VMware ESXi Server httpd/, 902/open/tcp//ssl|vmware-auth//VMware Authentication Daemon 1.10 (Uses VNC, SOAP)/, 5988/closed/tcp//wbem-http///, 5989/open/tcp//ssl|wbem//SBLIM Small Footprint CIM Broker/, 8000/open/tcp//http-alt?///, 8100/open/tcp//tcpwrapped///, 8300/closed/tcp//tmi///	Ignored State: filtered (990)
+# Nmap done at Mon Mar 19 07:50:40 2018 -- 1 IP address (1 host up) scanned in 186.63 seconds
