@@ -1,0 +1,794 @@
+{
+	"nmaprun": {
+		"scanner": "nmap",
+		"args": "nmap -sS -p22,445 -Pn -T4 -n -v -r --min-hostgroup 255 --min-rtt-timeout 1ms --max-rtt-timeout 240ms --max-retries 0 --max-scan-delay 0 --open -oX nmap-10_20_30_0_23.xml 10.20.30.0/23",
+		"start": "1521417370",
+		"startstr": "Sun Mar 18 17:56:10 2018",
+		"version": "7.60",
+		"xmloutputversion": "1.04",
+		"scaninfo": {
+			"type": "syn",
+			"protocol": "tcp",
+			"numservices": "2",
+			"services": "22,445"
+		},
+		"verbose": {
+			"level": "1"
+		},
+		"debugging": {
+			"level": "0"
+		},
+		"taskbegin": {
+			"task": "SYN Stealth Scan",
+			"time": "1521417370"
+		},
+		"taskend": {
+			"task": "SYN Stealth Scan",
+			"time": "1521417373",
+			"extrainfo": "1024 total ports"
+		},
+		"host": [
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.1",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "63"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "62419",
+					"rttvar": "48464",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.3",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "108750",
+					"rttvar": "95934",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417373",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.55",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "132788",
+					"rttvar": "125302",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.57",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "65913",
+					"rttvar": "50046",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.66",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "70011",
+					"rttvar": "59211",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.111",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "64"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "69870",
+					"rttvar": "52483",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.120",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "filtered",
+						"count": "1",
+						"extrareasons": {
+							"reason": "host-prohibited",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "73608",
+					"rttvar": "55878",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.30.121",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "filtered",
+						"count": "1",
+						"extrareasons": {
+							"reason": "host-prohibited",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "73433",
+					"rttvar": "55724",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.1",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "63"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "108845",
+					"rttvar": "96254",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.10",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"port": [
+						{
+							"protocol": "tcp",
+							"portid": "22",
+							"state": {
+								"state": "open",
+								"reason": "syn-ack",
+								"reason_ttl": "62"
+							},
+							"service": {
+								"name": "ssh",
+								"method": "table",
+								"conf": "3"
+							}
+						},
+						{
+							"protocol": "tcp",
+							"portid": "445",
+							"state": {
+								"state": "open",
+								"reason": "syn-ack",
+								"reason_ttl": "62"
+							},
+							"service": {
+								"name": "microsoft-ds",
+								"method": "table",
+								"conf": "3"
+							}
+						}
+					]
+				},
+				"times": {
+					"srtt": "80829",
+					"rttvar": "68677",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.21",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "filtered",
+						"count": "1",
+						"extrareasons": {
+							"reason": "no-response",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "66638",
+					"rttvar": "66638",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.22",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "filtered",
+						"count": "1",
+						"extrareasons": {
+							"reason": "no-response",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "66469",
+					"rttvar": "66469",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.53",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "filtered",
+						"count": "1",
+						"extrareasons": {
+							"reason": "no-response",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "75165",
+					"rttvar": "75165",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.71",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"port": [
+						{
+							"protocol": "tcp",
+							"portid": "22",
+							"state": {
+								"state": "open",
+								"reason": "syn-ack",
+								"reason_ttl": "62"
+							},
+							"service": {
+								"name": "ssh",
+								"method": "table",
+								"conf": "3"
+							}
+						},
+						{
+							"protocol": "tcp",
+							"portid": "445",
+							"state": {
+								"state": "open",
+								"reason": "syn-ack",
+								"reason_ttl": "62"
+							},
+							"service": {
+								"name": "microsoft-ds",
+								"method": "table",
+								"conf": "3"
+							}
+						}
+					]
+				},
+				"times": {
+					"srtt": "103640",
+					"rttvar": "78018",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.74",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "109409",
+					"rttvar": "84435",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.75",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "109206",
+					"rttvar": "84252",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417370",
+				"endtime": "1521417372",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "10.20.31.78",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "108928",
+					"rttvar": "83977",
+					"to": "240000"
+				}
+			}
+		],
+		"runstats": {
+			"finished": {
+				"time": "1521417373",
+				"timestr": "Sun Mar 18 17:56:13 2018",
+				"elapsed": "3.02",
+				"summary": "Nmap done at Sun Mar 18 17:56:13 2018; 512 IP addresses (512 hosts up) scanned in 3.02 seconds",
+				"exit": "success"
+			},
+			"hosts": {
+				"up": "512",
+				"down": "0",
+				"total": "512"
+			}
+		}
+	}
+}

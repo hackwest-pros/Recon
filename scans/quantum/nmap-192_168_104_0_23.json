@@ -1,0 +1,219 @@
+{
+	"nmaprun": {
+		"scanner": "nmap",
+		"args": "nmap -sS -p22,445 -Pn -T4 -n -v -r --min-hostgroup 255 --min-rtt-timeout 1ms --max-rtt-timeout 240ms --max-retries 0 --max-scan-delay 0 --open -oX nmap-192_168_104_0_23.xml 192.168.104.0/23",
+		"start": "1521417997",
+		"startstr": "Sun Mar 18 18:06:37 2018",
+		"version": "7.60",
+		"xmloutputversion": "1.04",
+		"scaninfo": {
+			"type": "syn",
+			"protocol": "tcp",
+			"numservices": "2",
+			"services": "22,445"
+		},
+		"verbose": {
+			"level": "1"
+		},
+		"debugging": {
+			"level": "0"
+		},
+		"taskbegin": {
+			"task": "SYN Stealth Scan",
+			"time": "1521417997"
+		},
+		"taskend": {
+			"task": "SYN Stealth Scan",
+			"time": "1521418005",
+			"extrainfo": "1024 total ports"
+		},
+		"host": [
+			{
+				"starttime": "1521417997",
+				"endtime": "1521418004",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "192.168.104.148",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "61"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "114483",
+					"rttvar": "105640",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417997",
+				"endtime": "1521418005",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "192.168.104.254",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "73340",
+					"rttvar": "57861",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417997",
+				"endtime": "1521418004",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "192.168.105.148",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "61"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "74843",
+					"rttvar": "64503",
+					"to": "240000"
+				}
+			},
+			{
+				"starttime": "1521417997",
+				"endtime": "1521418005",
+				"status": {
+					"state": "up",
+					"reason": "user-set",
+					"reason_ttl": "0"
+				},
+				"address": {
+					"addr": "192.168.105.254",
+					"addrtype": "ipv4"
+				},
+				"hostnames": "",
+				"ports": {
+					"extraports": {
+						"state": "closed",
+						"count": "1",
+						"extrareasons": {
+							"reason": "reset",
+							"count": "1"
+						}
+					},
+					"port": {
+						"protocol": "tcp",
+						"portid": "22",
+						"state": {
+							"state": "open",
+							"reason": "syn-ack",
+							"reason_ttl": "62"
+						},
+						"service": {
+							"name": "ssh",
+							"method": "table",
+							"conf": "3"
+						}
+					}
+				},
+				"times": {
+					"srtt": "73588",
+					"rttvar": "57550",
+					"to": "240000"
+				}
+			}
+		],
+		"runstats": {
+			"finished": {
+				"time": "1521418005",
+				"timestr": "Sun Mar 18 18:06:45 2018",
+				"elapsed": "8.05",
+				"summary": "Nmap done at Sun Mar 18 18:06:45 2018; 512 IP addresses (512 hosts up) scanned in 8.05 seconds",
+				"exit": "success"
+			},
+			"hosts": {
+				"up": "512",
+				"down": "0",
+				"total": "512"
+			}
+		}
+	}
+}

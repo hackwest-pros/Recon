@@ -1,0 +1,51 @@
+{
+	"nmaprun": {
+		"scanner": "nmap",
+		"args": "nmap -sn -n -v -oX nmap-172-16-0-0-16.xml 172.16.0.0/16",
+		"start": "1521413918",
+		"startstr": "Sun Mar 18 16:58:38 2018",
+		"version": "7.60",
+		"xmloutputversion": "1.04",
+		"$t": "\n\n\n\n\n\n\n\n",
+		"verbose": {
+			"level": "1"
+		},
+		"debugging": {
+			"level": "0"
+		},
+		"taskbegin": {
+			"task": "Ping Scan",
+			"time": "1521413918"
+		},
+		"taskprogress": [
+			{
+				"task": "Ping Scan",
+				"time": "1521413958",
+				"percent": "1.25",
+				"remaining": "3157",
+				"etc": "1521417115"
+			},
+			{
+				"task": "Ping Scan",
+				"time": "1521414210",
+				"percent": "8.88",
+				"remaining": "2997",
+				"etc": "1521417206"
+			},
+			{
+				"task": "Ping Scan",
+				"time": "1521414290",
+				"percent": "11.29",
+				"remaining": "2923",
+				"etc": "1521417213"
+			},
+			{
+				"task": "Ping Scan",
+				"time": "1521414461",
+				"percent": "16.46",
+				"remaining": "2757",
+				"etc": "1521417218"
+			}
+		]
+	}
+}

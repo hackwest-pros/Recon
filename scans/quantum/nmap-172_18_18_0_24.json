@@ -1,0 +1,45 @@
+{
+	"nmaprun": {
+		"scanner": "nmap",
+		"args": "nmap -sS -p22,445 -Pn -T4 -n -v -r --min-hostgroup 255 --min-rtt-timeout 1ms --max-rtt-timeout 240ms --max-retries 0 --max-scan-delay 0 --open -oX nmap-172_18_18_0_24.xml 172.18.18.0/24",
+		"start": "1521417918",
+		"startstr": "Sun Mar 18 18:05:18 2018",
+		"version": "7.60",
+		"xmloutputversion": "1.04",
+		"scaninfo": {
+			"type": "syn",
+			"protocol": "tcp",
+			"numservices": "2",
+			"services": "22,445"
+		},
+		"verbose": {
+			"level": "1"
+		},
+		"debugging": {
+			"level": "0"
+		},
+		"taskbegin": {
+			"task": "SYN Stealth Scan",
+			"time": "1521417918"
+		},
+		"taskend": {
+			"task": "SYN Stealth Scan",
+			"time": "1521417931",
+			"extrainfo": "512 total ports"
+		},
+		"runstats": {
+			"finished": {
+				"time": "1521417931",
+				"timestr": "Sun Mar 18 18:05:31 2018",
+				"elapsed": "12.76",
+				"summary": "Nmap done at Sun Mar 18 18:05:31 2018; 256 IP addresses (256 hosts up) scanned in 12.76 seconds",
+				"exit": "success"
+			},
+			"hosts": {
+				"up": "256",
+				"down": "0",
+				"total": "256"
+			}
+		}
+	}
+}

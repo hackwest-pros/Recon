@@ -1,0 +1,47 @@
+{
+	"nmaprun": {
+		"scanner": "nmap",
+		"args": "nmap -sn -n -T4 --min-hostgroup 255 --open -oX nmap-ping-10_1_139_0_26.xml 10.1.139.0/26",
+		"start": "1521423146",
+		"startstr": "Sun Mar 18 19:32:26 2018",
+		"version": "7.60",
+		"xmloutputversion": "1.04",
+		"verbose": {
+			"level": "0"
+		},
+		"debugging": {
+			"level": "0"
+		},
+		"host": {
+			"status": {
+				"state": "up",
+				"reason": "echo-reply",
+				"reason_ttl": "64"
+			},
+			"address": {
+				"addr": "10.1.139.10",
+				"addrtype": "ipv4"
+			},
+			"hostnames": "",
+			"times": {
+				"srtt": "119447",
+				"rttvar": "94845",
+				"to": "498827"
+			}
+		},
+		"runstats": {
+			"finished": {
+				"time": "1521423153",
+				"timestr": "Sun Mar 18 19:32:33 2018",
+				"elapsed": "7.31",
+				"summary": "Nmap done at Sun Mar 18 19:32:33 2018; 64 IP addresses (1 host up) scanned in 7.31 seconds",
+				"exit": "success"
+			},
+			"hosts": {
+				"up": "1",
+				"down": "63",
+				"total": "64"
+			}
+		}
+	}
+}
