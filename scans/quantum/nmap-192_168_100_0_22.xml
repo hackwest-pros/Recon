@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 18 18:06:25 2018 as: nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-192_168_100_0_22.xml 192.168.100.0/22 -->
+<nmaprun scanner="nmap" args="nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-192_168_100_0_22.xml 192.168.100.0/22" start="1521417985" startstr="Sun Mar 18 18:06:25 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1521417985"/>
+<taskend task="SYN Stealth Scan" time="1521417993" extrainfo="1024 total ports"/>
+<host starttime="1521417985" endtime="1521417993"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.101.148" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="61737" rttvar="47866" to="240000"/>
+</host>
+<host starttime="1521417985" endtime="1521417993"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.101.254" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="68712" rttvar="51781" to="240000"/>
+</host>
+<taskbegin task="SYN Stealth Scan" time="1521417993"/>
+<taskend task="SYN Stealth Scan" time="1521417997" extrainfo="1024 total ports"/>
+<host starttime="1521417993" endtime="1521417997"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.103.148" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="61"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="67031" rttvar="50721" to="240000"/>
+</host>
+<host starttime="1521417993" endtime="1521417997"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.103.254" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="100614" rttvar="89071" to="240000"/>
+</host>
+<runstats><finished time="1521417997" timestr="Sun Mar 18 18:06:37 2018" elapsed="12.64" summary="Nmap done at Sun Mar 18 18:06:37 2018; 1024 IP addresses (1024 hosts up) scanned in 12.64 seconds" exit="success"/><hosts up="1024" down="0" total="1024"/>
+</runstats>
+</nmaprun>

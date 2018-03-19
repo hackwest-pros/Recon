@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 18 17:08:43 2018 as: nmap -sS -p22,445 -T5 -n -v -&#45;min-hostgroup 256 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 70ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;min-rate 20e00 -&#45;open -oX nmap-172-16-0-0-16_3.xml 172.16.0.0/16 -->
+<nmaprun scanner="nmap" args="nmap -sS -p22,445 -T5 -n -v -&#45;min-hostgroup 256 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 70ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;min-rate 20e00 -&#45;open -oX nmap-172-16-0-0-16_3.xml 172.16.0.0/16" start="1521414523" startstr="Sun Mar 18 17:08:43 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="Ping Scan" time="1521414524"/>
+<taskend task="Ping Scan" time="1521414553" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414553"/>
+<taskend task="Ping Scan" time="1521414583" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414583"/>
+<taskend task="Ping Scan" time="1521414613" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414613"/>
+<taskend task="Ping Scan" time="1521414643" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414643"/>
+<taskend task="Ping Scan" time="1521414672" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414672"/>
+<taskend task="Ping Scan" time="1521414702" extrainfo="4096 total hosts"/>
+<taskbegin task="Ping Scan" time="1521414702"/>

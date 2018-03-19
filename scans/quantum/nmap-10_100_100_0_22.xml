@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 18 17:48:05 2018 as: nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-10_100_100_0_22.xml 10.100.100.0/22 -->
+<nmaprun scanner="nmap" args="nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-10_100_100_0_22.xml 10.100.100.0/22" start="1521416885" startstr="Sun Mar 18 17:48:05 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1521416885"/>
+<taskend task="SYN Stealth Scan" time="1521416890" extrainfo="1024 total ports"/>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="67181" rttvar="67181" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="99614" rttvar="81652" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.18" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="126406" rttvar="96173" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.31" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="69624" rttvar="52274" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.55" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="81478" rttvar="81478" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="125935" rttvar="117050" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.90" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="83629" rttvar="69856" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.99" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="118702" rttvar="90846" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.106" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="87266" rttvar="72612" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.118" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="121181" rttvar="95688" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="75959" rttvar="64655" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.124" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="75990" rttvar="64684" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.130" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="80554" rttvar="67272" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.144" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="111796" rttvar="92143" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416888"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.146" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="107284" rttvar="83163" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="225160" rttvar="225160" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.203" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="61451" rttvar="46731" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.228" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="98440" rttvar="85253" to="240000"/>
+</host>
+<host starttime="1521416885" endtime="1521416889"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.101.246" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="129518" rttvar="121508" to="240000"/>
+</host>
+<taskbegin task="SYN Stealth Scan" time="1521416890"/>
+<taskend task="SYN Stealth Scan" time="1521416893" extrainfo="1024 total ports"/>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.2" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="73625" rttvar="62410" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="67800" rttvar="67800" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="103047" rttvar="103047" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.18" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="116182" rttvar="97131" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.31" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="84931" rttvar="66931" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.60" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="63076" rttvar="47555" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.72" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="78242" rttvar="62503" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.74" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="111969" rttvar="89991" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.90" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="70731" rttvar="56293" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.99" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="110275" rttvar="87682" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.106" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="114034" rttvar="106366" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.118" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="72234" rttvar="54189" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="111304" rttvar="102337" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416891"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.124" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="79790" rttvar="62708" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.130" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="108635" rttvar="90385" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.144" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="75020" rttvar="58094" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="103774" rttvar="88362" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.168" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="106667" rttvar="85039" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="128875" rttvar="99019" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.203" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="60"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="103010" rttvar="80693" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.228" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1">
+<extrareasons reason="reset" count="1"/>
+</extraports>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="78831" rttvar="71425" to="240000"/>
+</host>
+<host starttime="1521416890" endtime="1521416892"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.100.103.246" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="77887" rttvar="65287" to="240000"/>
+</host>
+<runstats><finished time="1521416893" timestr="Sun Mar 18 17:48:13 2018" elapsed="7.26" summary="Nmap done at Sun Mar 18 17:48:13 2018; 1024 IP addresses (1024 hosts up) scanned in 7.26 seconds" exit="success"/><hosts up="1024" down="0" total="1024"/>
+</runstats>
+</nmaprun>

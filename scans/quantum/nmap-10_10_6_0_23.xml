@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 18 17:47:40 2018 as: nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-10_10_6_0_23.xml 10.10.6.0/23 -->
+<nmaprun scanner="nmap" args="nmap -sS -p22,445 -Pn -T4 -n -v -r -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX nmap-10_10_6_0_23.xml 10.10.6.0/23" start="1521416860" startstr="Sun Mar 18 17:47:40 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1521416860"/>
+<taskend task="SYN Stealth Scan" time="1521416885" extrainfo="1024 total ports"/>
+<runstats><finished time="1521416885" timestr="Sun Mar 18 17:48:05 2018" elapsed="25.26" summary="Nmap done at Sun Mar 18 17:48:05 2018; 512 IP addresses (512 hosts up) scanned in 25.26 seconds" exit="success"/><hosts up="512" down="0" total="512"/>
+</runstats>
+</nmaprun>
