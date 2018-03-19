@@ -1,0 +1,4 @@
+# Nmap 7.60 scan initiated Sun Mar 18 19:47:51 2018 as: nmap -e tun0 -n -A -v -T5 --top-ports 1000 --open -oA 10.1.10.0_24 10.1.10.0/24
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 18 19:49:01 2018 -- 256 IP addresses (1 host up) scanned in 70.33 seconds

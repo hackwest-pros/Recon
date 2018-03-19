@@ -1,0 +1,2165 @@
+# Nmap 7.60 scan initiated Sun Mar 18 19:50:00 2018 as: nmap -e tun0 -n -A -v -T5 --top-ports 1000 --open -oA 10.100.100.0_22 10.100.100.0/22
+Nmap scan report for 10.100.101.2
+Host is up (0.10s latency).
+Not shown: 994 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.7p1 Debian 5+deb8u4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 7c:b5:ca:0a:8d:86:0a:29:0b:cc:51:b2:1e:27:3f:d9 (DSA)
+|   2048 30:60:d4:4f:f1:51:33:60:99:fd:ce:ab:36:ce:8a:7e (RSA)
+|   256 4c:2e:67:ae:fd:fe:45:78:19:d7:c0:2b:c2:ea:89:70 (ECDSA)
+|_  256 58:d2:aa:71:cb:96:c6:9d:55:fc:d3:a7:ab:aa:99:5b (EdDSA)
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100021  1,3,4      43621/tcp  nlockmgr
+|   100021  1,3,4      45249/udp  nlockmgr
+|   100024  1          45195/tcp  status
+|_  100024  1          55645/udp  status
+3128/tcp open  http    Proxmox Virtual Environment REST API 3.0
+|_http-server-header: pve-api-daemon/3.0
+|_http-title: Site doesn't have a title.
+Aggressive OS guesses: Linux 3.11 - 4.1 (95%), Linux 3.13 (92%), Linux 3.16 (92%), Linux 3.10 - 3.12 (91%), Linux 4.4 (91%), Linux 2.6.32 (91%), Linux 3.2 - 3.8 (91%), Linux 3.8 (91%), IPFire 2.11 firewall (Linux 2.6.32) (91%), WatchGuard Fireware 11.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.983 days (since Sat Mar  3 19:34:02 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   103.71 ms 5.5.0.1
+2   ... 3
+4   101.51 ms 192.168.101.1
+5   97.38 ms  10.100.101.2
+
+Nmap scan report for 10.100.101.3
+Host is up (0.10s latency).
+Not shown: 998 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 12.1 (protocol 2.0)
+| ssh-hostkey: 
+|_  2048 05:4d:4c:e5:84:3b:c6:c7:da:cb:16:c7:0a:d7:f7:38 (RSA)
+443/tcp open  ssl/http Embedthis-Appweb (extension: php)
+|_http-favicon: Unknown favicon MD5: 3AB22B6F3F0D4271E8D038C05CFBD5C9
+| http-methods: 
+|_  Supported Methods: GET POST
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-title: Login
+|_Requested resource was /php/login.php
+| ssl-cert: Subject: commonName=3e5a9ca2cf8811a049db6de5f8b7eacd83542639ade9b2d24906899a5ae364d5/organizationName=Palo Alto Networks/stateOrProvinceName=CA/countryName=US
+| Subject Alternative Name: DNS:3e5a9ca2cf8811a049db6de5f8b7eacd83542639ade9b2d24906899a5ae364d5
+| Issuer: commonName=localhost/organizationName=Palo Alto Networks/stateOrProvinceName=CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-10-27T16:56:15
+| Not valid after:  2027-10-25T16:56:15
+| MD5:   7f26 ca2c 953c 45c7 d6bf 9b8f 53ef 3775
+|_SHA-1: 3738 610a 7631 f4ff 8b03 b36c b8b3 6605 393a ae2f
+|_ssl-date: 2018-03-18T21:22:58+00:00; -4h33m10s from scanner time.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|WAP|router|storage-misc|broadband router
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (91%), MikroTik RouterOS 6.X (89%), HP embedded (86%), Viasat embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:3.10 cpe:/h:viasat:surfbeam_2
+Aggressive OS guesses: Linux 3.2 - 3.8 (91%), Tomato 1.27 - 1.28 (Linux 2.4.20) (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (89%), Linux 3.6 (89%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (86%), Linux 2.6.32 (85%), DD-WRT v24 or v30 (Linux 3.10) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 12.169 days (since Tue Mar  6 15:05:33 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+|_clock-skew: mean: -4h33m10s, deviation: 0s, median: -4h33m10s
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   101.75 ms 10.100.101.3
+
+Nmap scan report for 10.100.101.6
+Host is up (0.10s latency).
+Not shown: 987 closed ports
+PORT      STATE SERVICE            VERSION
+22/tcp    open  ssh                WeOnlyDo sshd 2.1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 9d:9b:e0:52:81:e7:27:ec:68:99:f7:cd:8b:a7:48:92 (DSA)
+|_  1024 04:f4:84:fb:40:f8:a2:e2:01:27:80:b0:d9:a9:49:7c (RSA)
+23/tcp    open  telnet             freeSSHd telnetd
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Windows 7 Enterprise 7600 microsoft-ds (workgroup: ALPHA)
+554/tcp   open  rtsp?
+2869/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=WIN7-I61V2.alpha.net
+| Issuer: commonName=WIN7-I61V2.alpha.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-02-02T07:47:29
+| Not valid after:  2018-08-04T07:47:29
+| MD5:   dc64 5304 5857 e6c6 353b 8835 2eba 7ebc
+|_SHA-1: 0a14 950e 0a42 deb2 784b 4c34 c23a 1d11 99bd 1aea
+|_ssl-date: 2018-03-18T19:21:48+00:00; -6h37m44s from scanner time.
+8000/tcp  open  http               Icecast streaming media server
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: Site doesn't have a title (text/html).
+10243/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|8.1|2012|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (93%), Microsoft Windows 7 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 24.434 days (since Thu Feb 22 08:43:58 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: WIN7-I61V2; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -6h37m44s, deviation: 0s, median: -6h37m44s
+| nbstat: NetBIOS name: WIN7-I61V2, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:a0:6f:c0 (VMware)
+| Names:
+|   WIN7-I61V2<00>       Flags: <unique><active>
+|   ALPHA<00>            Flags: <group><active>
+|   WIN7-I61V2<20>       Flags: <unique><active>
+|_  ALPHA<1e>            Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 7 Enterprise 7600 (Windows 7 Enterprise 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::-
+|   Computer name: WIN7-I61V2
+|   NetBIOS computer name: WIN7-I61V2\x00
+|   Domain name: alpha.net
+|   Forest name: alpha.net
+|   FQDN: WIN7-I61V2.alpha.net
+|_  System time: 2018-03-18T15:18:09-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-18 13:19:19
+|_  start_date: 2016-07-02 08:29:26
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.43 ms 10.100.101.6
+
+Nmap scan report for 10.100.101.18
+Host is up (0.10s latency).
+Not shown: 987 closed ports
+PORT     STATE SERVICE      VERSION
+22/tcp   open  ssh          OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ea:fe:34:20:d1:76:92:bb:cf:c0:3b:a3:39:b9:39:80 (DSA)
+|_  2048 c6:1e:84:87:75:91:64:30:8a:49:15:04:41:d0:03:be (RSA)
+53/tcp   open  tcpwrapped
+80/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.2.15 (CentOS)
+| http-title: 404 Not Found
+|_Requested resource was config.php
+81/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: User Control Panel
+82/tcp   open  http         Apache httpd 2.2.15
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: 404 Not Found
+83/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+84/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+85/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+5222/tcp open  jabber       Prosody Jabber client 0.8.0 or newer
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     auth_mechanisms: 
+| 
+|     errors: 
+|       host-unknown
+|       
+|         text: This server does not serve 
+|       stream:stream
+|       (timeout)
+|     xmpp: 
+|       version: 1.0
+|     capabilities: 
+| 
+|     compression_methods: 
+| 
+|     features: 
+| 
+|_    unknown: 
+5269/tcp open  jabber       Prosody Jabber server
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     auth_mechanisms: 
+| 
+|     stream_id: f166c0ce-b9bf-4b61-b5cc-8f64f7915e97
+|     errors: 
+|       host-unknown
+|       
+|         text: This host does not serve 
+|       stream:stream
+|       (timeout)
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     capabilities: 
+| 
+|     compression_methods: 
+| 
+|     features: 
+| 
+|_    unknown: 
+5280/tcp open  http         Prosody XMPP BOSH httpd
+|_http-title: Site doesn't have a title.
+8001/tcp open  vcom-tunnel?
+8088/tcp open  http         Asterisk 11.16.0
+|_http-server-header: Asterisk/11.16.0
+|_http-title: 404 Not Found
+Aggressive OS guesses: Linux 2.6.32 (95%), Linux 3.4 (95%), Synology DiskStation Manager 5.1 (94%), Linux 3.10 (94%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 or 3.10 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.351 days (since Sun Mar  4 10:43:59 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: localhost.localdomain; Device: PBX
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.35 ms 10.100.101.18
+
+Nmap scan report for 10.100.101.31
+Host is up (0.11s latency).
+Not shown: 989 closed ports, 4 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           WeOnlyDo sshd 2.1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 e0:56:93:84:79:15:8f:fd:cb:c8:26:d4:cb:19:a2:f5 (DSA)
+|_  1024 f5:4d:f6:23:83:1a:2e:e2:e7:06:08:99:5f:76:4e:e4 (RSA)
+23/tcp   open  telnet        freeSSHd telnetd
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows XP microsoft-ds
+3389/tcp open  ms-wbt-server Microsoft Terminal Service
+8000/tcp open  http          Icecast streaming media server
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: Site doesn't have a title (text/html).
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (95%), Motorola embedded (92%), Beat embedded (86%), Microsoft embedded (86%), Belkin embedded (86%), SMA embedded (86%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_ce
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (95%), Microsoft Windows XP SP2 (95%), Microsoft Windows XP SP3 (95%), Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows Server 2003 SP2 (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (92%), Microsoft Windows XP Professional SP3 (91%), Microsoft Windows XP SP2 - SP3 (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (91%), Microsoft Windows XP Professional SP2 (firewall enabled) (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -6h29m57s, deviation: 0s, median: -6h29m57s
+| nbstat: NetBIOS name: WINXPPRO-I61VA, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:eb:8d:84 (VMware)
+| Names:
+|   WINXPPRO-I61VA<00>   Flags: <unique><active>
+|   ALPHA<00>            Flags: <group><active>
+|   WINXPPRO-I61VA<20>   Flags: <unique><active>
+|   ALPHA<1e>            Flags: <group><active>
+|   ALPHA<1d>            Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: winxppro-i61vA
+|   NetBIOS computer name: WINXPPRO-I61VA\x00
+|   Domain name: alpha.net
+|   Forest name: alpha.net
+|   FQDN: winxppro-i61vA.alpha.net
+|_  System time: 2018-03-18T14:28:29-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.62 ms 10.100.101.31
+
+Nmap scan report for 10.100.101.55
+Host is up (0.11s latency).
+Not shown: 991 closed ports, 2 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.0.8 or later
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 0        0            4096 Jun 22  2012 pub
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 5.5.0.181
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 2.2.2 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b3:0c:d5:db:a5:a8:ff:b2:ef:05:63:34:03:56:d1:54 (DSA)
+|_  2048 59:f8:9e:2c:42:7c:b5:ca:66:c3:77:d4:3b:7e:6f:4b (RSA)
+80/tcp   open  ssl/http?
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          40886/udp  status
+|_  100024  1          47516/tcp  status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.5.10-125.el6 (workgroup: MYGROUP)
+3306/tcp open  mysql?
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+Aggressive OS guesses: Linux 2.6.32 (95%), Linux 2.6.39 (95%), Linux 3.4 (95%), WatchGuard Fireware 11.8 (95%), Synology DiskStation Manager 5.1 (94%), Linux 3.10 (94%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 or 3.10 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.196 days (since Sun Mar  4 14:27:20 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+|_clock-skew: mean: -6h29m52s, deviation: 0s, median: -6h29m52s
+| nbstat: NetBIOS name: CENTOS-1, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   CENTOS-1<00>         Flags: <unique><active>
+|   CENTOS-1<03>         Flags: <unique><active>
+|   CENTOS-1<20>         Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   MYGROUP<1d>          Flags: <unique><active>
+|   MYGROUP<1e>          Flags: <group><active>
+|_  MYGROUP<00>          Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.5.10-125.el6)
+|   Computer name: centos-1
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: centos-1
+|_  System time: 2018-03-18T15:26:07-04:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.43 ms 10.100.101.55
+
+Nmap scan report for 10.100.101.60
+Host is up (0.11s latency).
+Not shown: 996 closed ports, 2 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 8c:c3:0f:0e:23:2d:5e:e8:49:41:bd:e5:fc:b3:48:7d (DSA)
+|   2048 2a:19:f1:87:7a:e5:9c:9c:23:a4:71:f6:1c:17:7c:28 (RSA)
+|_  256 93:8c:ac:38:bc:e6:4b:d8:53:44:be:33:f7:57:62:6e (ECDSA)
+53/tcp open  domain  ISC BIND 9.8.1-P1
+| dns-nsid: 
+|_  bind.version: 9.8.1-P1
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), WatchGuard Fireware 11.8 (95%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.5 (92%), Linux 3.0 - 3.2 (92%), Linux 2.6.32 - 3.0 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 26.525 days (since Tue Feb 20 06:33:09 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.46 ms 10.100.101.60
+
+Nmap scan report for 10.100.101.90
+Host is up (0.10s latency).
+Not shown: 978 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           FileZilla ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Sep 28  2012 incoming
+|_-r--r--r-- 1 ftp ftp            187 Mar 19  2011 onefile.html
+|_ftp-bounce: bounce working!
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+42/tcp   open  wins          Microsoft Windows Wins
+80/tcp   open  http          Microsoft IIS httpd
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/6.0
+|_http-title: Under Construction
+111/tcp  open  rpcbind       2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100003  2,3         2049/tcp  nfs
+|   100003  2,3         2049/udp  nfs
+|   100005  1,2,3       1048/tcp  mountd
+|   100005  1,2,3       1048/udp  mountd
+|   100021  1,2,3,4     1047/tcp  nlockmgr
+|   100021  1,2,3,4     1047/udp  nlockmgr
+|   100024  1           1039/tcp  status
+|   100024  1           1039/udp  status
+|   351455  1,2          626/tcp  mapsvc
+|_  351455  1,2          627/udp  mapsvc
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows Server 2003 R2 3790 Service Pack 1 microsoft-ds
+548/tcp  open  afp           (name: WIN2K3-90; protocol 2.2; MS3.0)
+|_afp-serverinfo: ERROR: Script execution failed (use -d to debug)
+1025/tcp open  msrpc         Microsoft Windows RPC
+1026/tcp open  msrpc         Microsoft Windows RPC
+1028/tcp open  msrpc         Microsoft Windows RPC
+1030/tcp open  msrpc         Microsoft Windows RPC
+1039/tcp open  status        1 (RPC #100024)
+1047/tcp open  nlockmgr      1-4 (RPC #100021)
+1048/tcp open  mountd        1-3 (RPC #100005)
+2049/tcp open  nfs           2-3 (RPC #100003)
+3306/tcp open  mysql         MySQL (unauthorized)
+3389/tcp open  ms-wbt-server Microsoft Terminal Service
+8022/tcp open  http          Microsoft IIS httpd
+| http-auth: 
+| HTTP/1.1 401 Access denied\x0D
+|   Negotiate
+|_  NTLM
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+| http-ntlm-info: 
+|   Target_Name: WIN2K3-90
+|   NetBIOS_Domain_Name: WIN2K3-90
+|   NetBIOS_Computer_Name: WIN2K3-90
+|   DNS_Domain_Name: win2k3-90
+|   DNS_Computer_Name: win2k3-90
+|_  Product_Version: 5.2.3790
+|_http-server-header: Microsoft-IIS/6.0
+|_http-title: Site doesn't have a title (text/html).
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows 2003|XP|PocketPC/CE|2000 (94%), Motorola embedded (89%), Beat embedded (86%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_ce
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (94%), Microsoft Windows XP SP3 (93%), Microsoft Windows Server 2003 SP0 - SP2 (91%), Microsoft Windows Server 2003 SP1 or SP2 (91%), Microsoft Windows 2003 (90%), Microsoft Windows Server 2003 (90%), Microsoft Windows Server 2003 SP1 (90%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (89%), Microsoft Windows XP Professional SP3 (89%), Microsoft Windows XP SP2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_clock-skew: mean: -6h30m25s, deviation: 0s, median: -6h30m25s
+| nbstat: NetBIOS name: WIN2K3-90, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:14:03:6d (VMware)
+| Names:
+|   WIN2K3-90<00>        Flags: <unique><active>
+|   WIN2K3-90<20>        Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows Server 2003 R2 3790 Service Pack 1 (Windows Server 2003 R2 5.2)
+|   OS CPE: cpe:/o:microsoft:windows_server_2003::sp1
+|   Computer name: win2k3-90
+|   NetBIOS computer name: WIN2K3-90\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2018-03-18T11:27:30-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.65 ms 10.100.101.90
+
+Nmap scan report for 10.100.101.99
+Host is up (0.11s latency).
+Not shown: 993 closed ports, 2 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd
+|_ftp-anon: got code 500 "OOPS: vsftpd: refusing to run with writable root inside chroot()".
+| ssl-cert: Subject: commonName=elasticsearch.cyberwildcats.net
+| Issuer: commonName=elasticsearch.cyberwildcats.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-06-15T05:13:21
+| Not valid after:  2027-06-13T05:13:21
+| MD5:   635c ec47 dc05 0734 cad1 d98f 548f 19c3
+|_SHA-1: 086b 7507 3574 0c01 3911 edcd f0c5 84e3 6c4b d2d8
+|_ssl-date: TLS randomness does not represent time
+22/tcp   open  ssh         OpenSSH 6.9p1 Ubuntu 2ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 de:9a:f3:76:7d:c5:2c:bd:52:dc:c2:2c:f4:ae:21:fe (DSA)
+|   2048 e9:ae:7c:a3:9b:d8:aa:eb:ee:91:b5:d8:15:8f:d1:71 (RSA)
+|   256 fe:14:6c:80:a1:cf:51:57:25:82:d4:8d:b7:10:d2:ce (ECDSA)
+|_  256 33:3a:dc:dc:90:9c:62:34:24:a6:4a:23:86:fb:cd:b8 (EdDSA)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 4.3.9-Ubuntu (workgroup: WORKGROUP)
+9200/tcp open  http        Elasticsearch REST API 5.4.0 (name: U9ceaa6; cluster: elasticsearch; Lucene 6.5.0)
+|_http-favicon: Unknown favicon MD5: 6177BFB75B498E0BB356223ED76FFE43
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (application/json; charset=UTF-8).
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (92%), Linux 3.16 (92%), Linux 3.10 - 3.12 (91%), Linux 2.6.32 (91%), Linux 3.2 - 3.8 (91%), IPFire 2.11 firewall (Linux 2.6.32) (90%), Linux 3.18 (90%), Linux 4.4 (90%), Linux 3.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 24.732 days (since Thu Feb 22 01:34:54 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: ELASTICSEARCH; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| nbstat: NetBIOS name: ELASTICSEARCH, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   ELASTICSEARCH<00>    Flags: <unique><active>
+|   ELASTICSEARCH<03>    Flags: <unique><active>
+|   ELASTICSEARCH<20>    Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.9-Ubuntu)
+|   Computer name: elasticsearch
+|   NetBIOS computer name: ELASTICSEARCH\x00
+|   Domain name: cyberwildcats.net
+|   FQDN: elasticsearch.cyberwildcats.net
+|_  System time: 2018-03-18T21:58:52-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-18 19:58:52
+|_  start_date: 1600-12-31 17:00:04
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.59 ms 10.100.101.99
+
+Nmap scan report for 10.100.101.106
+Host is up (0.11s latency).
+Not shown: 993 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 2c:96:61:9e:84:0f:14:3f:aa:95:42:4a:f0:66:bc:66 (DSA)
+|   2048 46:ee:e0:40:75:88:76:75:b3:14:30:42:b2:74:7c:39 (RSA)
+|_  256 8a:bc:05:15:29:57:b0:04:b8:b8:d9:69:f3:47:ad:ab (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.22 ((Debian))
+|_http-favicon: Joomla! CMS
+|_http-generator: Joomla! - Open Source Content Management
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Home
+443/tcp  open  ssl/http Apache httpd 2.2.22 ((Debian))
+|_http-generator: Joomla! - Open Source Content Management
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Home
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-06-25T17:33:48
+| Not valid after:  2026-06-23T17:33:48
+| MD5:   593a 6cce 984f b3c2 5902 a750 e83a 1be0
+|_SHA-1: 1a2c 165c 6f0d aa7e b78f 70e5 a99e 1b0d c182 2f52
+|_ssl-date: 2016-07-09T21:23:06+00:00; -1y252d04h33m18s from scanner time.
+3306/tcp open  mysql    MySQL 5.5.31-0+wheezy1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.31-0+wheezy1
+|   Thread ID: 112
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: S[P_k{J>9B}q?'EbB`=N
+|_  Auth Plugin Name: 89
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.5 (94%), Linux 3.8 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.833 days (since Sun Mar  4 23:09:26 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=251 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -617d04h33m18s, deviation: 0s, median: -617d04h33m18s
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   97.46 ms 10.100.101.106
+
+Nmap scan report for 10.100.101.115
+Host is up (0.11s latency).
+Not shown: 993 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b5:82:34:8e:df:a2:a7:a4:06:99:19:d5:a1:01:1d:2e (DSA)
+|   2048 3e:43:55:92:c3:82:87:7f:61:9e:90:23:89:6f:9b:c6 (RSA)
+|   256 eb:bd:a0:f9:ba:31:5b:f1:ff:b8:93:80:65:ce:cd:3b (ECDSA)
+|_  256 a1:91:24:d5:89:5c:1c:17:fb:c0:95:63:58:18:fc:7a (EdDSA)
+80/tcp   open  http     Apache httpd
+|_http-favicon: Mambo CMS
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 13 disallowed entries 
+| /administrator/ /cache/ /components/ /editor/ /help/ 
+| /images/ /includes/ /language/ /mambots/ /media/ /modules/ 
+|_/templates/ /installation/ 
+|_http-server-header: Apache
+|_http-title: Home - TurnKey Mambo
+443/tcp  open  ssl/http Apache httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 13 disallowed entries 
+| /administrator/ /cache/ /components/ /editor/ /help/ 
+| /images/ /includes/ /language/ /mambots/ /media/ /modules/ 
+|_/templates/ /installation/ 
+|_http-server-header: Apache
+|_http-title: Home - TurnKey Mambo
+| ssl-cert: Subject: commonName=mambo
+| Subject Alternative Name: DNS:mambo
+| Issuer: commonName=mambo
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-01-27T01:04:31
+| Not valid after:  2028-01-27T01:04:31
+| MD5:   5f99 43d3 eb54 ae93 449e 2fbe 84a0 b2de
+|_SHA-1: 5b58 d685 faad 78db 6b1f 3e15 8947 4b0d d1d5 9d64
+|_ssl-date: TLS randomness does not represent time
+3306/tcp open  mysql    MySQL 5.5.55-0+deb8u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.55-0+deb8u1
+|   Thread ID: 166
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: 78T!Cn$cFu;b].lVJM'v
+|_  Auth Plugin Name: 88
+Aggressive OS guesses: Linux 3.18 (94%), Linux 2.6.18 - 2.6.22 (89%), OpenWrt Chaos Calmer (Linux 3.18) (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), IPCop 2.0 (Linux 2.6.32) (89%), Linux 2.6.32 (89%), Linux 3.2 (89%), Linux 3.2.1 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.85 ms 10.100.101.115
+
+Nmap scan report for 10.100.101.118
+Host is up (0.11s latency).
+Not shown: 986 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE       VERSION
+22/tcp    open  ssh           WeOnlyDo sshd 2.1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 0a:18:64:fa:03:cc:41:2b:3b:5b:b0:76:d7:8d:dc:23 (DSA)
+|_  1024 dd:af:dc:8d:21:ad:7f:06:83:70:6d:b1:fc:17:f3:97 (RSA)
+23/tcp    open  telnet        freeSSHd telnetd
+80/tcp    open  http          Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: IIS Windows Server
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ms-wbt-server Microsoft Terminal Service
+| ssl-cert: Subject: commonName=win2012-i61v1.alpha.net
+| Issuer: commonName=win2012-i61v1.alpha.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-02-02T07:45:58
+| Not valid after:  2018-08-04T07:45:58
+| MD5:   67da 2ed2 ef18 edb9 1ca9 8b4e 86f5 5f99
+|_SHA-1: 347e 7ee1 6157 4d83 87ad 4298 862d cb22 9985 28c2
+|_ssl-date: 2018-03-18T19:19:07+00:00; -6h37m44s from scanner time.
+49152/tcp open  msrpc         Microsoft Windows RPC
+49153/tcp open  msrpc         Microsoft Windows RPC
+49154/tcp open  msrpc         Microsoft Windows RPC
+49155/tcp open  msrpc         Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|7|2008|Vista|10|8.1 (94%)
+OS CPE: cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_7::-:professional cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8.1:r1
+Aggressive OS guesses: Microsoft Windows Server 2012 (94%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 R2 (94%), Microsoft Windows 7 Professional (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows Vista Home Premium SP1 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 23.278 days (since Fri Feb 23 12:29:35 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -6h37m44s, deviation: 0s, median: -6h37m44s
+| nbstat: NetBIOS name: WIN2012-I61V1, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:e4:54:5a (VMware)
+| Names:
+|   ALPHA<00>            Flags: <group><active>
+|   WIN2012-I61V1<20>    Flags: <unique><active>
+|_  WIN2012-I61V1<00>    Flags: <unique><active>
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-18 13:21:10
+|_  start_date: 2016-07-03 11:36:08
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.84 ms 10.100.101.118
+
+Nmap scan report for 10.100.101.123
+Host is up (0.14s latency).
+Not shown: 993 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1.4 (Ubuntu Linux; protocol 2.0)
+443/tcp  open  https?
+| ssl-cert: Subject: commonName=securityonion
+| Issuer: commonName=securityonion
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-07-22T17:20:29
+| Not valid after:  2026-07-20T17:20:29
+| MD5:   2f8c 58c5 c03f a0fe 93f4 e21e 5a35 9c84
+|_SHA-1: 5d07 69ef b107 567f d6e9 69e0 97dd 36b0 f6ac c963
+444/tcp  open  snpp?
+9876/tcp open  sd?
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT    ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   ... 30
+
+Nmap scan report for 10.100.101.124
+Host is up (0.11s latency).
+Not shown: 994 closed ports, 2 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 40:57:d8:b9:b3:41:c7:10:49:de:5d:e8:8f:07:0d:b6 (DSA)
+|   2048 64:c9:41:9b:4b:d1:67:73:09:50:33:ce:d7:b1:27:48 (RSA)
+|_  256 0c:37:ea:fc:a2:0e:ba:dd:07:12:1e:43:03:d4:84:c1 (ECDSA)
+80/tcp   open  http     lighttpd 1.4.31
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.31
+|_http-title: Welcome page
+443/tcp  open  ssl/http lighttpd 1.4.31
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.31
+|_http-title: Welcome page
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-07-07T10:14:14
+| Not valid after:  2024-07-04T10:14:14
+| MD5:   9d2c d536 5089 715a c484 2aa9 8ac2 7fc3
+|_SHA-1: 3541 dc92 53ba 96dc 926a d13f 2a86 29f1 f342 24b9
+|_ssl-date: TLS randomness does not represent time
+3306/tcp open  mysql    MySQL 5.5.59-0+deb7u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.59-0+deb7u1
+|   Thread ID: 252
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: wV*k^vV*mjKw6F;7?w]J
+|_  Auth Plugin Name: 88
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), WatchGuard Fireware 11.8 (95%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.5 (92%), Linux 2.6.32 (91%), Linux 2.6.39 (91%), Linux 3.0 or 3.5 (91%), Linux 3.2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 28.432 days (since Sun Feb 18 08:46:57 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.72 ms 10.100.101.124
+
+Nmap scan report for 10.100.101.130
+Host is up (0.11s latency).
+Not shown: 992 closed ports, 4 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 09:79:b5:dc:a9:99:7f:fc:e9:8c:00:4e:9d:68:ec:1e (DSA)
+|   2048 62:eb:ee:27:0b:30:b0:71:c0:f3:01:ad:cd:de:28:e7 (RSA)
+|_  256 b0:41:24:39:c7:a2:e4:04:e5:9d:01:4a:c0:c2:37:2b (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.22 ((Debian))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: ZeroCMS
+443/tcp  open  ssl/http Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: TurnKey LAMP
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-07-07T10:16:53
+| Not valid after:  2024-07-04T10:16:53
+| MD5:   773d bc4b c5d4 6503 162f 79eb c49a 8c92
+|_SHA-1: 54a5 c450 f329 5310 7f67 b469 0241 c4fe 2632 1424
+|_ssl-date: TLS randomness does not represent time
+8000/tcp open  http     Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: TurnKey LAMP
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.8 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.5 (92%), Linux 3.0 - 3.2 (91%), Linux 2.6.32 (91%), Linux 3.0 (91%), Linux 3.0 or 3.5 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 28.546 days (since Sun Feb 18 06:02:50 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.74 ms 10.100.101.130
+
+Nmap scan report for 10.100.101.144
+Host is up (0.11s latency).
+Not shown: 994 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 67:b7:c3:7a:5d:c1:34:24:8b:72:bd:ab:02:02:0e:c4 (DSA)
+|   2048 a3:a5:91:d5:7e:81:4b:77:fb:ea:4c:d4:57:b6:bc:00 (RSA)
+|_  256 46:ed:e7:d0:87:d4:66:21:c4:2d:9a:4f:6c:5b:7c:c0 (ECDSA)
+80/tcp  open  http     Apache httpd 2.2.22 ((Debian))
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Database Error
+443/tcp open  ssl/http Apache httpd 2.2.22 ((Debian))
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Database Error
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-01-18T15:16:48
+| Not valid after:  2028-01-16T15:16:48
+| MD5:   bac2 da66 e87e ba6c 57bd 9770 dba9 ea5f
+|_SHA-1: 7a7d bab0 e80c 34f1 d14b d0f5 319e 572f a660 40b2
+|_ssl-date: TLS randomness does not represent time
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.8 (94%), Linux 3.1 - 3.2 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.5 (92%), Linux 3.0 - 3.2 (91%), Linux 2.6.32 (91%), Linux 3.0 (91%), Linux 3.0 or 3.5 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.205 days (since Mon Mar  5 14:13:55 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.80 ms 10.100.101.144
+
+Nmap scan report for 10.100.101.146
+Host is up (0.11s latency).
+Not shown: 995 closed ports, 2 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.0p1 Debian 4+deb7u7 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 c7:4e:56:d5:f4:d1:1e:e7:10:0d:17:b3:bc:a0:14:bc (DSA)
+|   2048 dc:d7:ad:2c:e4:9a:1d:0b:11:4b:ea:3f:d2:49:da:73 (RSA)
+|_  256 e1:b1:60:de:a8:e6:7a:f9:1d:c6:75:14:e8:29:dd:61 (ECDSA)
+80/tcp  open  http     Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+443/tcp open  ssl/http Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-01-18T15:16:51
+| Not valid after:  2028-01-16T15:16:51
+| MD5:   9da8 7e0b 077d 034f cdf7 2a56 35bd 9195
+|_SHA-1: eeb2 338b 97af a487 9a27 888b 8323 3773 c42f 4b1f
+|_ssl-date: TLS randomness does not represent time
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.8 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (94%), Linux 3.5 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.0 - 3.2 (91%), Linux 2.6.32 - 3.0 (91%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.684 days (since Mon Mar  5 02:45:19 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.81 ms 10.100.101.146
+
+Nmap scan report for 10.100.101.157
+Host is up (0.11s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac:32:71:79:c0:ae:3c:4f:9a:01:3a:23:58:47:92:fa (DSA)
+|_  2048 1d:2e:9f:0d:85:47:82:50:d1:e6:54:17:81:58:b1:f9 (RSA)
+80/tcp  open  http     Apache httpd 2.2.15
+| http-robots.txt: 18 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /bin/ /cache/ 
+| /cli/ /components/ /images/ /includes/ /installation/ 
+|_/language/ /layouts/ /libraries/ /logs/ /media/ /modules/
+111/tcp open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          46811/udp  status
+|_  100024  1          53682/tcp  status
+443/tcp open  ssl/http Apache httpd 2.2.15
+| http-robots.txt: 18 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /bin/ /cache/ 
+| /cli/ /components/ /images/ /includes/ /installation/ 
+|_/language/ /layouts/ /libraries/ /logs/ /media/ /modules/
+|_ssl-date: 2017-07-17T14:50:37+00:00; -244d11h05m36s from scanner time.
+Aggressive OS guesses: Linux 2.6.32 (95%), Linux 3.4 (95%), Synology DiskStation Manager 5.1 (94%), Linux 3.10 (94%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 or 3.10 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.226 days (since Sun Mar  4 13:44:26 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: 127.0.0.1
+
+Host script results:
+|_clock-skew: mean: -244d11h05m36s, deviation: 0s, median: -244d11h05m36s
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   132.65 ms 10.100.101.157
+
+Nmap scan report for 10.100.101.168
+Host is up (0.11s latency).
+Not shown: 995 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp?
+22/tcp open  ssh     OpenSSH 5.4p1 (FreeBSD 20100308; protocol 2.0)
+| ssh-hostkey: 
+|   1024 75:bd:e0:03:5d:84:49:15:01:3b:c1:f8:ac:2e:90:1e (DSA)
+|_  2048 49:f0:95:be:17:ee:b2:d4:99:ae:b5:6c:79:1c:70:bb (RSA)
+Aggressive OS guesses: FreeBSD 7.0-RELEASE (97%), FreeBSD 8.0-RELEASE (97%), FreeBSD 7.1-PRERELEASE 7.2-STABLE (96%), FreeBSD 9.0-RELEASE - 10.3-RELEASE (95%), FreeBSD 8.1-RELEASE (95%), FreeBSD 8.2-RELEASE (95%), FreeBSD 7.1-RELEASE (94%), FreeBSD 10.2-RELEASE (NAS4Free) (93%), FreeBSD 7.0-RC1 (93%), FreeBSD 7.0-RELEASE - 9.0-RELEASE (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.010 days (since Sun Mar 18 19:55:25 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   136.00 ms 10.100.101.168
+
+Nmap scan report for 10.100.101.175
+Host is up (0.11s latency).
+Not shown: 992 closed ports, 5 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ea:b6:32:07:c3:8e:9d:68:7d:3d:f8:b3:25:e0:7a:51 (DSA)
+|_  2048 6f:b3:b6:58:9e:1f:9d:bf:33:df:10:8b:8a:39:1c:28 (RSA)
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          47567/tcp  status
+|_  100024  1          53905/udp  status
+3306/tcp open  mysql   MySQL 5.1.61
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+Aggressive OS guesses: Linux 2.6.32 (95%), Linux 2.6.32 or 3.10 (95%), Linux 2.6.39 (95%), WatchGuard Fireware 11.8 (95%), Synology DiskStation Manager 5.1 (94%), Linux 3.1 - 3.2 (94%), Linux 3.4 (94%), Linux 3.10 (93%), Linux 2.6.32 - 2.6.39 (93%), Linux 2.6.32 - 3.0 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.210 days (since Sun Mar  4 14:06:38 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   111.78 ms 10.100.101.175
+
+Nmap scan report for 10.100.101.203
+Host is up (0.10s latency).
+Not shown: 989 closed ports, 4 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 f8:42:d0:10:f6:01:0f:80:cd:f2:06:e7:a0:2f:a5:58 (DSA)
+|_  2048 55:3d:ad:38:cb:d4:82:89:48:80:92:2e:7b:24:0c:74 (RSA)
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: ubuntu-1.alpha.net, PIPELINING, SIZE 10240000, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+80/tcp   open  http        Apache httpd 2.2.14 ((Ubuntu))
+|_http-generator: WordPress 3.0
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-title: Blah Blah Blah | Just another WordPress site
+110/tcp  open  pop3        Courier pop3d
+|_pop3-capabilities: LOGIN-DELAY(10) TOP PIPELINING IMPLEMENTATION(Courier Mail Server) UIDL USER
+143/tcp  open  imap        Dovecot imapd
+|_imap-capabilities: ENABLE Capability MULTIAPPEND LOGIN-REFERRALS ESORT LIST-EXTENDED CHILDREN STARTTLS SASL-IR IDLE WITHIN UIDPLUS OK CONTEXT=SEARCH SEARCHRES LITERAL+ NAMESPACE ESEARCH QRESYNC THREAD=REFS UNSELECT ID completed I18NLEVEL=1 CONDSTORE AUTH=PLAINA0001 THREAD=REFERENCES IMAP4rev1 SORT=DISPLAY SORT
+| ssl-cert: Subject: commonName=ubuntu/organizationName=Dovecot mail server
+| Issuer: commonName=ubuntu/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-07T17:41:35
+| Not valid after:  2013-11-07T17:41:35
+| MD5:   dcc7 ca42 f9fe c036 a9b4 eb8a a234 c3a7
+|_SHA-1: 8c12 7831 4ae5 5467 abaa 72b2 50f7 e3ee 976e bce6
+|_ssl-date: 2018-03-18T19:29:56+00:00; -6h29m55s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|_  ciphers: none
+993/tcp  open  ssl/imap    Dovecot imapd
+|_imap-capabilities: ENABLE Capability MULTIAPPEND LOGIN-REFERRALS ESORT CHILDREN LIST-EXTENDED SASL-IR IDLE WITHIN UIDPLUS OK CONTEXT=SEARCH SEARCHRES LITERAL+ NAMESPACE ESEARCH QRESYNC THREAD=REFS UNSELECT ID completed I18NLEVEL=1 CONDSTORE AUTH=PLAINA0001 THREAD=REFERENCES IMAP4rev1 SORT=DISPLAY SORT
+| ssl-cert: Subject: commonName=ubuntu/organizationName=Dovecot mail server
+| Issuer: commonName=ubuntu/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-07T17:41:35
+| Not valid after:  2013-11-07T17:41:35
+| MD5:   dcc7 ca42 f9fe c036 a9b4 eb8a a234 c3a7
+|_SHA-1: 8c12 7831 4ae5 5467 abaa 72b2 50f7 e3ee 976e bce6
+|_ssl-date: 2018-03-18T19:27:54+00:00; -6h29m55s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|_  ciphers: none
+9001/tcp open  tor-orport?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, JavaRMI, RTSPRequest, Radmin, SSLSessionReq, SSLv23SessionReq, TLSSessionReq, mongodb: 
+|     payloadq
+|     U=To check the status of a server, just type the server IP...
+|     endq
+|   NULL: 
+|     payloadq
+|_    U=To check the status of a server, just type the server IP...
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9001-TCP:V=7.60%I=7%D=3/18%Time=5AAF17A0%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,53,"\x80\x02}q\0U\x07payloadq\x01U=To\x20check\x20the\x20status\x20o
+SF:f\x20a\x20server,\x20just\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x02
+SF:s\.")%r(GenericLines,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x20check\x20
+SF:the\x20status\x20of\x20a\x20server,\x20just\x20type\x20the\x20server\x2
+SF:0IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03endq\x01\x88s\.")%r(GetRequest,62
+SF:,"\x80\x02}q\0U\x07payloadq\x01U=To\x20check\x20the\x20status\x20of\x20
+SF:a\x20server,\x20just\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x02s\.\x
+SF:80\x02}q\0U\x03endq\x01\x88s\.")%r(SSLSessionReq,62,"\x80\x02}q\0U\x07p
+SF:ayloadq\x01U=To\x20check\x20the\x20status\x20of\x20a\x20server,\x20just
+SF:\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03endq\
+SF:x01\x88s\.")%r(TLSSessionReq,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x20c
+SF:heck\x20the\x20status\x20of\x20a\x20server,\x20just\x20type\x20the\x20s
+SF:erver\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03endq\x01\x88s\.")%r(SSLv2
+SF:3SessionReq,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x20check\x20the\x20st
+SF:atus\x20of\x20a\x20server,\x20just\x20type\x20the\x20server\x20IP\.\.\.
+SF:\n\nq\x02s\.\x80\x02}q\0U\x03endq\x01\x88s\.")%r(JavaRMI,62,"\x80\x02}q
+SF:\0U\x07payloadq\x01U=To\x20check\x20the\x20status\x20of\x20a\x20server,
+SF:\x20just\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\
+SF:x03endq\x01\x88s\.")%r(Radmin,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x20
+SF:check\x20the\x20status\x20of\x20a\x20server,\x20just\x20type\x20the\x20
+SF:server\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03endq\x01\x88s\.")%r(mong
+SF:odb,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x20check\x20the\x20status\x20
+SF:of\x20a\x20server,\x20just\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x0
+SF:2s\.\x80\x02}q\0U\x03endq\x01\x88s\.")%r(HTTPOptions,62,"\x80\x02}q\0U\
+SF:x07payloadq\x01U=To\x20check\x20the\x20status\x20of\x20a\x20server,\x20
+SF:just\x20type\x20the\x20server\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03e
+SF:ndq\x01\x88s\.")%r(RTSPRequest,62,"\x80\x02}q\0U\x07payloadq\x01U=To\x2
+SF:0check\x20the\x20status\x20of\x20a\x20server,\x20just\x20type\x20the\x2
+SF:0server\x20IP\.\.\.\n\nq\x02s\.\x80\x02}q\0U\x03endq\x01\x88s\.");
+Device type: WAP|firewall|general purpose|storage-misc|terminal|broadband router|specialized|router
+Running (JUST GUESSING): Linux 2.4.X|2.6.X|3.X (94%), Check Point embedded (93%), Wyse ThinOS (92%), Actiontec embedded (91%), AVM embedded (90%), Axcient embedded (90%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.34 cpe:/o:linux:linux_kernel:2.6.23 cpe:/o:linux:linux_kernel:3.x cpe:/o:wyse:thinos cpe:/h:actiontec:gt701 cpe:/h:avm:fritz%21box_fon_wlan_7170 cpe:/o:linux:linux_kernel:2.4.21 cpe:/o:linux:linux_kernel:2.6.32
+Aggressive OS guesses: DD-WRT v23 (Linux 2.4.34) (94%), Check Point UTM-1 Edge X firewall (93%), Linux 2.6.23 (93%), Linux 2.6.32 - 2.6.33 (93%), QNAP NAS Firmware 3.8.3 (Linux 3.X) (93%), Linux 2.6.32 (92%), Wyse ThinOS (92%), DD-WRT v24-sp1 (Linux 2.4) (92%), Actiontec GT701 DSL modem (91%), Linux 2.6.15 - 2.6.26 (likely embedded) (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 29.692 days (since Sat Feb 17 02:33:05 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=201 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  ubuntu-1.alpha.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -6h29m55s, deviation: 0s, median: -6h29m55s
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   84.76 ms 10.100.101.203
+
+Nmap scan report for 10.100.101.228
+Host is up (0.11s latency).
+Not shown: 975 closed ports, 3 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE            VERSION
+53/tcp    open  domain             Microsoft DNS 6.0.6001
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.0.6001 (17714650)
+88/tcp    open  kerberos-sec       Microsoft Windows Kerberos (server time: 2018-03-18 19:13:46Z)
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+389/tcp   open  ldap               Microsoft Windows Active Directory LDAP (Domain: alpha.net, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds       Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap               Microsoft Windows Active Directory LDAP (Domain: alpha.net, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=win2008-i61v1.alpha.net
+| Issuer: commonName=win2008-i61v1.alpha.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-03-04T14:41:27
+| Not valid after:  2018-09-03T14:41:27
+| MD5:   0c10 bfc1 b25e 1f33 a2a2 577a fb28 12a8
+|_SHA-1: 2149 c73c 5174 1985 f50a 6f23 1088 fdc3 b1cf 7bb8
+|_ssl-date: 2018-03-18T19:19:55+00:00; -6h37m44s from scanner time.
+5357/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+49157/tcp open  ncacn_http         Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc              Microsoft Windows RPC
+49161/tcp open  msrpc              Microsoft Windows RPC
+49163/tcp open  msrpc              Microsoft Windows RPC
+49175/tcp open  msrpc              Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 Professional or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Server 2008 R2 SP1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.203 days (since Fri Mar  2 14:16:47 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: WIN2008-I61V1; OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_clock-skew: mean: -6h37m44s, deviation: 0s, median: -6h37m44s
+| nbstat: NetBIOS name: WIN2008-I61V1, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:5a:92:8b (VMware)
+| Names:
+|   WIN2008-I61V1<00>    Flags: <unique><active>
+|   ALPHA<00>            Flags: <group><active>
+|   ALPHA<1c>            Flags: <group><active>
+|   WIN2008-I61V1<20>    Flags: <unique><active>
+|_  ALPHA<1b>            Flags: <unique><active>
+| smb-os-discovery: 
+|   OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: win2008-i61v1
+|   NetBIOS computer name: WIN2008-I61V1\x00
+|   Domain name: alpha.net
+|   Forest name: alpha.net
+|   FQDN: win2008-i61v1.alpha.net
+|_  System time: 2018-03-18T12:21:11-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2018-03-18 13:21:11
+|_  start_date: 2017-06-22 08:31:03
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   106.06 ms 10.100.101.228
+
+Nmap scan report for 10.100.101.246
+Host is up (0.11s latency).
+Not shown: 981 closed ports, 5 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE            VERSION
+22/tcp    open  ssh                WeOnlyDo sshd 2.1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 f6:13:35:4a:87:f7:08:ec:2b:aa:a5:0a:86:d2:f9:31 (DSA)
+|_  1024 32:f5:d3:08:78:90:c1:7b:f9:f0:bb:ea:50:4b:c1:2f (RSA)
+23/tcp    open  telnet             freeSSHd telnetd
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Windows 7 Enterprise 7600 microsoft-ds (workgroup: ALPHA)
+554/tcp   open  rtsp?
+2869/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+3389/tcp  open  ssl/ms-wbt-server?
+| ssl-cert: Subject: commonName=win7-i61v1.alpha.net
+| Issuer: commonName=win7-i61v1.alpha.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2018-02-02T07:46:31
+| Not valid after:  2018-08-04T07:46:31
+| MD5:   6104 9fad b26b 5f3e 3b03 bb55 4bae e204
+|_SHA-1: 0bcd 917a d035 12c9 8e0b 7fb7 f3a6 bab2 9006 8a8f
+|_ssl-date: 2018-03-18T19:18:21+00:00; -6h37m44s from scanner time.
+8000/tcp  open  http               Icecast streaming media server
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: Site doesn't have a title (text/html).
+10243/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|8.1|2012|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (93%), Microsoft Windows 7 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 24.422 days (since Thu Feb 22 09:02:36 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: WIN7-I61V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -6h37m44s, deviation: 0s, median: -6h37m45s
+| nbstat: NetBIOS name: WIN7-I61V1, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:1c:99:81 (VMware)
+| Names:
+|   WIN7-I61V1<00>       Flags: <unique><active>
+|   ALPHA<00>            Flags: <group><active>
+|   WIN7-I61V1<20>       Flags: <unique><active>
+|_  ALPHA<1e>            Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 7 Enterprise 7600 (Windows 7 Enterprise 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::-
+|   Computer name: win7-i61v1
+|   NetBIOS computer name: WIN7-I61V1\x00
+|   Domain name: alpha.net
+|   Forest name: alpha.net
+|   FQDN: win7-i61v1.alpha.net
+|_  System time: 2018-03-18T15:21:11-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-18 13:21:12
+|_  start_date: 2016-07-02 08:25:42
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.101.2
+5   106.12 ms 10.100.101.246
+
+Nmap scan report for 10.100.103.2
+Host is up (0.11s latency).
+Not shown: 984 closed ports, 13 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 e2:b8:4c:f1:8b:84:d3:6f:26:49:3d:7a:32:23:5d:97 (DSA)
+|   2048 e6:8e:1f:a6:1a:1f:b3:a2:46:04:24:fe:47:fe:c5:5d (RSA)
+|   256 23:bf:f7:14:d0:a8:35:0e:3b:bf:9d:2c:72:08:96:26 (ECDSA)
+|_  256 a7:d3:59:81:8d:ff:66:25:da:ac:05:27:48:e1:9e:d2 (EdDSA)
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100021  1,3,4      34816/udp  nlockmgr
+|   100021  1,3,4      37226/tcp  nlockmgr
+|   100024  1          48335/tcp  status
+|_  100024  1          57467/udp  status
+3128/tcp open  http    Proxmox Virtual Environment REST API 3.0
+|_http-server-header: pve-api-daemon/3.0
+|_http-title: Site doesn't have a title.
+Aggressive OS guesses: Linux 3.11 - 4.1 (95%), Linux 3.13 (92%), Linux 3.10 - 3.12 (91%), Linux 4.4 (91%), Linux 2.6.32 (91%), Linux 3.2 - 3.8 (91%), Linux 3.8 (91%), WatchGuard Fireware 11.8 (91%), IPFire 2.11 firewall (Linux 2.6.32) (91%), Linux 3.16 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 15.380 days (since Sat Mar  3 10:01:43 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   106.14 ms 10.100.103.2
+
+Nmap scan report for 10.100.103.3
+Host is up (0.12s latency).
+Not shown: 998 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 12.1 (protocol 2.0)
+| ssh-hostkey: 
+|_  2048 ed:d9:a8:fe:2a:8c:a2:1d:fd:fd:f7:19:79:26:b1:e2 (RSA)
+443/tcp open  ssl/http Embedthis-Appweb (extension: php)
+|_http-favicon: Unknown favicon MD5: 3AB22B6F3F0D4271E8D038C05CFBD5C9
+| http-methods: 
+|_  Supported Methods: GET POST
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-title: 400 The plain HTTP request was sent to HTTPS port
+|_Requested resource was /php/login.php
+| ssl-cert: Subject: commonName=bcb84befee7758317b4a59ce7ae329cd94b1bb068afc7aa950f6d547f0d5fb21/organizationName=Palo Alto Networks/stateOrProvinceName=CA/countryName=US
+| Subject Alternative Name: DNS:bcb84befee7758317b4a59ce7ae329cd94b1bb068afc7aa950f6d547f0d5fb21
+| Issuer: commonName=localhost/organizationName=Palo Alto Networks/stateOrProvinceName=CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-10-28T15:04:07
+| Not valid after:  2027-10-26T15:04:07
+| MD5:   7882 bca6 090b 7057 dbc0 a221 1ce6 c4c2
+|_SHA-1: 7547 3e1e cba6 86f9 8be6 b1df ff36 4382 d7e0 66f6
+|_ssl-date: 2018-03-19T01:56:18+00:00; -1s from scanner time.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|WAP|router|storage-misc|broadband router|firewall
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (91%), MikroTik RouterOS 6.X (89%), HP embedded (86%), Viasat embedded (85%), WatchGuard Fireware 11.X (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:3.10 cpe:/h:viasat:surfbeam_2 cpe:/o:watchguard:fireware:11.8
+Aggressive OS guesses: Linux 3.2 - 3.8 (91%), Tomato 1.27 - 1.28 (Linux 2.4.20) (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (89%), Linux 3.6 (89%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (86%), Linux 2.6.32 (85%), Linux 2.6.32 or 3.10 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.435 days (since Mon Mar  5 08:42:52 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   114.96 ms 10.100.103.3
+
+Nmap scan report for 10.100.103.18
+Host is up (0.11s latency).
+Not shown: 987 closed ports
+PORT     STATE SERVICE      VERSION
+22/tcp   open  ssh          OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ea:fe:34:20:d1:76:92:bb:cf:c0:3b:a3:39:b9:39:80 (DSA)
+|_  2048 c6:1e:84:87:75:91:64:30:8a:49:15:04:41:d0:03:be (RSA)
+53/tcp   open  tcpwrapped
+80/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.2.15 (CentOS)
+| http-title: 404 Not Found
+|_Requested resource was config.php
+81/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: User Control Panel
+82/tcp   open  http         Apache httpd 2.2.15
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: 404 Not Found
+83/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+84/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+85/tcp   open  http         Apache httpd 2.2.15 ((CentOS))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.15 (CentOS)
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+5222/tcp open  jabber       Prosody Jabber client 0.8.0 or newer
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     auth_mechanisms: 
+| 
+|     errors: 
+|       host-unknown
+|       
+|         text: This server does not serve 
+|       stream:stream
+|       (timeout)
+|     xmpp: 
+|       version: 1.0
+|     capabilities: 
+| 
+|     compression_methods: 
+| 
+|     features: 
+| 
+|_    unknown: 
+5269/tcp open  jabber       Prosody Jabber server
+| xmpp-info: 
+|   STARTTLS Failed
+|   info: 
+|     auth_mechanisms: 
+| 
+|     stream_id: 1ef006a4-9ad6-429e-80a7-08f39a62f46f
+|     errors: 
+|       host-unknown
+|       
+|         text: This host does not serve 
+|       stream:stream
+|       (timeout)
+|     xmpp: 
+|       lang: en
+|       version: 1.0
+|     capabilities: 
+| 
+|     compression_methods: 
+| 
+|     features: 
+| 
+|_    unknown: 
+5280/tcp open  http         Prosody XMPP BOSH httpd
+|_http-title: Site doesn't have a title.
+8001/tcp open  vcom-tunnel?
+8088/tcp open  http         Asterisk 11.16.0
+|_http-server-header: Asterisk/11.16.0
+|_http-title: 404 Not Found
+Aggressive OS guesses: Linux 2.6.32 (94%), Linux 3.4 (94%), Synology DiskStation Manager 5.1 (94%), Linux 3.10 (94%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 or 3.10 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.39 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 1.874 days (since Fri Mar 16 23:11:01 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=265 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: localhost.localdomain; Device: PBX
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.100.101.2
+2   ... 3
+4   114.86 ms 192.168.103.1
+5   106.15 ms 10.100.103.18
+
+Nmap scan report for 10.100.103.31
+Host is up (0.10s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           WeOnlyDo sshd 2.1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 e0:56:93:84:79:15:8f:fd:cb:c8:26:d4:cb:19:a2:f5 (DSA)
+|_  1024 f5:4d:f6:23:83:1a:2e:e2:e7:06:08:99:5f:76:4e:e4 (RSA)
+23/tcp   open  telnet        freeSSHd telnetd
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  Windows XP microsoft-ds
+3389/tcp open  ms-wbt-server Microsoft Terminal Service
+8000/tcp open  http          Icecast streaming media server
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: Site doesn't have a title (text/html).
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Beat embedded (85%), Microsoft embedded (85%), Belkin embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_ce cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (94%), Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows Server 2003 SP2 (91%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows XP SP2 - SP3 (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (90%), Microsoft Windows 2000 SP4 (90%), Microsoft Windows XP Professional SP3 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -6h13m43s, deviation: 0s, median: -6h13m43s
+| nbstat: NetBIOS name: WINXPPRO-I63VA, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:8d:ea:44 (VMware)
+| Names:
+|   WINXPPRO-I63VA<00>   Flags: <unique><active>
+|   GAMMA<00>            Flags: <group><active>
+|   WINXPPRO-I63VA<20>   Flags: <unique><active>
+|_  GAMMA<1e>            Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: winxppro-i63vA
+|   NetBIOS computer name: WINXPPRO-I63VA\x00
+|   Domain name: gamma.net
+|   Forest name: gamma.net
+|   FQDN: winxppro-i63vA.gamma.net
+|_  System time: 2018-03-18T14:45:13-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   106.18 ms 10.100.103.31
+
+Nmap scan report for 10.100.103.60
+Host is up (0.11s latency).
+Not shown: 986 closed ports, 12 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 8c:c3:0f:0e:23:2d:5e:e8:49:41:bd:e5:fc:b3:48:7d (DSA)
+|   2048 2a:19:f1:87:7a:e5:9c:9c:23:a4:71:f6:1c:17:7c:28 (RSA)
+|_  256 93:8c:ac:38:bc:e6:4b:d8:53:44:be:33:f7:57:62:6e (ECDSA)
+53/tcp open  domain  ISC BIND 9.8.1-P1
+| dns-nsid: 
+|_  bind.version: 9.8.1-P1
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), WatchGuard Fireware 11.8 (95%), Linux 3.1 - 3.2 (94%), Linux 3.5 (93%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.0 - 3.2 (92%), Linux 2.6.32 - 3.0 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 15.342 days (since Sat Mar  3 10:56:29 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   86.54 ms 10.100.103.60
+
+Nmap scan report for 10.100.103.72
+Host is up (0.11s latency).
+Not shown: 987 closed ports, 10 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.7p1 Debian 5+deb8u2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 7b:87:1b:43:88:9c:7e:38:fa:d9:b2:b2:6e:0a:c8:02 (DSA)
+|   2048 f2:77:1c:5a:36:1f:f3:61:a5:34:2e:56:69:68:9c:69 (RSA)
+|   256 0e:36:09:44:62:78:37:d9:fd:3b:ad:29:a5:8a:94:f6 (ECDSA)
+|_  256 05:db:da:bb:df:b6:ec:ac:09:df:6c:2f:5b:9a:92:d0 (EdDSA)
+80/tcp  open  http     Apache httpd
+|_http-favicon: Unknown favicon MD5: 467034F21DE75659ACAA9A29AD8CED96
+|_http-generator: shopping cart program by Zen Cart&reg;, http://www.zen-cart.com eCommerce
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+|_http-title: Zen Cart!, The Art of E-commerce
+443/tcp open  ssl/http Apache httpd
+|_http-favicon: Unknown favicon MD5: 467034F21DE75659ACAA9A29AD8CED96
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=zencart
+| Subject Alternative Name: DNS:zencart, DNS:localhost
+| Issuer: commonName=zencart
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2016-07-04T13:59:14
+| Not valid after:  2026-07-04T13:59:14
+| MD5:   4f7d b154 f1b4 9bf7 4c53 73a6 7cf4 eb54
+|_SHA-1: dc2c e0cc 2b03 7755 0661 ac80 f761 2b39 ab8d b0a0
+|_ssl-date: TLS randomness does not represent time
+Aggressive OS guesses: Linux 3.18 (94%), Linux 2.6.18 - 2.6.22 (89%), OpenWrt Chaos Calmer (Linux 3.18) (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), IPCop 2.0 (Linux 2.6.32) (89%), Linux 2.6.32 (89%), Linux 3.2 (89%), Linux 3.2.1 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   128.54 ms 10.100.103.72
+
+Nmap scan report for 10.100.103.90
+Host is up (0.11s latency).
+Skipping host 10.100.103.90 due to host timeout
+Nmap scan report for 10.100.103.99
+Host is up (0.11s latency).
+Not shown: 980 closed ports, 15 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd
+|_ftp-anon: got code 500 "OOPS: vsftpd: refusing to run with writable root inside chroot()".
+| ssl-cert: Subject: commonName=elasticsearch.cyberwildcats.net
+| Issuer: commonName=elasticsearch.cyberwildcats.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-06-15T05:13:21
+| Not valid after:  2027-06-13T05:13:21
+| MD5:   635c ec47 dc05 0734 cad1 d98f 548f 19c3
+|_SHA-1: 086b 7507 3574 0c01 3911 edcd f0c5 84e3 6c4b d2d8
+|_ssl-date: TLS randomness does not represent time
+22/tcp   open  ssh         OpenSSH 6.9p1 Ubuntu 2ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 de:9a:f3:76:7d:c5:2c:bd:52:dc:c2:2c:f4:ae:21:fe (DSA)
+|   2048 e9:ae:7c:a3:9b:d8:aa:eb:ee:91:b5:d8:15:8f:d1:71 (RSA)
+|   256 fe:14:6c:80:a1:cf:51:57:25:82:d4:8d:b7:10:d2:ce (ECDSA)
+|_  256 33:3a:dc:dc:90:9c:62:34:24:a6:4a:23:86:fb:cd:b8 (EdDSA)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 4.3.9-Ubuntu (workgroup: WORKGROUP)
+9200/tcp open  http        Elasticsearch REST API 5.4.0 (name: U9ceaa6; cluster: elasticsearch; Lucene 6.5.0)
+|_http-favicon: Unknown favicon MD5: 6177BFB75B498E0BB356223ED76FFE43
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (application/json; charset=UTF-8).
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.16 (92%), Linux 3.13 (91%), Linux 3.10 - 3.12 (91%), Linux 4.4 (91%), Linux 2.6.32 (91%), Linux 3.2 - 3.8 (91%), Linux 3.8 (91%), IPFire 2.11 firewall (Linux 2.6.32) (90%), Linux 3.18 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 10.842 days (since Wed Mar  7 22:57:33 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: ELASTICSEARCH; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -263d02h01m37s, deviation: 0s, median: -263d02h01m37s
+| nbstat: NetBIOS name: ELASTICSEARCH, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   ELASTICSEARCH<00>    Flags: <unique><active>
+|   ELASTICSEARCH<03>    Flags: <unique><active>
+|   ELASTICSEARCH<20>    Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.9-Ubuntu)
+|   Computer name: elasticsearch
+|   NetBIOS computer name: ELASTICSEARCH\x00
+|   Domain name: cyberwildcats.net
+|   FQDN: elasticsearch.cyberwildcats.net
+|_  System time: 2017-06-28T19:57:20-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2017-06-28 17:57:25
+|_  start_date: 1600-12-31 17:00:04
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   121.23 ms 10.100.103.99
+
+Nmap scan report for 10.100.103.106
+Host is up (0.11s latency).
+Not shown: 986 closed ports, 10 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 71:52:e1:3d:c5:9b:3d:99:56:15:e0:1a:6a:0e:07:55 (DSA)
+|   2048 8b:9f:b5:e7:87:99:74:d5:1d:27:05:df:c2:43:64:86 (RSA)
+|_  256 8a:bc:05:15:29:57:b0:04:b8:b8:d9:69:f3:47:ad:ab (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.22 ((Debian))
+|_http-favicon: Joomla! CMS
+|_http-generator: Joomla! - Open Source Content Management
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Home
+443/tcp  open  ssl/http Apache httpd 2.2.22 ((Debian))
+|_http-generator: Joomla! - Open Source Content Management
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-robots.txt: 16 disallowed entries (15 shown)
+| /joomla/administrator/ /administrator/ /cache/ /cli/ 
+| /components/ /images/ /includes/ /installation/ /language/ 
+|_/libraries/ /logs/ /media/ /modules/ /plugins/ /templates/
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Home
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-06-25T17:48:47
+| Not valid after:  2026-06-23T17:48:47
+| MD5:   4d91 72ef 1024 6caa 4f1c 9458 ec38 32e4
+|_SHA-1: 4d3b 972f 3c2d 6389 eb85 70c4 6f6c dee3 4fd8 f8e9
+|_ssl-date: 2016-06-26T13:13:22+00:00; -1y265d12h43m28s from scanner time.
+3306/tcp open  mysql    MySQL 5.5.31-0+wheezy1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.31-0+wheezy1
+|   Thread ID: 69
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: d&,HiVT!G"o/7h&#z`PS
+|_  Auth Plugin Name: 89
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), WatchGuard Fireware 11.8 (95%), Linux 3.1 - 3.2 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.5 (92%), Linux 3.0 - 3.2 (92%), Linux 2.6.32 (91%), Linux 2.6.39 (91%), Linux 3.0 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.805 days (since Sun Mar 18 00:50:33 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -630d12h43m28s, deviation: 0s, median: -630d12h43m28s
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   121.26 ms 10.100.103.106
+
+Nmap scan report for 10.100.103.118
+Host is up (0.12s latency).
+Skipping host 10.100.103.118 due to host timeout
+Nmap scan report for 10.100.103.123
+Host is up (0.14s latency).
+Not shown: 988 closed ports, 8 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1.4 (Ubuntu Linux; protocol 2.0)
+443/tcp  open  https?
+| ssl-cert: Subject: commonName=securityonion
+| Issuer: commonName=securityonion
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-07-30T15:52:58
+| Not valid after:  2026-07-28T15:52:58
+| MD5:   5bc1 2b3f 9104 5ef8 485e 3029 46c7 9d17
+|_SHA-1: 4c47 3b1f 2946 b2d7 38dd 47d4 fbdc a298 7613 3a00
+444/tcp  open  snpp?
+9876/tcp open  sd?
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT    ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   ... 30
+
+Nmap scan report for 10.100.103.124
+Host is up (0.11s latency).
+Not shown: 986 closed ports, 10 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4+deb7u6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 40:57:d8:b9:b3:41:c7:10:49:de:5d:e8:8f:07:0d:b6 (DSA)
+|   2048 64:c9:41:9b:4b:d1:67:73:09:50:33:ce:d7:b1:27:48 (RSA)
+|_  256 d6:60:f9:40:83:00:37:73:fe:64:23:fc:6c:12:53:55 (ECDSA)
+80/tcp   open  http     lighttpd 1.4.31
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.31
+|_http-title: Welcome page
+443/tcp  open  ssl/http lighttpd 1.4.31
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.31
+|_http-title: Welcome page
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-07-07T10:14:14
+| Not valid after:  2024-07-04T10:14:14
+| MD5:   9d2c d536 5089 715a c484 2aa9 8ac2 7fc3
+|_SHA-1: 3541 dc92 53ba 96dc 926a d13f 2a86 29f1 f342 24b9
+|_ssl-date: TLS randomness does not represent time
+3306/tcp open  mysql    MySQL 5.5.55-0+deb7u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.55-0+deb7u1
+|   Thread ID: 81
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: Pf2c}l$jmc+HiWY7HD[{
+|_  Auth Plugin Name: 88
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), WatchGuard Fireware 11.8 (95%), Linux 3.1 - 3.2 (94%), Linux 3.5 (93%), Linux 2.6.32 - 2.6.39 (93%), Linux 2.6.32 - 3.0 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 2.6.39 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 1.376 days (since Sat Mar 17 11:08:14 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   121.28 ms 10.100.103.124
+
+Nmap scan report for 10.100.103.130
+Host is up (0.11s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.0p1 Debian 4+deb7u6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 09:79:b5:dc:a9:99:7f:fc:e9:8c:00:4e:9d:68:ec:1e (DSA)
+|   2048 62:eb:ee:27:0b:30:b0:71:c0:f3:01:ad:cd:de:28:e7 (RSA)
+|_  256 cd:ea:fe:f1:c9:ed:ab:2b:4a:e7:ea:c7:12:ef:56:f5 (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+443/tcp  open  ssl/http Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: TurnKey LAMP
+| ssl-cert: Subject: organizationName=TurnKey Linux
+| Issuer: organizationName=TurnKey Linux
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-07-07T10:16:53
+| Not valid after:  2024-07-04T10:16:53
+| MD5:   773d bc4b c5d4 6503 162f 79eb c49a 8c92
+|_SHA-1: 54a5 c450 f329 5310 7f67 b469 0241 c4fe 2632 1424
+|_ssl-date: TLS randomness does not represent time
+8000/tcp open  http     Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: TurnKey LAMP
+Aggressive OS guesses: Linux 3.2 - 3.8 (95%), Linux 3.8 (95%), Linux 3.1 - 3.2 (94%), WatchGuard Fireware 11.8 (94%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.5 (92%), Linux 3.0 - 3.2 (92%), Linux 2.6.32 (91%), Linux 3.0 (91%), Linux 3.0 or 3.5 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 12.261 days (since Tue Mar  6 12:54:20 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   121.41 ms 10.100.103.130
+
+Nmap scan report for 10.100.103.144
+Host is up (0.11s latency).
+Skipping host 10.100.103.144 due to host timeout
+Nmap scan report for 10.100.103.157
+Host is up (0.11s latency).
+Skipping host 10.100.103.157 due to host timeout
+Nmap scan report for 10.100.103.168
+Host is up (0.099s latency).
+Skipping host 10.100.103.168 due to host timeout
+Nmap scan report for 10.100.103.175
+Host is up (0.097s latency).
+Not shown: 990 closed ports, 7 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ea:b6:32:07:c3:8e:9d:68:7d:3d:f8:b3:25:e0:7a:51 (DSA)
+|_  2048 6f:b3:b6:58:9e:1f:9d:bf:33:df:10:8b:8a:39:1c:28 (RSA)
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          41904/udp  status
+|_  100024  1          46826/tcp  status
+3306/tcp open  mysql   MySQL 5.1.61
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.1.61
+|   Thread ID: 248
+|   Capabilities flags: 63487
+|   Some Capabilities: DontAllowDatabaseTableColumn, Support41Auth, SupportsTransactions, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, ConnectWithDatabase, IgnoreSigpipes, SupportsLoadDataLocal, Speaks41ProtocolOld, SupportsCompression, Speaks41ProtocolNew, LongPassword, ODBCClient, InteractiveClient
+|   Status: Autocommit
+|_  Salt: ~cT\Qar:j(&&-Lv24La&
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (93%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.38 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.225 days (since Sun Mar  4 13:46:14 2018)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-4 are the same as for 10.100.103.18
+5   101.85 ms 10.100.103.175
+
+Nmap scan report for 10.100.103.203
+Host is up (0.11s latency).
+Skipping host 10.100.103.203 due to host timeout
+Nmap scan report for 10.100.103.228
+Host is up (0.10s latency).
+Skipping host 10.100.103.228 due to host timeout
+Nmap scan report for 10.100.103.246
+Host is up (0.11s latency).
+Skipping host 10.100.103.246 due to host timeout
+Post-scan script results:
+| clock-skew: 
+|   -6h10m03s: 
+|     10.100.103.203
+|     10.100.103.90
+|   -6h13m42s: 
+|     10.100.103.228
+|_    10.100.103.31
+| ssh-hostkey: Possible duplicate hosts
+| Key 1024 09:79:b5:dc:a9:99:7f:fc:e9:8c:00:4e:9d:68:ec:1e (DSA) used by:
+|   10.100.101.130
+|   10.100.103.130
+| Key 1024 e0:56:93:84:79:15:8f:fd:cb:c8:26:d4:cb:19:a2:f5 (DSA) used by:
+|   10.100.101.31
+|   10.100.103.31
+| Key 1024 f6:13:35:4a:87:f7:08:ec:2b:aa:a5:0a:86:d2:f9:31 (DSA) used by:
+|   10.100.101.246
+|   10.100.103.246
+| Key 2048 55:3d:ad:38:cb:d4:82:89:48:80:92:2e:7b:24:0c:74 (RSA) used by:
+|   10.100.101.203
+|   10.100.103.203
+| Key 1024 f8:42:d0:10:f6:01:0f:80:cd:f2:06:e7:a0:2f:a5:58 (DSA) used by:
+|   10.100.101.203
+|   10.100.103.203
+| Key 2048 6f:b3:b6:58:9e:1f:9d:bf:33:df:10:8b:8a:39:1c:28 (RSA) used by:
+|   10.100.101.175
+|   10.100.103.175
+| Key 256 93:8c:ac:38:bc:e6:4b:d8:53:44:be:33:f7:57:62:6e (ECDSA) used by:
+|   10.100.101.60
+|   10.100.103.60
+| Key 1024 dd:af:dc:8d:21:ad:7f:06:83:70:6d:b1:fc:17:f3:97 (RSA) used by:
+|   10.100.101.118
+|   10.100.103.118
+| Key 1024 ac:32:71:79:c0:ae:3c:4f:9a:01:3a:23:58:47:92:fa (DSA) used by:
+|   10.100.101.157
+|   10.100.103.157
+| Key 2048 1d:2e:9f:0d:85:47:82:50:d1:e6:54:17:81:58:b1:f9 (RSA) used by:
+|   10.100.101.157
+|   10.100.103.157
+| Key 1024 8c:c3:0f:0e:23:2d:5e:e8:49:41:bd:e5:fc:b3:48:7d (DSA) used by:
+|   10.100.101.60
+|   10.100.103.60
+| Key 1024 40:57:d8:b9:b3:41:c7:10:49:de:5d:e8:8f:07:0d:b6 (DSA) used by:
+|   10.100.101.124
+|   10.100.103.124
+| Key 2048 62:eb:ee:27:0b:30:b0:71:c0:f3:01:ad:cd:de:28:e7 (RSA) used by:
+|   10.100.101.130
+|   10.100.103.130
+| Key 2048 49:f0:95:be:17:ee:b2:d4:99:ae:b5:6c:79:1c:70:bb (RSA) used by:
+|   10.100.101.168
+|   10.100.103.168
+| Key 1024 ea:fe:34:20:d1:76:92:bb:cf:c0:3b:a3:39:b9:39:80 (DSA) used by:
+|   10.100.101.18
+|   10.100.103.18
+| Key 2048 2a:19:f1:87:7a:e5:9c:9c:23:a4:71:f6:1c:17:7c:28 (RSA) used by:
+|   10.100.101.60
+|   10.100.103.60
+| Key 1024 f5:4d:f6:23:83:1a:2e:e2:e7:06:08:99:5f:76:4e:e4 (RSA) used by:
+|   10.100.101.31
+|   10.100.103.31
+| Key 1024 de:9a:f3:76:7d:c5:2c:bd:52:dc:c2:2c:f4:ae:21:fe (DSA) used by:
+|   10.100.101.99
+|   10.100.103.99
+| Key 1024 ea:b6:32:07:c3:8e:9d:68:7d:3d:f8:b3:25:e0:7a:51 (DSA) used by:
+|   10.100.101.175
+|   10.100.103.175
+| Key 2048 e9:ae:7c:a3:9b:d8:aa:eb:ee:91:b5:d8:15:8f:d1:71 (RSA) used by:
+|   10.100.101.99
+|   10.100.103.99
+| Key 1024 75:bd:e0:03:5d:84:49:15:01:3b:c1:f8:ac:2e:90:1e (DSA) used by:
+|   10.100.101.168
+|   10.100.103.168
+| Key 2048 c6:1e:84:87:75:91:64:30:8a:49:15:04:41:d0:03:be (RSA) used by:
+|   10.100.101.18
+|   10.100.103.18
+| Key 256 8a:bc:05:15:29:57:b0:04:b8:b8:d9:69:f3:47:ad:ab (ECDSA) used by:
+|   10.100.101.106
+|   10.100.103.106
+| Key 1024 32:f5:d3:08:78:90:c1:7b:f9:f0:bb:ea:50:4b:c1:2f (RSA) used by:
+|   10.100.101.246
+|   10.100.103.246
+| Key 256 fe:14:6c:80:a1:cf:51:57:25:82:d4:8d:b7:10:d2:ce (ECDSA) used by:
+|   10.100.101.99
+|   10.100.103.99
+| Key 1024 0a:18:64:fa:03:cc:41:2b:3b:5b:b0:76:d7:8d:dc:23 (DSA) used by:
+|   10.100.101.118
+|   10.100.103.118
+| Key 2048 64:c9:41:9b:4b:d1:67:73:09:50:33:ce:d7:b1:27:48 (RSA) used by:
+|   10.100.101.124
+|   10.100.103.124
+| Key 256 33:3a:dc:dc:90:9c:62:34:24:a6:4a:23:86:fb:cd:b8 (EdDSA) used by:
+|   10.100.101.99
+|_  10.100.103.99
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 18 20:09:34 2018 -- 1024 IP addresses (43 hosts up) scanned in 1174.16 seconds

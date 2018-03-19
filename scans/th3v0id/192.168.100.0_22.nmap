@@ -1,0 +1,226 @@
+# Nmap 7.60 scan initiated Sun Mar 18 19:39:08 2018 as: nmap -e tun0 -n -A -v -T5 --top-ports 1000 --open -oA 192.168.100.0_22 192.168.100.0/22
+Nmap scan report for 192.168.101.148
+Host is up (0.14s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      ProFTPD 1.3.3d
+22/tcp   open  ssh      OpenSSH 5.8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b6:37:ac:a7:1e:ca:02:59:73:4e:ec:79:ec:4f:52:81 (DSA)
+|   1024 61:6f:ed:d7:59:12:af:44:a9:ea:3a:60:0d:ad:82:25 (RSA)
+|_  256 43:51:35:d9:36:e0:6c:7e:72:04:e5:cc:90:77:ec:8a (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.17 ((Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.17 (Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|_  100000  2,3,4        111/udp  rpcbind
+443/tcp  open  ssl/http Apache httpd 2.2.17 ((Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.17 (Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=localhost/organizationName=Apache Friends/stateOrProvinceName=Berlin/countryName=DE
+| Issuer: commonName=localhost/organizationName=Apache Friends/stateOrProvinceName=Berlin/countryName=DE
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2004-10-01T09:10:30
+| Not valid after:  2010-09-30T09:10:30
+| MD5:   b181 18f6 1a4d cb51 df5e 189c 40dd 3280
+|_SHA-1: c4c9 a1dc 528d 41ac 1988 f65d b62f 9ca9 22fb e711
+|_ssl-date: 2018-03-18T19:10:21+00:00; -6h29m54s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+3306/tcp open  mysql    MySQL 5.5.8
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.8
+|   Thread ID: 4
+|   Capabilities flags: 63487
+|   Some Capabilities: IgnoreSigpipes, Support41Auth, FoundRows, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolOld, LongColumnFlag, SupportsTransactions, InteractiveClient, ODBCClient, SupportsLoadDataLocal, Speaks41ProtocolNew, SupportsCompression, DontAllowDatabaseTableColumn, LongPassword, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: NIeBVi2XE0^l$ifGlm\e
+|_  Auth Plugin Name: 78
+5800/tcp open  vnc-http x11vnc
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: File Not Found
+5900/tcp open  vnc      VNC (protocol 3.7)
+| vnc-info: 
+|   Protocol version: 3.7
+|   Security types: 
+|     TLS (18)
+|_    VNC Authentication (2)
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (95%), Linux 2.6.18 (95%), AXIS 211A Network Camera (Linux 2.6.20) (95%), Linux 2.6.16 (94%), Linux 2.6.24 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.27 - 2.6.28 (92%), Linux 2.6.9 - 2.6.18 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.461 days (since Mon Mar  5 07:37:03 2018)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=203 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+Host script results:
+|_clock-skew: mean: -6h29m54s, deviation: 0s, median: -6h29m54s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   176.31 ms 5.5.0.1
+2   176.29 ms 10.20.30.1
+3   176.61 ms 10.20.30.3
+4   84.18 ms  192.168.101.148
+
+Nmap scan report for 192.168.101.254
+Host is up (0.16s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 cd:0c:5b:67:6b:0d:67:29:a2:bc:5f:a2:aa:fe:d0:69 (DSA)
+|_  2048 d4:d6:40:78:8a:db:71:e0:e4:44:6a:51:66:95:30:82 (RSA)
+Aggressive OS guesses: Linux 3.6 (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Lorex NV408 video recorder (95%), Linux 3.1 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 15.277 days (since Sat Mar  3 12:01:53 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-2 are the same as for 192.168.101.148
+3   176.22 ms 192.168.101.254
+
+Nmap scan report for 192.168.103.148
+Host is up (0.15s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      ProFTPD 1.3.3d
+22/tcp   open  ssh      OpenSSH 5.8 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b6:37:ac:a7:1e:ca:02:59:73:4e:ec:79:ec:4f:52:81 (DSA)
+|   1024 61:6f:ed:d7:59:12:af:44:a9:ea:3a:60:0d:ad:82:25 (RSA)
+|_  256 43:51:35:d9:36:e0:6c:7e:72:04:e5:cc:90:77:ec:8a (ECDSA)
+80/tcp   open  http     Apache httpd 2.2.17 ((Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.17 (Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|_  100000  2,3,4        111/udp  rpcbind
+443/tcp  open  ssl/http Apache httpd 2.2.17 ((Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.17 (Unix) DAV/2 mod_ssl/2.2.17 OpenSSL/1.0.0c PHP/5.3.5 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=localhost/organizationName=Apache Friends/stateOrProvinceName=Berlin/countryName=DE
+| Issuer: commonName=localhost/organizationName=Apache Friends/stateOrProvinceName=Berlin/countryName=DE
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2004-10-01T09:10:30
+| Not valid after:  2010-09-30T09:10:30
+| MD5:   b181 18f6 1a4d cb51 df5e 189c 40dd 3280
+|_SHA-1: c4c9 a1dc 528d 41ac 1988 f65d b62f 9ca9 22fb e711
+|_ssl-date: 2018-03-18T19:30:12+00:00; -6h10m03s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+3306/tcp open  mysql    MySQL (unauthorized)
+5800/tcp open  vnc-http x11vnc
+| http-methods: 
+|_  Supported Methods: GET
+|_http-title: File Not Found
+5900/tcp open  vnc      VNC (protocol 3.7)
+| vnc-info: 
+|   Protocol version: 3.7
+|   Security types: 
+|     TLS (18)
+|_    VNC Authentication (2)
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (95%), Linux 2.6.18 (95%), AXIS 211A Network Camera (Linux 2.6.20) (95%), Linux 2.6.16 (94%), Linux 2.6.24 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.27 - 2.6.28 (92%), Linux 2.6.9 - 2.6.18 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.097 days (since Sun Mar 18 17:21:06 2018)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=202 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+Host script results:
+|_clock-skew: mean: -6h10m03s, deviation: 0s, median: -6h10m03s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-3 are the same as for 192.168.101.148
+4   176.75 ms 192.168.103.148
+
+Nmap scan report for 192.168.103.254
+Host is up (0.16s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 cd:0c:5b:67:6b:0d:67:29:a2:bc:5f:a2:aa:fe:d0:69 (DSA)
+|_  2048 d4:d6:40:78:8a:db:71:e0:e4:44:6a:51:66:95:30:82 (RSA)
+Aggressive OS guesses: Lorex NV408 video recorder (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.6 (95%), Linux 3.1 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 15.277 days (since Sat Mar  3 12:01:53 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-2 are the same as for 192.168.101.148
+3   176.43 ms 192.168.103.254
+
+Post-scan script results:
+| ssh-hostkey: Possible duplicate hosts
+| Key 256 43:51:35:d9:36:e0:6c:7e:72:04:e5:cc:90:77:ec:8a (ECDSA) used by:
+|   192.168.101.148
+|   192.168.103.148
+| Key 1024 b6:37:ac:a7:1e:ca:02:59:73:4e:ec:79:ec:4f:52:81 (DSA) used by:
+|   192.168.101.148
+|   192.168.103.148
+| Key 1024 cd:0c:5b:67:6b:0d:67:29:a2:bc:5f:a2:aa:fe:d0:69 (DSA) used by:
+|   192.168.101.254
+|   192.168.103.254
+| Key 1024 61:6f:ed:d7:59:12:af:44:a9:ea:3a:60:0d:ad:82:25 (RSA) used by:
+|   192.168.101.148
+|   192.168.103.148
+| Key 2048 d4:d6:40:78:8a:db:71:e0:e4:44:6a:51:66:95:30:82 (RSA) used by:
+|   192.168.101.254
+|_  192.168.103.254
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 18 19:40:29 2018 -- 1024 IP addresses (4 hosts up) scanned in 81.73 seconds

@@ -1,0 +1,3 @@
+# Nmap 7.60 scan initiated Sun Mar 18 19:57:41 2018 as: nmap -e tun0 -n -A -v -T5 --top-ports 1000 --open -oA 172.30.20.0_24 172.30.20.0/24
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Mar 18 19:58:33 2018 -- 256 IP addresses (0 hosts up) scanned in 52.21 seconds
