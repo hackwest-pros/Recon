@@ -1,0 +1,1136 @@
+# Nmap 7.60 scan initiated Sun Mar 18 19:38:30 2018 as: nmap -e tun0 -n -A -v -T5 --top-ports 1000 --open -oA 10.20.30.0_23 10.20.30.0/23
+Nmap scan report for 10.20.30.1
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 92:ca:01:e7:cc:9f:24:eb:ae:22:00:20:19:2d:a5:17 (DSA)
+|   2048 c3:47:e1:66:08:68:a3:05:da:be:4b:35:db:cb:9a:fd (RSA)
+|_  256 51:b3:04:46:84:12:2f:84:28:92:53:ab:82:f3:a7:61 (ECDSA)
+53/tcp   open  domain  dnsmasq 2.59
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.59
+8000/tcp open  http    GoAhead WebServer
+|_http-favicon: Unknown favicon MD5: AD7E6C57A46E242587774D9D9C241B3B
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: GoAhead-Webs
+| http-title: Site doesn't have a title (text/html).
+|_Requested resource was http://10.20.30.1:8000/csa23aba43/config/log_off_page.htm
+Aggressive OS guesses: Linux 3.2 (94%), Linux 3.2 - 3.10 (94%), Linux 3.2 - 3.16 (94%), ASUS RT-N56U WAP (Linux 3.4) (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (93%), Crestron XPanel control system (93%), Linux 3.16 (93%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.5 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.374 days (since Mon Mar  5 09:48:10 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   161.54 ms 10.20.30.1
+
+Nmap scan report for 10.20.30.3
+Host is up (0.11s latency).
+Not shown: 998 closed ports, 1 filtered port
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 cd:0c:5b:67:6b:0d:67:29:a2:bc:5f:a2:aa:fe:d0:69 (DSA)
+|_  2048 d4:d6:40:78:8a:db:71:e0:e4:44:6a:51:66:95:30:82 (RSA)
+Aggressive OS guesses: Lorex NV408 video recorder (94%), MikroTik RouterOS 6.35 (94%), Synology DiskStation Manager 5 (Linux) (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.2 (94%), Linux 3.6 (93%), Linux 3.1 (93%), Linux 3.10 (92%), Linux 3.2 - 3.16 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 15.282 days (since Sat Mar  3 12:01:53 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=265 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   84.84 ms 10.20.30.3
+
+Nmap scan report for 10.20.30.55
+Host is up (0.11s latency).
+Not shown: 998 closed ports, 1 filtered port
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze5 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ef:2f:43:76:a2:8e:cf:6b:58:df:18:45:1d:5e:ee:9b (DSA)
+|_  2048 de:d3:1a:40:e6:03:7d:b1:07:8d:d2:a0:6d:75:ae:9f (RSA)
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), DD-WRT (Linux 3.18) (95%), DD-WRT v3.0 (Linux 4.4.2) (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Android 4.1.2 (94%), Android 4.1.1 (93%), Android 4.2.2 (Linux 3.4) (93%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 14.785 days (since Sat Mar  3 23:56:23 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   161.50 ms 5.5.0.1
+2   164.01 ms 10.20.30.55
+
+Nmap scan report for 10.20.30.57
+Host is up (0.11s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.5p1 Debian 6+squeeze5 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 89:45:c8:19:ee:68:52:77:dd:e4:25:07:2e:3e:4c:2c (DSA)
+|_  2048 4d:64:a6:4c:50:dc:70:9d:df:84:52:6b:2c:41:62:6f (RSA)
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), DD-WRT v3.0 (Linux 4.4.2) (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), DD-WRT (Linux 3.18) (94%), Android 4.2.2 (Linux 3.4) (93%), Linux 3.1 (93%), Linux 3.2 (93%), Android 4.1.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.032 days (since Fri Mar  2 18:01:48 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   164.05 ms 10.20.30.57
+
+Nmap scan report for 10.20.30.66
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 6.7p1 Debian 5 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ce:b6:f0:7c:d8:cf:57:aa:d8:f7:b7:13:5c:ff:61:bc (DSA)
+|   2048 55:86:09:46:83:87:90:e4:ef:ea:b7:7d:c3:78:07:a3 (RSA)
+|   256 9e:d9:bc:54:41:50:9c:ef:f3:e7:71:ef:1a:57:87:60 (ECDSA)
+|_  256 07:f9:84:fc:6d:85:ca:d8:85:4d:83:73:7d:c0:5a:9a (EdDSA)
+111/tcp   open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          54045/tcp  status
+|_  100024  1          58871/udp  status
+54045/tcp open  status  1 (RPC #100024)
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 4.2 (95%), Linux 3.12 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.044 days (since Fri Mar  2 17:43:24 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   164.16 ms 10.20.30.66
+
+Nmap scan report for 10.20.30.111
+Host is up (0.10s latency).
+Not shown: 992 closed ports, 1 filtered port
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 5.3p1 Debian 3ubuntu7.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 cb:14:87:c0:e5:26:9d:28:84:88:c6:be:1a:c9:ad:83 (DSA)
+|_  2048 e4:5a:73:4f:17:07:42:9d:e4:11:41:05:10:d7:48:2a (RSA)
+53/tcp   open  domain   dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+81/tcp   open  http     Apache httpd 2.2.14
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-title: 404 Not Found
+111/tcp  open  rpcbind  2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      46588/udp  mountd
+|   100005  1,2,3      59957/tcp  mountd
+|   100021  1,3,4      36740/udp  nlockmgr
+|   100021  1,3,4      60703/tcp  nlockmgr
+|   100024  1          38308/tcp  status
+|_  100024  1          50539/udp  status
+548/tcp  open  afp      Netatalk 2 (name: itac-fw; protocol 3.1)
+| afp-serverinfo: 
+|   Server Flags: 
+|     Flags hex: 0x8379
+|     Super Client: true
+|     UUIDs: false
+|     UTF8 Server Name: true
+|     Open Directory: true
+|     Reconnect: false
+|     Server Notifications: true
+|     TCP/IP: true
+|     Server Signature: true
+|     Server Messages: true
+|     Password Saving Prohibited: false
+|     Password Changing: false
+|     Copy File: true
+|   Server Name: itac-fw
+|   Machine Type: Netatalk
+|   AFP Versions: AFPVersion 1.1, AFPVersion 2.0, AFPVersion 2.1, AFP2.2, AFPX03, AFP3.1
+|   UAMs: Cleartxt Passwrd, DHX2
+|   Server Signature: 3cab46593cab46593cab46593cab4659
+|   Network Addresses: 
+|     70.89.60.171
+|_  UTF8 Server Name: itac-fw
+2049/tcp open  nfs      2-4 (RPC #100003)
+4443/tcp open  ssl/http TwistedWeb httpd 9.0.0
+|_http-favicon: Unknown favicon MD5: 32A8C07C149098F52CDA6C0D6B19FDCE
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: TwistedWeb/9.0.0
+| http-title: Forbidden
+|_Requested resource was https://10.20.30.111:4443/__session_start__/
+| ssl-cert: Subject: commonName=vpn.cyberwildcats.net/organizationName=Wilmington University/stateOrProvinceName=DE/countryName=US
+| Issuer: commonName=vpn.cyberwildcats.net/organizationName=Wilmington University/stateOrProvinceName=DE/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-06-28T03:18:01
+| Not valid after:  2017-06-28T03:18:01
+| MD5:   a3e9 2a2b bfa8 ffe1 b20f 5cbf 6793 d342
+|_SHA-1: 6725 5898 d8f5 0cbf 995a 5550 6002 9b1e 3cad 138a
+|_ssl-date: 2018-03-19T01:42:05+00:00; 0s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+Aggressive OS guesses: Linux 2.6.32 (95%), MikroTik RouterOS 6.0 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Linux 3.1 (95%), Linux 3.2 (95%), Linux 2.6.31 - 2.6.32 (94%), Linux 2.6.22 (94%), Canon imageRUNNER ADVANCE C3320i copier (93%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.044 days (since Fri Mar  2 17:43:26 2018)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: itac-fw.hfc.comcastbusiness.net; OSs: Linux, Unix; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   163.99 ms 10.20.30.111
+
+Nmap scan report for 10.20.30.120
+Host is up (0.12s latency).
+Not shown: 995 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE  VERSION
+22/tcp    open  ssh      OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 f6:e6:c2:38:9a:ab:80:7b:51:f7:26:7a:e3:e7:8e:59 (DSA)
+|_  2048 c8:f9:e0:90:92:87:bf:56:7c:7f:42:e0:f4:a5:75:df (RSA)
+80/tcp    open  http     lighttpd 1.4.35
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Index of /
+443/tcp   open  ssl/http Jetty 9.0.7.v20131107
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Jetty(9.0.7.v20131107)
+| http-title: RSA Security Analytics Login
+|_Requested resource was https://10.20.30.120/login
+| ssl-cert: Subject: commonName=c3d8a51e-b723-46b5-86fb-31ab98e4d45f
+| Subject Alternative Name: DNS:c3d8a51e-b723-46b5-86fb-31ab98e4d45f, DNS:puppetmaster.local
+| Issuer: commonName=Puppet CA: c3d8a51e-b723-46b5-86fb-31ab98e4d45f
+| Public Key type: rsa
+| Public Key bits: 4096
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2015-11-09T23:40:13
+| Not valid after:  2020-11-08T23:40:13
+| MD5:   f041 fd22 bef0 6ae6 0bee 31b7 093c 82e0
+|_SHA-1: 5f06 cf1a f509 39c2 04cf f358 0b3f 428b a8b1 1231
+|_ssl-date: 2018-03-19T01:42:09+00:00; 0s from scanner time.
+50003/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequest: 
+|     handle
+|     35390
+|     pversion
+|     trusted
+|   DNSVersionBindReq: 
+|     handle
+|     35374
+|     pversion
+|     trusted
+|   GenericLines: 
+|     handle
+|     35294
+|     pversion
+|     trusted
+|   GetRequest: 
+|     handle
+|     35310
+|     pversion
+|     trusted
+|   HTTPOptions: 
+|     handle
+|     35326
+|     pversion
+|     trusted
+|   Help: 
+|     handle
+|     35406
+|     pversion
+|     trusted
+|   NULL, ibm-db2: 
+|     handle
+|     35278
+|     pversion
+|     trusted
+|   RPCCheck: 
+|     handle
+|     35358
+|     pversion
+|     trusted
+|   RTSPRequest: 
+|     handle
+|     35342
+|     pversion
+|     trusted
+|   SSLSessionReq: 
+|     handle
+|     35422
+|     pversion
+|_    trusted
+50006/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequest, DNSVersionBindReq, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, ibm-db2: 
+|     handle
+|     pversion
+|_    trusted
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port50003-TCP:V=7.60%I=7%D=3/18%Time=5AAF14C1%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xce\x89\0\x00
+SF:9\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0035278\x08\0\0\0pversion\x0
+SF:2\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(ibm-db2,56,"\xa9\0\x01\0N
+SF:\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xce\x89\0\x009\0\0\0\x03\0\0\0\x06
+SF:\0\0\0handle\x05\0\0\x0035278\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0
+SF:trusted\x01\0\0\x000")%r(GenericLines,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x0
+SF:1\0\x03@\0\x01\0\0\0\xde\x89\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05
+SF:\0\0\x0035294\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\
+SF:x000")%r(GetRequest,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0
+SF:\0\xee\x89\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0035310\x08\
+SF:0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(HTTPOptio
+SF:ns,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xfe\x89\0\x009
+SF:\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0035326\x08\0\0\0pversion\x02
+SF:\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(RTSPRequest,56,"\xa9\0\x01
+SF:\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x0e\x8a\0\x009\0\0\0\x03\0\0\0\
+SF:x06\0\0\0handle\x05\0\0\x0035342\x08\0\0\0pversion\x02\0\0\x0098\x07\0\
+SF:0\0trusted\x01\0\0\x000")%r(RPCCheck,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01
+SF:\0\x03@\0\x01\0\0\0\x1e\x8a\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\
+SF:0\0\x0035358\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x
+SF:000")%r(DNSVersionBindReq,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x
+SF:01\0\0\0\.\x8a\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0035374\
+SF:x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSSt
+SF:atusRequest,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0>\x8a\
+SF:0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0\0\x0035390\x08\0\0\0pversi
+SF:on\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(Help,56,"\xa9\0\x01\
+SF:0N\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0N\x8a\0\x009\0\0\0\x03\0\0\0\x06\
+SF:0\0\0handle\x05\0\0\x0035406\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0t
+SF:rusted\x01\0\0\x000")%r(SSLSessionReq,56,"\xa9\0\x01\0N\0\0\0b\0\0\0\x0
+SF:1\0\x03@\0\x01\0\0\0\^\x8a\0\x009\0\0\0\x03\0\0\0\x06\0\0\0handle\x05\0
+SF:\0\x0035422\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x0
+SF:00");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port50006-TCP:V=7.60%I=7%D=3/18%Time=5AAF14C1%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xba\0\0\x007\
+SF:0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00186\x08\0\0\0pversion\x02\0\
+SF:0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(ibm-db2,54,"\xa9\0\x01\0L\0\0
+SF:\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xba\0\0\x007\0\0\0\x03\0\0\0\x06\0\0\0
+SF:handle\x03\0\0\x00186\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\
+SF:x01\0\0\x000")%r(GenericLines,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@
+SF:\0\x01\0\0\0\xca\0\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x0020
+SF:2\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(Get
+SF:Request,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xda\0\0\x
+SF:007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00218\x08\0\0\0pversion\x0
+SF:2\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(HTTPOptions,54,"\xa9\0\x0
+SF:1\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xea\0\0\x007\0\0\0\x03\0\0\0\x
+SF:06\0\0\0handle\x03\0\0\x00234\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0
+SF:trusted\x01\0\0\x000")%r(RTSPRequest,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01
+SF:\0\x03@\0\x01\0\0\0\xfa\0\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\
+SF:0\x00250\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000"
+SF:)%r(RPCCheck,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\n\x0
+SF:1\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00266\x08\0\0\0pversi
+SF:on\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSVersionBindReq,54
+SF:,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x1a\x01\0\x007\0\0\
+SF:0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00282\x08\0\0\0pversion\x02\0\0\x0
+SF:098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSStatusRequest,54,"\xa9\0\x01\0
+SF:L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\*\x01\0\x007\0\0\0\x03\0\0\0\x06\
+SF:0\0\0handle\x03\0\0\x00298\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0tru
+SF:sted\x01\0\0\x000")%r(Help,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\
+SF:x01\0\0\0:\x01\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00314\x0
+SF:8\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(SSLSess
+SF:ionReq,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0J\x01\0\x00
+SF:7\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00330\x08\0\0\0pversion\x02\
+SF:0\0\x0098\x07\0\0\0trusted\x01\0\0\x000");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.10 (92%), Linux 3.4 - 3.10 (92%), Linux 3.5 (92%), Synology DiskStation Manager 5.2-5644 (92%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.13 (92%), Linux 2.6.32 - 3.9 (92%), Linux 2.6.32 (90%), Linux 2.6.32 - 3.1 (90%), Linux 3.11 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.473 days (since Mon Mar  5 07:26:48 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=251 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   161.22 ms 10.20.30.120
+
+Nmap scan report for 10.20.30.121
+Host is up (0.12s latency).
+Not shown: 998 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 8d:5a:4b:a6:b2:1b:f1:46:bd:82:82:be:a6:7c:b6:56 (DSA)
+|_  2048 c6:57:74:ed:08:43:e5:8d:4e:9b:c1:11:0b:07:99:26 (RSA)
+50006/tcp open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequest, DNSVersionBindReq, GenericLines, GetRequest, HTTPOptions, Help, NULL, RPCCheck, RTSPRequest, SSLSessionReq, ibm-db2: 
+|     handle
+|     pversion
+|_    trusted
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port50006-TCP:V=7.60%I=7%D=3/18%Time=5AAF14C1%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xcb\0\0\x007\
+SF:0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00203\x08\0\0\0pversion\x02\0\
+SF:0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(ibm-db2,54,"\xa9\0\x01\0L\0\0
+SF:\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xcb\0\0\x007\0\0\0\x03\0\0\0\x06\0\0\0
+SF:handle\x03\0\0\x00203\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\
+SF:x01\0\0\x000")%r(GenericLines,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@
+SF:\0\x01\0\0\0\xdb\0\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x0021
+SF:9\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(Get
+SF:Request,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xeb\0\0\x
+SF:007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00235\x08\0\0\0pversion\x0
+SF:2\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(HTTPOptions,54,"\xa9\0\x0
+SF:1\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\xfb\0\0\x007\0\0\0\x03\0\0\0\x
+SF:06\0\0\0handle\x03\0\0\x00251\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0
+SF:trusted\x01\0\0\x000")%r(RTSPRequest,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01
+SF:\0\x03@\0\x01\0\0\0\x0b\x01\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\
+SF:0\0\x00267\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x00
+SF:0")%r(RPCCheck,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\x1
+SF:b\x01\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00283\x08\0\0\0pv
+SF:ersion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSVersionBindRe
+SF:q,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\+\x01\0\x007\0\
+SF:0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00299\x08\0\0\0pversion\x02\0\0\
+SF:x0098\x07\0\0\0trusted\x01\0\0\x000")%r(DNSStatusRequest,54,"\xa9\0\x01
+SF:\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0;\x01\0\x007\0\0\0\x03\0\0\0\x06
+SF:\0\0\0handle\x03\0\0\x00315\x08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0tr
+SF:usted\x01\0\0\x000")%r(Help,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0
+SF:\x01\0\0\0K\x01\0\x007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00331\x
+SF:08\0\0\0pversion\x02\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000")%r(SSLSes
+SF:sionReq,54,"\xa9\0\x01\0L\0\0\0b\0\0\0\x01\0\x03@\0\x01\0\0\0\[\x01\0\x
+SF:007\0\0\0\x03\0\0\0\x06\0\0\0handle\x03\0\0\x00347\x08\0\0\0pversion\x0
+SF:2\0\0\x0098\x07\0\0\0trusted\x01\0\0\x000");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 2.6.32 (92%), Linux 2.6.32 - 3.1 (92%), Linux 3.10 (92%), Linux 3.11 (92%), Linux 3.2 (92%), Linux 3.4 - 3.10 (92%), Linux 3.5 (92%), Linux 3.8 (92%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.13 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.445 days (since Mon Mar  5 08:05:58 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   161.09 ms 10.20.30.121
+
+Nmap scan report for 10.20.31.1
+Host is up (0.11s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE    VERSION
+22/tcp open  ssh        OpenSSH 5.9p1 Debian 5ubuntu1.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 92:ca:01:e7:cc:9f:24:eb:ae:22:00:20:19:2d:a5:17 (DSA)
+|   2048 c3:47:e1:66:08:68:a3:05:da:be:4b:35:db:cb:9a:fd (RSA)
+|_  256 51:b3:04:46:84:12:2f:84:28:92:53:ab:82:f3:a7:61 (ECDSA)
+53/tcp open  tcpwrapped
+Aggressive OS guesses: Linux 3.2 (94%), Linux 3.2 - 3.10 (94%), Linux 3.2 - 3.16 (94%), ASUS RT-N56U WAP (Linux 3.4) (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (93%), Crestron XPanel control system (93%), Linux 3.16 (93%), Linux 3.5 (92%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.428 days (since Mon Mar  5 08:31:28 2018)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   156.56 ms 10.20.31.1
+
+Nmap scan report for 10.20.31.10
+Host is up (0.11s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 5.3p1 Debian 3ubuntu7.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 bc:12:eb:8b:46:0f:91:70:3f:3a:76:15:30:3c:9c:be (DSA)
+|_  2048 b0:9f:d2:1d:de:24:97:81:5e:ca:34:e1:31:ec:2f:85 (RSA)
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: itac-ubuntusvr-p1.cyberwildcats.net, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=itac-ubuntusvr-p1.cyberwildcats.net
+| Issuer: commonName=itac-ubuntusvr-p1.cyberwildcats.net
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-08-22T16:16:34
+| Not valid after:  2022-08-20T16:16:34
+| MD5:   dd19 e94f 3c8c afeb c21c f6f2 53f1 f9c9
+|_SHA-1: 3783 2b23 83ce 33d0 896d a074 d7c2 9bf8 1107 aff4
+|_ssl-date: 2018-03-19T02:02:38+00:00; +20m34s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+80/tcp   open  http        Apache httpd 2.2.14 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      37562/tcp  mountd
+|   100005  1,2,3      44850/udp  mountd
+|   100021  1,3,4      37538/tcp  nlockmgr
+|   100021  1,3,4      49600/udp  nlockmgr
+|   100024  1          43753/tcp  status
+|_  100024  1          52807/udp  status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+2049/tcp open  nfs         2-4 (RPC #100003)
+Aggressive OS guesses: Linux 2.6.32 (95%), Sony Bravia W600-, W800-, or W900-series TV (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Linux 3.1 (95%), Linux 3.2 (95%), AVM FRITZ!Box (FritzOS 6.03) (95%), HP P2000 G3 NAS device (94%), Infoblox Trinzic network control appliance (94%), Iomega StorCenter ix4-200d (Linux 2.6.31) (94%), Kyocera ECOSYS M2030dn printer (94%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.106 days (since Fri Mar  2 16:14:10 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  itac-ubuntusvr-p1.cyberwildcats.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 20m33s, deviation: 0s, median: 20m33s
+| nbstat: NetBIOS name: ITAC-UBUNTUSVR-, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   ITAC-UBUNTUSVR-<00>  Flags: <unique><active>
+|   ITAC-UBUNTUSVR-<03>  Flags: <unique><active>
+|   ITAC-UBUNTUSVR-<20>  Flags: <unique><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   164.09 ms 10.20.31.10
+
+Nmap scan report for 10.20.31.21
+Host is up (0.11s latency).
+Not shown: 990 filtered ports, 2 closed ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 5.6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 da:49:4b:71:c1:6f:b3:40:3e:ce:a4:62:b4:cc:d3:0b (DSA)
+|_  2048 42:a6:2a:8b:d7:13:49:b6:b5:0b:6d:ac:51:32:99:c1 (RSA)
+80/tcp   open  http            VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Did not follow redirect to https://10.20.31.21/
+427/tcp  open  svrloc?
+443/tcp  open  ssl/http        VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: HEAD POST
+|_http-title: " + ID_EESX_Welcome + "
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-05T13:09:02
+| Not valid after:  2024-05-06T13:09:02
+| MD5:   24ce 9b8c 3f90 e0fd 0b1f a7d4 e5fe 094f
+|_SHA-1: 3235 ecb5 7921 ad3e 206a cf98 dcef f937 6d47 0935
+|_ssl-date: 2018-03-18T19:34:30+00:00; -6h07m44s from scanner time.
+| vmware-version: 
+|   Server version: VMware ESXi 5.1.0
+|   Build: 799733
+|   Locale version: INTL 000
+|   OS type: vmnix-x86
+|_  Product Line ID: embeddedEsx
+902/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+5989/tcp open  ssl/wbem        SBLIM Small Footprint CIM Broker
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-05T13:09:02
+| Not valid after:  2024-05-06T13:09:02
+| MD5:   24ce 9b8c 3f90 e0fd 0b1f a7d4 e5fe 094f
+|_SHA-1: 3235 ecb5 7921 ad3e 206a cf98 dcef f937 6d47 0935
+|_ssl-date: 2018-03-18T19:34:33+00:00; -6h07m44s from scanner time.
+8000/tcp open  http-alt?
+8100/tcp open  tcpwrapped
+Aggressive OS guesses: VMware ESXi 4.1 (95%), VMware ESXi 5.0 - 5.5 (94%), VMware ESXi 5.5 (93%), VMware ESXi 4.1.0 (93%), VMware ESX Server 4.0.1 (91%), FreeBSD 5.2.1-RELEASE (91%), FreeBSD 5.3 - 5.5 (90%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (90%), VMware ESX Server 5 (90%), FreeNAS 0.69.2 (FreeBSD 6.3-STABLE - 6.4-RELEASE) (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.479 days (since Mon Mar  5 07:18:20 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=179 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: itac-vm21; CPE: cpe:/o:vmware:esxi, cpe:/o:vmware:ESXi:5.1.0
+
+Host script results:
+|_clock-skew: mean: -6h07m44s, deviation: 0s, median: -6h07m44s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   156.73 ms 10.20.31.21
+
+Nmap scan report for 10.20.31.22
+Host is up (0.11s latency).
+Not shown: 990 filtered ports, 2 closed ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 5.6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a6:b5:8c:b7:77:5b:65:22:cc:1c:28:6d:4d:42:13:42 (DSA)
+|_  2048 69:43:76:6e:92:0b:a6:bb:68:ea:31:9e:86:47:1b:9b (RSA)
+80/tcp   open  http            VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Did not follow redirect to https://10.20.31.22/
+427/tcp  open  svrloc?
+443/tcp  open  ssl/http        VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: " + ID_EESX_Welcome + "
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-05T18:47:42
+| Not valid after:  2024-05-06T18:47:42
+| MD5:   08cf 2f2f 587a ed4c 3d3c 3cf5 c18e 6aa7
+|_SHA-1: 4efc cda0 3f4f e892 8157 b7f6 c1d8 8436 5e26 d7d6
+|_ssl-date: 2018-03-18T20:37:13+00:00; -5h04m54s from scanner time.
+| vmware-version: 
+|   Server version: VMware ESXi 5.1.0
+|   Build: 799733
+|   Locale version: INTL 000
+|   OS type: vmnix-x86
+|_  Product Line ID: embeddedEsx
+902/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+5989/tcp open  ssl/wbem        SBLIM Small Footprint CIM Broker
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-11-05T18:47:42
+| Not valid after:  2024-05-06T18:47:42
+| MD5:   08cf 2f2f 587a ed4c 3d3c 3cf5 c18e 6aa7
+|_SHA-1: 4efc cda0 3f4f e892 8157 b7f6 c1d8 8436 5e26 d7d6
+|_ssl-date: 2018-03-18T20:37:17+00:00; -5h04m54s from scanner time.
+8000/tcp open  http-alt?
+8100/tcp open  tcpwrapped
+Aggressive OS guesses: VMware ESXi 4.1 (95%), VMware ESXi 5.0 - 5.5 (94%), VMware ESXi 4.1.0 (93%), VMware ESXi 5.5 (93%), VMware ESX Server 4.0.1 (91%), FreeBSD 5.2.1-RELEASE (91%), FreeBSD 5.3 - 5.5 (90%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (90%), VMware ESX Server 5 (90%), FreeNAS 0.69.2 (FreeBSD 6.3-STABLE - 6.4-RELEASE) (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.479 days (since Mon Mar  5 07:17:53 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=185 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: itac-esx22; CPE: cpe:/o:vmware:esxi, cpe:/o:vmware:ESXi:5.1.0
+
+Host script results:
+|_clock-skew: mean: -5h04m54s, deviation: 0s, median: -5h04m54s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   156.66 ms 10.20.31.22
+
+Nmap scan report for 10.20.31.53
+Host is up (0.11s latency).
+Not shown: 990 filtered ports, 2 closed ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE         VERSION
+22/tcp   open  ssh             OpenSSH 5.6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 01:a4:c5:2b:fd:1c:7b:68:96:6a:21:3a:75:4c:c0:8e (DSA)
+|_  2048 32:52:b6:fa:ab:62:82:4a:ee:c2:a3:1a:07:fe:49:da (RSA)
+80/tcp   open  http            VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Did not follow redirect to https://10.20.31.53/
+427/tcp  open  svrloc?
+443/tcp  open  ssl/http        VMware ESXi Server httpd
+| http-methods: 
+|_  Supported Methods: HEAD POST
+|_http-title: " + ID_EESX_Welcome + "
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-01-15T23:49:33
+| Not valid after:  2024-07-16T23:49:33
+| MD5:   03da ad62 a3e3 226f e901 3b8b 624a ea4a
+|_SHA-1: ea7a ede7 281b 305a ce65 e7f8 c78f 346c c0d1 4ad2
+|_ssl-date: 2018-03-18T23:42:03+00:00; -2h00m00s from scanner time.
+| vmware-version: 
+|   Server version: VMware ESXi 5.1.0
+|   Build: 799733
+|   Locale version: INTL 000
+|   OS type: vmnix-x86
+|_  Product Line ID: embeddedEsx
+902/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+5989/tcp open  ssl/wbem        SBLIM Small Footprint CIM Broker
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=VMware, Inc/stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:localhost.localdomain
+| Issuer: organizationName=VMware Installer
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-01-15T23:49:33
+| Not valid after:  2024-07-16T23:49:33
+| MD5:   03da ad62 a3e3 226f e901 3b8b 624a ea4a
+|_SHA-1: ea7a ede7 281b 305a ce65 e7f8 c78f 346c c0d1 4ad2
+|_ssl-date: 2018-03-18T23:42:03+00:00; -2h00m01s from scanner time.
+8000/tcp open  http-alt?
+8100/tcp open  tcpwrapped
+Aggressive OS guesses: VMware ESXi 4.1.0 (95%), VMware ESXi 5.0 - 5.5 (94%), VMware ESXi 5.5 (93%), VMware ESXi 4.1 (93%), FreeBSD 5.3 - 5.5 (91%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (90%), VMware ESX Server 4.0.1 (90%), VMware ESX Server 5 (90%), VMware ESXi 6.0.0 (90%), FreeBSD 5.2.1-RELEASE (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.110 days (since Fri Mar  2 16:08:43 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=216 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: GAMMA; CPE: cpe:/o:vmware:esxi
+
+Host script results:
+|_clock-skew: mean: -2h00m00s, deviation: 0s, median: -2h00m01s
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   156.68 ms 10.20.31.53
+
+Nmap scan report for 10.20.31.71
+Host is up (0.12s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 c3:73:a8:00:cf:ea:61:ac:16:10:75:c4:93:7a:64:84 (RSA)
+|   256 d4:ee:a8:4d:50:55:ec:7e:47:bd:39:6d:08:c6:a6:93 (ECDSA)
+|_  256 f5:e2:e6:0e:0b:8c:da:9f:0e:f5:72:1d:1b:1c:d6:31 (EdDSA)
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: ubuntu, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2016-10-03T23:43:17
+| Not valid after:  2026-10-01T23:43:17
+| MD5:   226d acc8 a7e6 9db0 ce8e 8cd2 d7a4 4794
+|_SHA-1: 6888 4d01 548a 832f 7819 1993 588e cf9b c6fa 3d22
+|_ssl-date: TLS randomness does not represent time
+53/tcp   open  domain      ISC BIND 9.10.3-P4-Ubuntu
+| dns-nsid: 
+|_  bind.version: 9.10.3-P4-Ubuntu
+80/tcp   open  http        Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+110/tcp  open  pop3        Dovecot pop3d
+|_pop3-capabilities: SASL CAPA PIPELINING RESP-CODES UIDL AUTH-RESP-CODE TOP
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp  open  imap        Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more have LITERAL+ LOGIN-REFERRALS listed post-login ENABLE IDLE Pre-login capabilities SASL-IR LOGINDISABLEDA0001 OK ID
+445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+5666/tcp open  tcpwrapped
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.8 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.529 days (since Mon Mar  5 06:05:54 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts:  ubuntu, UBUNTU; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   UBUNTU<00>           Flags: <unique><active>
+|   UBUNTU<03>           Flags: <unique><active>
+|   UBUNTU<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: ubuntu
+|   NetBIOS computer name: UBUNTU\x00
+|   Domain name: \x00
+|   FQDN: ubuntu
+|_  System time: 2018-03-18T21:42:36-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2018-03-18 19:42:36
+|_  start_date: 1600-12-31 17:00:04
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   161.51 ms 10.20.31.71
+
+Nmap scan report for 10.20.31.74
+Host is up (0.11s latency).
+Not shown: 992 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 42:3a:1e:38:26:a5:c8:65:bc:7b:b2:30:59:83:18:63 (DSA)
+|   2048 4f:56:93:c2:1c:42:45:ba:ae:01:eb:a0:2a:17:e4:f4 (RSA)
+|_  256 2f:6a:dc:be:24:51:39:4f:12:47:02:39:52:61:0b:42 (ECDSA)
+25/tcp  open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+80/tcp  open  http     Apache httpd 2.2.22 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+110/tcp open  pop3     Dovecot pop3d
+|_pop3-capabilities: SASL CAPA PIPELINING STLS UIDL RESP-CODES TOP
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-04-21T22:48:32
+| Not valid after:  2023-04-21T22:48:32
+| MD5:   cf00 2673 bddd c489 d617 26ce 7e43 075e
+|_SHA-1: d651 9af3 967a c709 0240 a26c e10e 6cde 6b83 3373
+|_ssl-date: 2018-03-19T01:40:59+00:00; -1m03s from scanner time.
+143/tcp open  imap     Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more capabilities have LITERAL+ LOGIN-REFERRALS listed post-login Pre-login IDLE ENABLE STARTTLS LOGINDISABLEDA0001 SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-04-21T22:48:32
+| Not valid after:  2023-04-21T22:48:32
+| MD5:   cf00 2673 bddd c489 d617 26ce 7e43 075e
+|_SHA-1: d651 9af3 967a c709 0240 a26c e10e 6cde 6b83 3373
+|_ssl-date: 2018-03-19T01:41:18+00:00; -1m03s from scanner time.
+443/tcp open  http     Apache httpd 2.2.22
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: 404 Not Found
+993/tcp open  ssl/imap Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more AUTH=PLAINA0001 have LITERAL+ LOGIN-REFERRALS post-login listed IDLE Pre-login capabilities ENABLE SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-04-21T22:48:32
+| Not valid after:  2023-04-21T22:48:32
+| MD5:   cf00 2673 bddd c489 d617 26ce 7e43 075e
+|_SHA-1: d651 9af3 967a c709 0240 a26c e10e 6cde 6b83 3373
+|_ssl-date: 2018-03-19T01:41:13+00:00; -1m03s from scanner time.
+995/tcp open  ssl/pop3 Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) CAPA PIPELINING TOP UIDL RESP-CODES USER
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-04-21T22:48:32
+| Not valid after:  2023-04-21T22:48:32
+| MD5:   cf00 2673 bddd c489 d617 26ce 7e43 075e
+|_SHA-1: d651 9af3 967a c709 0240 a26c e10e 6cde 6b83 3373
+|_ssl-date: 2018-03-19T01:41:04+00:00; -1m03s from scanner time.
+Aggressive OS guesses: Linux 3.2 (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.5 (95%), Linux 3.1 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.2 - 3.10 (94%), Linux 3.2 - 3.16 (94%), Linux 3.8 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.170 days (since Fri Mar  2 14:42:09 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: www.cyberwildcats.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -1m03s, deviation: 0s, median: -1m03s
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   161.43 ms 10.20.31.74
+
+Nmap scan report for 10.20.31.75
+Host is up (0.11s latency).
+Not shown: 993 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 18:14:8f:39:ae:33:99:ea:18:b8:bf:61:7b:4c:c9:86 (DSA)
+|   2048 fe:03:bc:f5:4c:b7:12:67:fe:a5:66:0d:13:4f:3a:11 (RSA)
+|_  256 a7:68:98:52:9b:80:6a:b3:6f:61:2f:9a:94:73:95:fc (ECDSA)
+25/tcp  open  smtp     Postfix smtpd
+|_smtp-commands: mail.prosversusjoes.net, PIPELINING, SIZE 10240000, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=www.prosversusjoes.net
+| Issuer: commonName=www.prosversusjoes.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-07-03T02:53:54
+| Not valid after:  2023-07-01T02:53:54
+| MD5:   f5cd 4947 b88e 1edd 2165 0157 2ee0 1f9c
+|_SHA-1: cfb1 609d a86b b18e 60fc 5b3a 584b e696 4b7c 252d
+|_ssl-date: 2018-03-19T01:41:02+00:00; -1m03s from scanner time.
+80/tcp  open  http     Apache httpd 2.2.22 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: ProsVJoes CTF
+110/tcp open  pop3     Dovecot pop3d
+|_pop3-capabilities: SASL CAPA PIPELINING STLS UIDL RESP-CODES TOP
+| ssl-cert: Subject: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-07-03T02:54:13
+| Not valid after:  2023-07-03T02:54:13
+| MD5:   2de6 0835 3574 7c54 73bb 81ee 08aa 594b
+|_SHA-1: 0653 7175 9c43 bab5 53fc fb25 dc15 8e6a ca21 71d3
+|_ssl-date: 2018-03-19T01:41:31+00:00; -1m02s from scanner time.
+143/tcp open  imap     Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more capabilities have LITERAL+ LOGIN-REFERRALS listed post-login Pre-login IDLE ENABLE STARTTLS LOGINDISABLEDA0001 SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-07-03T02:54:13
+| Not valid after:  2023-07-03T02:54:13
+| MD5:   2de6 0835 3574 7c54 73bb 81ee 08aa 594b
+|_SHA-1: 0653 7175 9c43 bab5 53fc fb25 dc15 8e6a ca21 71d3
+|_ssl-date: 2018-03-19T01:41:31+00:00; -1m03s from scanner time.
+993/tcp open  ssl/imap Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more AUTH=PLAINA0001 have LITERAL+ LOGIN-REFERRALS post-login listed IDLE Pre-login capabilities ENABLE SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-07-03T02:54:13
+| Not valid after:  2023-07-03T02:54:13
+| MD5:   2de6 0835 3574 7c54 73bb 81ee 08aa 594b
+|_SHA-1: 0653 7175 9c43 bab5 53fc fb25 dc15 8e6a ca21 71d3
+|_ssl-date: 2018-03-19T01:41:30+00:00; -1m03s from scanner time.
+995/tcp open  ssl/pop3 Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) CAPA PIPELINING TOP UIDL RESP-CODES USER
+| ssl-cert: Subject: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.prosversusjoes.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2013-07-03T02:54:13
+| Not valid after:  2023-07-03T02:54:13
+| MD5:   2de6 0835 3574 7c54 73bb 81ee 08aa 594b
+|_SHA-1: 0653 7175 9c43 bab5 53fc fb25 dc15 8e6a ca21 71d3
+|_ssl-date: 2018-03-19T01:41:12+00:00; -1m03s from scanner time.
+Aggressive OS guesses: Linux 3.2 (95%), Linux 3.2 - 3.10 (95%), Linux 3.2 - 3.16 (95%), XBMCbuntu Frodo v12.2 (Linux 3.X) (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (95%), Linux 3.5 (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 16.040 days (since Fri Mar  2 17:49:16 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  mail.prosversusjoes.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -1m02s, deviation: 0s, median: -1m03s
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   161.47 ms 10.20.31.75
+
+Nmap scan report for 10.20.31.78
+Host is up (0.13s latency).
+Not shown: 992 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.9p1 Debian 5ubuntu1.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 f0:63:00:02:aa:c3:e2:94:86:12:48:09:18:d0:44:e4 (DSA)
+|   2048 ba:1b:91:09:17:f7:90:3a:e6:d2:57:3c:90:9c:3e:55 (RSA)
+|_  256 46:8d:a7:43:b2:fb:dd:35:9c:da:c7:e0:f0:39:70:d2 (ECDSA)
+25/tcp  open  smtp     Postfix smtpd
+|_smtp-commands: www.cyberwildcats.net, PIPELINING, SIZE 10240000, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=www.cyberwildcats.net
+| Issuer: commonName=www.cyberwildcats.net
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-08-27T00:50:37
+| Not valid after:  2024-08-24T00:50:37
+| MD5:   bc51 637d 9c13 1481 aaf8 5d00 e2f0 c1e3
+|_SHA-1: 71e1 6db8 c8ad b0da b9f6 cfa3 d854 8ee8 e3f8 ee09
+|_ssl-date: 2018-03-19T01:41:31+00:00; -54s from scanner time.
+80/tcp  open  http     Apache httpd 2.2.22 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+110/tcp open  pop3     Dovecot pop3d
+|_pop3-capabilities: SASL CAPA PIPELINING STLS UIDL RESP-CODES TOP
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-08-27T00:51:12
+| Not valid after:  2024-08-26T00:51:12
+| MD5:   e053 d7ec 690b bd6e 6acb 6618 dbfb 1fce
+|_SHA-1: cebf 0aef 57b3 8c75 4e0f ab18 2652 50ae 5097 64e1
+|_ssl-date: 2018-03-19T01:41:06+00:00; -54s from scanner time.
+111/tcp open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100021  1,3,4      34941/udp  nlockmgr
+|   100021  1,3,4      37086/tcp  nlockmgr
+|   100024  1          38081/udp  status
+|_  100024  1          42730/tcp  status
+143/tcp open  imap     Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more capabilities have LITERAL+ LOGIN-REFERRALS listed post-login Pre-login IDLE ENABLE STARTTLS LOGINDISABLEDA0001 SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-08-27T00:51:12
+| Not valid after:  2024-08-26T00:51:12
+| MD5:   e053 d7ec 690b bd6e 6acb 6618 dbfb 1fce
+|_SHA-1: cebf 0aef 57b3 8c75 4e0f ab18 2652 50ae 5097 64e1
+|_ssl-date: 2018-03-19T01:41:31+00:00; -54s from scanner time.
+993/tcp open  ssl/imap Dovecot imapd
+|_imap-capabilities: IMAP4rev1 more AUTH=PLAINA0001 have LITERAL+ LOGIN-REFERRALS post-login listed IDLE Pre-login capabilities ENABLE SASL-IR OK ID
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-08-27T00:51:12
+| Not valid after:  2024-08-26T00:51:12
+| MD5:   e053 d7ec 690b bd6e 6acb 6618 dbfb 1fce
+|_SHA-1: cebf 0aef 57b3 8c75 4e0f ab18 2652 50ae 5097 64e1
+|_ssl-date: 2018-03-19T01:41:18+00:00; -54s from scanner time.
+995/tcp open  ssl/pop3 Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) CAPA PIPELINING TOP UIDL RESP-CODES USER
+| ssl-cert: Subject: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Issuer: commonName=www.cyberwildcats.net/organizationName=Dovecot mail server
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2014-08-27T00:51:12
+| Not valid after:  2024-08-26T00:51:12
+| MD5:   e053 d7ec 690b bd6e 6acb 6618 dbfb 1fce
+|_SHA-1: cebf 0aef 57b3 8c75 4e0f ab18 2652 50ae 5097 64e1
+|_ssl-date: 2018-03-19T01:41:18+00:00; -54s from scanner time.
+Aggressive OS guesses: Linux 3.2 (95%), Linux 3.2 - 3.10 (95%), Linux 3.2 - 3.16 (95%), XBMCbuntu Frodo v12.2 (Linux 3.X) (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (95%), Linux 3.5 (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 13.400 days (since Mon Mar  5 09:11:26 2018)
+Network Distance: 3 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  www.cyberwildcats.net; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -54s, deviation: 0s, median: -54s
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+-   Hop 1 is the same as for 10.20.30.55
+2   ...
+3   161.61 ms 10.20.31.78
+
+Post-scan script results:
+| clock-skew: 
+|   -1m03s: 
+|     10.20.31.74
+|     10.20.31.75
+|   0s: 
+|     10.20.30.120
+|     10.20.31.71
+|_    10.20.30.111
+| ssh-hostkey: Possible duplicate hosts
+| Key 1024 92:ca:01:e7:cc:9f:24:eb:ae:22:00:20:19:2d:a5:17 (DSA) used by:
+|   10.20.30.1
+|   10.20.31.1
+| Key 256 51:b3:04:46:84:12:2f:84:28:92:53:ab:82:f3:a7:61 (ECDSA) used by:
+|   10.20.30.1
+|   10.20.31.1
+| Key 2048 c3:47:e1:66:08:68:a3:05:da:be:4b:35:db:cb:9a:fd (RSA) used by:
+|   10.20.30.1
+|_  10.20.31.1
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 18 19:47:23 2018 -- 512 IP addresses (17 hosts up) scanned in 533.06 seconds
