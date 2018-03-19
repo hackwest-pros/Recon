@@ -1,0 +1,23 @@
+[*] Nmap: Nmap scan report for 10.100.101.106                                             
+[*] Nmap: Host is up, received echo-reply ttl 60 (0.16s latency).                         
+[*] Nmap: Scanned at 2018-03-18 21:16:13 MDT for 73s                                      
+[*] Nmap: PORT    STATE SERVICE  REASON         VERSION                                   
+[*] Nmap: 443/tcp open  ssl/http syn-ack ttl 60 Apache httpd 2.2.22 ((Debian))            
+[*] Nmap: |_http-server-header: Apache/2.2.22 (Debian)                                    
+[*] Nmap: | ssl-heartbleed:                                                               
+[*] Nmap: |   VULNERABLE:                                                                 
+[*] Nmap: |   The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptog
+raphic software library. It allows for stealing information intended to be protected by SS
+L/TLS encryption.                                                                         
+[*] Nmap: |     State: VULNERABLE                                                         
+[*] Nmap: |     Risk factor: High                                                         
+[*] Nmap: |       OpenSSL versions 1.0.1 and 1.0.2-beta releases (including 1.0.1f and 1.0
+.2-beta1) of OpenSSL are affected by the Heartbleed bug. The bug allows for reading memory
+ of systems protected by the vulnerable OpenSSL versions and could allow for disclosure of
+ otherwise encrypted confidential information as well as the encryption keys themselves.  
+[*] Nmap: |                                                                               
+[*] Nmap: |     References:                                                               
+[*] Nmap: |       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160            
+[*] Nmap: |       http://www.openssl.org/news/secadv_20140407.txt                         
+[*] Nmap: |_      http://cvedetails.com/cve/2014-0160/                                    
+

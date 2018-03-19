@@ -1,0 +1,493 @@
+
+NSE Timing: About 99.29% done; ETC: 21:45 (0:00:08 remaining)            
+NSE Timing: About 99.29% done; ETC: 21:45 (0:00:08 remaining)                         
+NSE Timing: About 99.29% done; ETC: 21:46 (0:00:08 remaining)       
+NSE Timing: About 99.29% done; ETC: 21:46 (0:00:08 remaining)
+NSE Timing: About 99.29% done; ETC: 21:47 (0:00:09 remaining)
+NSE Timing: About 99.29% done; ETC: 21:47 (0:00:09 remaining)
+NSE Timing: About 99.61% done; ETC: 21:48 (0:00:05 remaining)
+Completed NSE at 21:48, 1266.98s elapsed                     
+NSE: Starting runlevel 2 (of 2) scan.                        
+Initiating NSE at 21:48                                      
+Completed NSE at 21:48, 0.00s elapsed                                               
+Nmap scan report for 10.20.31.10                              
+Host is up, received user-set (0.16s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                          
+                                                                    
+PORT    STATE SERVICE     REASON         VERSION             
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+                                                             
+Nmap scan report for 10.20.31.71                             
+Host is up, received user-set (0.099s latency).              
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE     REASON         VERSION                                      
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: UBUNTU                                   
+                                                                                               
+Host script results:                                                          
+| smb-brute:                                                 
+|_  No accounts found                                        
+                                                             
+Nmap scan report for 10.100.101.6                            
+Host is up, received user-set (0.061s latency).              
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                                                                
+PORT    STATE SERVICE      REASON          VERSION                                                   
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: ALPHA)
+Service Info: Host: WIN7-I61V2; OS: Windows; CPE: cpe:/o:microsoft:windows                                                                            
+                                                                                               
+Host script results:                                                          
+| smb-brute:                                                   
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                             
+Nmap scan report for 10.100.101.31                           
+Host is up, received user-set (0.16s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION                                                 
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp     
+                                                                                    
+Host script results:                                          
+| smb-brute:                                                                                                                                        
+|_  No accounts found                                                                                                                                   
+                                             
+Nmap scan report for 10.100.101.55                      
+Host is up, received user-set (0.16s latency).                                      
+Scanned at 2018-03-18 21:26:46 MDT for 1280s 
+                                                  
+PORT    STATE SERVICE     REASON         VERSION                                               
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+                                                  
+Host script results:                                                                  
+| smb-brute:                                                                        
+|_  No accounts found                                   
+                                             
+Nmap scan report for 10.100.101.90           
+Host is up, received user-set (0.16s latency).          
+Scanned at 2018-03-18 21:26:46 MDT for 1280s 
+                                              
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+                                                  
+Host script results:                                                                                 
+| smb-brute:                                                                                       
+|_  guest:<blank> => Valid credentials, account disabled                  
+                                                  
+Nmap scan report for 10.100.101.99                                                    
+Host is up, received user-set (0.11s latency).                      
+Scanned at 2018-03-18 21:26:46 MDT for 1280s            
+                                                
+PORT    STATE SERVICE     REASON         VERSION                                    
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: ELASTICSEARCH             
+                                                  
+Host script results:                                                                               
+| smb-brute:                                                                
+|_  No accounts found                                              
+                                                  
+Nmap scan report for 10.100.101.118                                         
+Host is up, received user-set (0.11s latency).                                                                                                      
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                                                                                            
+                                                                                    
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+                                                  
+Host script results:                                                                           
+| smb-brute:                                                                      
+|_  guest:<blank> => Valid credentials, account disabled
+                                                  
+Nmap scan report for 10.100.101.228                                                                
+Host is up, received user-set (0.16s latency).                            
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                       
+                                                                                    
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+                                 
+Host script results:                                    
+| smb-brute:                                
+|_  guest:<blank> => Valid credentials, account disabled
+                                                  
+Nmap scan report for 10.100.101.246                                                                  
+Host is up, received user-set (0.19s latency).                            
+Scanned at 2018-03-18 21:26:46 MDT for 1280s    
+                                        
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: ALPHA)
+Service Info: Host: WIN7-I61V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+                                  
+Host script results:                          
+| smb-brute:                                
+|_  guest:<blank> => Valid credentials, account disabled
+                                                  
+Nmap scan report for 10.100.103.31                                          
+Host is up, received user-set (0.16s latency).                                                
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                       
+                                                              
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+                                                      
+Host script results:                                                                                                                                                     
+| smb-brute:                                
+|_  guest:<blank> => Valid credentials, account disabled
+                                                  
+Nmap scan report for 10.100.103.74                                                    
+Host is up, received user-set.                                      
+Scanned at 2018-03-18 21:26:46 MDT for 14s  
+[0] 0:bash  1:bash- 2:ruby  3:bash  4:[tmux]*                                                                                           
+
+Host is up, received user-set.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [317/1635]
+Scanned at 2018-03-18 21:26:46 MDT for 14s        
+                                                                                                   
+PORT    STATE    SERVICE      REASON      VERSION                         
+445/tcp filtered microsoft-ds no-response                    
+                                                                                    
+Nmap scan report for 10.100.103.90                           
+Host is up, received user-set (0.099s latency).                                       
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                        
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+                                                             
+Host script results:                                                                                 
+| smb-brute:                                                              
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                             
+Nmap scan report for 10.100.103.99                           
+Host is up, received user-set (0.11s latency).                                                     
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                              
+                                                             
+PORT    STATE SERVICE     REASON         VERSION             
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)           
+Service Info: Host: ELASTICSEARCH                                             
+                                                             
+Host script results:                                                        
+| smb-brute:                                                                                  
+|_  No accounts found                                              
+                                                              
+Nmap scan report for 10.100.103.118                          
+Host is up, received user-set (0.11s latency).                                                  
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                               
+                                                             
+PORT    STATE SERVICE      REASON          VERSION                                                                                                                       
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+                                                                         
+Host script results:                                                                  
+| smb-brute:                                                        
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                             
+Nmap scan report for 10.100.103.144                          
+Host is up, received user-set (0.16s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds        
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+                                                             
+Host script results:                                                                  
+| smb-brute:                                                        
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                                                    
+Nmap scan report for 10.100.103.228                          
+Host is up, received user-set (0.11s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003                
+                                                             
+Host script results:                                                                           
+| smb-brute:                                                                  
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                             
+Nmap scan report for 10.100.103.246                          
+Host is up, received user-set (0.15s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION                                              
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: GAMMA)  
+Service Info: Host: WIN7-I63V1; OS: Windows; CPE: cpe:/o:microsoft:windows                         
+                                                                                                                                                      
+Host script results:                                                                           
+| smb-brute:                                                                  
+|_  guest:<blank> => Valid credentials, account disabled       
+                                                             
+Nmap scan report for 10.100.104.6                            
+Host is up, received user-set (0.16s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: DELTA)
+Service Info: Host: WIN7-I64V2; OS: Windows; CPE: cpe:/o:microsoft:windows  
+                                                                   
+Host script results:                                                                
+| smb-brute:                                                  
+|_  guest:<blank> => Valid credentials, account disabled                                                                                            
+                                                                                                                                                        
+Nmap scan report for 10.100.104.31           
+Host is up, received user-set (0.16s latency).          
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                        
+                                             
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds                   
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp                    
+                                                  
+Host script results:                                                                  
+| smb-brute:                                                                        
+|_  No accounts found                                   
+                                             
+Nmap scan report for 10.100.104.74           
+Host is up, received user-set.                          
+Scanned at 2018-03-18 21:26:46 MDT for 14s   
+                                              
+PORT    STATE    SERVICE      REASON      VERSION 
+445/tcp filtered microsoft-ds no-response                                             
+                                                                    
+Nmap scan report for 10.100.104.90                
+Host is up, received user-set (0.19s latency).                                                       
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                                       
+                                                                          
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+                                                        
+Host script results:                            
+| smb-brute:                                                                        
+|_  guest:<blank> => Valid credentials, account disabled                            
+                                              
+Nmap scan report for 10.100.104.144               
+Host is up, received user-set (0.11s latency).                                                     
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                
+                                                                   
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp                                                                                      
+                                                                                                                                                        
+Host script results:                                                                
+| smb-brute:                                      
+|_  guest:<blank> => Valid credentials, account disabled                                       
+                                                                              
+Nmap scan report for 10.100.104.246               
+Host is up, received user-set (0.15s latency).                                                 
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                      
+                                                        
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: DELTA)
+Service Info: Host: WIN7-I64V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+                                                                   
+Host script results:                                                                
+| smb-brute:                                      
+|_  No accounts found                                                                 
+                                                                    
+Nmap scan report for 10.100.105.6
+Host is up, received user-set (0.16s latency).          
+Scanned at 2018-03-18 21:26:46 MDT for 1280s
+                                                        
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: EPSILON)
+Service Info: Host: WIN7-I65V2; OS: Windows; CPE: cpe:/o:microsoft:windows
+                                                
+Host script results:                    
+| smb-brute:                                      
+|_  No accounts found                                                                              
+                                                                          
+Nmap scan report for 10.100.105.31
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 21:26:46 MDT for 1280s
+                                                        
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp                                
+                                                                   
+Host script results:                                          
+| smb-brute:                                      
+|_  guest:<blank> => Valid credentials, account disabled                    
+                                                              
+Nmap scan report for 10.100.105.90                    
+Host is up, received user-set (0.11s latency).                                                                                                                           
+Scanned at 2018-03-18 21:26:46 MDT for 1280s
+                                                        
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+
+
+
+
+
+
+
+
+t script results:                                                                               
+| smb-brute:                                                              
+|_  guest:<blank> => Valid credentials, account disabled
+                                                                                    
+Nmap scan report for 10.100.105.99                
+Host is up, received user-set (0.11s latency).                                        
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                        
+                                             
+PORT    STATE SERVICE     REASON         VERSION        
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: ELASTICSEARCH                       
+                                                  
+Host script results:                                                                                 
+| smb-brute:                                                              
+|_  No accounts found                           
+                                              
+Nmap scan report for 10.100.105.118               
+Host is up, received user-set (0.11s latency).                                                     
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                              
+                                              
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+                                                  
+Host script results:                                                        
+| smb-brute:                                                                                  
+|_  guest:<blank> => Valid credentials, account disabled           
+                                                              
+Nmap scan report for 10.100.105.144               
+Host is up, received user-set (0.11s latency).                                                  
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                               
+                                                       
+PORT    STATE SERVICE      REASON          VERSION                                                                                                                       
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+                                                                         
+Host script results:                                                                  
+| smb-brute:                                                        
+|_  guest:<blank> => Valid credentials, account disabled
+                                                             
+Nmap scan report for 10.100.105.197                          
+Host is up, received user-set (0.11s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE     REASON         VERSION             
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SAMBA                                    
+                                                             
+Host script results:                                                                  
+| smb-brute:                                                        
+|_  No accounts found                                        
+                                                             
+Nmap scan report for 10.100.105.228                          
+Host is up, received user-set (0.19s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+                                                             
+Host script results:                                                                           
+| smb-brute:                                                                  
+|_  guest:<blank> => Valid credentials, account disabled     
+                                                             
+Nmap scan report for 10.100.105.246                          
+Host is up, received user-set (0.19s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION                                              
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: EPSILON)
+Service Info: Host: WIN7-I65V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+                                                                                                                                                      
+Host script results:                                                                           
+| smb-brute:                                                                  
+|_  No accounts found                                          
+                                                             
+Nmap scan report for 10.150.100.150                          
+Host is up, received user-set (0.11s latency).               
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                 
+                                                             
+PORT    STATE SERVICE      REASON          VERSION           
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+                                                                   
+Host script results:                                                                
+| smb-brute:                                                  
+|_  No accounts found                                                                                                                               
+                                                                                                                                                        
+Nmap scan report for 172.25.20.21            
+Host is up, received user-set (0.16s latency).          
+Scanned at 2018-03-18 21:26:46 MDT for 1280s                                        
+                                             
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 126 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+                                                  
+Host script results:                                                                  
+| smb-brute:                                                                        
+|_  guest:<blank> => Valid credentials, account disabled
+                                             
+Nmap scan report for 172.25.20.100           
+Host is up, received user-set (0.11s latency).          
+Scanned at 2018-03-18 21:26:46 MDT for 1280s 
+                                              
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+                                              
+Host script results:                              
+| smb-brute:                                                                                         
+|_  guest:<blank> => Valid credentials, account disabled                                           
+                                                                          
+Nmap scan report for 172.25.20.101            
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 21:26:46 MDT for 1280s            
+                                                        
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+                                              
+Host script results:                          
+| smb-brute:                                      
+|_  guest:<blank> => Valid credentials, account disabled                                           
+                                                                            
+Nmap scan report for 172.25.20.102                                 
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 21:26:46 MDT for 1280s  
+                                                                                                                                                    
+PORT    STATE SERVICE     REASON         VERSION                                                                                                        
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SYN-NFS2                  
+                                                               
+Host script results:                          
+| smb-brute:                                      
+|_  guest:<blank> => Valid credentials, account disabled                                       
+                                                                                  
+Nmap scan report for 172.25.20.103           
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 21:26:46 MDT for 1280s  
+                                                        
+PORT    STATE SERVICE     REASON         VERSION                   
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SYN-NFS2                  
+                                            
+Host script results:
+| smb-brute:
+|_  guest:<blank> => Valid credentials, account disabled
+
+Nmap scan report for 10.20.31.1
+Host is up, received user-set (0.19s latency).
+Scanned at 2018-03-18 21:26:46 MDT for 14s
+
+PORT    STATE  SERVICE      REASON       VERSION
+445/tcp closed microsoft-ds reset ttl 63
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 21:48
+Completed NSE at 21:48, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 21:48
+Completed NSE at 21:48, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 40 IP addresses (40 hosts up) scanned in 1280.85 seconds
+           Raw packets sent: 44 (1.936KB) | Rcvd: 40 (1.756KB)
+

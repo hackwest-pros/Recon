@@ -1,0 +1,541 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-03-18 23:03 MDT
+NSE: Loaded 43 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 23:03
+Completed NSE at 23:03, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 23:03
+Completed NSE at 23:03, 0.00s elapsed
+Initiating SYN Stealth Scan at 23:03
+Scanning 40 hosts [1 port/host]
+Discovered open port 445/tcp on 10.100.101.6
+Discovered open port 445/tcp on 10.20.31.10
+Discovered open port 445/tcp on 10.100.101.31
+Discovered open port 445/tcp on 172.25.20.21
+Discovered open port 445/tcp on 10.100.104.31
+Discovered open port 445/tcp on 10.100.101.55
+Discovered open port 445/tcp on 10.100.104.6
+Discovered open port 445/tcp on 10.100.105.31
+Discovered open port 445/tcp on 10.100.105.6
+Discovered open port 445/tcp on 10.100.103.31
+Discovered open port 445/tcp on 10.100.101.90
+Discovered open port 445/tcp on 172.25.20.100
+Discovered open port 445/tcp on 172.25.20.101
+Discovered open port 445/tcp on 172.25.20.102
+Discovered open port 445/tcp on 172.25.20.103
+Discovered open port 445/tcp on 10.100.101.99
+Discovered open port 445/tcp on 10.100.105.90
+Discovered open port 445/tcp on 10.100.105.99
+Discovered open port 445/tcp on 10.100.103.99
+Discovered open port 445/tcp on 10.100.101.118
+Discovered open port 445/tcp on 10.150.100.150
+Discovered open port 445/tcp on 10.100.105.144
+Discovered open port 445/tcp on 10.100.104.144
+Discovered open port 445/tcp on 10.100.105.118
+Discovered open port 445/tcp on 10.100.105.197
+Discovered open port 445/tcp on 10.100.103.228
+Discovered open port 445/tcp on 10.100.103.118
+Discovered open port 445/tcp on 10.100.103.144
+Discovered open port 445/tcp on 10.100.101.228
+Discovered open port 445/tcp on 10.100.104.246
+Discovered open port 445/tcp on 10.100.103.246
+Discovered open port 445/tcp on 10.20.31.71
+Discovered open port 445/tcp on 10.100.103.90
+Discovered open port 445/tcp on 10.100.104.90
+Discovered open port 445/tcp on 10.100.105.228
+Discovered open port 445/tcp on 10.100.101.246
+Discovered open port 445/tcp on 10.100.105.246
+Completed SYN Stealth Scan at 23:03, 0.64s elapsed (40 total ports)
+Initiating Service scan at 23:03
+Scanning 37 services on 40 hosts
+Completed Service scan at 23:03, 12.78s elapsed (37 services on 40 hosts)
+NSE: Script scanning 40 hosts.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 23:03
+NSE Timing: About 99.23% done; ETC: 23:03 (0:00:00 remaining)
+NSE Timing: About 99.23% done; ETC: 23:04 (0:00:00 remaining)
+NSE Timing: About 99.23% done; ETC: 23:04 (0:00:01 remaining)
+NSE Timing: About 99.23% done; ETC: 23:05 (0:00:01 remaining)
+NSE Timing: About 99.23% done; ETC: 23:05 (0:00:01 remaining)
+NSE Timing: About 99.23% done; ETC: 23:06 (0:00:01 remaining)
+NSE Timing: About 99.23% done; ETC: 23:07 (0:00:02 remaining)
+NSE Timing: About 99.23% done; ETC: 23:07 (0:00:02 remaining)
+Completed NSE at 23:07, 259.71s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 23:07
+Completed NSE at 23:07, 0.01s elapsed
+Nmap scan report for 10.20.31.10
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.20.31.71
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: UBUNTU
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.101.6
+Host is up, received user-set (0.061s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: ALPHA)
+Service Info: Host: WIN7-I61V2; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.101.31
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.101.55
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.101.90
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.101.99
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: ELASTICSEARCH
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.101.118
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.101.228
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.100.101.246
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: ALPHA)
+Service Info: Host: WIN7-I61V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.103.31
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.103.74
+Host is up, received user-set.
+Scanned at 2018-03-18 23:03:14 MDT for 13s
+
+PORT    STATE    SERVICE      REASON      VERSION
+445/tcp filtered microsoft-ds no-response
+
+Nmap scan report for 10.100.103.90
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.103.99
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: ELASTICSEARCH
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.103.118
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.103.144
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.103.228
+Host is up, received user-set (0.099s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.100.103.246
+Host is up, received user-set (0.12s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: GAMMA)
+Service Info: Host: WIN7-I63V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.104.6
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: DELTA)
+Service Info: Host: WIN7-I64V2; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.104.31
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.104.74
+Host is up, received user-set.
+Scanned at 2018-03-18 23:03:14 MDT for 13s
+
+PORT    STATE    SERVICE      REASON      VERSION
+445/tcp filtered microsoft-ds no-response
+
+Nmap scan report for 10.100.104.90
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.104.144
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.104.246
+Host is up, received user-set (0.11s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: DELTA)
+Service Info: Host: WIN7-I64V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.105.6
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: EPSILON)
+Service Info: Host: WIN7-I65V2; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.105.31
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.105.90
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.105.99
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: ELASTICSEARCH
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.105.118
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.105.144
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.100.105.197
+Host is up, received user-set (0.100s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 60 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SAMBA
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.100.105.228
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 2003 or 2008 microsoft-ds
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows_server_2003
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.100.105.246
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows 7 - 10 microsoft-ds (workgroup: EPSILON)
+Service Info: Host: WIN7-I65V1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.150.100.150
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 124 Microsoft Windows XP microsoft-ds
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 172.25.20.21
+Host is up, received user-set (0.16s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 126 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OS: Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 172.25.20.100
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 172.25.20.101
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 172.25.20.102
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SYN-NFS2
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 172.25.20.103
+Host is up, received user-set (0.10s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 273s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+Service Info: Host: SYN-NFS2
+
+Host script results:
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+
+Nmap scan report for 10.20.31.1
+Host is up, received user-set (0.15s latency).
+Scanned at 2018-03-18 23:03:14 MDT for 13s
+
+PORT    STATE  SERVICE      REASON       VERSION
+445/tcp closed microsoft-ds reset ttl 63
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 23:07
+Completed NSE at 23:07, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 23:07
+Completed NSE at 23:07, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 40 IP addresses (40 hosts up) scanned in 273.55 seconds
+           Raw packets sent: 49 (2.156KB) | Rcvd: 45 (1.972KB)
