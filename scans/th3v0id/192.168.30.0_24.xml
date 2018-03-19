@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 18 18:21:09 2018 as: nmap -A -sS -p22,445,80,443,21,23,145,88,69,53,25,110,115,113,123,143,194,389,514,515,993,995,1080,1433,1434,3306,1812,1813,2049,5432,10050,10051,750,751,9418 -Pn -T4 -n -v -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX /root/Repos/Recon/scans/192.168.30.0_24.xml 192.168.30.0/24 -->
+<nmaprun scanner="nmap" args="nmap -A -sS -p22,445,80,443,21,23,145,88,69,53,25,110,115,113,123,143,194,389,514,515,993,995,1080,1433,1434,3306,1812,1813,2049,5432,10050,10051,750,751,9418 -Pn -T4 -n -v -&#45;min-hostgroup 255 -&#45;min-rtt-timeout 1ms -&#45;max-rtt-timeout 240ms -&#45;max-retries 0 -&#45;max-scan-delay 0 -&#45;open -oX /root/Repos/Recon/scans/192.168.30.0_24.xml 192.168.30.0/24" start="1521418869" startstr="Sun Mar 18 18:21:09 2018" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="35" services="21-23,25,53,69,80,88,110,113,115,123,143,145,194,389,443,445,514-515,750-751,993,995,1080,1433-1434,1812-1813,2049,3306,5432,9418,10050-10051"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1521418869"/>
+<taskend task="NSE" time="1521418869"/>
+<taskbegin task="NSE" time="1521418869"/>
+<taskend task="NSE" time="1521418869"/>
+<taskbegin task="SYN Stealth Scan" time="1521418869"/>
+<taskend task="SYN Stealth Scan" time="1521418882" extrainfo="8925 total ports"/>
+<taskbegin task="Service scan" time="1521418882"/>
+<taskbegin task="Traceroute" time="1521419118"/>
+<taskend task="Traceroute" time="1521419401"/>
+<taskbegin task="NSE" time="1521419401"/>
+<taskend task="NSE" time="1521419403"/>
+<taskbegin task="NSE" time="1521419403"/>
+<taskend task="NSE" time="1521419403"/>
+<taskbegin task="SYN Stealth Scan" time="1521419403"/>
+<taskend task="SYN Stealth Scan" time="1521419404" extrainfo="35 total ports"/>
+<taskbegin task="Service scan" time="1521419404"/>
+<taskbegin task="Traceroute" time="1521419407"/>
+<taskend task="Traceroute" time="1521419410"/>
+<taskbegin task="NSE" time="1521419410"/>
+<taskend task="NSE" time="1521419410"/>
+<taskbegin task="NSE" time="1521419410"/>
+<taskend task="NSE" time="1521419410"/>
+<taskbegin task="NSE" time="1521419410"/>
+<taskend task="NSE" time="1521419410"/>
+<taskbegin task="NSE" time="1521419410"/>
+<taskend task="NSE" time="1521419410"/>
+<runstats><finished time="1521419410" timestr="Sun Mar 18 18:30:10 2018" elapsed="540.63" summary="Nmap done at Sun Mar 18 18:30:10 2018; 256 IP addresses (256 hosts up) scanned in 540.63 seconds" exit="success"/><hosts up="256" down="0" total="256"/>
+</runstats>
+</nmaprun>
