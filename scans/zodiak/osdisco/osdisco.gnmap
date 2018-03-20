@@ -1,0 +1,360 @@
+# Nmap 7.60 scan initiated Sun Mar 18 23:26:57 2018 as: nmap -iL ranges.txt -T insane -oA osdisco/osdisco -O --osscan-guess --top-ports 10
+Host: 5.5.0.1 ()	Status: Up
+Host: 5.5.0.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 5.5.0.201 ()	Status: Up
+Host: 5.5.0.201 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	OS: Linux 3.8 - 4.9	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.1.10.1 ()	Status: Up
+Host: 10.1.10.1 ()	Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/filtered/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///
+Host: 10.1.139.10 ()	Status: Up
+Host: 10.1.139.10 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 10.20.30.1 ()	Status: Up
+Host: 10.20.30.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.20.30.3 ()	Status: Up
+Host: 10.20.30.3 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.20.30.55 ()	Status: Up
+Host: 10.20.30.55 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.20.30.57 ()	Status: Up
+Host: 10.20.30.57 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.20.30.66 ()	Status: Up
+Host: 10.20.30.66 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.20.30.111 ()	Status: Up
+Host: 10.20.30.111 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.20.30.120 ()	Status: Up
+Host: 10.20.30.120 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.20.30.121 ()	Status: Up
+Host: 10.20.30.121 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/filtered/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.20.31.1 ()	Status: Up
+Host: 10.20.31.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.20.31.10 ()	Status: Up
+Host: 10.20.31.10 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.20.31.21 ()	Status: Up
+Host: 10.20.31.21 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 165	IP ID Seq: Busy server or unknown class
+Host: 10.20.31.22 ()	Status: Up
+Host: 10.20.31.22 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 156	IP ID Seq: Incremental
+Host: 10.20.31.53 ()	Status: Up
+Host: 10.20.31.53 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 193	IP ID Seq: Incremental
+Host: 10.20.31.71 ()	Status: Up
+Host: 10.20.31.71 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 10.20.31.74 ()	Status: Up
+Host: 10.20.31.74 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 242	IP ID Seq: All zeros
+Host: 10.20.31.75 ()	Status: Up
+Host: 10.20.31.75 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.20.31.78 ()	Status: Up
+Host: 10.20.31.78 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.101.2 ()	Status: Up
+Host: 10.100.101.2 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 246	IP ID Seq: All zeros
+Host: 10.100.101.3 ()	Status: Up
+Host: 10.100.101.3 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.100.101.6 ()	Status: Up
+Host: 10.100.101.6 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: Incremental
+Host: 10.100.101.18 ()	Status: Up
+Host: 10.100.101.18 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 10.100.101.31 ()	Status: Up
+Host: 10.100.101.31 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: Incremental
+Host: 10.100.101.55 ()	Status: Up
+Host: 10.100.101.55 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 244	IP ID Seq: All zeros
+Host: 10.100.101.60 ()	Status: Up
+Host: 10.100.101.60 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.101.90 ()	Status: Up
+Host: 10.100.101.90 ()	Ports: 21/open/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: Incremental
+Host: 10.100.101.99 ()	Status: Up
+Host: 10.100.101.99 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.101.106 ()	Status: Up
+Host: 10.100.101.106 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.101.115 ()	Status: Up
+Host: 10.100.101.115 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.101.118 ()	Status: Up
+Host: 10.100.101.118 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: Incremental
+Host: 10.100.101.123 ()	Status: Up
+Host: 10.100.101.123 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.100.101.124 ()	Status: Up
+Host: 10.100.101.124 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 245	IP ID Seq: All zeros
+Host: 10.100.101.130 ()	Status: Up
+Host: 10.100.101.130 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.100.101.144 ()	Status: Up
+Host: 10.100.101.144 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 246	IP ID Seq: All zeros
+Host: 10.100.101.146 ()	Status: Up
+Host: 10.100.101.146 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.100.101.157 ()	Status: Up
+Host: 10.100.101.157 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.101.168 ()	Status: Up
+Host: 10.100.101.168 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: Incremental
+Host: 10.100.101.175 ()	Status: Up
+Host: 10.100.101.175 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.100.101.203 ()	Status: Up
+Host: 10.100.101.203 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 188	IP ID Seq: All zeros
+Host: 10.100.101.228 ()	Status: Up
+Host: 10.100.101.228 ()	Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: Incremental
+Host: 10.100.101.246 ()	Status: Up
+Host: 10.100.101.246 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: Incremental
+Host: 10.100.103.2 ()	Status: Up
+Host: 10.100.103.2 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.103.3 ()	Status: Up
+Host: 10.100.103.3 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.100.103.18 ()	Status: Up
+Host: 10.100.103.18 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.100.103.31 ()	Status: Up
+Host: 10.100.103.31 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: Incremental
+Host: 10.100.103.60 ()	Status: Up
+Host: 10.100.103.60 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.100.103.72 ()	Status: Up
+Host: 10.100.103.72 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.100.103.90 ()	Status: Up
+Host: 10.100.103.90 ()	Ports: 21/open/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: Incremental
+Host: 10.100.103.99 ()	Status: Up
+Host: 10.100.103.99 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.100.103.106 ()	Status: Up
+Host: 10.100.103.106 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.103.118 ()	Status: Up
+Host: 10.100.103.118 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: Incremental
+Host: 10.100.103.123 ()	Status: Up
+Host: 10.100.103.123 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.103.124 ()	Status: Up
+Host: 10.100.103.124 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: All zeros
+Host: 10.100.103.130 ()	Status: Up
+Host: 10.100.103.130 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 240	IP ID Seq: All zeros
+Host: 10.100.103.144 ()	Status: Up
+Host: 10.100.103.144 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: Incremental
+Host: 10.100.103.157 ()	Status: Up
+Host: 10.100.103.157 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.103.168 ()	Status: Up
+Host: 10.100.103.168 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: Incremental
+Host: 10.100.103.175 ()	Status: Up
+Host: 10.100.103.175 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.103.203 ()	Status: Up
+Host: 10.100.103.203 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 192	IP ID Seq: All zeros
+Host: 10.100.103.228 ()	Status: Up
+Host: 10.100.103.228 ()	Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: Incremental
+Host: 10.100.103.246 ()	Status: Up
+Host: 10.100.103.246 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: Incremental
+Host: 10.100.104.2 ()	Status: Up
+Host: 10.100.104.2 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 244	IP ID Seq: All zeros
+Host: 10.100.104.3 ()	Status: Up
+Host: 10.100.104.3 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.104.6 ()	Status: Up
+Host: 10.100.104.6 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: Incremental
+Host: 10.100.104.18 ()	Status: Up
+Host: 10.100.104.18 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.104.31 ()	Status: Up
+Host: 10.100.104.31 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: Incremental
+Host: 10.100.104.60 ()	Status: Up
+Host: 10.100.104.60 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.100.104.72 ()	Status: Up
+Host: 10.100.104.72 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.100.104.90 ()	Status: Up
+Host: 10.100.104.90 ()	Ports: 21/open/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: Incremental
+Host: 10.100.104.99 ()	Status: Up
+Host: 10.100.104.99 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.100.104.106 ()	Status: Up
+Host: 10.100.104.106 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 244	IP ID Seq: All zeros
+Host: 10.100.104.118 ()	Status: Up
+Host: 10.100.104.118 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: Incremental
+Host: 10.100.104.123 ()	Status: Up
+Host: 10.100.104.123 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: All zeros
+Host: 10.100.104.124 ()	Status: Up
+Host: 10.100.104.124 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.104.130 ()	Status: Up
+Host: 10.100.104.130 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.100.104.144 ()	Status: Up
+Host: 10.100.104.144 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: Incremental
+Host: 10.100.104.157 ()	Status: Up
+Host: 10.100.104.157 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.100.104.168 ()	Status: Up
+Host: 10.100.104.168 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: Incremental
+Host: 10.100.104.175 ()	Status: Up
+Host: 10.100.104.175 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.100.104.203 ()	Status: Up
+Host: 10.100.104.203 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 187	IP ID Seq: All zeros
+Host: 10.100.104.228 ()	Status: Up
+Host: 10.100.104.228 ()	Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/filtered/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: Incremental
+Host: 10.100.104.246 ()	Status: Up
+Host: 10.100.104.246 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: Incremental
+Host: 10.100.105.2 ()	Status: Up
+Host: 10.100.105.2 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.105.3 ()	Status: Up
+Host: 10.100.105.3 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 10.100.105.6 ()	Status: Up
+Host: 10.100.105.6 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: Incremental
+Host: 10.100.105.18 ()	Status: Up
+Host: 10.100.105.18 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 10.100.105.31 ()	Status: Up
+Host: 10.100.105.31 ()	Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: Incremental
+Host: 10.100.105.60 ()	Status: Up
+Host: 10.100.105.60 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.100.105.72 ()	Status: Up
+Host: 10.100.105.72 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.105.90 ()	Status: Up
+Host: 10.100.105.90 ()	Ports: 21/open/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: Incremental
+Host: 10.100.105.99 ()	Status: Up
+Host: 10.100.105.99 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.100.105.101 ()	Status: Up
+Host: 10.100.105.101 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.100.105.106 ()	Status: Up
+Host: 10.100.105.106 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.105.118 ()	Status: Up
+Host: 10.100.105.118 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: Incremental
+Host: 10.100.105.123 ()	Status: Up
+Host: 10.100.105.123 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.100.105.124 ()	Status: Up
+Host: 10.100.105.124 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.100.105.130 ()	Status: Up
+Host: 10.100.105.130 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 10.100.105.144 ()	Status: Up
+Host: 10.100.105.144 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: Incremental
+Host: 10.100.105.157 ()	Status: Up
+Host: 10.100.105.157 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 243	IP ID Seq: All zeros
+Host: 10.100.105.168 ()	Status: Up
+Host: 10.100.105.168 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 242	IP ID Seq: Incremental
+Host: 10.100.105.175 ()	Status: Up
+Host: 10.100.105.175 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 250	IP ID Seq: All zeros
+Host: 10.100.105.192 ()	Status: Up
+Host: 10.100.105.192 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 10.100.105.197 ()	Status: Up
+Host: 10.100.105.197 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 10.100.105.203 ()	Status: Up
+Host: 10.100.105.203 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 206	IP ID Seq: All zeros
+Host: 10.100.105.228 ()	Status: Up
+Host: 10.100.105.228 ()	Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/filtered/tcp//http///, 110/filtered/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/filtered/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: Incremental
+Host: 10.100.105.246 ()	Status: Up
+Host: 10.100.105.246 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: Incremental
+Host: 10.150.0.1 ()	Status: Up
+Host: 10.150.0.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 10.150.0.254 ()	Status: Up
+Host: 10.150.0.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.150.100.1 ()	Status: Up
+Host: 10.150.100.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 261	IP ID Seq: All zeros
+Host: 10.150.100.50 ()	Status: Up
+Host: 10.150.100.50 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 10.150.100.60 ()	Status: Up
+Host: 10.150.100.60 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.150.100.70 ()	Status: Up
+Host: 10.150.100.70 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/open/tcp//smtp///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 263	IP ID Seq: All zeros
+Host: 10.150.100.80 ()	Status: Up
+Host: 10.150.100.80 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 10.150.100.81 ()	Status: Up
+Host: 10.150.100.81 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 10.150.100.82 ()	Status: Up
+Host: 10.150.100.82 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 10.150.100.83 ()	Status: Up
+Host: 10.150.100.83 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 261	IP ID Seq: All zeros
+Host: 10.150.100.101 ()	Status: Up
+Host: 10.150.100.101 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.150.100.150 ()	Status: Up
+Host: 10.150.100.150 ()	Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/open/tcp//ms-wbt-server///	Seq Index: 262	IP ID Seq: Incremental
+Host: 10.150.100.151 ()	Status: Up
+Host: 10.150.100.151 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 10.150.100.152 ()	Status: Up
+Host: 10.150.100.152 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 10.150.100.170 ()	Status: Up
+Host: 10.150.100.170 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 261	IP ID Seq: All zeros
+Host: 10.150.100.190 ()	Status: Up
+Host: 10.150.100.190 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 10.150.100.191 ()	Status: Up
+Host: 10.150.100.191 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 10.200.0.1 ()	Status: Up
+Host: 10.200.0.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 10.200.0.254 ()	Status: Up
+Host: 10.200.0.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.200.10.1 ()	Status: Up
+Host: 10.200.10.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 262	IP ID Seq: All zeros
+Host: 10.200.10.200 ()	Status: Up
+Host: 10.200.10.200 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 261	IP ID Seq: All zeros
+Host: 10.200.20.1 ()	Status: Up
+Host: 10.200.20.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.200.30.1 ()	Status: Up
+Host: 10.200.30.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.200.40.1 ()	Status: Up
+Host: 10.200.40.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 10.200.50.1 ()	Status: Up
+Host: 10.200.50.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 10.200.60.1 ()	Status: Up
+Host: 10.200.60.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 10.200.70.1 ()	Status: Up
+Host: 10.200.70.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 10.200.100.1 ()	Status: Up
+Host: 10.200.100.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.200.100.2 ()	Status: Up
+Host: 10.200.100.2 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 10.200.100.81 ()	Status: Up
+Host: 10.200.100.81 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 10.200.100.90 ()	Status: Up
+Host: 10.200.100.90 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 10.200.100.109 ()	Status: Up
+Host: 10.200.100.109 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 257	IP ID Seq: All zeros
+Host: 10.200.100.126 ()	Status: Up
+Host: 10.200.100.126 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 172.15.10.1 (172-15-10-1.lightspeed.snjsca.sbcglobal.net)	Status: Up
+Host: 172.15.10.1 (172-15-10-1.lightspeed.snjsca.sbcglobal.net)	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 172.15.10.30 (172-15-10-30.lightspeed.snjsca.sbcglobal.net)	Status: Up
+Host: 172.15.10.30 (172-15-10-30.lightspeed.snjsca.sbcglobal.net)	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 172.15.10.31 (172-15-10-31.lightspeed.snjsca.sbcglobal.net)	Status: Up
+Host: 172.15.10.31 (172-15-10-31.lightspeed.snjsca.sbcglobal.net)	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 172.15.10.51 (172-15-10-51.lightspeed.snjsca.sbcglobal.net)	Status: Up
+Host: 172.15.10.51 (172-15-10-51.lightspeed.snjsca.sbcglobal.net)	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 219	IP ID Seq: Incremental
+Host: 172.25.20.1 ()	Status: Up
+Host: 172.25.20.1 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 251	IP ID Seq: All zeros
+Host: 172.25.20.31 ()	Status: Up
+Host: 172.25.20.31 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 252	IP ID Seq: All zeros
+Host: 172.25.20.44 ()	Status: Up
+Host: 172.25.20.44 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 172.25.20.61 ()	Status: Up
+Host: 172.25.20.61 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 221	IP ID Seq: Incremental
+Host: 172.25.20.62 ()	Status: Up
+Host: 172.25.20.62 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 256	IP ID Seq: All zeros
+Host: 172.25.20.63 ()	Status: Up
+Host: 172.25.20.63 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 222	IP ID Seq: Incremental
+Host: 172.25.20.64 ()	Status: Up
+Host: 172.25.20.64 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 221	IP ID Seq: Busy server or unknown class
+Host: 172.25.20.65 ()	Status: Up
+Host: 172.25.20.65 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 224	IP ID Seq: Incremental
+Host: 172.25.20.70 ()	Status: Up
+Host: 172.25.20.70 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 223	IP ID Seq: Incremental
+Host: 172.25.20.71 ()	Status: Up
+Host: 172.25.20.71 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 219	IP ID Seq: Incremental
+Host: 172.25.20.75 ()	Status: Up
+Host: 172.25.20.75 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 172.25.20.76 ()	Status: Up
+Host: 172.25.20.76 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 172.25.20.77 ()	Status: Up
+Host: 172.25.20.77 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 262	IP ID Seq: All zeros
+Host: 172.25.20.78 ()	Status: Up
+Host: 172.25.20.78 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 253	IP ID Seq: All zeros
+Host: 172.25.20.80 ()	Status: Up
+Host: 172.25.20.80 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 221	IP ID Seq: Incremental
+Host: 172.25.20.81 ()	Status: Up
+Host: 172.25.20.81 ()	Ports: 21/filtered/tcp//ftp///, 22/open/tcp//ssh///, 23/filtered/tcp//telnet///, 25/filtered/tcp//smtp///, 80/open/tcp//http///, 110/filtered/tcp//pop3///, 139/filtered/tcp//netbios-ssn///, 443/open/tcp//https///, 445/filtered/tcp//microsoft-ds///, 3389/filtered/tcp//ms-wbt-server///	Seq Index: 221	IP ID Seq: Incremental
+Host: 172.25.20.100 ()	Status: Up
+Host: 172.25.20.100 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 172.25.20.101 ()	Status: Up
+Host: 172.25.20.101 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 249	IP ID Seq: All zeros
+Host: 172.25.20.102 ()	Status: Up
+Host: 172.25.20.102 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 248	IP ID Seq: All zeros
+Host: 172.25.20.103 ()	Status: Up
+Host: 172.25.20.103 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/open/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/open/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 247	IP ID Seq: All zeros
+Host: 172.25.20.110 ()	Status: Up
+Host: 172.25.20.110 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: All zeros
+Host: 172.25.20.119 ()	Status: Up
+Host: 172.25.20.119 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 172.25.20.183 ()	Status: Up
+Host: 172.25.20.183 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 255	IP ID Seq: All zeros
+Host: 172.25.20.213 ()	Status: Up
+Host: 172.25.20.213 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 259	IP ID Seq: All zeros
+Host: 172.25.20.254 ()	Status: Up
+Host: 172.25.20.254 ()	Ports: 21/closed/tcp//ftp///, 22/closed/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 258	IP ID Seq: Randomized
+Host: 192.168.101.148 ()	Status: Up
+Host: 192.168.101.148 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 202	IP ID Seq: All zeros
+Host: 192.168.101.254 ()	Status: Up
+Host: 192.168.101.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 243	IP ID Seq: All zeros
+Host: 192.168.103.148 ()	Status: Up
+Host: 192.168.103.148 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 196	IP ID Seq: All zeros
+Host: 192.168.103.254 ()	Status: Up
+Host: 192.168.103.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 254	IP ID Seq: All zeros
+Host: 192.168.104.148 ()	Status: Up
+Host: 192.168.104.148 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 205	IP ID Seq: All zeros
+Host: 192.168.104.254 ()	Status: Up
+Host: 192.168.104.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+Host: 192.168.105.148 ()	Status: Up
+Host: 192.168.105.148 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/open/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/open/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 190	IP ID Seq: All zeros
+Host: 192.168.105.254 ()	Status: Up
+Host: 192.168.105.254 ()	Ports: 21/closed/tcp//ftp///, 22/open/tcp//ssh///, 23/closed/tcp//telnet///, 25/closed/tcp//smtp///, 80/closed/tcp//http///, 110/closed/tcp//pop3///, 139/closed/tcp//netbios-ssn///, 443/closed/tcp//https///, 445/closed/tcp//microsoft-ds///, 3389/closed/tcp//ms-wbt-server///	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Mon Mar 19 06:16:53 2018 -- 204352 IP addresses (179 hosts up) scanned in 24595.98 seconds

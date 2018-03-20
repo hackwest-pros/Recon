@@ -1,0 +1,3371 @@
+# Nmap 7.60 scan initiated Sun Mar 18 23:26:57 2018 as: nmap -iL ranges.txt -T insane -oA osdisco/osdisco -O --osscan-guess --top-ports 10
+Nmap scan report for 5.5.0.1
+Host is up (0.12s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), MikroTik RouterOS 6.0 (95%), Linux 3.1 (94%), Linux 3.2 (94%), Linux 2.6.31 - 2.6.32 (94%), Linux 2.6.22 (94%), Linux 2.6.32 - 2.6.35 (93%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 5.5.0.201
+Host is up (0.000025s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.8 - 4.9
+Network Distance: 0 hops
+
+Warning: 10.100.105.90 giving up on port because retransmission cap hit (2).
+Warning: 10.100.104.130 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.1.10.1
+Host is up (0.10s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Too many fingerprints match this host to give specific OS details
+
+Nmap scan report for 10.1.139.10
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Linux 3.1 (94%), Linux 3.2 (94%), Linux 2.6.31 - 2.6.32 (94%), Linux 2.6.32 (94%), MikroTik RouterOS 6.0 (94%), Linux 2.6.22 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 2.6.26 - 2.6.35 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 10.20.30.1
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.16 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.2 (93%), Crestron XPanel control system (93%), Linux 3.16 (92%), Linux 3.2 - 3.10 (92%), XBMCbuntu Frodo v12.2 (Linux 3.X) (92%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.10 (90%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.30.3
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.2 (93%), Linux 3.1 (92%), Linux 3.10 (92%), Linux 3.6 (92%), Lorex NV408 video recorder (92%), MikroTik RouterOS 6.35 (92%), Synology DiskStation Manager 5 (Linux) (92%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.30.55
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.18 (94%), DD-WRT (Linux 3.18) (94%), DD-WRT v3.0 (Linux 4.4.2) (94%), Android 4.2.2 (Linux 3.4) (93%), Linux 3.1 (93%), Linux 3.2 (93%), Android 4.1.1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+Nmap scan report for 10.20.30.57
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), DD-WRT (Linux 3.18) (95%), DD-WRT v3.0 (Linux 4.4.2) (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Android 4.1.2 (93%), Android 4.2.2 (Linux 3.4) (93%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+Nmap scan report for 10.20.30.66
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.13 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+Nmap scan report for 10.20.30.111
+Host is up (0.075s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Linux 3.1 (94%), Linux 3.2 (94%), Linux 2.6.31 - 2.6.32 (94%), Linux 2.6.32 (94%), MikroTik RouterOS 6.0 (94%), Linux 2.6.22 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 2.6.32 - 2.6.35 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+Nmap scan report for 10.20.30.120
+Host is up (0.083s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.11 (91%), Linux 2.6.32 - 3.10 (91%), Linux 2.6.32 - 3.9 (91%), Linux 2.6.32 (90%), Linux 3.10 (90%), Linux 3.4 - 3.10 (90%), Linux 3.5 (90%), Synology DiskStation Manager 5.2-5644 (90%), Linux 2.6.32 - 3.13 (89%), Crestron XPanel control system (89%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.30.121
+Host is up (0.081s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  filtered https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 2.6.32 (91%), Linux 2.6.32 - 3.10 (91%), Linux 2.6.32 - 3.9 (91%), Linux 3.11 (90%), Synology DiskStation Manager 5.2-5644 (90%), Linux 2.6.32 - 3.13 (89%), Crestron XPanel control system (89%), Linux 2.6.32 - 2.6.39 (88%), Linux 2.6.32 - 3.1 (88%), Linux 2.6.39 (88%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.31.1
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.16 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.2 (93%), Crestron XPanel control system (93%), Linux 3.16 (92%), Linux 3.2 - 3.10 (92%), XBMCbuntu Frodo v12.2 (Linux 3.X) (92%), Linux 2.6.32 - 3.10 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.5 (90%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.31.10
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (95%), Sony Bravia W600-, W800-, or W900-series TV (95%), Linux 3.1 (94%), Linux 3.2 (94%), HP P2000 G3 NAS device (94%), AVM FRITZ!Box (FritzOS 6.03) (94%), Infoblox Trinzic network control appliance (94%), Iomega StorCenter ix4-200d (Linux 2.6.31) (94%), Kyocera ECOSYS M2030dn printer (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.20.31.21
+Host is up (0.083s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: VMware ESXi 5.0 - 5.5 (95%), VMware ESXi 5.5 (94%), VMware ESXi 5.0 (94%), VMware ESXi 4.1 (93%), FreeBSD 5.3 - 5.5 (90%), FreeBSD 5.0-RELEASE (89%), FreeBSD 5.2.1-RELEASE (89%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (89%), FreeNAS 0.69.2 (FreeBSD 6.3-STABLE - 6.4-RELEASE) (89%), VMware ESX Server 4.0.1 (89%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.31.22
+Host is up (0.083s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: VMware ESXi 5.0 - 5.5 (95%), VMware ESXi 5.5 (94%), VMware ESXi 5.0 (94%), VMware ESXi 4.1 (93%), FreeBSD 5.3 - 5.5 (90%), FreeBSD 5.0-RELEASE (89%), FreeBSD 5.2.1-RELEASE (89%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (89%), FreeNAS 0.69.2 (FreeBSD 6.3-STABLE - 6.4-RELEASE) (89%), VMware ESX Server 4.0.1 (89%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.31.53
+Host is up (0.080s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|storage-misc
+Running (JUST GUESSING): VMware ESXi 4.X|5.X (93%), FreeBSD 5.X|6.X (85%), VMware ESX Server 3.X|4.X|5.X (85%)
+OS CPE: cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:freebsd:freebsd:5.0 cpe:/o:freebsd:freebsd:6.2 cpe:/o:vmware:esx:3 cpe:/o:vmware:esx:4 cpe:/o:vmware:esx:5
+Aggressive OS guesses: VMware ESXi 4.1.0 (93%), VMware ESXi 5.0 - 5.5 (91%), VMware ESXi 5.5 (90%), VMware ESXi 5.0 (90%), VMware ESXi 4.1 (89%), FreeBSD 5.0-RELEASE (85%), FreeBSD 5.2.1-RELEASE (85%), FreeBSD 5.3 - 5.5 (85%), FreeNAS 0.686 (FreeBSD 6.2-RELEASE) or VMware ESXi Server 3.0 - 4.0 (85%), FreeNAS 0.69.2 (FreeBSD 6.3-STABLE - 6.4-RELEASE) (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.20.31.71
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.20.31.74
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.2 - 3.16 (94%), Linux 3.5 (94%), Linux 3.8 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 2.6.32 - 3.5 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.20.31.75
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.2 (95%), Linux 3.2 - 3.10 (95%), Linux 3.16 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.5 (93%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.20.31.78
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 (95%), Linux 3.2 - 3.10 (95%), Linux 3.2 - 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (94%), Linux 3.5 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.100.101.2
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (93%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 4.4 (89%), HP MSM410 WAP (89%), Linux 2.6.35 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.3
+Host is up (0.081s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|WAP|storage-misc
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (90%), MikroTik RouterOS 6.X (88%), HP embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3
+Aggressive OS guesses: Linux 3.2 - 3.8 (90%), Linux 3.6 (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (88%), Tomato 1.27 - 1.28 (Linux 2.4.20) (88%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.101.6
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 Professional or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Server 2008 R2 SP1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.18
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 3.2 - 3.8 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.31
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (94%), Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows Server 2003 SP2 (91%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (90%), Microsoft Windows XP Professional SP3 (90%), Microsoft Windows XP SP2 - SP3 (90%), Microsoft Windows XP SP2 or SP3 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.55
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.38 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.60
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.90
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows 2003|XP|PocketPC/CE|2000 (94%), Motorola embedded (89%), Beat embedded (86%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (94%), Microsoft Windows XP SP3 (91%), Microsoft Windows Server 2003 SP1 or SP2 (91%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (89%), Microsoft Windows Server 2003 SP1 (89%), Microsoft Windows Server 2003 SP0 - SP2 (89%), Motorola VIP1216 digital set top box (Windows CE 5.0) (89%), Microsoft Windows 2003 (88%), Microsoft Windows Server 2003 (88%), Microsoft Windows XP Professional SP2 (French) (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.99
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (91%), Linux 3.2 - 3.8 (91%), WatchGuard Fireware 11.8 (91%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 4.4 (90%), Linux 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.106
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.5 (94%), Linux 3.8 (94%), Linux 3.1 - 3.2 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.115
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (94%), Linux 2.6.18 - 2.6.22 (89%), OpenWrt Chaos Calmer (Linux 3.18) (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), IPCop 2.0 (Linux 2.6.32) (89%), Linux 2.6.32 (89%), IPCop 2 firewall (Linux 3.4) (89%), Linux 3.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.118
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|Vista|2008|7|10|8.1 (94%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8.1:r1
+Aggressive OS guesses: Microsoft Windows Server 2012 or Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 (94%), Microsoft Windows Server 2012 R2 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 7 (90%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (90%), Microsoft Windows 7 Professional (90%), Microsoft Windows Vista SP2 (90%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.123
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), IPFire 2.11 firewall (Linux 2.6.32) (89%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.124
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (93%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.5 (92%), Linux 3.1 - 3.2 (92%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.32 or 3.10 (90%), Linux 2.6.38 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.130
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.144
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.5 (93%), Linux 3.2 - 3.8 (93%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 or 3.10 (91%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.32 (90%), Linux 2.6.38 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.146
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 2.6.32 - 3.0 (90%), Synology DiskStation Manager 5.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.157
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.168
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: FreeBSD 9.0-RELEASE - 10.3-RELEASE (95%), FreeBSD 7.0-RELEASE (93%), FreeBSD 8.0-RELEASE (93%), FreeBSD 7.1-PRERELEASE 7.2-STABLE (92%), FreeBSD 8.1-RELEASE (91%), FreeBSD 8.2-RELEASE (91%), m0nowall 1.3b16 firewall (FreeBSD 6.3-RELEASE) (91%), m0n0wall 1.3b11 - 1.3b15 FreeBSD-based firewall (91%), VMware ESXi 4.1.0 (91%), VMware ESXi 4.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.175
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.4 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.203
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: WAP|firewall|general purpose|storage-misc|terminal|broadband router|specialized
+Running (JUST GUESSING): Linux 2.4.X|2.6.X|3.X (94%), Check Point embedded (93%), Wyse ThinOS (92%), Actiontec embedded (91%), Axcient embedded (91%), HP embedded (91%), AVM embedded (90%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.34 cpe:/o:linux:linux_kernel:2.6.23 cpe:/o:linux:linux_kernel:3.x cpe:/o:wyse:thinos cpe:/h:actiontec:gt701 cpe:/o:linux:linux_kernel:2.4.21 cpe:/h:hp:p2000_g3 cpe:/h:avm:fritz%21box_fon_wlan_7170
+Aggressive OS guesses: DD-WRT v23 (Linux 2.4.34) (94%), Check Point UTM-1 Edge X firewall (93%), Linux 2.6.23 (93%), Linux 2.6.32 - 2.6.33 (93%), QNAP NAS Firmware 3.8.3 (Linux 3.X) (93%), Linux 2.6.32 (92%), Wyse ThinOS (92%), DD-WRT v24-sp1 (Linux 2.4) (92%), Actiontec GT701 DSL modem (91%), Linux 2.4.21 (embedded) (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.228
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.101.246
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.2
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (95%), Linux 3.2 - 3.8 (91%), Linux 3.13 (91%), Linux 3.5 (90%), Linux 3.18 (90%), Linux 2.6.32 (90%), Linux 3.16 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.3
+Host is up (0.081s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|WAP|storage-misc
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (90%), MikroTik RouterOS 6.X (88%), HP embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3.6 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3
+Aggressive OS guesses: Linux 3.6 (90%), Linux 3.2 - 3.8 (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (88%), Tomato 1.27 - 1.28 (Linux 2.4.20) (88%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.103.18
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.4 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.31
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (90%), Microsoft Windows Server 2003 SP2 (90%), Microsoft Windows XP Professional SP3 (90%), Microsoft Windows XP SP2 - SP3 (90%), Microsoft Windows XP SP2 or SP3 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.60
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.5 (94%), Linux 3.2 - 3.8 (94%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 2.6.32 - 3.0 (90%), Synology DiskStation Manager 5.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.72
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|firewall|broadband router|media device
+Running (JUST GUESSING): Linux 3.X|2.6.X (94%), IPCop 2.X|1.X (90%), D-Link embedded (89%), IPFire 2.X (89%), Tiandy embedded (89%)
+OS CPE: cpe:/o:linux:linux_kernel:3.18 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:ipcop:ipcop:2.0 cpe:/o:linux:linux_kernel:3.4 cpe:/h:dlink:dsl-2890al cpe:/o:linux:linux_kernel:2.6.25.20 cpe:/o:ipcop:ipcop:1.9.19 cpe:/o:ipfire:ipfire:2.9
+Aggressive OS guesses: Linux 3.18 (94%), OpenWrt Chaos Calmer (Linux 3.18) (90%), IPCop 2.0 (Linux 2.6.32) (90%), IPCop 2 firewall (Linux 3.4) (90%), Linux 2.6.18 - 2.6.22 (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), Linux 2.6.32 (89%), Linux 3.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.90
+Host is up (0.088s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows 2003|XP|PocketPC/CE|2000 (93%), Motorola embedded (89%), Beat embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (93%), Microsoft Windows XP SP3 (91%), Microsoft Windows Server 2003 SP1 (90%), Microsoft Windows Server 2003 SP1 or SP2 (90%), Microsoft Windows Server 2003 SP0 - SP2 (89%), Motorola VIP1216 digital set top box (Windows CE 5.0) (89%), Microsoft Windows 2003 (88%), Microsoft Windows Server 2003 (88%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (88%), Microsoft Windows XP SP2 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.99
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 3.5 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.106
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 2.6.32 - 3.0 (90%), Synology DiskStation Manager 5.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.118
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|7|Vista|2008|10|8.1 (94%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8.1:r1
+Aggressive OS guesses: Microsoft Windows Server 2012 or Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 (93%), Microsoft Windows 7 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (90%), Microsoft Windows 7 Professional (90%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (89%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.123
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.124
+Host is up (0.092s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Synology DiskStation Manager 5.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.130
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (93%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.5 (92%), Linux 3.1 - 3.2 (92%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.32 or 3.10 (90%), Linux 2.6.38 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.144
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows XP SP3 (93%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (93%), Microsoft Windows XP SP2 (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows Server 2003 SP2 (90%), Microsoft Windows CE 6.0 (89%), Microsoft Windows XP Professional SP3 (89%), Microsoft Windows XP SP2 - SP3 (89%), Microsoft Windows XP SP3 or Small Business Server 2003 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.157
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 3.2 - 3.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.168
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: FreeBSD 7.0-RELEASE (96%), FreeBSD 8.0-RELEASE (96%), FreeBSD 8.1-RELEASE (95%), FreeBSD 7.1-PRERELEASE 7.2-STABLE (95%), FreeBSD 9.0-RELEASE - 10.3-RELEASE (94%), FreeBSD 8.2-RELEASE (94%), FreeBSD 7.1-RELEASE (94%), FreeBSD 7.0-RELEASE - 9.0-RELEASE (93%), FreeBSD 7.0-RC1 (92%), FreeBSD 7.0-STABLE (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.175
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 2.6.39 (93%), Linux 3.4 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.203
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: DD-WRT v23 (Linux 2.4.34) (94%), Check Point UTM-1 Edge X firewall (93%), Linux 2.6.23 (93%), Linux 2.6.32 - 2.6.33 (93%), QNAP NAS Firmware 3.8.3 (Linux 3.X) (93%), Linux 2.6.32 (92%), Wyse ThinOS (92%), DD-WRT v24-sp1 (Linux 2.4) (92%), Actiontec GT701 DSL modem (91%), AVM FRITZ!Box FON WLAN 7170 WAP (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.228
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.103.246
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.2
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 3.5 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.3
+Host is up (0.082s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|WAP|storage-misc
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (90%), MikroTik RouterOS 6.X (88%), HP embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3.6 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3
+Aggressive OS guesses: Linux 3.6 (90%), Linux 3.2 - 3.8 (89%), MikroTik RouterOS 6.15 (Linux 3.3.5) (88%), Tomato 1.27 - 1.28 (Linux 2.4.20) (88%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.104.6
+Host is up (0.091s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows Vista|2008|7|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows 7 (94%), Microsoft Windows Server 2008 R2 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (93%), Microsoft Windows Vista SP2 (92%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (92%), Microsoft Windows Server 2008 R2 SP1 (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (92%), Microsoft Windows 7 Professional or Windows 8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.18
+Host is up (0.095s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.4 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.31
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (93%), Microsoft Windows XP Professional SP2 (French) (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows Server 2003 SP2 (90%), Microsoft Windows XP SP3 or Small Business Server 2003 (89%), Microsoft Windows XP SP2 or SP3 (89%), Microsoft Windows Server 2003 SP1 or SP2 (89%), Microsoft Windows CE 6.0 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.60
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (93%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.72
+Host is up (0.088s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|firewall|broadband router|media device
+Running (JUST GUESSING): Linux 3.X|2.6.X (94%), IPCop 2.X|1.X (90%), D-Link embedded (89%), IPFire 2.X (89%), Tiandy embedded (89%)
+OS CPE: cpe:/o:linux:linux_kernel:3.18 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:ipcop:ipcop:2.0 cpe:/h:dlink:dsl-2890al cpe:/o:linux:linux_kernel:2.6.25.20 cpe:/o:ipcop:ipcop:1.9.19 cpe:/o:ipfire:ipfire:2.9 cpe:/o:linux:linux_kernel:3.4
+Aggressive OS guesses: Linux 3.18 (94%), OpenWrt Chaos Calmer (Linux 3.18) (90%), IPCop 2.0 (Linux 2.6.32) (90%), Linux 2.6.18 - 2.6.22 (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), Linux 2.6.32 (89%), IPCop 2 firewall (Linux 3.4) (89%), Linux 3.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.90
+Host is up (0.094s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows 2003|XP|PocketPC/CE|2000 (94%), Motorola embedded (89%), Beat embedded (87%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (94%), Microsoft Windows XP SP3 (92%), Microsoft Windows Server 2003 SP1 or SP2 (91%), Microsoft Windows Server 2003 SP1 (90%), Microsoft Windows Server 2003 (89%), Microsoft Windows XP Professional SP3 (89%), Microsoft Windows XP SP2 - SP3 (89%), Microsoft Windows Server 2003 SP0 - SP2 (89%), Motorola VIP1216 digital set top box (Windows CE 5.0) (89%), Microsoft Windows 2003 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.99
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 3.5 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.106
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.5 (93%), Linux 3.2 - 3.8 (93%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 or 3.10 (91%), Synology DiskStation Manager 5.1 (90%), Linux 2.6.38 (90%), Linux 3.11 - 4.1 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.118
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|Vista|2008|7|10|8.1 (94%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8.1:r1
+Aggressive OS guesses: Microsoft Windows Server 2012 or Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 (93%), Microsoft Windows Server 2012 R2 (93%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows 7 Professional (90%), Microsoft Windows Server 2008 R2 (89%), Microsoft Windows 7 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (89%), Microsoft Windows Vista Home Premium SP1 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.123
+Host is up (0.088s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.2 - 3.8 (91%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 3.5 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.124
+Host is up (0.094s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.130
+Host is up (0.089s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), Linux 3.8 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.0 - 3.2 (91%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.144
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Beat embedded (85%), Microsoft embedded (85%), Belkin embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP3 (94%), Microsoft Windows XP Professional SP2 (French) (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows Server 2003 SP2 (91%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (90%), Microsoft Windows XP Professional SP3 (90%), Microsoft Windows XP SP2 - SP3 (90%), Microsoft Windows XP SP2 or SP3 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.157
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 3.2 - 3.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.168
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: FreeBSD 9.0-RELEASE - 10.3-RELEASE (94%), VMware ESXi 4.1.0 (91%), FreeBSD 8.1-RELEASE (91%), FreeBSD 7.0-RELEASE (91%), FreeBSD 7.1-PRERELEASE 7.2-STABLE (91%), FreeBSD 8.0-RELEASE (91%), VMware ESXi 4.1 (90%), FreeBSD 8.2-RELEASE (90%), FreeBSD 7.1-RELEASE (90%), m0nowall 1.3b16 firewall (FreeBSD 6.3-RELEASE) (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.175
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.4 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.203
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: DD-WRT v23 (Linux 2.4.34) (94%), Check Point UTM-1 Edge X firewall (93%), Linux 2.6.23 (93%), Linux 2.6.32 - 2.6.33 (93%), QNAP NAS Firmware 3.8.3 (Linux 3.X) (93%), Linux 2.6.32 (92%), Wyse ThinOS (92%), DD-WRT v24-sp1 (Linux 2.4) (92%), Actiontec GT701 DSL modem (91%), Dell Remote Access Controller 5/I (DRAC 5/I) (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.104.228
+Host is up (0.093s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  open     netbios-ssn
+443/tcp  filtered https
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 2008|7|Vista|Phone|8.1 (90%)
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_8.1
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows 7 (90%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (90%), Microsoft Windows Server 2008 R2 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (89%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (89%), Microsoft Windows 8.1 Update 1 (87%), Microsoft Windows Phone 7.5 or 8.0 (87%), Microsoft Windows Server 2008 R2 or Windows 8.1 (87%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.104.246
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (93%), Microsoft Windows 7 Professional or Windows 8 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (93%), Microsoft Windows Server 2008 R2 SP1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.2
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%), Linux 4.4 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.3
+Host is up (0.084s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|WAP|storage-misc
+Running (JUST GUESSING): Linux 3.X|2.4.X|2.6.X (90%), MikroTik RouterOS 6.X (88%), HP embedded (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:mikrotik:routeros:6.15 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:hp:p2000_g3
+Aggressive OS guesses: Linux 3.2 - 3.8 (90%), Linux 3.6 (90%), MikroTik RouterOS 6.15 (Linux 3.3.5) (88%), Tomato 1.27 - 1.28 (Linux 2.4.20) (88%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.38 (87%), Linux 2.6.18 - 2.6.22 (86%), HP P2000 G3 NAS device (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.105.6
+Host is up (0.089s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows 7 Professional or Windows 8 (93%), Microsoft Windows Server 2008 R2 SP1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.18
+Host is up (0.094s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 3.2 - 3.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.31
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (93%), Microsoft Windows XP Professional SP2 (French) (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows XP SP3 or Small Business Server 2003 (90%), Microsoft Windows Server 2003 SP2 (90%), Microsoft Windows XP SP2 or SP3 (89%), Microsoft Windows Server 2003 SP1 or SP2 (89%), Microsoft Windows CE 6.0 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.60
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.72
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|firewall|broadband router|media device
+Running (JUST GUESSING): Linux 3.X|2.6.X (94%), IPCop 2.X|1.X (91%), D-Link embedded (89%), IPFire 2.X (89%), Tiandy embedded (89%)
+OS CPE: cpe:/o:linux:linux_kernel:3.18 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:ipcop:ipcop:2.0 cpe:/h:dlink:dsl-2890al cpe:/o:linux:linux_kernel:2.6.25.20 cpe:/o:ipcop:ipcop:1.9.19 cpe:/o:ipfire:ipfire:2.9 cpe:/o:linux:linux_kernel:3.4
+Aggressive OS guesses: Linux 3.18 (94%), OpenWrt Chaos Calmer (Linux 3.18) (91%), IPCop 2.0 (Linux 2.6.32) (91%), Linux 2.6.32 (90%), Linux 2.6.18 - 2.6.22 (89%), D-Link DSL-2890AL ADSL router (89%), OpenWrt Kamikaze 8.09 (Linux 2.6.25.20) (89%), IPCop 1.9.19 or IPFire 2.9 firewall (Linux 2.6.32) (89%), IPCop 2 firewall (Linux 3.4) (89%), Linux 3.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.90
+Host is up (0.092s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized
+Running (JUST GUESSING): Microsoft Windows 2003|XP|PocketPC/CE|2000 (94%), Motorola embedded (89%), Beat embedded (87%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (94%), Microsoft Windows XP SP3 (92%), Microsoft Windows Server 2003 SP1 or SP2 (91%), Microsoft Windows Server 2003 SP1 (90%), Microsoft Windows Server 2003 (89%), Microsoft Windows Server 2003 SP0 - SP2 (89%), Motorola VIP1216 digital set top box (Windows CE 5.0) (89%), Microsoft Windows 2003 (88%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (88%), Microsoft Windows XP Professional SP3 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.99
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 3.2 - 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%), IPFire 2.11 firewall (Linux 2.6.32) (89%), Linux 2.6.18 - 2.6.22 (89%), Linux 3.10 - 3.12 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.101
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (91%), Linux 3.18 (90%), Linux 3.10 - 3.12 (90%), Linux 3.5 (90%), Linux 4.4 (90%), Linux 3.2 - 3.8 (90%), Linux 3.8 (90%), WatchGuard Fireware 11.8 (90%), Linux 3.16 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.106
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.118
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|7|Vista|2008|10|8.1 (94%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8.1:r1
+Aggressive OS guesses: Microsoft Windows Server 2012 or Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 R2 (94%), Microsoft Windows Server 2012 (93%), Microsoft Windows 7 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (90%), Microsoft Windows 7 Professional (90%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.123
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (95%), Linux 3.13 (92%), Linux 3.2 - 3.8 (91%), IPFire 2.11 firewall (Linux 2.6.32) (91%), Linux 3.16 (91%), Linux 3.5 (90%), Linux 4.4 (90%), Linux 3.8 (90%), WatchGuard Fireware 11.8 (90%), Linux 3.18 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.124
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), WatchGuard Fireware 11.8 (94%), Linux 3.1 - 3.2 (93%), Linux 3.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%), Linux 2.6.32 - 3.0 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.130
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.8 (94%), Linux 3.5 (94%), Linux 3.8 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.32 (91%), Linux 2.6.32 or 3.10 (91%), Linux 3.11 - 4.1 (91%), Linux 3.0 - 3.2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.144
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|media device|specialized|power-device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (94%), Motorola embedded (91%), Cisco embedded (85%), Microsoft embedded (85%), Belkin embedded (85%), SMA embedded (85%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:cisco:isb2230
+Aggressive OS guesses: Microsoft Windows Server 2003 SP0 or Windows XP SP2 (94%), Microsoft Windows XP SP2 (94%), Microsoft Windows XP SP3 (93%), Microsoft Windows XP Professional SP2 (French) (93%), Motorola VIP1216 digital set top box (Windows CE 5.0) (91%), Microsoft Windows Server 2003 SP2 (90%), Microsoft Windows CE 6.0 (89%), Microsoft Windows XP Professional SP3 (89%), Microsoft Windows XP SP2 - SP3 (89%), Microsoft Windows XP SP3 or Small Business Server 2003 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.157
+Host is up (0.086s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 3.2 - 3.8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.168
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: FreeBSD 9.0-RELEASE - 10.3-RELEASE (94%), FreeBSD 8.1-RELEASE (92%), FreeBSD 7.0-RELEASE (92%), FreeBSD 8.0-RELEASE (92%), FreeBSD 7.1-PRERELEASE 7.2-STABLE (91%), VMware ESXi 5.1 (91%), FreeBSD 9.0-RELEASE (91%), VMware ESXi 4.1.0 (91%), FreeBSD 8.2-RELEASE (90%), FreeBSD 7.1-RELEASE (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.175
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (94%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (93%), Linux 3.4 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (92%), Linux 3.10 (92%), Linux 3.1 - 3.2 (92%), Linux 2.6.38 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.192
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.2 - 3.8 (91%), Linux 3.13 (90%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 4.4 (90%), Linux 3.8 (90%), WatchGuard Fireware 11.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.197
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.11 - 4.1 (94%), Linux 3.13 (91%), Linux 3.2 - 3.8 (91%), WatchGuard Fireware 11.8 (91%), Linux 3.18 (90%), Linux 3.5 (90%), Linux 4.4 (90%), Linux 3.8 (90%), Linux 3.16 (90%), Linux 2.6.32 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.203
+Host is up (0.073s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: firewall|WAP|general purpose|broadband router|storage-misc|terminal|router
+Running (JUST GUESSING): Check Point embedded (94%), Linux 2.4.X|2.6.X|3.X (94%), Actiontec embedded (93%), Wyse ThinOS (92%), Axcient embedded (91%), Cisco embedded (91%), AVM embedded (91%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.34 cpe:/o:linux:linux_kernel:2.6.23 cpe:/h:actiontec:gt701 cpe:/o:linux:linux_kernel:3.x cpe:/o:wyse:thinos cpe:/o:linux:linux_kernel:2.6.32 cpe:/h:cisco:rv320 cpe:/h:avm:fritz%21box_fon_wlan_7170
+Aggressive OS guesses: Check Point UTM-1 Edge X firewall (94%), DD-WRT v23 (Linux 2.4.34) (94%), Linux 2.6.23 (94%), Linux 2.6.32 - 2.6.33 (94%), Actiontec GT701 DSL modem (93%), QNAP NAS Firmware 3.8.3 (Linux 3.X) (93%), Linux 2.6.32 (92%), Wyse ThinOS (92%), DD-WRT v24-sp1 (Linux 2.4) (92%), Axceint Uptiva backup appliance (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.100.105.228
+Host is up (0.083s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   filtered http
+110/tcp  filtered pop3
+139/tcp  open     netbios-ssn
+443/tcp  filtered https
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|Phone|8.1 (90%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_8.1
+Aggressive OS guesses: Microsoft Windows 7 (90%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (90%), Microsoft Windows Server 2008 R2 (89%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (89%), Microsoft Windows 7 Professional or Windows 8 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (89%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (89%), Microsoft Windows Vista SP2 (88%), Microsoft Windows 8.1 Update 1 (87%), Microsoft Windows Phone 7.5 or 8.0 (87%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 10.100.105.246
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 7|Vista|2008|2012|8.1|10 (94%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows 7 (94%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (94%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (94%), Microsoft Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (94%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (94%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows 7 Professional or Windows 8 (93%), Microsoft Windows Server 2008 R2 SP1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.0.1
+Host is up (0.072s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), Lorex NV408 video recorder (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 10.150.0.254
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), Lorex NV408 video recorder (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.150.100.1
+Host is up (0.071s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), Lorex NV408 video recorder (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 10.150.100.50
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 (95%), Linux 3.5 (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.2 - 3.16 (94%), Linux 3.8 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.2 - 3.10 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.60
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 (95%), Linux 3.5 (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.2 - 3.10 (94%), Linux 3.2 - 3.16 (94%), Linux 3.8 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.70
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   open   smtp
+80/tcp   open   http
+110/tcp  open   pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.5 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.2 - 3.16 (94%), Linux 3.8 (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.2 - 3.10 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.80
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.13 (92%), DD-WRT v3.0 (Linux 4.4.2) (92%), Linux 2.6.32 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.81
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 3.10 - 4.8 (93%), Linux 3.12 (92%), Linux 3.13 (92%), DD-WRT (Linux 3.18) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.82
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.83
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.101
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 3.13 (92%), Linux 3.8 - 4.9 (92%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%), Linux 3.10 - 4.8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.150
+Host is up (0.075s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp open   ms-wbt-server
+Device type: general purpose|phone|media device
+Running (JUST GUESSING): Microsoft Windows XP|2003|PocketPC/CE|2000 (96%), Microsoft Windows Mobile 6.X (92%), Motorola embedded (90%), Telekom embedded (90%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_server_2003 cpe:/o:microsoft:windows_mobile:6 cpe:/o:microsoft:windows_ce cpe:/o:microsoft:windows_2000::sp4 cpe:/h:motorola:vip1232 cpe:/h:telekom:mr_303
+Aggressive OS guesses: Microsoft Windows XP SP2 or SP3 (96%), Microsoft Windows XP SP2 (96%), Microsoft Windows XP SP2 or SP3, or Windows Embedded Standard 2009 (93%), Microsoft Windows XP SP2 or SP3, or Windows Server 2003 (93%), Microsoft Windows XP SP2 or Windows Server 2003 SP2 (93%), Microsoft Windows XP SP3 (93%), Microsoft Windows XP Professional SP2 (93%), Microsoft Windows XP Professional SP3 (92%), Microsoft Windows Server 2003 SP2 (92%), Microsoft Windows XP SP0 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.151
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.2 (95%), Linux 3.16 (94%), Linux 3.2 - 3.10 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.1 (93%), Linux 3.5 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.152
+Host is up (0.089s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.170
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%), Linux 3.18 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.190
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.150.100.191
+Host is up (0.073s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.0.1
+Host is up (0.089s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Lorex NV408 video recorder (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 10.200.0.254
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.6 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%), Linux 3.2 - 3.16 (94%), Lorex NV408 video recorder (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 10.200.10.1
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|WAP|phone
+Running (JUST GUESSING): Linux 3.X|4.X (95%), Asus embedded (94%), Google Android 5.X|6.X|7.X (92%)
+OS CPE: cpe:/o:linux:linux_kernel:3.13 cpe:/o:linux:linux_kernel:4 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:4.1 cpe:/o:google:android:5 cpe:/o:google:android:6 cpe:/o:linux:linux_kernel:3.18
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.8 (95%), Linux 3.12 (95%), Linux 3.8 - 3.11 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.18 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.10.200
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.13 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.18 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 6 hops
+
+Nmap scan report for 10.200.20.1
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.30.1
+Host is up (0.084s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.40.1
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|WAP|phone
+Running (JUST GUESSING): Linux 3.X|4.X (95%), Asus embedded (94%), Google Android 5.X|6.X|7.X (92%)
+OS CPE: cpe:/o:linux:linux_kernel:3.13 cpe:/o:linux:linux_kernel:4 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:4.1 cpe:/o:google:android:5 cpe:/o:google:android:6 cpe:/o:linux:linux_kernel:3.18
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.8 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.50.1
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.8 (95%), Linux 4.2 (95%), Linux 3.18 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.60.1
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.70.1
+Host is up (0.087s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.100.1
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Lorex NV408 video recorder (95%), MikroTik RouterOS 6.35 (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 10.200.100.2
+Host is up (0.085s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.100.81
+Host is up (0.072s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.100.90
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.100.109
+Host is up (0.082s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 10.200.100.126
+Host is up (0.073s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 5 hops
+
+Nmap scan report for 172-15-10-1.lightspeed.snjsca.sbcglobal.net (172.15.10.1)
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), DD-WRT (Linux 3.18) (95%), DD-WRT v3.0 (Linux 4.4.2) (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Android 4.1.1 (93%), Android 4.1.2 (93%), Android 4.2.2 (Linux 3.4) (93%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+Nmap scan report for 172-15-10-30.lightspeed.snjsca.sbcglobal.net (172.15.10.30)
+Host is up (0.083s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.12 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172-15-10-31.lightspeed.snjsca.sbcglobal.net (172.15.10.31)
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Device type: general purpose|WAP|phone
+Running (JUST GUESSING): Linux 3.X|4.X (95%), Asus embedded (94%), Google Android 5.X|6.X|7.X (92%)
+OS CPE: cpe:/o:linux:linux_kernel:3.12 cpe:/o:linux:linux_kernel:4 cpe:/h:asus:rt-n56u cpe:/o:linux:linux_kernel:3.4 cpe:/o:linux:linux_kernel:4.1 cpe:/o:google:android:5 cpe:/o:google:android:6 cpe:/o:linux:linux_kernel:3.18
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.8 - 3.11 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172-15-10-51.lightspeed.snjsca.sbcglobal.net (172.15.10.51)
+Host is up (0.082s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (93%), FreeBSD 5.X|6.X (88%), Apple Mac OS X 10.3.X|10.4.X (85%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:freebsd:freebsd:5.4 cpe:/o:apple:mac_os_x:10.3 cpe:/o:apple:mac_os_x:10.4 cpe:/o:freebsd:freebsd:6.2 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (93%), VMware ESXi 4.1 (92%), VMware ESXi 5.0 - 5.5 (89%), VMware ESXi 5.5 (89%), VMware ESXi 5.0 (89%), FreeBSD 5.4-RELEASE (88%), Apple Mac OS X 10.3.9 (Panther) - 10.4.7 (Tiger) (Darwin 7.9.0 - 8.7.8, PowerPC) (85%), Apple Mac OS X 10.4.11 (Tiger) (Darwin 8.11.0, PowerPC) (85%), Apple Mac OS X 10.4.8 - 10.4.11 (Tiger) (Darwin 8.8.0 - 8.11.0) (85%), Apple Mac OS X 10.4.8 - 10.4.11 (Tiger) (Darwin 8.8.0 - 8.11.1) (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.1
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.2 (95%), Linux 3.2 - 3.10 (95%), Linux 3.16 (94%), Linux 3.5 (94%), XBMCbuntu Frodo v12.2 (Linux 3.X) (94%), Linux 2.6.32 - 3.10 (94%), Linux 2.6.32 - 3.9 (94%), Linux 3.1 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+Nmap scan report for 172.25.20.31
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 3.10 - 4.8 (93%), Linux 3.13 (92%), DD-WRT v3.0 (Linux 4.4.2) (92%), Linux 3.8 - 4.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.44
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 - 4.8 (92%), Linux 3.13 (92%), DD-WRT v3.0 (Linux 4.4.2) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.61
+Host is up (0.076s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (89%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (89%), VMware ESXi 4.1 (88%), VMware ESXi 4.1.0 (86%), VMware ESXi 5.0 - 5.5 (86%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.62
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.63
+Host is up (0.067s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (89%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (89%), VMware ESXi 4.1.0 (86%), VMware ESXi 4.1 (86%), VMware ESXi 5.0 - 5.5 (86%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.64
+Host is up (0.081s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (88%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (88%), VMware ESXi 4.1.0 (87%), VMware ESXi 4.1 (87%), VMware ESXi 5.0 - 5.5 (85%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.65
+Host is up (0.069s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 5.X|4.X|6.X (88%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:5.5 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:6.0.0 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 5.5 (88%), VMware ESXi 4.1 (87%), VMware ESXi 6.0.0 (87%), VMware ESXi 4.1.0 (85%), VMware ESXi 5.0 - 5.5 (85%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.70
+Host is up (0.085s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 4.X|6.X|5.X (88%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 4.1 (88%), VMware ESXi 6.0.0 (87%), VMware ESXi 4.1.0 (86%), VMware ESXi 5.0 - 5.5 (86%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.71
+Host is up (0.080s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (93%), FreeBSD 5.X|6.X (88%), Apple Mac OS X 10.3.X|10.4.X (85%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:freebsd:freebsd:5.4 cpe:/o:apple:mac_os_x:10.3 cpe:/o:apple:mac_os_x:10.4 cpe:/o:freebsd:freebsd:6.2 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (93%), VMware ESXi 4.1 (92%), VMware ESXi 5.0 - 5.5 (89%), VMware ESXi 5.5 (89%), VMware ESXi 5.0 (89%), FreeBSD 5.4-RELEASE (88%), Apple Mac OS X 10.3.9 (Panther) - 10.4.7 (Tiger) (Darwin 7.9.0 - 8.7.8, PowerPC) (85%), Apple Mac OS X 10.4.11 (Tiger) (Darwin 8.11.0, PowerPC) (85%), Apple Mac OS X 10.4.8 - 10.4.11 (Tiger) (Darwin 8.8.0 - 8.11.0) (85%), Apple Mac OS X 10.4.8 - 10.4.11 (Tiger) (Darwin 8.8.0 - 8.11.1) (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.75
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.76
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.77
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.8 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.78
+Host is up (0.079s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.12 (94%), Linux 3.8 - 3.11 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.80
+Host is up (0.070s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (89%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (89%), VMware ESXi 4.1.0 (88%), VMware ESXi 4.1 (88%), VMware ESXi 5.0 - 5.5 (86%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.81
+Host is up (0.075s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+23/tcp   filtered telnet
+25/tcp   filtered smtp
+80/tcp   open     http
+110/tcp  filtered pop3
+139/tcp  filtered netbios-ssn
+443/tcp  open     https
+445/tcp  filtered microsoft-ds
+3389/tcp filtered ms-wbt-server
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): VMware ESXi 6.X|4.X|5.X (89%), Crestron 2-Series (85%)
+OS CPE: cpe:/o:vmware:esxi:6.0.0 cpe:/o:vmware:esxi:4.1 cpe:/o:vmware:esxi:5 cpe:/o:crestron:2_series
+Aggressive OS guesses: VMware ESXi 6.0.0 (89%), VMware ESXi 4.1.0 (88%), VMware ESXi 4.1 (88%), VMware ESXi 5.0 - 5.5 (86%), Crestron XPanel control system (85%)
+No exact OS matches for host (test conditions non-ideal).
+
+Nmap scan report for 172.25.20.100
+Host is up (0.068s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.1 - 3.2 (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 2.6.32 (92%), Linux 3.11 (92%), Linux 3.2 - 4.8 (92%), QNAP QTS 4.0 - 4.2 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.101
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.1 - 3.2 (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Netgear RAIDiator 4.2.21 (Linux 2.6.37) (93%), Linux 2.6.32 (92%), Linux 2.6.32 - 3.2 (92%), Linux 3.11 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.102
+Host is up (0.078s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.16 (94%), Linux 3.1 - 3.2 (93%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 3.2 - 4.8 (92%), Linux 3.8 - 4.9 (92%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%), Ubiquiti Edgemax router firmware 1.7.0 (Linux 3.10) (92%), Synology DiskStation Manager 5.2-5644 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.103
+Host is up (0.077s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   open   telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  open   netbios-ssn
+443/tcp  closed https
+445/tcp  open   microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.16 (94%), Linux 3.1 - 3.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%), Ubiquiti Edgemax router firmware 1.7.0 (Linux 3.10) (92%), Linux 3.18 (92%), Linux 3.2 - 4.8 (92%), Linux 3.4 - 3.10 (92%), Linux 3.8 - 4.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.110
+Host is up (0.080s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.13 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), Linux 3.12 (95%), Linux 3.18 (95%), Linux 3.8 - 3.11 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 4.2 (94%), Linux 3.1 (93%), Linux 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.119
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.18 (94%), Linux 3.13 (92%), Linux 3.8 - 4.9 (92%), QNAP QTS 4.0 - 4.2 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.183
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (93%), Linux 3.2 (93%), Linux 3.10 - 4.8 (93%), Linux 3.12 (92%), Linux 3.13 (92%), Linux 3.8 - 3.11 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.213
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.18 (95%), Linux 3.2 - 4.8 (95%), Linux 3.16 (95%), ASUS RT-N56U WAP (Linux 3.4) (94%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 - 4.8 (92%), Linux 3.13 (92%), DD-WRT v3.0 (Linux 4.4.2) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 172.25.20.254
+Host is up (0.081s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   closed ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Cisco SG200 or SG300 switch (95%), Cisco SG 200 or SG 300 switch (93%), Cisco SG 300-10, Dell PowerConnect 2748, Linksys SLM2024, SLM2048, or SLM224P, or Netgear FS728TP or GS724TP switch (92%), Cisco SF300 or SG300 switch (92%), Dell Remote Access Controller 4 (DRAC 4) (91%), 3Com Baseline Switch 2924-SFP or Cisco ESW-520 switch or Allied Telesis AT-8000 series switch (90%), Allied Telesis AT-8000S; Dell PowerConnect 2824, 3448, 5316M, or 5324; Linksys SFE2000P, SRW2024, SRW2048, or SRW224G4; or TP-LINK TL-SL3428 switch (90%), Linksys SRW2000-series or Allied Telesyn AT-8000S switch (90%), Cisco SG 500 switch (90%), Nintendo Wii game console (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 192.168.101.148
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (94%), Linux 2.6.18 (94%), AXIS 211A Network Camera (Linux 2.6.20) (94%), Linux 2.6.24 (94%), Linux 2.6.16 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), Toshiba REGZA TV (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.9 - 2.6.18 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 192.168.101.254
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.6 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%), Linux 3.2 - 3.16 (94%), Lorex NV408 video recorder (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 192.168.103.148
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (94%), Linux 2.6.18 (94%), AXIS 211A Network Camera (Linux 2.6.20) (94%), Linux 2.6.24 (94%), Linux 2.6.16 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), Toshiba REGZA TV (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.27 - 2.6.28 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 192.168.103.254
+Host is up (0.070s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Linux 3.6 (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%), Linux 3.2 - 3.16 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 192.168.104.148
+Host is up (0.074s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (94%), Linux 2.6.18 (94%), AXIS 211A Network Camera (Linux 2.6.20) (94%), Linux 2.6.24 (94%), Linux 2.6.16 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.9 - 2.6.18 (92%), OpenWrt White Russian 0.9 (Linux 2.4.30) (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 192.168.104.254
+Host is up (0.071s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Lorex NV408 video recorder (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+Nmap scan report for 192.168.105.148
+Host is up (0.076s latency).
+
+PORT     STATE  SERVICE
+21/tcp   open   ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   open   http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 2.6.37 (95%), Asus RT-N10 router or AXIS 211A Network Camera (Linux 2.6) (94%), Linux 2.6.18 (94%), AXIS 211A Network Camera (Linux 2.6.20) (94%), Linux 2.6.24 (94%), Linux 2.6.16 (94%), Linux 2.6.37 (OpenSUSE 11.4) (93%), Toshiba REGZA TV (93%), OpenWrt (Linux 2.4.32) (93%), Linux 2.6.9 - 2.6.18 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 4 hops
+
+Nmap scan report for 192.168.105.254
+Host is up (0.071s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+22/tcp   open   ssh
+23/tcp   closed telnet
+25/tcp   closed smtp
+80/tcp   closed http
+110/tcp  closed pop3
+139/tcp  closed netbios-ssn
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+Aggressive OS guesses: Linux 3.6 (95%), MikroTik RouterOS 6.35 (95%), Synology DiskStation Manager 5 (Linux) (95%), Linux 2.6.32 - 3.10 (95%), Linux 2.6.32 - 3.9 (95%), Linux 3.2 (95%), Lorex NV408 video recorder (95%), Linux 3.1 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.10 (94%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 3 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 19 06:16:53 2018 -- 204352 IP addresses (179 hosts up) scanned in 24595.98 seconds
